@@ -6,10 +6,10 @@
 
 using namespace std;
 
-class shareCount
+class ShareCount
 {
 public:
-    shareCount();
+    ShareCount();
     bool identifierUtilisateur(string identifiant, string motDePasse);
     Utilisateur getUtilisateur(string identifiant);
 };

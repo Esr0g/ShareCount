@@ -2,10 +2,11 @@
 #include <string>
 #include "utilisateur.h"
 
-shareCount::shareCount()
+ShareCount::ShareCount()
 {
 
 }
-/*Utilisateur::getUtilisateur(string identifiantUtilisateur){
+
+Utilisateur ShareCount::getUtilisateur(string identifiantUtilisateur){
     
-}*/
+}
