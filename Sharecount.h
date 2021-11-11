@@ -2,14 +2,14 @@
 #define SHARECOUNT_H
 
 #include <string>
-#include "utilisateur.h"
+#include "Utilisateur.h"
 
 using namespace std;
 
-class shareCount
+class ShareCount
 {
 public:
-    shareCount();
+    ShareCount();
     bool identifierUtilisateur(string identifiant, string motDePasse);
     Utilisateur getUtilisateur(string identifiant);
 };

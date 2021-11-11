@@ -16,20 +16,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    gestionnaireutilisateurs.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    sharecount.cpp \
-    utilisateur.cpp
+    Gestionnaireutilisateurs.cpp \
+    Mainwindow.cpp \
+    Sharecount.cpp \
+    Utilisateur.cpp \
+    main.cpp
 
 HEADERS += \
-    gestionnaireutilisateurs.h \
-    mainwindow.h \
-    sharecount.h \
-    utilisateur.h
+    Gestionnaireutilisateurs.h \
+    Mainwindow.h \
+    Sharecount.h \
+    Utilisateur.h
 
 FORMS += \
-    mainwindow.ui
+    Mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
