@@ -20,7 +20,6 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     sharecount.cpp \
-    test.cpp \
     utilisateur.cpp
 
 HEADERS += \
