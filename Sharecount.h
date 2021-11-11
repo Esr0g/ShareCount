@@ -4,14 +4,12 @@
 #include <string>
 #include "Utilisateur.h"
 
-using namespace std;
-
 class ShareCount
 {
 public:
     ShareCount();
-    bool identifierUtilisateur(string identifiant, string motDePasse);
-    Utilisateur getUtilisateur(string identifiant);
+    bool identifierUtilisateur(std::string identifiant, std::string motDePasse);
+    Utilisateur getUtilisateur(std::string identifiant);
 };
 
 #endif // SHARECOUNT_H

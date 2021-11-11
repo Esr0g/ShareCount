@@ -2,19 +2,18 @@
 #define UTILISATEUR_H
 #include <string>
 
-using namespace std;
 
 class Utilisateur
 {
 public:
     Utilisateur();
-    Utilisateur(string u_nom, string u_identifiant, string u_motDePasse);
+    Utilisateur(std::string u_nom, std::string u_identifiant, std::string u_motDePasse);
 
 private:
-    string nom;
-    string identifiant;
-    string motDePasse;
-    string mail;
+    std::string nom;
+    std::string identifiant;
+    std::string motDePasse;
+    std::string mail;
     double solde;
 };
 

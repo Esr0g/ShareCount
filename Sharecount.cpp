@@ -7,6 +7,6 @@ ShareCount::ShareCount()
 
 }
 
-Utilisateur ShareCount::getUtilisateur(string identifiantUtilisateur){
+Utilisateur ShareCount::getUtilisateur(std::string identifiantUtilisateur){
     
 }
