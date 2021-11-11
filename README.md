@@ -2,6 +2,6 @@
 Projet L3 CPOA 
 
 Utilisation :  
-git clone  
+git clone https://github.com/Esr0g/ShareCount.git
 Ouvrir ShareCount.pro avec Qt  
-Compilation
+Compilation  
