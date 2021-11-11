@@ -7,12 +7,8 @@ gestionnaireUtilisateurs::gestionnaireUtilisateurs()
 {
 
 }
-gestionnaireUtilisateurs::ajouterUtilisateur(Utilisateur user){
-    int i=0;
-    while(users[i]==NULL){
-        i++;
-    }
-    users[i] = user;
+void gestionnaireUtilisateurs::ajouterUtilisateur(Utilisateur user){
+
 }
 
 

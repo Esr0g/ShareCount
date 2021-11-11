@@ -2,6 +2,7 @@
 #define SHARECOUNT_H
 
 #include <string>
+#include "utilisateur.h"
 
 using namespace std;
 

@@ -1,6 +1,7 @@
 #ifndef GESTIONNAIREUTILISATEURS_H
 #define GESTIONNAIREUTILISATEURS_H
 #include <list>
+#include "utilisateur.h"
 
 using namespace std;
 

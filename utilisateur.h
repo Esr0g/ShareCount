@@ -8,6 +8,7 @@ class Utilisateur
 {
 public:
     Utilisateur();
+    Utilisateur(string u_nom, string u_identifiant, string u_motDePasse);
 
 private:
     string nom;
