@@ -1,6 +1,6 @@
-#include "sharecount.h"
+#include "Sharecount.h"
 #include <string>
-#include "utilisateur.h"
+#include "Utilisateur.h"
 
 ShareCount::ShareCount()
 {
