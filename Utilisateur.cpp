@@ -1,6 +1,8 @@
 #include "Utilisateur.h"
 
-Utilisateur::Utilisateur(std::string u_nom, std::string u_identifiant, std::string u_motDePasse)
+using namespace std;
+
+Utilisateur::Utilisateur(string u_nom, string u_identifiant, string u_motDePasse)
 {
     nom=u_nom;
     identifiant=u_identifiant;
