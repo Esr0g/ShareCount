@@ -2,6 +2,8 @@
 #include <string>
 #include "Utilisateur.h"
 
+using namespace std;
+
 ShareCount::ShareCount()
 {
 

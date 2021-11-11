@@ -3,13 +3,13 @@
 #include <list>
 #include "Utilisateur.h"
 
-using namespace std;
-
 class gestionnaireUtilisateurs
 {
+
 public:
     gestionnaireUtilisateurs();
     void ajouterUtilisateur(Utilisateur user);
+
 private:
     Utilisateur users[100];
 };
