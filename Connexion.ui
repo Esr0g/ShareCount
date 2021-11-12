@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Mainwindow</class>
- <widget class="QDialog" name="Mainwindow">
+ <class>Connexion</class>
+ <widget class="QDialog" name="Connexion">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>555</width>
-    <height>381</height>
+    <width>473</width>
+    <height>329</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,29 +16,28 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <pointsize>30</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
      <property name="text">
-      <string>ShareCount</string>
+      <string>Identifiant</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Créer un compte</string>
+      <string>Mot de passe</string>
      </property>
     </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_2"/>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton">
      <property name="text">
-      <string>Se connecter</string>
+      <string>Connexion</string>
      </property>
     </widget>
    </item>

@@ -1,21 +1,27 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QDialog>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+namespace Ui {
+class Mainwindow;
+}
 
-class MainWindow : public QMainWindow
+class Mainwindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    explicit Mainwindow(QWidget *parent = nullptr);
+    ~Mainwindow();
+
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::Mainwindow *ui;
 };
+
 #endif // MAINWINDOW_H
