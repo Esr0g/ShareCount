@@ -5,6 +5,7 @@
 #include "Mainwindow.h"
 #include "Connecte.h"
 
+
 Connexion::Connexion(ShareCount *sc, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Connexion)

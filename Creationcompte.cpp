@@ -1,10 +1,12 @@
-#include "Creationcompte.h"
+﻿#include "Creationcompte.h"
 #include "ui_Creationcompte.h"
 #include <QDebug>
 #include "Utilisateur.h"
 #include "Sharecount.h"
 #include <iostream>
 #include "Mainwindow.h" //--------
+
+
 
 Creationcompte::Creationcompte(ShareCount *sc, QWidget *parent) :
     QDialog(parent),
@@ -46,4 +48,5 @@ void Creationcompte::on_pushButton_clicked()
     //std::cout << shareCount.getGestionnaireUtilisateurs().getUtilisateurs().back().getIdentifiant();
     close();
     //qDebug() << nom;
+    //Mainswindow Mainwindow = new Mainwindow();
 }

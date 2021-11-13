@@ -12,6 +12,9 @@ class Connecte : public QDialog
     Q_OBJECT
 
 public:
+    /**
+     * @brief Connecte c'est le constructeur de connecte
+     */
     explicit Connecte(QWidget *parent = nullptr);
     ~Connecte();
 

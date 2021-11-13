@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include "Sharecount.h"
+#include "Creationcompte.h"
+#include "Connecte.h"
+#include "Connexion.h"
+
 #include <QDialog>
 
 extern ShareCount count; //------
@@ -14,7 +18,10 @@ class Mainwindow : public QDialog
 {
     Q_OBJECT
 
-public:
+public:/**
+     * @brief Mainwindow constructeur
+     * @param sc shareCount objet
+     */
     explicit Mainwindow(ShareCount *sc, QWidget *parent = nullptr);
     ~Mainwindow();
 
@@ -25,7 +32,9 @@ private slots:
 
 private:
     Ui::Mainwindow *ui;
-    ShareCount shareCount;
+    ShareCount *shareCount;
+    Creationcompte *creationcomte;
+    Connexion *connexion;
 };
 
 #endif // MAINWINDOW_H

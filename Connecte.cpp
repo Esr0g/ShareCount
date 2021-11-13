@@ -3,6 +3,7 @@
 #include "Mainwindow.h"
 #include <string>
 
+
 Connecte::Connecte(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Connecte)

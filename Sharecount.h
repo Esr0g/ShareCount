@@ -8,6 +8,9 @@
 class ShareCount
 {
 public:
+    /**
+     * @brief ShareCount constructeur
+     */
     ShareCount();
     bool identifierUtilisateur(std::string identifiant, std::string motDePasse);
     Utilisateur getUtilisateur(std::string identifiant);

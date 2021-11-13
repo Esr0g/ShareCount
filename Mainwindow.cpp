@@ -3,6 +3,7 @@
 #include "Creationcompte.h"
 #include "Connexion.h"
 
+
 ShareCount count;
 
 Mainwindow::Mainwindow(ShareCount *sc, QWidget *parent) :
@@ -10,7 +11,7 @@ Mainwindow::Mainwindow(ShareCount *sc, QWidget *parent) :
     ui(new Ui::Mainwindow)
 {
     ui->setupUi(this);
-    shareCount = *sc;
+    shareCount = sc;
     count = *sc; //-------
 }
 
@@ -21,14 +22,24 @@ Mainwindow::~Mainwindow()
 
 void Mainwindow::on_pushButton_2_clicked()
 {
-    Creationcompte creationcompte(&count);
-    creationcompte.setModal(true);
-    creationcompte.exec();
+    //hide();
+    creationcomte = new Creationcompte(&count , this);
+    creationcomte->show();
+
+//    Creationcompte creationcompte(&count);
+//    creationcompte.setModal(true);
+//    creationcompte.exec();
 }
 
 void Mainwindow::on_pushButton_clicked()
 {
-    Connexion connexion(&count);
-    connexion.setModal(true);
-    connexion.exec();
+    hide();
+
+    connexion = new Connexion(&count,this);
+    connexion->show();
+
+
+//    Connexion connexion(&count);
+//    connexion.setModal(true);
+//    connexion.exec();
 }

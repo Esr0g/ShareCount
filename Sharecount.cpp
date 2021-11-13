@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 ShareCount::ShareCount()
 {
     utilisateurs = gestionnaireUtilisateurs();

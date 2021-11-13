@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 Utilisateur::Utilisateur(string u_nom, string u_identifiant, std::string u_mail, string u_motDePasse)
 {
     nom=u_nom;

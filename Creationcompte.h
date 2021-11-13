@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "Sharecount.h"
 
+
 namespace Ui {
 class Creationcompte;
 }
@@ -13,6 +14,10 @@ class Creationcompte : public QDialog
     Q_OBJECT
 
 public:
+    /**
+     * @brief Creationcompte constructeur
+     * @param sc shareCount objet
+     */
     explicit Creationcompte(ShareCount *sc, QWidget *parent = nullptr);
     ~Creationcompte();
 
@@ -22,6 +27,8 @@ private slots:
 private:
     Ui::Creationcompte *ui;
     ShareCount shareCount;
+
+
 };
 
 #endif // CREATIONCOMPTE_H

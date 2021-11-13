@@ -8,6 +8,9 @@ class gestionnaireUtilisateurs
 {
 
 public:
+    /**
+     * @brief gestionnaireUtilisateurs constructeur
+     */
     gestionnaireUtilisateurs();
     void ajouterUtilisateur(Utilisateur* user);
     std::list<Utilisateur> getUtilisateurs();

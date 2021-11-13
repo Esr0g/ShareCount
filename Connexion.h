@@ -13,6 +13,10 @@ class Connexion : public QDialog
     Q_OBJECT
 
 public:
+    /**
+     * @brief Connexion constructeur connexion
+     * @param sc shareCount objet
+     */
     explicit Connexion(ShareCount *sc, QWidget *parent = nullptr);
     ~Connexion();
 
