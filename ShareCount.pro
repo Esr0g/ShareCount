@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Connecte.cpp \
     Connexion.cpp \
     Creationcompte.cpp \
     Gestionnaireutilisateurs.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
+    Connecte.h \
     Connexion.h \
     Creationcompte.h \
     Gestionnaireutilisateurs.h \
@@ -33,6 +35,7 @@ HEADERS += \
     Utilisateur.h
 
 FORMS += \
+    Connecte.ui \
     Connexion.ui \
     Creationcompte.ui \
     Mainwindow.ui

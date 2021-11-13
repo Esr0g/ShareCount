@@ -3,15 +3,18 @@
 #include <list>
 #include "Utilisateur.h"
 
+
 class gestionnaireUtilisateurs
 {
 
 public:
     gestionnaireUtilisateurs();
-    void ajouterUtilisateur(Utilisateur user);
+    void ajouterUtilisateur(Utilisateur* user);
+    std::list<Utilisateur> getUtilisateurs();
+    void setListe(std::list<Utilisateur> liste);
 
 private:
-    Utilisateur users[100];
+    std::list<Utilisateur> utilisateurs;
 };
 
 #endif // GESTIONNAIREUTILISATEURS_H

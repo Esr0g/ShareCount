@@ -11,8 +11,10 @@ public:
     ShareCount();
     bool identifierUtilisateur(std::string identifiant, std::string motDePasse);
     Utilisateur getUtilisateur(std::string identifiant);
+    gestionnaireUtilisateurs getGestionnaireUtilisateurs();
+    void setGestionnaireUtilisateurs(gestionnaireUtilisateurs gu);
 private:
-    gestionnaireUtilisateurs Utilisateurs;
+    gestionnaireUtilisateurs utilisateurs;
 };
 
 #endif // SHARECOUNT_H
