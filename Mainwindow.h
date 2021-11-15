@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "Sharecount.h"
+#include "model/sharecount/Sharecount.h"
 #include "Creationcompte.h"
 #include "Connecte.h"
 #include "Connexion.h"

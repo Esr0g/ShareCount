@@ -10,9 +10,8 @@ Connecte::Connecte(QWidget *parent) :
 {
     ui->setupUi(this);
     QString msg = "Bienvenue ";
-    std::string str = count.getGestionnaireUtilisateurs().getUtilisateurs().back().getIdentifiant();
-    QString qstr = QString::fromStdString(str);
-    msg.append(qstr);
+    QString str = count.getGestionnaireUtilisateurs().getUtilisateurs().back().getIdentifiant();
+    msg.append(str);
     msg.append("\n Vous êtes connecté !");
     ui->label->setText(msg);
 }

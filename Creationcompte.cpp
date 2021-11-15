@@ -1,8 +1,8 @@
 ﻿#include "Creationcompte.h"
 #include "ui_Creationcompte.h"
 #include <QDebug>
-#include "Utilisateur.h"
-#include "Sharecount.h"
+#include "model/utilisateur/Utilisateur.h"
+#include "model/sharecount/Sharecount.h"
 #include <iostream>
 #include "Mainwindow.h" //--------
 
@@ -31,7 +31,7 @@ void Creationcompte::on_pushButton_clicked()
     count.getGestionnaireUtilisateurs().getUtilisateurs();
     std::list<Utilisateur> users = count.getGestionnaireUtilisateurs().getUtilisateurs();
 
-    Utilisateur utilisateur = Utilisateur(nom.toStdString(), identifiant.toStdString(), mail.toStdString(), mdp.toStdString());
+    Utilisateur utilisateur = Utilisateur(nom, identifiant, mail, mdp);
     //users.push_back(utilisateur);
     //shareCount.getGestionnaireUtilisateurs().ajouterUtilisateur(&utilisateur);
     //std::cout << users.size();

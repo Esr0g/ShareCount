@@ -19,26 +19,35 @@ SOURCES += \
     Connecte.cpp \
     Connexion.cpp \
     Creationcompte.cpp \
-    Gestionnaireutilisateurs.cpp \
+    screen/fenetreprincipale/FenetrePrincipale.cpp \
+    model/gestionnaireutilisateurs/Gestionnaireutilisateurs.cpp \
     Mainwindow.cpp \
-    Sharecount.cpp \
-    Utilisateur.cpp \
+    vues/pageCreationCompte/PageCreationCompte.cpp \
+    vues/pageaccueil/PageAccueil.cpp \
+    model/sharecount/Sharecount.cpp \
+    model/utilisateur/Utilisateur.cpp \
     main.cpp
 
 HEADERS += \
     Connecte.h \
     Connexion.h \
     Creationcompte.h \
-    Gestionnaireutilisateurs.h \
+    screen/fenetreprincipale/FenetrePrincipale.h \
+    model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
     Mainwindow.h \
-    Sharecount.h \
-    Utilisateur.h
+    vues/pageCreationCompte/PageCreationCompte.h \
+    vues/pageaccueil/PageAccueil.h \
+    model/sharecount/Sharecount.h \
+    model/utilisateur/Utilisateur.h
 
 FORMS += \
     Connecte.ui \
     Connexion.ui \
     Creationcompte.ui \
-    Mainwindow.ui
+    screen/fenetreprincipale/FenetrePrincipale.ui \
+    Mainwindow.ui \
+    vues/pageCreationCompte/PageCreationCompte.ui \
+    vues/pageaccueil/PageAccueil.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

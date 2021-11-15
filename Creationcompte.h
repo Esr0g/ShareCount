@@ -2,7 +2,7 @@
 #define CREATIONCOMPTE_H
 
 #include <QDialog>
-#include "Sharecount.h"
+#include "model/sharecount/Sharecount.h"
 
 
 namespace Ui {
