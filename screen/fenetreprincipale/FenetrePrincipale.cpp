@@ -1,5 +1,6 @@
 #include "FenetrePrincipale.h"
 #include "ui_FenetrePrincipale.h"
+#include "vues/pageCreationCompte/PageCreationCompte.h"
 
 FenetrePrincipale::FenetrePrincipale(QWidget *parent) :
     QWidget(parent),
@@ -15,11 +16,14 @@ FenetrePrincipale* FenetrePrincipale::getThis() {
 }
 
 void FenetrePrincipale::setPageActive(QWidget *p) {
-    if (pageActive) {
+    if (pageActive != nullptr) {
         delete pageActive;
+        pageActive = nullptr;
     }
 
     pageActive = p;
+    resizeEvent(nullptr);
+    pageActive->show();
 }
 
 void FenetrePrincipale::resizeEvent(QResizeEvent *event){
@@ -28,6 +32,11 @@ void FenetrePrincipale::resizeEvent(QResizeEvent *event){
         pageActive->resize(width(), height());
     }
 }
+
+void FenetrePrincipale::creerCompte() {
+    setPageActive(new PageCreationCompte(this, this));
+}
+
 
 
 FenetrePrincipale::~FenetrePrincipale()

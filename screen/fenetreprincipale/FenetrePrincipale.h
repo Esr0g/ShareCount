@@ -40,6 +40,9 @@ public:
      */
     void setPageActive(QWidget *p);
 
+public slots:
+    void creerCompte();
+
 private:
     Ui::FenetrePrincipale *ui;
     QWidget *pageActive;

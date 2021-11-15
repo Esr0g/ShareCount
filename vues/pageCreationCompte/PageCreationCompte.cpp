@@ -1,6 +1,5 @@
 #include "PageCreationCompte.h"
 #include "ui_PageCreationCompte.h"
-#include <iostream>
 
 PageCreationCompte::PageCreationCompte(QWidget *parent) :
     QWidget(parent),
@@ -15,7 +14,6 @@ PageCreationCompte::PageCreationCompte(QWidget *parent, FenetrePrincipale *fp) :
     pwindow(fp)
 {
     ui->setupUi(this);
-    std::cout << "Ca fonctionne !" << std::endl;
 }
 
 
