@@ -17,6 +17,9 @@ public:
     explicit PageCreationCompte(QWidget *parent, FenetrePrincipale *fp);
     ~PageCreationCompte();
 
+public slots:
+    void annuler();
+
 private:
     Ui::PageCreationCompte *ui;
     FenetrePrincipale *pwindow;

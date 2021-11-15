@@ -7,7 +7,7 @@ PageAccueil::PageAccueil(QWidget *parent) :
     ui(new Ui::PageAccueil)
 {
     ui->setupUi(this);
-    connect(ui->boutonCreationCompte, SIGNAL(released()), pwindow, SLOT(creerCompte()));
+    connect(ui->boutonCreationCompte, SIGNAL(released()), this, SLOT(creerCompte()));
 }
 
 PageAccueil::PageAccueil(QWidget *parent, FenetrePrincipale *fp) :
@@ -16,7 +16,11 @@ PageAccueil::PageAccueil(QWidget *parent, FenetrePrincipale *fp) :
     pwindow(fp)
 {
     ui->setupUi(this);
-    connect(ui->boutonCreationCompte, SIGNAL(released()), pwindow, SLOT(creerCompte()));
+    connect(ui->boutonCreationCompte, SIGNAL(released()), this, SLOT(creerCompte()));
+}
+
+void PageAccueil::creerCompte() {
+    pwindow->setPageActive(new PageCreationCompte(pwindow, pwindow));
 }
 
 PageAccueil::~PageAccueil()

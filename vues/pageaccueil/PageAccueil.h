@@ -17,6 +17,9 @@ public:
     explicit PageAccueil(QWidget *parent, FenetrePrincipale *fp);
     ~PageAccueil();
 
+public slots:
+    void creerCompte();
+
 private:
     Ui::PageAccueil *ui;
     FenetrePrincipale *pwindow;
