@@ -16,36 +16,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Connecte.cpp \
-    Connexion.cpp \
-    Creationcompte.cpp \
+    model/sharecount/ShareCount.cpp \
     screen/fenetreprincipale/FenetrePrincipale.cpp \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.cpp \
-    Mainwindow.cpp \
     vues/pagecreationcompte/PageCreationCompte.cpp \
     vues/pageaccueil/PageAccueil.cpp \
-    model/sharecount/Sharecount.cpp \
     model/utilisateur/Utilisateur.cpp \
     main.cpp
 
 HEADERS += \
-    Connecte.h \
-    Connexion.h \
-    Creationcompte.h \
+    model/sharecount/ShareCount.h \
     screen/fenetreprincipale/FenetrePrincipale.h \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
-    Mainwindow.h \
     vues/pagecreationcompte/PageCreationCompte.h \
     vues/pageaccueil/PageAccueil.h \
-    model/sharecount/Sharecount.h \
     model/utilisateur/Utilisateur.h
 
 FORMS += \
-    Connecte.ui \
-    Connexion.ui \
-    Creationcompte.ui \
     screen/fenetreprincipale/FenetrePrincipale.ui \
-    Mainwindow.ui \
     vues/pagecreationcompte/PageCreationCompte.ui \
     vues/pageaccueil/PageAccueil.ui
 

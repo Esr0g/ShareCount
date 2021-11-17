@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QResizeEvent>
+#include <model/sharecount/ShareCount.h>
 
 namespace Ui {
 class FenetrePrincipale;
@@ -18,6 +19,7 @@ class FenetrePrincipale : public QWidget
 
 public:
     explicit FenetrePrincipale(QWidget *parent = nullptr);
+    explicit FenetrePrincipale(QWidget *parent, ShareCount* sc);
 
     /**
      * @brief getThis permet de renvoyer le pointeur de la classe pour pouvoir ajouter des "enfants"
@@ -43,6 +45,7 @@ public:
 private:
     Ui::FenetrePrincipale *ui;
     QWidget *pageActive;
+    ShareCount* shareCount;
 };
 
 #endif // FENETREPRINCIPALE_H

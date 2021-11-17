@@ -10,6 +10,16 @@ FenetrePrincipale::FenetrePrincipale(QWidget *parent) :
     resize(1280, 720);
 }
 
+FenetrePrincipale::FenetrePrincipale(QWidget *parent, ShareCount* sc):
+     QWidget(parent),
+     ui(new Ui::FenetrePrincipale),
+     shareCount(sc)
+ {
+     ui->setupUi(this);
+     pageActive = nullptr;
+     resize(1280, 720);
+ }
+
 FenetrePrincipale* FenetrePrincipale::getThis() {
     return this;
 }
@@ -35,5 +45,7 @@ void FenetrePrincipale::resizeEvent(QResizeEvent *event){
 
 FenetrePrincipale::~FenetrePrincipale()
 {
+    delete shareCount;
+    delete pageActive;
     delete ui;
 }

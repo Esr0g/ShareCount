@@ -7,14 +7,21 @@ class Utilisateur
 {
 public:
     /**
-     * @brief Utilisateur constructeur
+     * @brief Utilisateur constructeur, classe qui représente un utilisateur
+     * (on peut appeler cela un compte)
      */
     Utilisateur();
-    Utilisateur(QString u_nom, QString u_identifiant, QString u_mail, QString u_motDePasse);
+    Utilisateur(const QString& u_nom, const QString u_prenom, const QString& u_identifiant, const QString& u_mail, const QString& u_motDePasse);
     QString getNom() const;
+    QString getPrenom() const;
     QString getIdentifiant() const;
     QString getMotDePasse() const;
     QString getMail() const;
+    void setNom(const QString& n);
+    void setPrenom(const QString& p);
+    void setIdentifiant(const QString& id);
+    void setMotDePasse(const QString& mdp);
+    void setMail(const QString& m);
 
 private:
     /**
@@ -25,6 +32,7 @@ private:
      * @brief identifiant de client
      */
     QString identifiant;
+    QString prenom;
     /**
      * @brief motDePasse de compte
      */

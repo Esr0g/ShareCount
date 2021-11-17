@@ -7,21 +7,39 @@ PageCreationCompte::PageCreationCompte(QWidget *parent) :
     ui(new Ui::PageCreationCompte)
 {
     ui->setupUi(this);
+    setConnexion();
 }
 
-PageCreationCompte::PageCreationCompte(QWidget *parent, FenetrePrincipale *fp) :
+PageCreationCompte::PageCreationCompte(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc) :
     QWidget(parent),
     ui(new Ui::PageCreationCompte),
-    pwindow(fp)
+    pwindow(fp),
+    shareCount(sc)
 {
     ui->setupUi(this);
-    connect(ui->pushButton_2, SIGNAL(released()), this, SLOT(annuler()));
+    setConnexion();
 }
 
 void PageCreationCompte::annuler() {
-    pwindow->setPageActive(new PageAccueil(pwindow, pwindow));
+    pwindow->setPageActive(new PageAccueil(pwindow, pwindow, shareCount));
 }
 
+void PageCreationCompte::setConnexion() {
+    connect(ui->pushButton_2, SIGNAL(released()), this, SLOT(annuler()));
+    connect(ui->pushButton, SIGNAL(pressed()), this, SLOT(onPushButtonCreerCompte()));
+}
+
+void PageCreationCompte::onPushButtonCreerCompte() {
+    Utilisateur u;
+    u.setNom(ui->lineEdit->text());
+    u.setPrenom(ui->lineEdit_2->text());
+    u.setMotDePasse(ui->lineEdit_4->text());
+    u.setMail(ui->lineEdit_6->text());
+
+    shareCount->ajouterUtilisateur(u);
+
+    pwindow->setPageActive(new PageAccueil(pwindow, pwindow, shareCount));
+}
 
 PageCreationCompte::~PageCreationCompte()
 {

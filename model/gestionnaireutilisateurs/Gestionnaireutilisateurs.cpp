@@ -1,27 +1,21 @@
 #include "Gestionnaireutilisateurs.h"
 #include "model/utilisateur/Utilisateur.h"
-#include "model/sharecount/Sharecount.h"
-#include <list>
+#include "model/sharecount/ShareCount.h"
+#include <iostream>
 
-gestionnaireUtilisateurs::gestionnaireUtilisateurs()
+GestionnaireUtilisateur::GestionnaireUtilisateur()
 {
-    //utilisateurs = {Utilisateur("aa","aaa","aaa","bbbb")};
-}
-void gestionnaireUtilisateurs::ajouterUtilisateur(Utilisateur& user){
-    utilisateurs.push_back(user);
 }
 
-/*Utilisateur gestionnaireUtilisateurs::getUtilisateur(int i){
-    return utilisateurs[i];
-}*/
+bool GestionnaireUtilisateur::identifierUtilisateur(const QString& mail, const QString& mdp) const{
 
-/*std::vector<Utilisateur> gestionnaireUtilisateurs::getUtilisateurs(){
+    return true;
+}
+
+void GestionnaireUtilisateur::ajouterUtilisateur(Utilisateur& user){
+    utilisateurs[user.getMail()] = user;
+}
+
+/*std::vector<Utilisateur> GestionnaireUtilisateur::getUtilisateurs(){
     return utilisateurs;
 }*/
-std::list<Utilisateur> gestionnaireUtilisateurs::getUtilisateurs() const {
-    return utilisateurs;
-}
-
-void gestionnaireUtilisateurs::setListe(std::list<Utilisateur> liste){
-    utilisateurs=liste;
-}

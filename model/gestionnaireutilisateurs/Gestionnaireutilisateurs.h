@@ -1,23 +1,21 @@
 #ifndef GESTIONNAIREUTILISATEURS_H
 #define GESTIONNAIREUTILISATEURS_H
-#include <list>
+#include <map>
 #include "model/utilisateur/Utilisateur.h"
 
-
-class gestionnaireUtilisateurs
+class GestionnaireUtilisateur
 {
 
 public:
     /**
-     * @brief gestionnaireUtilisateurs constructeur
+     * @brief class GestionnaireUtilisateur constructeur
      */
-    gestionnaireUtilisateurs();
+    explicit GestionnaireUtilisateur();
     void ajouterUtilisateur(Utilisateur& user);
-    std::list<Utilisateur> getUtilisateurs() const;
-    void setListe(std::list<Utilisateur> liste);
+    bool identifierUtilisateur(const QString& mail, const QString& mdp) const;
 
 private:
-    std::list<Utilisateur> utilisateurs;
+    std::map<QString, Utilisateur> utilisateurs;
 };
 
 #endif // GESTIONNAIREUTILISATEURS_H
