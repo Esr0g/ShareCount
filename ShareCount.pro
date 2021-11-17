@@ -22,7 +22,7 @@ SOURCES += \
     screen/fenetreprincipale/FenetrePrincipale.cpp \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.cpp \
     Mainwindow.cpp \
-    vues/pageCreationCompte/PageCreationCompte.cpp \
+    vues/pagecreationcompte/PageCreationCompte.cpp \
     vues/pageaccueil/PageAccueil.cpp \
     model/sharecount/Sharecount.cpp \
     model/utilisateur/Utilisateur.cpp \
@@ -35,7 +35,7 @@ HEADERS += \
     screen/fenetreprincipale/FenetrePrincipale.h \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
     Mainwindow.h \
-    vues/pageCreationCompte/PageCreationCompte.h \
+    vues/pagecreationcompte/PageCreationCompte.h \
     vues/pageaccueil/PageAccueil.h \
     model/sharecount/Sharecount.h \
     model/utilisateur/Utilisateur.h
@@ -46,7 +46,7 @@ FORMS += \
     Creationcompte.ui \
     screen/fenetreprincipale/FenetrePrincipale.ui \
     Mainwindow.ui \
-    vues/pageCreationCompte/PageCreationCompte.ui \
+    vues/pagecreationcompte/PageCreationCompte.ui \
     vues/pageaccueil/PageAccueil.ui
 
 # Default rules for deployment.

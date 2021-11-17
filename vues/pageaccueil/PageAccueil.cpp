@@ -1,6 +1,6 @@
 #include "PageAccueil.h"
 #include "ui_PageAccueil.h"
-#include "vues/pageCreationCompte/PageCreationCompte.h"
+#include "vues/pagecreationcompte/PageCreationCompte.h"
 
 PageAccueil::PageAccueil(QWidget *parent) :
     QWidget(parent),
