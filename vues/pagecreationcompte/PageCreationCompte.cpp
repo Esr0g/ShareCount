@@ -31,8 +31,7 @@ void PageCreationCompte::setConnexion() {
 
 void PageCreationCompte::onPushButtonCreerCompte() {
     Utilisateur u;
-    u.setNom(ui->lineEdit->text());
-    u.setPrenom(ui->lineEdit_2->text());
+    u.setIdentifiant(ui->lineEdit_2->text());
     u.setMotDePasse(ui->lineEdit_4->text());
     u.setMail(ui->lineEdit_6->text());
 

@@ -1,8 +1,6 @@
 #include "ShareCount.h"
 
-ShareCount::ShareCount(QObject *parent): QObject(parent)
-{
-
+ShareCount::ShareCount(QObject *parent): QObject(parent){
 }
 
 bool ShareCount::identifierUtilisateur(const QString &mail, const QString &motDePasse) const {
