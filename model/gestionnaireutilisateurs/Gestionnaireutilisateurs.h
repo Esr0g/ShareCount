@@ -31,6 +31,13 @@ public:
      */
     bool identifierUtilisateur(const QString& id, const QString& mdp) const;
 
+    ///
+    /// \brief getUtilisateur retorune l'utilisateur avec l'identifiant "id"
+    /// \param id
+    /// \return
+    ///
+    Utilisateur getUtilisateur(const QString& id) const;
+
 private:
     std::map<QString, Utilisateur> utilisateurs;
 };

@@ -31,6 +31,8 @@ void GestionnaireUtilisateur::ajouterUtilisateur(Utilisateur& user){
     utilisateurs[user.getIdentifiant()] = user;
 }
 
-/*std::vector<Utilisateur> GestionnaireUtilisateur::getUtilisateurs(){
-    return utilisateurs;
-}*/
+Utilisateur GestionnaireUtilisateur::getUtilisateur(const QString& id) const {
+    std::map<QString, Utilisateur>::const_iterator it = utilisateurs.find(id);
+
+    return it->second;
+}

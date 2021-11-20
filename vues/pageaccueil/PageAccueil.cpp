@@ -1,6 +1,7 @@
 #include "PageAccueil.h"
 #include "ui_PageAccueil.h"
 #include "vues/pagecreationcompte/PageCreationCompte.h"
+#include "vues/pageprincipale/PagePrincipale.h"
 #include <iostream>
 
 PageAccueil::PageAccueil(QWidget *parent) :
@@ -32,7 +33,10 @@ void PageAccueil::setConnect() {
 
 void PageAccueil::connexion() {
     if (shareCount->identifierUtilisateur(ui->lineEdit->text(), ui->lineEdit_2->text())) {
-        std::cout << "La connexion est presque réussie !" << std::endl;
+        pwindow->setPageActive(new PagePrincipale(pwindow, pwindow, shareCount));
+        pwindow->hide();
+    } else {
+        std::cout << "Identifiant ou Mot de passe incorrect" << std::endl;
     }
 }
 

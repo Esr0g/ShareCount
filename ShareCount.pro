@@ -22,7 +22,8 @@ SOURCES += \
     vues/pagecreationcompte/PageCreationCompte.cpp \
     vues/pageaccueil/PageAccueil.cpp \
     model/utilisateur/Utilisateur.cpp \
-    main.cpp
+    main.cpp \
+    vues/pageprincipale/PagePrincipale.cpp
 
 HEADERS += \
     model/sharecount/ShareCount.h \
@@ -30,12 +31,14 @@ HEADERS += \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
     vues/pagecreationcompte/PageCreationCompte.h \
     vues/pageaccueil/PageAccueil.h \
-    model/utilisateur/Utilisateur.h
+    model/utilisateur/Utilisateur.h \
+    vues/pageprincipale/PagePrincipale.h
 
 FORMS += \
     screen/fenetreprincipale/FenetrePrincipale.ui \
     vues/pagecreationcompte/PageCreationCompte.ui \
-    vues/pageaccueil/PageAccueil.ui
+    vues/pageaccueil/PageAccueil.ui \
+    vues/pageprincipale/PagePrincipale.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

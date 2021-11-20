@@ -45,7 +45,6 @@ void FenetrePrincipale::resizeEvent(QResizeEvent *event){
 
 FenetrePrincipale::~FenetrePrincipale()
 {
-    delete shareCount;
     delete pageActive;
     delete ui;
 }

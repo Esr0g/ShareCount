@@ -1,4 +1,6 @@
 #include "ShareCount.h"
+#include <QWidget>
+#include <vues/pageprincipale/PagePrincipale.h>
 
 ShareCount::ShareCount(QObject *parent): QObject(parent){
 }
@@ -12,7 +14,11 @@ void ShareCount::ajouterUtilisateur(Utilisateur& u) {
 }
 
 void ShareCount::setUtilisateurActif(Utilisateur &user) {
-    utilisateurActif = &user;
+    *utilisateurActif = user;
+}
+
+Utilisateur ShareCount::getUtilisateur(const QString& id) const{
+    return utilisateurs.getUtilisateur(id);
 }
 
 ShareCount::~ShareCount() {

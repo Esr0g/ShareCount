@@ -36,6 +36,8 @@ public:
      */
     void setUtilisateurActif(Utilisateur &user);
 
+    Utilisateur getUtilisateur(const QString& id) const;
+
     ~ShareCount();
 
 public slots:
