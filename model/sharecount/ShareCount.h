@@ -30,13 +30,17 @@ public:
      */
     bool identifierUtilisateur(const QString &mail, const QString &motDePasse) const;
 
+    /**
+     * @brief setUtilisateurActif Permet d'affecter au système l'utilisateur actif
+     * @param user
+     */
     void setUtilisateurActif(Utilisateur &user);
 
     ~ShareCount();
 
 public slots:
     /**
-     * @brief ajouterUtilisateur
+     * @brief ajouterUtilisateur permet de créer un compte utilisateur
      * @param u
      */
     void ajouterUtilisateur(Utilisateur& u);

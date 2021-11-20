@@ -33,7 +33,6 @@ public:
      * @param event
      */
     void resizeEvent(QResizeEvent *event);
-    ~FenetrePrincipale();
 
     /**
      * @brief setPageActive permet de positionner la page active
@@ -41,6 +40,8 @@ public:
      * @param p page que l'on souhaite afficher
      */
     void setPageActive(QWidget *p);
+
+    ~FenetrePrincipale();
 
 private:
     Ui::FenetrePrincipale *ui;

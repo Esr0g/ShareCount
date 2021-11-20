@@ -2,37 +2,61 @@
 #define UTILISATEUR_H
 #include <QString>
 
-
+/**
+ * @brief The Utilisateur class est une classe qui représente un utilisateur ou un compte.
+ * défini par un identifiant, un mot de passe et une adresse mail
+ */
 class Utilisateur
 {
 public:
     /**
-     * @brief Utilisateur constructeur, classe qui représente un utilisateur
-     * (on peut appeler cela un compte)
+     * @brief Utilisateur constructeur
      */
     Utilisateur();
-    Utilisateur(const QString& u_nom, const QString u_prenom, const QString& u_identifiant, const QString& u_mail, const QString& u_motDePasse);
-    QString getNom() const;
-    QString getPrenom() const;
+
+    /**
+     * @brief getIdentifiant
+     * @return l'identifiant de l'utilisateur
+     */
     QString getIdentifiant() const;
+
+    /**
+     * @brief getMotDePasse
+     * @return  le mot de passe de l'utilisateur
+     */
     QString getMotDePasse() const;
+
+    /**
+     * @brief getMail
+     * @return le mail de l'utilisateur
+     */
     QString getMail() const;
-    void setNom(const QString& n);
-    void setPrenom(const QString& p);
+
+    /**
+     * @brief setIdentifiant modifie l'identifiant
+     * @param id
+     */
     void setIdentifiant(const QString& id);
+
+    /**
+     * @brief setMotDePasse modifier le mdp
+     * @param mdp
+     */
     void setMotDePasse(const QString& mdp);
+
+    /**
+     * @brief setMail modifier le mail
+     * @param m
+     */
     void setMail(const QString& m);
 
 private:
-    /**
-     * @brief nom client
-     */
-    QString nom;
+
     /**
      * @brief identifiant de client
      */
     QString identifiant;
-    QString prenom;
+
     /**
      * @brief motDePasse de compte
      */
