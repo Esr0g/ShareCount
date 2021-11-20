@@ -1,12 +1,12 @@
 #ifndef GESTIONNAIREUTILISATEURS_H
 #define GESTIONNAIREUTILISATEURS_H
 #include <map>
+#include <iterator>
 #include "model/utilisateur/Utilisateur.h"
 
-/**
- * @brief The GestionnaireUtilisateur class
- * C'est un classe qui permet de gérer la collection d'utilisateur
- */
+///
+/// \brief The GestionnaireUtilisateur class C'est un classe qui permet de gérer la collection d'utilisateur
+///
 class GestionnaireUtilisateur
 {
 
