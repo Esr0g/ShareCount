@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    model/bdd/DbManager.cpp \
     model/sharecount/ShareCount.cpp \
     screen/fenetreprincipale/FenetrePrincipale.cpp \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
     vues/pageprincipale/PagePrincipale.cpp
 
 HEADERS += \
+    model/bdd/DbManager.h \
     model/sharecount/ShareCount.h \
     screen/fenetreprincipale/FenetrePrincipale.h \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
