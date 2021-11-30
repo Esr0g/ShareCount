@@ -4,6 +4,7 @@
 #include <QObject>
 #include <model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h>
 #include <model/utilisateur/Utilisateur.h>
+#include <model/gestionnaireGroupes/Gestionnairegroupes.h>
 
 /**
  * @brief The ShareCount class
@@ -51,6 +52,7 @@ public slots:
 private:
     GestionnaireUtilisateur utilisateurs;
     Utilisateur *utilisateurActif;
+    gestionnaireGroupes groupes;
 };
 
 #endif // SHARECOUNT_H

@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,28 +16,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    model/gestionnaireGroupes/Gestionnairegroupes.cpp \
+    model/groupe/Groupe.cpp \
     model/sharecount/ShareCount.cpp \
     screen/fenetreprincipale/FenetrePrincipale.cpp \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.cpp \
-    vues/pagecreationcompte/PageCreationCompte.cpp \
     vues/pageaccueil/PageAccueil.cpp \
+    vues/pagecreationcompte/PageCreationCompte.cpp \
     model/utilisateur/Utilisateur.cpp \
     main.cpp \
+    vues/pagecreationgroupe/pagecreationgroupe.cpp \
     vues/pageprincipale/PagePrincipale.cpp
 
 HEADERS += \
+    model/gestionnaireGroupes/Gestionnairegroupes.h \
+    model/groupe/Groupe.h \
     model/sharecount/ShareCount.h \
     screen/fenetreprincipale/FenetrePrincipale.h \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
     vues/pagecreationcompte/PageCreationCompte.h \
     vues/pageaccueil/PageAccueil.h \
     model/utilisateur/Utilisateur.h \
+    vues/pagecreationgroupe/pagecreationgroupe.h \
     vues/pageprincipale/PagePrincipale.h
 
 FORMS += \
     screen/fenetreprincipale/FenetrePrincipale.ui \
     vues/pagecreationcompte/PageCreationCompte.ui \
     vues/pageaccueil/PageAccueil.ui \
+    vues/pagecreationgroupe/pagecreationgroupe.ui \
     vues/pageprincipale/PagePrincipale.ui
 
 # Default rules for deployment.
