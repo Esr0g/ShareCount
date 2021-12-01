@@ -1,8 +1,12 @@
 #include "PagePrincipale.h"
 #include "ui_PagePrincipale.h"
+<<<<<<< HEAD
 #include <QtWidgets>
 #include <QDockWidget>
 #include "vues/pagecreationgroupe/pagecreationgroupe.h"
+=======
+#include "model/bdd/BDDManager.h"
+>>>>>>> e07a95f1b60f3b32f24cfe7efd6d2a0d46c65274
 
 PagePrincipale::PagePrincipale(QWidget *parent) :
     QMainWindow(parent),

@@ -36,3 +36,17 @@ Utilisateur GestionnaireUtilisateur::getUtilisateur(const QString& id) const {
 
     return it->second;
 }
+
+bool GestionnaireUtilisateur::findUtilisateur(const QString& id) const {
+     std::map<QString, Utilisateur>::const_iterator it = utilisateurs.find(id);
+
+     if (it == utilisateurs.end()) {
+         return false;
+     } else {
+         return true;
+     }
+}
+
+int GestionnaireUtilisateur::getNombreUtilisateur() const {
+    return utilisateurs.size();
+}

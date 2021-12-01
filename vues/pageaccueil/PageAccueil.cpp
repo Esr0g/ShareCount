@@ -3,6 +3,7 @@
 #include "vues/pagecreationcompte/PageCreationCompte.h"
 #include "vues/pageprincipale/PagePrincipale.h"
 #include <iostream>
+#include <QMessageBox>
 
 PageAccueil::PageAccueil(QWidget *parent) :
     QWidget(parent),
@@ -36,7 +37,7 @@ void PageAccueil::connexion() {
         pwindow->setPageActive(new PagePrincipale(pwindow, pwindow, shareCount));
         pwindow->hide();
     } else {
-        std::cout << "Identifiant ou Mot de passe incorrect" << std::endl;
+        QMessageBox::critical(this, "Erreur connexion", "Identifiant ou mot de passe inconnu, veuillez réessayer");
     }
 }
 
