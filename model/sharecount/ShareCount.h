@@ -5,6 +5,7 @@
 #include <model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h>
 #include <model/utilisateur/Utilisateur.h>
 #include <model/gestionnaireGroupes/Gestionnairegroupes.h>
+#include <model/bdd/BDDManager.h>
 
 /**
  * @brief The ShareCount class
@@ -29,7 +30,7 @@ public:
      * @param motDePasse
      * @return
      */
-    bool identifierUtilisateur(const QString &mail, const QString &motDePasse) const;
+    bool identifierUtilisateur(const QString &identifiant, const QString &motDePasse) const;
 
     /**
      * @brief setUtilisateurActif Permet d'affecter au système l'utilisateur actif
@@ -37,7 +38,25 @@ public:
      */
     void setUtilisateurActif(Utilisateur &user);
 
+    /**
+     * @brief getUtilisateur retourne un utilisateur avec l'id spécifique
+     * @param id
+     * @return
+     */
     Utilisateur getUtilisateur(const QString& id) const;
+
+    /**
+     * @brief findUtilisateur retourne vrai si l'utilisateur existe faux sinon
+     * @param id
+     * @return
+     */
+    bool findUtilisateur(const QString& id) const;
+
+    /**
+     * @brief creerUtilisateur permet d'ajouter un utilisateur à la base de donnée
+     * @param user
+     */
+    void creerUtilisateur(Utilisateur& user);
 
     ~ShareCount();
 
@@ -53,6 +72,7 @@ private:
     GestionnaireUtilisateur utilisateurs;
     Utilisateur *utilisateurActif;
     gestionnaireGroupes groupes;
+    BDDManager shareCountBDD;
 };
 
 #endif // SHARECOUNT_H

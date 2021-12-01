@@ -38,6 +38,15 @@ public:
     ///
     Utilisateur getUtilisateur(const QString& id) const;
 
+    /**
+     * @brief findUtilisateur retourne vrai si l'utilisateur st trouvé, faux sinon
+     * @param id
+     * @return
+     */
+    bool findUtilisateur(const QString& id) const;
+
+    int getNombreUtilisateur() const;
+
 private:
     std::map<QString, Utilisateur> utilisateurs;
 };

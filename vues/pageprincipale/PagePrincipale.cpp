@@ -3,6 +3,7 @@
 #include <QtWidgets>
 #include <QDockWidget>
 #include "vues/pagecreationgroupe/pagecreationgroupe.h"
+#include "model/bdd/BDDManager.h"
 
 PagePrincipale::PagePrincipale(QWidget *parent) :
     QMainWindow(parent),
