@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    model/bdd/DbManager.cpp \
     model/gestionnaireGroupes/Gestionnairegroupes.cpp \
     model/groupe/Groupe.cpp \
     model/sharecount/ShareCount.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
     vues/pageprincipale/PagePrincipale.cpp
 
 HEADERS += \
+    model/bdd/DbManager.h \
     model/gestionnaireGroupes/Gestionnairegroupes.h \
     model/groupe/Groupe.h \
     model/sharecount/ShareCount.h \
