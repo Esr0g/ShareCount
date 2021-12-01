@@ -1,5 +1,6 @@
 #include "PagePrincipale.h"
 #include "ui_PagePrincipale.h"
+#include "model/bdd/BDDManager.h"
 
 PagePrincipale::PagePrincipale(QWidget *parent) :
     QMainWindow(parent),

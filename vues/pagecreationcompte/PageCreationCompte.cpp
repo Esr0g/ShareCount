@@ -1,6 +1,7 @@
 #include "PageCreationCompte.h"
 #include "ui_PageCreationCompte.h"
 #include "vues/pageaccueil/PageAccueil.h"
+#include "QMessageBox"
 
 PageCreationCompte::PageCreationCompte(QWidget *parent) :
     QWidget(parent),
@@ -31,13 +32,18 @@ void PageCreationCompte::setConnexion() {
 
 void PageCreationCompte::onPushButtonCreerCompte() {
     Utilisateur u;
+
     u.setIdentifiant(ui->lineEdit_2->text());
-    u.setMotDePasse(ui->lineEdit_4->text());
-    u.setMail(ui->lineEdit_6->text());
 
-    shareCount->ajouterUtilisateur(u);
+    if (shareCount->findUtilisateur(u.getIdentifiant())) {
+        QMessageBox::critical(this, "Erreur création du compte", "Impossible de créer le compte l'identifiant existe déjà !");
+    } else {
+        u.setMotDePasse(ui->lineEdit_4->text());
+        u.setMail(ui->lineEdit_6->text());
+        shareCount->creerUtilisateur(u);
 
-    pwindow->setPageActive(new PageAccueil(pwindow, pwindow, shareCount));
+        pwindow->setPageActive(new PageAccueil(pwindow, pwindow, shareCount));
+    }
 }
 
 PageCreationCompte::~PageCreationCompte()
