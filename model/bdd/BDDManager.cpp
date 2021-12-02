@@ -5,7 +5,7 @@
 #include <QString>
 #include <QSqlError>
 
-BDDManager::BDDManager(const QString& path) : creerDataBase(false)
+BDDManager::BDDManager(const QString& path) : creerDataBase(true)
 {
     sharCountBase = QSqlDatabase::addDatabase("QSQLITE");
     sharCountBase.setDatabaseName(path);
@@ -43,15 +43,15 @@ void BDDManager::createDataBase() {
             qDebug() << "Création de la table GroupesGestionBudget échouée.";
         }
 
-        query.prepare("CREATE TABLE UtilisateursParGroupes(idGroupe TEXT, "
+        query.prepare("CREATE TABLE UtilisateursParGroupesGDB(idGroupe TEXT, "
                       "idUser TEXT,"
                       "PRIMARY KEY(idGroupe, idUser),"
                       "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser),"
                       "FOREIGN KEY (idGroupe) REFERENCES Utilisateurs(idGroupe));");
         if (query.exec()) {
-            qDebug() << "Création de la table UtilisateursParGroupes réussie.";
+            qDebug() << "Création de la table UtilisateursParGroupesGDB réussie.";
         } else {
-            qDebug() << "Création de la table UtilisateursParGroupes échouée.";
+            qDebug() << "Création de la table UtilisateursParGroupesGDB échouée.";
         }
 
         query.prepare("CREATE TABLE Historique(noHist INTEGER, "
