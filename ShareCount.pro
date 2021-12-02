@@ -16,13 +16,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-<<<<<<< HEAD
-    model/bdd/DbManager.cpp \
     model/gestionnaireGroupes/Gestionnairegroupes.cpp \
     model/groupe/Groupe.cpp \
-=======
     model/bdd/BDDManager.cpp \
->>>>>>> e07a95f1b60f3b32f24cfe7efd6d2a0d46c65274
     model/sharecount/ShareCount.cpp \
     screen/fenetreprincipale/FenetrePrincipale.cpp \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.cpp \
@@ -31,16 +27,13 @@ SOURCES += \
     model/utilisateur/Utilisateur.cpp \
     main.cpp \
     vues/pagecreationgroupe/pagecreationgroupe.cpp \
-    vues/pageprincipale/PagePrincipale.cpp
+    vues/pageprincipale/PagePrincipale.cpp \
+    vues/vuelistegroupe/VueListeGroupe.cpp
 
 HEADERS += \
-<<<<<<< HEAD
-    model/bdd/DbManager.h \
     model/gestionnaireGroupes/Gestionnairegroupes.h \
     model/groupe/Groupe.h \
-=======
     model/bdd/BDDManager.h \
->>>>>>> e07a95f1b60f3b32f24cfe7efd6d2a0d46c65274
     model/sharecount/ShareCount.h \
     screen/fenetreprincipale/FenetrePrincipale.h \
     model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
@@ -48,14 +41,17 @@ HEADERS += \
     vues/pageaccueil/PageAccueil.h \
     model/utilisateur/Utilisateur.h \
     vues/pagecreationgroupe/pagecreationgroupe.h \
-    vues/pageprincipale/PagePrincipale.h
+    vues/pageprincipale/PagePrincipale.h \
+    vues/vuelistegroupe/VueListeGroupe.h
+
 
 FORMS += \
     screen/fenetreprincipale/FenetrePrincipale.ui \
     vues/pagecreationcompte/PageCreationCompte.ui \
     vues/pageaccueil/PageAccueil.ui \
     vues/pagecreationgroupe/pagecreationgroupe.ui \
-    vues/pageprincipale/PagePrincipale.ui
+    vues/pageprincipale/PagePrincipale.ui \
+    vues/vuelistegroupe/VueListeGroupe.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

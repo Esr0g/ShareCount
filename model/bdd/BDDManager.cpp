@@ -3,6 +3,7 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QString>
+#include <QSqlError>
 
 BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
@@ -10,7 +11,7 @@ BDDManager::BDDManager(const QString& path) : creerDataBase(false)
     sharCountBase.setDatabaseName(path);
 
     if (!sharCountBase.open()) {
-        qDebug() << "Erreur: connection avec la base de donnée échouée";
+        qDebug() << "Erreur: connection avec la base de donnée échouée" << sharCountBase.lastError();
     } else {
         qDebug() << "Connection réussie";
     }

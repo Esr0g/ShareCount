@@ -4,11 +4,12 @@
 #include <QObject>
 #include <model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h>
 #include <model/utilisateur/Utilisateur.h>
-<<<<<<< HEAD
+
 #include <model/gestionnaireGroupes/Gestionnairegroupes.h>
-=======
+
 #include <model/bdd/BDDManager.h>
->>>>>>> e07a95f1b60f3b32f24cfe7efd6d2a0d46c65274
+
+#include <model/bdd/BDDManager.h>
 
 /**
  * @brief The ShareCount class
@@ -74,12 +75,12 @@ public slots:
 private:
     GestionnaireUtilisateur utilisateurs;
     Utilisateur *utilisateurActif;
-<<<<<<< HEAD
+
     gestionnaireGroupes groupes;
-=======
+
     BDDManager shareCountBDD;
 
->>>>>>> e07a95f1b60f3b32f24cfe7efd6d2a0d46c65274
+
 };
 
 #endif // SHARECOUNT_H
