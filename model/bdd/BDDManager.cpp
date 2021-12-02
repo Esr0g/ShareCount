@@ -22,30 +22,79 @@ void BDDManager::createDataBase() {
 
     if (creerDataBase) {
         QSqlQuery query;
-        query.prepare("CREATE TABLE utilisateurs(idUser TEXT PRIMARY KEY,"
-                      " mdp TEXT,"
-                      " mail TEXT);");
+        query.prepare("CREATE TABLE Utilisateurs(idUser TEXT PRIMARY KEY,"
+                      " mdp TEXT NOT NULL,"
+                      " mail TEXT NULL);");
         if (query.exec()) {
-            qDebug() << "Création de la table utilisateur réussie.";
+            qDebug() << "Création de la table Utilisateurs réussie.";
         } else {
-            qDebug() << "Création de la table utilisateur échouée.";
+            qDebug() << "Création de la table Utilisateurs échouée.";
         }
 
-        query.prepare("CREATE TABLE groupes(idGroupe INTEGER PRIMARY KEY);");
+        query.prepare("CREATE TABLE GroupesGestionBudget(idGroupe TEXT, "
+                      "idUser TEXT,"
+                      "description TEXT NULL,"
+                      "dateCreationGrp TEXT NOT NULL,"
+                      "PRIMARY KEY(idGroupe, idUser),"
+                      "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser));");
         if (query.exec()) {
-            qDebug() << "Création de la table groupe réussie.";
+            qDebug() << "Création de la table GroupesGestionBudget réussie.";
         } else {
-            qDebug() << "Création de la table groupe échouée.";
+            qDebug() << "Création de la table GroupesGestionBudget échouée.";
         }
 
-        query.prepare("CREATE TABLE gpUtilisateur(idUser TEXT,"
-                      "idGroupe INTEGER, "
-                      "FOREIGN KEY (idUser) REFERENCES utilisateurs(idUser), "
-                      "FOREIGN KEY (idGroupe) REFERENCES Ggroupes(idGrope));");
+        query.prepare("CREATE TABLE UtilisateursParGroupes(idGroupe TEXT, "
+                      "idUser TEXT,"
+                      "PRIMARY KEY(idGroupe, idUser),"
+                      "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser),"
+                      "FOREIGN KEY (idGroupe) REFERENCES Utilisateurs(idGroupe));");
         if (query.exec()) {
-            qDebug() << "Création de la table gpUtilisateur réussie.";
+            qDebug() << "Création de la table UtilisateursParGroupes réussie.";
         } else {
-            qDebug() << "Création de la table gpUtilisateur échouée.";
+            qDebug() << "Création de la table UtilisateursParGroupes échouée.";
+        }
+
+        query.prepare("CREATE TABLE Historique(noHist INTEGER, "
+                      "idGroupe TEXT,"
+                      "contenu TEXT NOT NULL,"
+                      "dateHisto TEXT,"
+                      "PRIMARY KEY(noHist, idGroupe),"
+                      "FOREIGN KEY (idGroupe) REFERENCES Utilisateurs(idGroupe));");
+        if (query.exec()) {
+            qDebug() << "Création de la table Historique réussie.";
+        } else {
+            qDebug() << "Création de la table Historique échouée.";
+        }
+
+        query.prepare("CREATE TABLE Depenses(idUser TEXT,"
+                      "idGroupe TEXT,"
+                      "noDep INTEGER,"
+                      "valeurBase INTEGER NOT NULL,"
+                      "BoolDepRembourse INTEGER DEFAULT 0," // Ceci représente un booléen
+                      "valeurRembourse INTEGER DEFAULT 0,"
+                      "dateDep TEXT NOT NULL,"
+                      "PRIMARY KEY (idUser, idGroupe, noDep),"
+                      "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser), "
+                      "FOREIGN KEY (idGroupe) REFERENCES GroupesGestionBudget(idGroupe));");
+        if (query.exec()) {
+            qDebug() << "Création de la table Depenses réussie.";
+        } else {
+            qDebug() << "Création de la table Depenses échouée.";
+        }
+
+        query.prepare("CREATE TABLE Dettes(idUser TEXT,"
+                      "noDep INTEGER,"
+                      "valeurBase INTEGER NOT NULL,"
+                      "BoolDetteRembourse INTEGER DEFAULT 0," // Ceci représente un booléen
+                      "valeurRembourse INTEGER DEFAULT 0,"
+                      "dateDette TEXT NOT NULL,"
+                      "PRIMARY KEY (idUser, noDep),"
+                      "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser), "
+                      "FOREIGN KEY (noDep) REFERENCES Depenses(noDep));");
+        if (query.exec()) {
+            qDebug() << "Création de la table Dettes réussie.";
+        } else {
+            qDebug() << "Création de la table Dettes échouée.";
         }
     }
 }
