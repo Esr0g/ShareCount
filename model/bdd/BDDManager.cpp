@@ -12,11 +12,7 @@ BDDManager::BDDManager(const QString& path) : creerDataBase(false)
     sharCountBase.open();
 
     if (!sharCountBase.open()) {
-<<<<<<< HEAD
-        qDebug() << "Erreur: connection avec la base de donnée échouée" << sharCountBase.lastError().text();
-=======
-        qDebug() << "Erreur: connection avec la base de donnée échouée" << sharCountBase.lastError();
->>>>>>> ce4ec0ea3f6598536c72b3605b4a93b572eef5f6
+        qDebug() << "Erreur: connection avec la base de donnée échouée";
     } else {
         qDebug() << "Connection réussie" ;
     }
