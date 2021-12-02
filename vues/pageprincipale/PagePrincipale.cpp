@@ -6,7 +6,6 @@
 #include "model/bdd/BDDManager.h"
 #include "QListWidget"
 #include "QTextEdit"
-#include "vues/vuelistegroupe/VueListeGroupe.h"
 
 PagePrincipale::PagePrincipale(QWidget *parent) :
     QMainWindow(parent),
@@ -23,13 +22,16 @@ PagePrincipale::PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCoun
 {
     ui->setupUi(this);
 
-    setCentralWidget(new QTextEdit());
-    QDockWidget *dock = new QDockWidget(tr("Customers"), this);
+    //setCentralWidget(new QTextEdit());
+    /*QDockWidget *dock = new QDockWidget(tr("Customers"), this);
     dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 
     dock->setWidget(new QTextEdit());
-    addDockWidget(Qt::LeftDockWidgetArea, dock);
-    setConnect();
+    addDockWidget(Qt::LeftDockWidgetArea, dock);*/
+
+    VueListeGroupe *vueGroupes = new VueListeGroupe(pwindow, pwindow, shareCount);
+    addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
+    setConnect(vueGroupes);
 }
 
 PagePrincipale::~PagePrincipale()
@@ -39,8 +41,8 @@ PagePrincipale::~PagePrincipale()
 
 void PagePrincipale::ajouterGroupe()
 {
-    VueListeGroupe *vueGroupes = new VueListeGroupe(pwindow, pwindow, shareCount);
-    addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
+    //VueListeGroupe *vueGroupes = new VueListeGroupe(pwindow, pwindow, shareCount);
+    //addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
 
     PageCreationGroupe *pcg = new PageCreationGroupe(pwindow, pwindow, shareCount);
     setCentralWidget(pcg);
@@ -56,7 +58,9 @@ void PagePrincipale::ajouterGroupe()
 
 }
 
-void PagePrincipale::setConnect(){
+void PagePrincipale::setConnect(VueListeGroupe *vlg){
     //connect(ui->ajouterGroupe, SIGNAL(released()), this, SLOT(ajouterGroupe()));
+    //QObject::connect(vlg->getCreerGroupeButton(), SIGNAL(clicked), this, SLOT(ajouterGroupe()));
+    QObject::connect(vlg->getCreerGroupeButton(), &QPushButton::clicked, this, &PagePrincipale::ajouterGroupe);
 }
 

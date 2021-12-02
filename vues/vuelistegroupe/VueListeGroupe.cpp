@@ -1,5 +1,6 @@
 #include "VueListeGroupe.h"
 #include "ui_VueListeGroupe.h"
+#include "vues/pagecreationgroupe/pagecreationgroupe.h"
 
 VueListeGroupe::VueListeGroupe(QWidget *parent) :
     QDockWidget(parent),
@@ -22,4 +23,14 @@ VueListeGroupe::VueListeGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCoun
 VueListeGroupe::~VueListeGroupe()
 {
     delete ui;
+}
+
+void VueListeGroupe::creerGroupeButtonClicked(){
+    //PageCreationGroupe *pcg = new PageCreationGroupe(pwindow, pwindow, shareCount);
+    //setCentralWidget(pcg);
+    //pprincipale->ajouterGroupe();
+}
+
+QPushButton *VueListeGroupe::getCreerGroupeButton(){
+    return ui->creerGroupeButton;
 }
