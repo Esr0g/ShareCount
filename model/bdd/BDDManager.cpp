@@ -3,16 +3,18 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QString>
+#include <QSqlError>
 
 BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
     sharCountBase = QSqlDatabase::addDatabase("QSQLITE");
     sharCountBase.setDatabaseName(path);
+    sharCountBase.open();
 
     if (!sharCountBase.open()) {
-        qDebug() << "Erreur: connection avec la base de donnée échouée";
+        qDebug() << "Erreur: connection avec la base de donnée échouée" << sharCountBase.lastError().text();
     } else {
-        qDebug() << "Connection réussie";
+        qDebug() << "Connection réussie" ;
     }
 }
 

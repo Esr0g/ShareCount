@@ -4,30 +4,28 @@
 #include <QDockWidget>
 #include "vues/pagecreationgroupe/pagecreationgroupe.h"
 #include "model/bdd/BDDManager.h"
+#include "QListWidget"
+#include "QTextEdit"
 
 PagePrincipale::PagePrincipale(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::PagePrincipale)
 {
     ui->setupUi(this);
-    /*QDockWidget *dock = new QDockWidget("VuePrincipale",this);
-    dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
-
-    //this->setCentralWidget(dock);
-    //this->addDockWidget(Qt::RightDockWidgetArea, dock);
+    /*dockOptions().setFlag(QMainWindow::VerticalTabs);
+    QDockWidget *dock = new QDockWidget("VuePrincipale",this);
+    dock->setAllowedAreas(Qt::LeftDockWidgetArea);
     dock->setWidget(new PageCreationGroupe(pwindow, pwindow, shareCount));
-    QListWidget *headingList = new QListWidget(dock);
-
-    dock->setWidget(headingList);
-    addDockWidget(Qt::RightDockWidgetArea, dock);*/
+    addDockWidget(Qt::RightDockWidgetArea, dock);
+    this->show();*/
 
     /*QDockWidget *dock = new QDockWidget;
     dock->setAllowedAreas(Qt::AllDockWidgetAreas);
     dock->setWidget(new PageCreationGroupe(pwindow, pwindow, shareCount));
     this->addDockWidget(Qt::LeftDockWidgetArea, dock);
     setConnect();*/
-    QHBoxLayout *box =  this->findChild<QHBoxLayout*>("verticalLayout");
-    box->addWidget(new QPushButton("Bonjour"));
+    //QHBoxLayout *box =  this->findChild<QHBoxLayout*>("verticalLayout");
+    //box->addWidget(new QPushButton("Bonjour"));
     //QHBoxLayout *layout =
 }
 
@@ -38,6 +36,13 @@ PagePrincipale::PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCoun
     shareCount(sc)
 {
     ui->setupUi(this);
+
+    setCentralWidget(new QTextEdit());
+    QDockWidget *dock = new QDockWidget(tr("Customers"), this);
+    dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
+
+    dock->setWidget(new QTextEdit());
+    addDockWidget(Qt::LeftDockWidgetArea, dock);
     setConnect();
 }
 
@@ -54,6 +59,6 @@ void PagePrincipale::ajouterGroupe()
 }
 
 void PagePrincipale::setConnect(){
-    connect(ui->ajouterGroupe, SIGNAL(released()), this, SLOT(ajouterGroupe()));
+    //connect(ui->ajouterGroupe, SIGNAL(released()), this, SLOT(ajouterGroupe()));
 }
 
