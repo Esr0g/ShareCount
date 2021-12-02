@@ -5,7 +5,7 @@
 #include <QString>
 #include <QSqlError>
 
-BDDManager::BDDManager(const QString& path) : creerDataBase(true)
+BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
     sharCountBase = QSqlDatabase::addDatabase("QSQLITE");
     sharCountBase.setDatabaseName(path);
@@ -57,7 +57,7 @@ void BDDManager::createDataBase() {
         query.prepare("CREATE TABLE Historique(noHist INTEGER, "
                       "idGroupe TEXT,"
                       "contenu TEXT NOT NULL,"
-                      "dateHisto TEXT,"
+                      "dateHisto TEXT NOT NULL,"
                       "PRIMARY KEY(noHist, idGroupe),"
                       "FOREIGN KEY (idGroupe) REFERENCES Utilisateurs(idGroupe));");
         if (query.exec()) {
