@@ -6,27 +6,13 @@
 #include "model/bdd/BDDManager.h"
 #include "QListWidget"
 #include "QTextEdit"
+#include "vues/vuelistegroupe/VueListeGroupe.h"
 
 PagePrincipale::PagePrincipale(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::PagePrincipale)
 {
     ui->setupUi(this);
-    /*dockOptions().setFlag(QMainWindow::VerticalTabs);
-    QDockWidget *dock = new QDockWidget("VuePrincipale",this);
-    dock->setAllowedAreas(Qt::LeftDockWidgetArea);
-    dock->setWidget(new PageCreationGroupe(pwindow, pwindow, shareCount));
-    addDockWidget(Qt::RightDockWidgetArea, dock);
-    this->show();*/
-
-    /*QDockWidget *dock = new QDockWidget;
-    dock->setAllowedAreas(Qt::AllDockWidgetAreas);
-    dock->setWidget(new PageCreationGroupe(pwindow, pwindow, shareCount));
-    this->addDockWidget(Qt::LeftDockWidgetArea, dock);
-    setConnect();*/
-    //QHBoxLayout *box =  this->findChild<QHBoxLayout*>("verticalLayout");
-    //box->addWidget(new QPushButton("Bonjour"));
-    //QHBoxLayout *layout =
 }
 
 PagePrincipale::PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc) :
@@ -53,8 +39,20 @@ PagePrincipale::~PagePrincipale()
 
 void PagePrincipale::ajouterGroupe()
 {
-    //pwindow->setPageActive(new PageCreationGroupe(pwindow, pwindow, shareCount));
-    //pwindow->show();
+    VueListeGroupe *vueGroupes = new VueListeGroupe(pwindow, pwindow, shareCount);
+    addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
+
+    PageCreationGroupe *pcg = new PageCreationGroupe(pwindow, pwindow, shareCount);
+    setCentralWidget(pcg);
+    /*
+    QDockWidget *dock = new QDockWidget("CréationGroupe",this);
+    dock->setFeatures(dock->features() & ~QDockWidget::DockWidgetClosable);
+    dock->setFeatures(dock->features() & ~QDockWidget::DockWidgetMovable);
+    dock->setFeatures(dock->features() & ~QDockWidget::DockWidgetFloatable);
+    dock->setWidget(pcg);
+    dock->setAllowedAreas(Qt::RightDockWidgetArea);
+    addDockWidget(Qt::RightDockWidgetArea, dock);
+    //addDockWidget(Qt::RightDockWidgetArea, pcg);*/
 
 }
 

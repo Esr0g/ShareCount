@@ -1,5 +1,6 @@
 #include "pagecreationgroupe.h"
 #include "ui_pagecreationgroupe.h"
+#include <QDockWidget>
 
 PageCreationGroupe::PageCreationGroupe(QWidget *parent) :
     QWidget(parent),
@@ -15,6 +16,7 @@ PageCreationGroupe::PageCreationGroupe(QWidget *parent, FenetrePrincipale *fp, S
     shareCount(sc)
 {
     ui->setupUi(this);
+
     //setConnexion();
 }
 

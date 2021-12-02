@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "screen/fenetreprincipale/FenetrePrincipale.h"
 #include "model/sharecount/ShareCount.h"
+#include <QDockWidget>
 
 namespace Ui {
 class PageCreationGroupe;
