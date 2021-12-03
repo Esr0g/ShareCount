@@ -21,17 +21,17 @@
     <item alignment="Qt::AlignHCenter">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>TextLabel</string>
+       <string>Mes groupes</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QTreeView" name="treeView"/>
+     <widget class="QListView" name="listView"/>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="creerGroupeButton">
       <property name="text">
-       <string>PushButton</string>
+       <string>Créer un groupe</string>
       </property>
      </widget>
     </item>

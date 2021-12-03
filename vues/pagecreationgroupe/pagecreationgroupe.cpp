@@ -25,6 +25,9 @@ PageCreationGroupe::~PageCreationGroupe()
     delete ui;
 }
 
+QPushButton *PageCreationGroupe::getCreerGroupeButton(){
+    return ui->CreerGroupe;
+}
 
 void PageCreationGroupe::setConnexion() {
     //connect(ui->pushButton_2, SIGNAL(released()), this, SLOT(annuler()));
