@@ -6,6 +6,7 @@
 #include "model/sharecount/ShareCount.h"
 #include <QDockWidget>
 #include <QPushButton>
+#include <QString>
 
 namespace Ui {
 class PageCreationGroupe;
@@ -20,6 +21,7 @@ public:
     explicit PageCreationGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
     ~PageCreationGroupe();
     QPushButton *getCreerGroupeButton();
+    QString getNomGroupe();
 private:
     void setConnexion();
 
@@ -30,6 +32,7 @@ private:
     Ui::PageCreationGroupe *ui;
     FenetrePrincipale* pwindow;
     ShareCount* shareCount;
+    QString nomGroupe; //nom donné au groupe (dans le lineEdit)
 };
 
 #endif // PAGECREATIONGROUPE_H

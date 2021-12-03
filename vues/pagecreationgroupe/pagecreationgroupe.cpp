@@ -36,5 +36,9 @@ void PageCreationGroupe::setConnexion() {
 
 void PageCreationGroupe::on_CreerGroupe_clicked()
 {
+    nomGroupe = ui->lineEdit->text();
+}
 
+QString PageCreationGroupe::getNomGroupe(){
+    return nomGroupe;
 }
