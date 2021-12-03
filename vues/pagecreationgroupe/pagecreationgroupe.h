@@ -5,6 +5,7 @@
 #include "screen/fenetreprincipale/FenetrePrincipale.h"
 #include "model/sharecount/ShareCount.h"
 #include <QDockWidget>
+#include <QPushButton>
 
 namespace Ui {
 class PageCreationGroupe;
@@ -18,7 +19,7 @@ public:
     explicit PageCreationGroupe(QWidget *parent = nullptr);
     explicit PageCreationGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
     ~PageCreationGroupe();
-
+    QPushButton *getCreerGroupeButton();
 private:
     void setConnexion();
 

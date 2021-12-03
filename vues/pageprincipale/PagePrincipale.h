@@ -27,6 +27,7 @@ private:
     Ui::PagePrincipale *ui;
     FenetrePrincipale* pwindow;
     ShareCount* shareCount;
+    VueListeGroupe* vlg;
 };
 
 #endif // PAGEPRINCIPALE_H

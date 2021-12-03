@@ -31,7 +31,8 @@ PagePrincipale::PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCoun
 
     VueListeGroupe *vueGroupes = new VueListeGroupe(pwindow, pwindow, shareCount);
     addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
-    setConnect(vueGroupes);
+    vlg = vueGroupes;
+    setConnect(vlg);
 }
 
 PagePrincipale::~PagePrincipale()
@@ -46,6 +47,7 @@ void PagePrincipale::ajouterGroupe()
 
     PageCreationGroupe *pcg = new PageCreationGroupe(pwindow, pwindow, shareCount);
     setCentralWidget(pcg);
+    vlg->setPageCreationGroupe(pcg);
     /*
     QDockWidget *dock = new QDockWidget("CréationGroupe",this);
     dock->setFeatures(dock->features() & ~QDockWidget::DockWidgetClosable);

@@ -17,12 +17,18 @@ VueListeGroupe::VueListeGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCoun
 {
     ui->setupUi(this);
 
+    //setConnect(pageCreationGroupe);
     //setConnexion();
 }
 
 VueListeGroupe::~VueListeGroupe()
 {
     delete ui;
+}
+
+void VueListeGroupe::setPageCreationGroupe(PageCreationGroupe *pcg){
+    pageCreationGroupe = pcg;
+    setConnect(pageCreationGroupe);
 }
 
 void VueListeGroupe::creerGroupeButtonClicked(){
@@ -33,4 +39,16 @@ void VueListeGroupe::creerGroupeButtonClicked(){
 
 QPushButton *VueListeGroupe::getCreerGroupeButton(){
     return ui->creerGroupeButton;
+}
+
+void VueListeGroupe::setConnect(PageCreationGroupe *pcg){
+    //QString nomGroupe = QString::fromStdString("Groupe1");
+    QObject::connect(pcg->getCreerGroupeButton(), &QPushButton::clicked, this, &VueListeGroupe::ajouterGroupe);
+}
+
+void VueListeGroupe::ajouterGroupe(){
+    QStringList groupes;
+    groupes << "nomGroupe";
+    QAbstractItemModel *model = new QStringListModel(groupes);
+    ui->listView->setModel(model);
 }
