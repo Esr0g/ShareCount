@@ -1,6 +1,7 @@
 #ifndef UTILISATEUR_H
 #define UTILISATEUR_H
 #include <QString>
+#include "model/gestionnaireGroupes/Gestionnairegroupes.h"
 
 /**
  * @brief The Utilisateur class est une classe qui représente un utilisateur ou un compte.
@@ -50,6 +51,8 @@ public:
      */
     void setMail(const QString& m);
 
+    void AjouterAMesGroupes(const Groupe& grp);
+
 private:
 
     /**
@@ -68,7 +71,7 @@ private:
     /**
      * @brief solde de client
      */
-    double solde;
+    gestionnaireGroupes mesGroupes;
 };
 
 
