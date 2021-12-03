@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "screen/fenetreprincipale/FenetrePrincipale.h"
 #include "model/sharecount/ShareCount.h"
+#include "QKeyEvent"
 
 namespace Ui {
 class PageCreationCompte;
@@ -55,6 +56,7 @@ public slots:
     void onPushButtonCreerCompte();
 
 private:
+
     Ui::PageCreationCompte *ui;
     FenetrePrincipale *pwindow;
     ShareCount* shareCount;
