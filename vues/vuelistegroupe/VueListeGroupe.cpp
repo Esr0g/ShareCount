@@ -47,7 +47,7 @@ void VueListeGroupe::setConnect(PageCreationGroupe *pcg){
 }
 
 void VueListeGroupe::ajouterGroupe(){
-    QStringList groupes;
+    //QStringList groupes;
     groupes << pageCreationGroupe->getNomGroupe();
     QAbstractItemModel *model = new QStringListModel(groupes);
     ui->listView->setModel(model);

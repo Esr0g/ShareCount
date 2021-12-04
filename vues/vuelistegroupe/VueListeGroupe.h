@@ -34,6 +34,7 @@ private:
     FenetrePrincipale *pwindow;
     ShareCount* shareCount;
     PageCreationGroupe* pageCreationGroupe;
+    QStringList groupes;
 };
 
 #endif // VUELISTEGROUPE_H
