@@ -26,7 +26,7 @@ int Depense::getValeurRemboursee() const {
     return valeurRemboursee;
 }
 
-bool Depense::estRemboursee() const {
+bool Depense::isRemboursee() const {
     return estRemboursee;
 }
 

@@ -5,6 +5,9 @@
 #include "model/sharecount/ShareCount.h"
 #include <QWidget>
 #include <QLabel>
+#include "model/depense/Depense.h"
+#include <QInputDialog>
+#include <QStringListModel>
 
 namespace Ui {
 class PageGestionDeBudget;
@@ -20,11 +23,15 @@ public:
     QLabel *getLabelNomGroupe();
     ~PageGestionDeBudget();
 
+private slots:
+    void on_ajouterDepenseButton_clicked();
+
 private:
     Ui::PageGestionDeBudget *ui;
     FenetrePrincipale* pwindow;
     ShareCount* shareCount;
     QLabel nomGroupe;
+    QStringList depenses;
 };
 
 #endif // PAGEGESTIONDEBUDGET_H

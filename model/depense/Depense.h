@@ -58,7 +58,7 @@ public:
      * faux sinon
      * @return
      */
-    bool estRemboursee() const;
+    bool isRemboursee() const;
 
     /**
      * @brief addValeurRemboursee permet de rembourser une partie de la dépense

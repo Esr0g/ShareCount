@@ -39,13 +39,13 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QListView" name="listView_2"/>
+    <widget class="QListView" name="depenseListView"/>
    </item>
    <item row="3" column="0">
     <widget class="QListView" name="listView"/>
    </item>
    <item row="2" column="1">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="ajouterDepenseButton">
      <property name="text">
       <string>Ajouter une dépense</string>
      </property>
