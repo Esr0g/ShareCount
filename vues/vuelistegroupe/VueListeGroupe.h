@@ -8,6 +8,8 @@
 #include <QPushButton>
 #include <QStringListModel>
 #include <QAbstractItemModel>
+#include <QListView>
+#include <QDebug>
 
 namespace Ui {
 class VueListeGroupe;
@@ -22,19 +24,24 @@ public:
     explicit VueListeGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
     QPushButton *getCreerGroupeButton();
     void setPageCreationGroupe(PageCreationGroupe *pcg);
+    QListView *getListView();
+    QModelIndex getIndexList();
     ~VueListeGroupe();
 
 private slots:
     void creerGroupeButtonClicked();
-    void ajouterGroupe();  //ajout d'un groupe dans le tree view
+    void ajouterGroupe();  //ajout d'un groupe dans la listView
+    void itemClicked(QModelIndex index);
 private:
     void setConnect(PageCreationGroupe *pcg);
+    void setConnect1();
 private:
     Ui::VueListeGroupe *ui;
     FenetrePrincipale *pwindow;
     ShareCount* shareCount;
     PageCreationGroupe* pageCreationGroupe;
     QStringList groupes;
+    QModelIndex indexList;
 };
 
 #endif // VUELISTEGROUPE_H

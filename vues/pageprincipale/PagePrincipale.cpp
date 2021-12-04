@@ -3,6 +3,7 @@
 #include <QtWidgets>
 #include <QDockWidget>
 #include "vues/pagecreationgroupe/pagecreationgroupe.h"
+#include "vues/pagegestiondebudget/PageGestionDeBudget.h"
 #include "model/bdd/BDDManager.h"
 #include "QListWidget"
 #include "QTextEdit"
@@ -22,17 +23,15 @@ PagePrincipale::PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCoun
 {
     ui->setupUi(this);
 
-    //setCentralWidget(new QTextEdit());
-    /*QDockWidget *dock = new QDockWidget(tr("Customers"), this);
-    dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
-
-    dock->setWidget(new QTextEdit());
-    addDockWidget(Qt::LeftDockWidgetArea, dock);*/
-
     VueListeGroupe *vueGroupes = new VueListeGroupe(pwindow, pwindow, shareCount);
     addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
     vlg = vueGroupes;
     setConnect(vlg);
+}
+
+void PagePrincipale::afficherGroupe(){
+    PageGestionDeBudget *pgdb = new PageGestionDeBudget(pwindow, pwindow, shareCount);
+    setCentralWidget(pgdb);
 }
 
 PagePrincipale::~PagePrincipale()
@@ -42,27 +41,19 @@ PagePrincipale::~PagePrincipale()
 
 void PagePrincipale::ajouterGroupe()
 {
-    //VueListeGroupe *vueGroupes = new VueListeGroupe(pwindow, pwindow, shareCount);
-    //addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
-
     PageCreationGroupe *pcg = new PageCreationGroupe(pwindow, pwindow, shareCount);
     setCentralWidget(pcg);
     vlg->setPageCreationGroupe(pcg);
-    /*
-    QDockWidget *dock = new QDockWidget("CréationGroupe",this);
-    dock->setFeatures(dock->features() & ~QDockWidget::DockWidgetClosable);
-    dock->setFeatures(dock->features() & ~QDockWidget::DockWidgetMovable);
-    dock->setFeatures(dock->features() & ~QDockWidget::DockWidgetFloatable);
-    dock->setWidget(pcg);
-    dock->setAllowedAreas(Qt::RightDockWidgetArea);
-    addDockWidget(Qt::RightDockWidgetArea, dock);
-    //addDockWidget(Qt::RightDockWidgetArea, pcg);*/
-
+    setConnect1();
 }
 
 void PagePrincipale::setConnect(VueListeGroupe *vlg){
-    //connect(ui->ajouterGroupe, SIGNAL(released()), this, SLOT(ajouterGroupe()));
-    //QObject::connect(vlg->getCreerGroupeButton(), SIGNAL(clicked), this, SLOT(ajouterGroupe()));
-    QObject::connect(vlg->getCreerGroupeButton(), &QPushButton::clicked, this, &PagePrincipale::ajouterGroupe);
+    QObject::connect(vlg->getCreerGroupeButton(), &QPushButton::clicked, this, &PagePrincipale::ajouterGroupe); //lors d'un clique sur le bouton "Créer un groupe" de la vueListeGroupe on affiche la pageCréation groupe
+}
+
+void PagePrincipale::setConnect1(){
+    //QModelIndex index = vlg->getListView()->currentIndex();
+
+    QObject::connect(vlg->getListView(), SIGNAL(clicked(const QModelIndex)),this,SLOT(afficherGroupe()));
 }
 

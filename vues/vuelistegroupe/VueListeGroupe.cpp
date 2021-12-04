@@ -16,6 +16,7 @@ VueListeGroupe::VueListeGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCoun
     shareCount(sc)
 {
     ui->setupUi(this);
+    setConnect1();
 
     //setConnect(pageCreationGroupe);
     //setConnexion();
@@ -32,23 +33,35 @@ void VueListeGroupe::setPageCreationGroupe(PageCreationGroupe *pcg){
 }
 
 void VueListeGroupe::creerGroupeButtonClicked(){
-    //PageCreationGroupe *pcg = new PageCreationGroupe(pwindow, pwindow, shareCount);
-    //setCentralWidget(pcg);
-    //pprincipale->ajouterGroupe();
+    //active le signal
 }
 
 QPushButton *VueListeGroupe::getCreerGroupeButton(){
     return ui->creerGroupeButton;
 }
 
+QListView *VueListeGroupe::getListView(){
+    return ui->listView;
+}
+
 void VueListeGroupe::setConnect(PageCreationGroupe *pcg){
-    //QString nomGroupe = QString::fromStdString("Groupe1");
-    QObject::connect(pcg->getCreerGroupeButton(), &QPushButton::clicked, this, &VueListeGroupe::ajouterGroupe);
+    QObject::connect(pcg->getCreerGroupeButton(), &QPushButton::clicked, this, &VueListeGroupe::ajouterGroupe); //lors d'un clique sur le bouton "Créer un groupe" de la pageCreationGroupe on affiche le groupe crée dans la listView
+}
+
+void VueListeGroupe::setConnect1(){
+    QObject::connect(ui->listView,SIGNAL(clicked(const QModelIndex)),this,SLOT(itemClicked(QModelIndex)));
 }
 
 void VueListeGroupe::ajouterGroupe(){
-    //QStringList groupes;
     groupes << pageCreationGroupe->getNomGroupe();
     QAbstractItemModel *model = new QStringListModel(groupes);
     ui->listView->setModel(model);
+}
+
+QModelIndex VueListeGroupe::getIndexList(){
+    return indexList;
+}
+
+void VueListeGroupe::itemClicked(QModelIndex index){
+    qDebug() << index.data().toString();
 }

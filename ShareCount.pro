@@ -27,6 +27,7 @@ SOURCES += \
     model/utilisateur/Utilisateur.cpp \
     main.cpp \
     vues/pagecreationgroupe/pagecreationgroupe.cpp \
+    vues/pagegestiondebudget/PageGestionDeBudget.cpp \
     vues/pageprincipale/PagePrincipale.cpp \
     vues/vuelistegroupe/VueListeGroupe.cpp
 
@@ -41,6 +42,7 @@ HEADERS += \
     vues/pageaccueil/PageAccueil.h \
     model/utilisateur/Utilisateur.h \
     vues/pagecreationgroupe/pagecreationgroupe.h \
+    vues/pagegestiondebudget/PageGestionDeBudget.h \
     vues/pageprincipale/PagePrincipale.h \
     vues/vuelistegroupe/VueListeGroupe.h
 
@@ -51,6 +53,7 @@ FORMS += \
     vues/pagecreationcompte/PageCreationCompte.ui \
     vues/pageaccueil/PageAccueil.ui \
     vues/pagecreationgroupe/pagecreationgroupe.ui \
+    vues/pagegestiondebudget/pagegestiondebudget.ui \
     vues/pageprincipale/PagePrincipale.ui \
     vues/vuelistegroupe/VueListeGroupe.ui
 
