@@ -17,31 +17,37 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     model/gestionnaireGroupes/Gestionnairegroupes.cpp \
+    model/gestionnaireutilisateurs/Gestionnaireutilisateur.cpp \
     model/groupe/Groupe.cpp \
     model/bdd/BDDManager.cpp \
+    model/groupe/GroupeGestionBuget.cpp \
     model/sharecount/ShareCount.cpp \
+    model/depense/Depense.cpp \
+    model/gestionnairedepenses/GestionnaireDepenses.cpp \
     screen/fenetreprincipale/FenetrePrincipale.cpp \
-    model/gestionnaireutilisateurs/Gestionnaireutilisateurs.cpp \
     vues/pageaccueil/PageAccueil.cpp \
     vues/pagecreationcompte/PageCreationCompte.cpp \
     model/utilisateur/Utilisateur.cpp \
     main.cpp \
-    vues/pagecreationgroupe/pagecreationgroupe.cpp \
+    vues/pagecreationgroupe/PageCreationGroupe.cpp \
     vues/pagegestiondebudget/PageGestionDeBudget.cpp \
     vues/pageprincipale/PagePrincipale.cpp \
     vues/vuelistegroupe/VueListeGroupe.cpp
 
 HEADERS += \
     model/gestionnaireGroupes/Gestionnairegroupes.h \
+    model/gestionnaireutilisateurs/Gestionnaireutilisateur.h \
     model/groupe/Groupe.h \
     model/bdd/BDDManager.h \
+    model/groupe/GroupeGestionBuget.h \
     model/sharecount/ShareCount.h \
+    model/depense/Depense.h \
+    model/gestionnairedepenses/GestionnaireDepenses.h \
     screen/fenetreprincipale/FenetrePrincipale.h \
-    model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h \
     vues/pagecreationcompte/PageCreationCompte.h \
     vues/pageaccueil/PageAccueil.h \
     model/utilisateur/Utilisateur.h \
-    vues/pagecreationgroupe/pagecreationgroupe.h \
+    vues/pagecreationgroupe/PageCreationGroupe.h \
     vues/pagegestiondebudget/PageGestionDeBudget.h \
     vues/pageprincipale/PagePrincipale.h \
     vues/vuelistegroupe/VueListeGroupe.h
@@ -52,7 +58,7 @@ FORMS += \
     screen/fenetreprincipale/FenetrePrincipale.ui \
     vues/pagecreationcompte/PageCreationCompte.ui \
     vues/pageaccueil/PageAccueil.ui \
-    vues/pagecreationgroupe/pagecreationgroupe.ui \
+    vues/pagecreationgroupe/PageCreationGroupe.ui \
     vues/pagegestiondebudget/pagegestiondebudget.ui \
     vues/pageprincipale/PagePrincipale.ui \
     vues/vuelistegroupe/VueListeGroupe.ui

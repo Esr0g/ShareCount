@@ -1,9 +1,4 @@
 #include "BDDManager.h"
-#include <QFile>
-#include <QSqlQuery>
-#include <QDebug>
-#include <QString>
-#include <QSqlError>
 
 BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
@@ -137,4 +132,5 @@ void BDDManager::initialiserListeUtilisateur(GestionnaireUtilisateur& users) {
     }
 }
 
-
+void BDDManager::insererunGroupe(Groupe& grp) {
+}

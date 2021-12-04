@@ -1,17 +1,15 @@
 #ifndef DEPENSE_H
 #define DEPENSE_H
 
-#include <QObject>
-#include "model/groupe/Groupe.h"
+
 #include "model/utilisateur/Utilisateur.h"
 
 /**
  * @brief The Depense class définie une dépense, qui sera la fonction princiaple
  * des GroupesGestionsBudget
  */
-class Depense : public QObject
+class Depense
 {
-    Q_OBJECT
 
 public:
     /**
@@ -78,10 +76,8 @@ private:
     Utilisateur createur;
     int valeurBase;
     int valeurRemboursee;
-    bool estRemboursee;
+    bool estRembourseeB;
 
-
-signals:
 
 };
 

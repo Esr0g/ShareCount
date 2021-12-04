@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <QResizeEvent>
-#include <model/sharecount/ShareCount.h>
+#include "model/sharecount/ShareCount.h"
 
 namespace Ui {
 class FenetrePrincipale;

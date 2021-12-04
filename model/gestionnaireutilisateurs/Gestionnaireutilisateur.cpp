@@ -1,8 +1,5 @@
-#include "Gestionnaireutilisateurs.h"
-#include "model/utilisateur/Utilisateur.h"
-#include "model/sharecount/ShareCount.h"
-#include <iostream>
-#include <string>
+#include "Gestionnaireutilisateur.h"
+
 
 GestionnaireUtilisateur::GestionnaireUtilisateur()
 {
@@ -49,4 +46,12 @@ bool GestionnaireUtilisateur::findUtilisateur(const QString& id) const {
 
 int GestionnaireUtilisateur::getNombreUtilisateur() const {
     return utilisateurs.size();
+}
+
+std::map<QString, Utilisateur>::iterator  GestionnaireUtilisateur::begin() {
+    return utilisateurs.begin();
+}
+
+std::map<QString, Utilisateur>::iterator  GestionnaireUtilisateur::end() {
+    return utilisateurs.end();
 }

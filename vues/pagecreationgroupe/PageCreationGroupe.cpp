@@ -1,6 +1,8 @@
-#include "pagecreationgroupe.h"
-#include "ui_pagecreationgroupe.h"
+#include "PageCreationGroupe.h"
+#include "ui_PageCreationGroupe.h"
+#include "model/groupe/GroupeGestionBuget.h"
 #include <QDockWidget>
+#include <iostream>
 
 PageCreationGroupe::PageCreationGroupe(QWidget *parent) :
     QWidget(parent),
@@ -20,11 +22,6 @@ PageCreationGroupe::PageCreationGroupe(QWidget *parent, FenetrePrincipale *fp, S
     //setConnexion();
 }
 
-PageCreationGroupe::~PageCreationGroupe()
-{
-    delete ui;
-}
-
 QPushButton *PageCreationGroupe::getCreerGroupeButton(){
     return ui->CreerGroupe;
 }
@@ -36,9 +33,12 @@ void PageCreationGroupe::setConnexion() {
 
 void PageCreationGroupe::on_CreerGroupe_clicked()
 {
-    nomGroupe = ui->lineEdit->text();
+    Utilisateur u = shareCount->getUtilisateurActif();
+    GroupeGestionBuget ggb(ui->lineEdit->text());
+    u.ajouterAMesGroupes(ggb);
 }
 
-QString PageCreationGroupe::getNomGroupe(){
-    return nomGroupe;
+PageCreationGroupe::~PageCreationGroupe()
+{
+    delete ui;
 }

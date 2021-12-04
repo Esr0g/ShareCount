@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     fenetrePrincipale.setPageActive(new PageAccueil(&fenetrePrincipale, &fenetrePrincipale, sc));
     //fenetrePrincipale.setPageActive(new PageCreationCompte(&fenetrePrincipale, &fenetrePrincipale));
 
+
     fenetrePrincipale.show();
     return a.exec();
 }

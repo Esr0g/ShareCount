@@ -3,9 +3,15 @@
 
 #include <QObject>
 #include <QSqlDatabase>
-#include <model/utilisateur/Utilisateur.h>
+#include <QFile>
+#include <QSqlQuery>
+#include <QDebug>
+#include <QString>
+#include <QSqlError>
 #include <map>
-#include <model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h>
+
+#include "model/utilisateur/Utilisateur.h"
+#include "model/gestionnaireutilisateurs/Gestionnaireutilisateur.h"
 
 #define DB_PATH "../ShareCount/sql/ShareCountDataBase.db"
 
@@ -43,6 +49,8 @@ public:
      * @param sc
      */
     void initialiserListeUtilisateur(GestionnaireUtilisateur& users);
+
+    void insererunGroupe(Groupe& grp);
 
 
 private:

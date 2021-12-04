@@ -2,7 +2,7 @@
 #include "ui_PagePrincipale.h"
 #include <QtWidgets>
 #include <QDockWidget>
-#include "vues/pagecreationgroupe/pagecreationgroupe.h"
+#include "vues/pagecreationgroupe/PageCreationGroupe.h"
 #include "vues/pagegestiondebudget/PageGestionDeBudget.h"
 #include "model/bdd/BDDManager.h"
 #include "QListWidget"

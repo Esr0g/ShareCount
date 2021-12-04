@@ -1,24 +1,26 @@
 #ifndef GESTIONNAIREGROUPES_H
 #define GESTIONNAIREGROUPES_H
-#include <QString>
-#include "model/groupe/Groupe.h"
-#include <iostream>
-#include <map>
-#include <iterator>
 
-class gestionnaireGroupes
+#include <QString>
+#include <vector>
+
+#include "model/groupe/Groupe.h"
+
+class Groupe;
+
+class GestionnaireGroupes
 {
 public:
-    //gestionnaireGroupes();
-
-    explicit gestionnaireGroupes();
+    explicit GestionnaireGroupes();
 
     void ajouterGroupe(Groupe& groupe);
 
-    Groupe getGroupe(const QString& id) const;
+    Groupe getGroupe(const int& i) const;
+
+    int size();
 
 private:
-    std::map<QString, Groupe> groupes;
+    std::vector<Groupe> groupes;
 };
 
 #endif // GESTIONNAIREGROUPES_H

@@ -1,20 +1,18 @@
 #include "Gestionnairegroupes.h"
-#include "model/groupe/Groupe.h"
-#include <iostream>
-#include "model/sharecount/ShareCount.h"
 
-gestionnaireGroupes::gestionnaireGroupes()
+GestionnaireGroupes::GestionnaireGroupes()
 {
 
 }
 
-void gestionnaireGroupes::ajouterGroupe(Groupe& groupe){
-    groupes[groupe.getIdentifiant()] = groupe;
+void GestionnaireGroupes::ajouterGroupe(Groupe& groupe){
+    groupes.push_back(groupe);
 }
 
-Groupe gestionnaireGroupes::getGroupe(const QString& id) const{
-    std::map<QString, Groupe>::const_iterator it = groupes.find(id);
-
-    return it->second;
+Groupe GestionnaireGroupes::getGroupe(const int& i) const{
+    return groupes[i];
 }
 
+int GestionnaireGroupes::size() {
+    return groupes.size();
+}

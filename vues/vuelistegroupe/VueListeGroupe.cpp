@@ -1,6 +1,6 @@
 #include "VueListeGroupe.h"
 #include "ui_VueListeGroupe.h"
-#include "vues/pagecreationgroupe/pagecreationgroupe.h"
+#include "vues/pagecreationgroupe/PageCreationGroupe.h"
 
 VueListeGroupe::VueListeGroupe(QWidget *parent) :
     QDockWidget(parent),
@@ -52,8 +52,8 @@ void VueListeGroupe::setConnect1(){
     QObject::connect(ui->listView,SIGNAL(clicked(const QModelIndex)),this,SLOT(itemClicked(QModelIndex)));
 }
 
-void VueListeGroupe::ajouterGroupe(){
-    groupes << pageCreationGroupe->getNomGroupe();
+void VueListeGroupe::ajouterGroupe() {
+    groupes = shareCount->getUtilisateurActif().getMesGroupes();
     QAbstractItemModel *model = new QStringListModel(groupes);
     ui->listView->setModel(model);
 }

@@ -19,9 +19,10 @@ class PageCreationGroupe : public QWidget
 public:
     explicit PageCreationGroupe(QWidget *parent = nullptr);
     explicit PageCreationGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
-    ~PageCreationGroupe();
     QPushButton *getCreerGroupeButton();
     QString getNomGroupe();
+    ~PageCreationGroupe();
+
 private:
     void setConnexion();
 
@@ -32,7 +33,6 @@ private:
     Ui::PageCreationGroupe *ui;
     FenetrePrincipale* pwindow;
     ShareCount* shareCount;
-    QString nomGroupe; //nom donné au groupe (dans le lineEdit)
 };
 
 #endif // PAGECREATIONGROUPE_H

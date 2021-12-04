@@ -2,10 +2,12 @@
 #define SHARECOUNT_H
 
 #include <QObject>
-#include <model/gestionnaireutilisateurs/Gestionnaireutilisateurs.h>
-#include <model/utilisateur/Utilisateur.h>
-#include <model/gestionnaireGroupes/Gestionnairegroupes.h>
-#include <model/bdd/BDDManager.h>
+#include <QWidget>
+#include "model/utilisateur/Utilisateur.h"
+#include "model/groupe/Groupe.h"
+#include "model/bdd/BDDManager.h"
+#include "model/gestionnaireutilisateurs/Gestionnaireutilisateur.h"
+#include "model/gestionnaireGroupes/Gestionnairegroupes.h"
 
 /**
  * @brief The ShareCount class
@@ -58,20 +60,15 @@ public:
      */
     void creerUtilisateur(Utilisateur& user);
 
-    ~ShareCount();
+    Utilisateur getUtilisateurActif() const;
 
-public slots:
-    /**
-     * @brief ajouterUtilisateur permet de créer un compte utilisateur
-     * @param u
-     */
-    void ajouterUtilisateur(Utilisateur& u);
+    ~ShareCount();
 
 
 private:
     GestionnaireUtilisateur utilisateurs;
-    Utilisateur *utilisateurActif;
-    gestionnaireGroupes groupes;
+    Utilisateur utilisateurActif;
+    GestionnaireGroupes groupes;
     BDDManager shareCountBDD;
 };
 

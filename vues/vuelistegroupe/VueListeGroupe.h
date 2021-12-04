@@ -4,7 +4,7 @@
 #include <QDockWidget>
 #include "screen/fenetreprincipale/FenetrePrincipale.h"
 #include "model/sharecount/ShareCount.h"
-#include "vues/pagecreationgroupe/pagecreationgroupe.h"
+#include "vues/pagecreationgroupe/PageCreationGroupe.h"
 #include <QPushButton>
 #include <QStringListModel>
 #include <QAbstractItemModel>
@@ -32,6 +32,7 @@ private slots:
     void creerGroupeButtonClicked();
     void ajouterGroupe();  //ajout d'un groupe dans la listView
     void itemClicked(QModelIndex index);
+
 private:
     void setConnect(PageCreationGroupe *pcg);
     void setConnect1();

@@ -1,7 +1,6 @@
 #include "Utilisateur.h"
 
-Utilisateur::Utilisateur(){
-
+Utilisateur::Utilisateur(): mesGroupes(new GestionnaireGroupes){
 }
 
 
@@ -28,4 +27,21 @@ QString Utilisateur::getMotDePasse() const {
 
 QString Utilisateur::getMail() const {
     return mail;
+}
+
+void Utilisateur::ajouterAMesGroupes(Groupe& grp) {
+    mesGroupes->ajouterGroupe(grp);
+}
+
+QStringList Utilisateur::getMesGroupes() const {
+    QStringList qsl;
+    for (int i = 0; i < mesGroupes->size(); i++) {
+        qsl << mesGroupes->getGroupe(i).getIdentifiant();
+    }
+
+    return qsl;
+}
+
+Utilisateur::~Utilisateur() {
+    //delete mesGroupes;
 }

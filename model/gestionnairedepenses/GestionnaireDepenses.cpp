@@ -1,6 +1,6 @@
 #include "GestionnaireDepenses.h"
 
-GestionnaireDepenses::GestionnaireDepenses(QObject *parent) : QObject(parent)
+GestionnaireDepenses::GestionnaireDepenses()
 {
 
 }
@@ -15,4 +15,12 @@ Depense GestionnaireDepenses::getDepense(const int& i) const {
 
 int GestionnaireDepenses::nbDepense() const {
     return depenses.size();
+}
+
+std::vector<Depense>::iterator GestionnaireDepenses::begin() {
+    return depenses.begin();
+}
+
+std::vector<Depense>::iterator GestionnaireDepenses::end() {
+    return depenses.end();
 }

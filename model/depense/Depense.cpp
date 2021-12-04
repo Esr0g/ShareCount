@@ -1,13 +1,13 @@
 #include "Depense.h"
 
-Depense::Depense(): numDepense(0), createur(nullptr),
+Depense::Depense(): numDepense(0),
     valeurBase(0), valeurRemboursee(0),
-    estRemboursee(false) {
+    estRembourseeB(false) {
 }
 
-Depense::Depense(const int& num, Utilisateur& user, int& valB, int valRem = 0, bool estRem = false):
+Depense::Depense(const int& num, Utilisateur& user, int& valB, int valRem, bool estRem):
     numDepense(num), createur(user), valeurBase(valB),
-    valRem(valRem), estRemboursee(estRem) {
+    valeurRemboursee(valRem), estRembourseeB(estRem) {
 }
 
 int Depense::getNumDepense() const {
@@ -15,7 +15,7 @@ int Depense::getNumDepense() const {
 }
 
 Utilisateur Depense::getCreateur() const {
-    return createur
+    return createur;
 }
 
 int Depense::getVealeurBase() const {
@@ -27,7 +27,7 @@ int Depense::getValeurRemboursee() const {
 }
 
 bool Depense::estRemboursee() const {
-    return estRemboursee;
+    return estRembourseeB;
 }
 
 void Depense::addValeurRemboursee(const int& val) {
@@ -35,5 +35,5 @@ void Depense::addValeurRemboursee(const int& val) {
 }
 
 void Depense::setEstRemboursee(const bool& b) {
-    estRemboursee = b;
+    estRembourseeB = b;
 }
