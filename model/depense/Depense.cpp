@@ -27,7 +27,7 @@ int Depense::getValeurRemboursee() const {
 }
 
 bool Depense::isRemboursee() const {
-    return estRemboursee;
+    return estRembourseeB;
 }
 
 void Depense::addValeurRemboursee(const int& val) {

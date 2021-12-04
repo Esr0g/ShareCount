@@ -1,12 +1,16 @@
 #include "VueListeGroupe.h"
 #include "ui_VueListeGroupe.h"
 #include "vues/pagecreationgroupe/PageCreationGroupe.h"
+#include <iostream>
 
 VueListeGroupe::VueListeGroupe(QWidget *parent) :
     QDockWidget(parent),
     ui(new Ui::VueListeGroupe)
 {
     ui->setupUi(this);
+    groupes = shareCount->getUtilisateurActif().getMesGroupesToString();
+    QAbstractItemModel *model = new QStringListModel(groupes);
+    ui->listView->setModel(model);
 }
 
 VueListeGroupe::VueListeGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc) :
@@ -17,6 +21,9 @@ VueListeGroupe::VueListeGroupe(QWidget *parent, FenetrePrincipale *fp, ShareCoun
 {
     ui->setupUi(this);
     setConnect1();
+    groupes = shareCount->getUtilisateurActif().getMesGroupesToString();
+    QAbstractItemModel *model = new QStringListModel(groupes);
+    ui->listView->setModel(model);
 
     //setConnect(pageCreationGroupe);
     //setConnexion();
@@ -53,7 +60,7 @@ void VueListeGroupe::setConnect1(){
 }
 
 void VueListeGroupe::ajouterGroupe() {
-    groupes = shareCount->getUtilisateurActif().getMesGroupes();
+    groupes = shareCount->getUtilisateurActif().getMesGroupesToString();
     QAbstractItemModel *model = new QStringListModel(groupes);
     ui->listView->setModel(model);
 }

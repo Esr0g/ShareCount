@@ -33,13 +33,18 @@ void Utilisateur::ajouterAMesGroupes(Groupe& grp) {
     mesGroupes->ajouterGroupe(grp);
 }
 
-QStringList Utilisateur::getMesGroupes() const {
+QStringList Utilisateur::getMesGroupesToString() const {
     QStringList qsl;
     for (int i = 0; i < mesGroupes->size(); i++) {
         qsl << mesGroupes->getGroupe(i).getIdentifiant();
     }
 
     return qsl;
+}
+
+
+GestionnaireGroupes& Utilisateur::getMesGroupes() const {
+    return *mesGroupes;
 }
 
 Utilisateur::~Utilisateur() {

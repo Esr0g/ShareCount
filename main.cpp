@@ -13,8 +13,6 @@ int main(int argc, char *argv[])
     FenetrePrincipale fenetrePrincipale;
     ShareCount* sc = new ShareCount();
     fenetrePrincipale.setPageActive(new PageAccueil(&fenetrePrincipale, &fenetrePrincipale, sc));
-    //fenetrePrincipale.setPageActive(new PageCreationCompte(&fenetrePrincipale, &fenetrePrincipale));
-
 
     fenetrePrincipale.show();
     return a.exec();

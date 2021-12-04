@@ -50,7 +50,9 @@ public:
      */
     void initialiserListeUtilisateur(GestionnaireUtilisateur& users);
 
-    void insererunGroupe(Groupe& grp);
+    void insererunGroupe(const Groupe& grp, const Utilisateur& user);
+
+    void initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QString& idUser);
 
 
 private:

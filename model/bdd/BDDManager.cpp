@@ -1,4 +1,6 @@
 #include "BDDManager.h"
+#include <iostream>
+#include "model/groupe/GroupeGestionBuget.h"
 
 BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
@@ -132,5 +134,43 @@ void BDDManager::initialiserListeUtilisateur(GestionnaireUtilisateur& users) {
     }
 }
 
-void BDDManager::insererunGroupe(Groupe& grp) {
+void BDDManager::insererunGroupe(const Groupe& grp, const Utilisateur& user) {
+    QSqlQuery query;
+    query.prepare("INSERT INTO GroupesGestionBudget(idGroupe, idUser, description, dateCreationGrp )"
+                   "VALUES (:idGroupe, :idUser, :description, :dateCreationGrp);");
+    query.bindValue(":idGroupe", QVariant(grp.getIdentifiant()));
+    query.bindValue(":idUser", QVariant(user.getIdentifiant()));
+    query.bindValue(":description", QVariant(grp.getDescription()));
+    query.bindValue(":dateCreationGrp", QVariant(grp.getDateCreation()));
+
+    std::cout << grp.getIdentifiant().toStdString() << std::endl;
+
+    if (query.exec()) {
+        qDebug() << "Le groupe a bien était ajouté a la table groupe";
+    } else {
+        qDebug() << "Echec de l'ajout du groupe";
+    }
+}
+
+void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QString& idUser) {
+    QSqlQuery query;
+
+    query.prepare("SELECT * FROM GroupesGestionBudget WHERE idUser = :id;");
+    query.bindValue(":id", QVariant(idUser));
+
+    if (query.exec()) {
+        qDebug() << "Selection du groupe réussie";
+    } else {
+        qDebug() << "Selection du groupe échouée";
+    }
+
+    while (query.next()) {
+        QString idGroupe = query.value("idGroupe").toString();
+        QString idUser = query.value("idUser").toString();
+        QString description = query.value("description").toString();
+        QString date = query.value("dateCreationGrp").toString();
+        GroupeGestionBuget ggb(idGroupe, description);
+        ggb.setDate(date);
+        grp.ajouterGroupe(ggb);
+    }
 }
