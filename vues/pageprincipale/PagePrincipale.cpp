@@ -31,6 +31,9 @@ PagePrincipale::PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCoun
 
 void PagePrincipale::afficherGroupe(){
     PageGestionDeBudget *pgdb = new PageGestionDeBudget(pwindow, pwindow, shareCount);
+
+    //qDebug() << vlg->getListView()->currentIndex().data().toString();
+    pgdb->getLabelNomGroupe()->setText(vlg->getListView()->currentIndex().data().toString());
     setCentralWidget(pgdb);
 }
 

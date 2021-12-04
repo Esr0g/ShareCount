@@ -15,7 +15,7 @@ int Depense::getNumDepense() const {
 }
 
 Utilisateur Depense::getCreateur() const {
-    return createur
+    return createur;
 }
 
 int Depense::getVealeurBase() const {

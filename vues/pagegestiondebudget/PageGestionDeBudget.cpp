@@ -17,6 +17,11 @@ PageGestionDeBudget::PageGestionDeBudget(QWidget *parent, FenetrePrincipale *fp,
     ui->setupUi(this);
 }
 
+QLabel *PageGestionDeBudget::getLabelNomGroupe(){
+    return ui->label;
+}
+
+
 PageGestionDeBudget::~PageGestionDeBudget()
 {
     delete ui;

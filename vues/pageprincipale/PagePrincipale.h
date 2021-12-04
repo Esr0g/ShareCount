@@ -6,6 +6,7 @@
 #include "vues/vuelistegroupe/VueListeGroupe.h"
 #include "vues/pagegestiondebudget/PageGestionDeBudget.h"
 #include <QListView>
+#include <QDebug>
 
 namespace Ui {
 class PagePrincipale;
