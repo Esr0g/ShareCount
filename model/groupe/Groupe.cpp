@@ -4,13 +4,15 @@
 Groupe::Groupe(const QString& id, const QString& descr):
     identifiant(id),
     description(descr),
-    participants(new GestionnaireUtilisateur())
+    participants(new GestionnaireUtilisateur),
+    depenses(new GestionnaireDepenses)
 {
     QDateTime d;
     dateCreation = d.currentDateTime().toString("dd/MM/yyyy hh:mm:ss");
 }
 
-Groupe::Groupe(): participants(new GestionnaireUtilisateur()) {
+Groupe::Groupe(): participants(new GestionnaireUtilisateur),
+    depenses(new GestionnaireDepenses) {
 }
 
 QString Groupe::getIdentifiant() const {
@@ -42,7 +44,33 @@ GestionnaireUtilisateur Groupe::getParticipants() const {
 }
 
 void Groupe::setDate(const QString& date) {
-    dateCreation = date;}
+    dateCreation = date;
+}
+
+void Groupe::ajouterUneDepense(Depense& dep){
+    depenses->ajouterUneDepense(dep);
+}
+
+int Groupe::nbDepenses() const {
+    return depenses->nbDepense();
+}
+
+QStringList Groupe::depensesToString() {
+    QStringList qsl;
+
+    for (int i = 0; i < nbDepenses(); i++) {
+        Depense dep = depenses->getDepense(i);
+        QString valeurBase = QString::number(dep.getVealeurBase());
+        QString valeurRembourse = QString::number(dep.getValeurRemboursee());
+        qsl << dep.getNom()+" : "+valeurBase+" € avancé par "+dep.getCreateur()+"\n"+valeurRembourse+" € Remboursé\nLe "+dep.getdate();
+    }
+
+    return qsl;
+}
+
+void Groupe::clearDepenses() {
+    depenses->clearDepenses();
+}
 
 Groupe::~Groupe() {
     //delete participants;

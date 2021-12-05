@@ -5,24 +5,26 @@ Depense::Depense(): numDepense(0),
     estRembourseeB(false) {
 }
 
-Depense::Depense(const int& num, Utilisateur& user, int& valB, int valRem, bool estRem):
+Depense::Depense(const int& num, QString& user, double &valB, QString& nomDep, QString& dateDep, double valRem, bool estRem):
     numDepense(num), createur(user), valeurBase(valB),
-    valeurRemboursee(valRem), estRembourseeB(estRem) {
+    valeurRemboursee(valRem), estRembourseeB(estRem),
+    nom(nomDep), date(dateDep)
+{
 }
 
 int Depense::getNumDepense() const {
     return numDepense;
 }
 
-Utilisateur Depense::getCreateur() const {
+QString Depense::getCreateur() const {
     return createur;
 }
 
-int Depense::getVealeurBase() const {
+double Depense::getVealeurBase() const {
     return valeurBase;
 }
 
-int Depense::getValeurRemboursee() const {
+double Depense::getValeurRemboursee() const {
     return valeurRemboursee;
 }
 
@@ -36,4 +38,12 @@ void Depense::addValeurRemboursee(const int& val) {
 
 void Depense::setEstRemboursee(const bool& b) {
     estRembourseeB = b;
+}
+
+QString Depense::getNom() const {
+    return nom;
+}
+
+QString Depense::getdate() const {
+    return date;
 }

@@ -23,14 +23,14 @@ public:
      * @brief ajouterGroupe permet d'ajouter un groupe a la collection
      * @param groupe
      */
-    void ajouterGroupe(Groupe& groupe);
+    void ajouterGroupe(Groupe &groupe);
 
     /**
      * @brief getGroupe permet de retourner un groupe à la position i
      * @param i
      * @return
      */
-    Groupe getGroupe(const int& i) const;
+    Groupe& getGroupe(const int& i);
 
     /**
      * @brief size retourne la taille de la collection

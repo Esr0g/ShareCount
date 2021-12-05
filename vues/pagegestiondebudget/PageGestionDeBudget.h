@@ -23,6 +23,7 @@ public:
     explicit PageGestionDeBudget(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
     QLabel *getLabelNomGroupe();
     void miseAJourParticipant();
+    void miseAJourDepenses();
     ~PageGestionDeBudget();
 
 private slots:

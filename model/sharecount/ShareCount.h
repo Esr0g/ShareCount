@@ -3,8 +3,6 @@
 
 #include <QObject>
 #include <QWidget>
-#include "model/utilisateur/Utilisateur.h"
-#include "model/groupe/Groupe.h"
 #include "model/bdd/BDDManager.h"
 #include "model/gestionnaireutilisateurs/Gestionnaireutilisateur.h"
 #include "model/gestionnaireGroupes/Gestionnairegroupes.h"
@@ -102,6 +100,24 @@ public:
      */
     QStringList initialiserParticipants(const QString& grp);
 
+    /**
+     * @brief ajouterUneDepense permet d'ajouter une dépense au groupe actif
+     * @param dep
+     */
+    void ajouterUneDepense(Depense& dep);
+
+    /**
+     * @brief getGroupeActif retourne le groupe actif
+     * @return
+     */
+    Groupe& getGroupeActif();
+
+    /**
+     * @brief setGroupeActif positionne le groupe actif
+     * @param grp
+     */
+    void setGroupeActif(Groupe& grp);
+
     ~ShareCount();
 
 
@@ -110,6 +126,7 @@ private:
     Utilisateur utilisateurActif;
     GestionnaireGroupes groupes;
     BDDManager shareCountBDD;
+    Groupe groupeActif;
 };
 
 #endif // SHARECOUNT_H

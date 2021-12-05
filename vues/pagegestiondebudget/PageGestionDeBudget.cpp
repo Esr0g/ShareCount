@@ -35,20 +35,6 @@ PageGestionDeBudget::~PageGestionDeBudget()
 
 void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
 {
-    //QDialog *dialog = new QDialog(parent, 0);
-    //QString text = QInputDialog::getText(0, "Nouvelle dépense", "Montant", QLineEdit::Normal,"", &ok);
-
-    /*double valeurDep = QInputDialog::getDouble(this, "Ajouter Une Dépense", "Nouvelle Dépense : ", 0, 0, 10000, 2);
-
-    if (valeurDep != 0) {
-        std::ostringstream streamObj;
-        streamObj<< std::fixed;
-        streamObj << std::setprecision(2);
-        streamObj << valeurDep;
-        QString valeurTxt = QString::fromStdString(streamObj.str());
-        depenses << valeurTxt + " € par " +shareCount->getUtilisateurActif().getIdentifiant();;
-    }*/
-
     QString idGroupe = ui->label->text();
 
     QDialog * d = new QDialog();
@@ -104,7 +90,8 @@ void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
         montantTxt = QString::fromStdString(streamObj.str());
 
         if (titre.isEmpty()) {
-            titre = "Depense " + shareCount->getUtilisateurActif().getMesGroupes().size() + 1;
+            titre.append("Depense ");
+            titre.append(QString::fromStdString(std::to_string(shareCount->getGroupeActif().nbDepenses() + 1)));
         }
 
         if (!date.isValid()) {
@@ -121,10 +108,11 @@ void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
     }
 
     if (ajouterDepense) {
-        depenses << lineEditA->text() + " : " + montantTxt + " € avancé par " +
-                    shareCount->getUtilisateurActif().getIdentifiant() + " le "+ dateTxt;
-        QAbstractItemModel *model = new QStringListModel(depenses);
-        ui->depenseListView->setModel(model);
+        QString user = shareCount->getUtilisateurActif().getIdentifiant();
+        Depense dep (shareCount->getGroupeActif().nbDepenses(), user,
+                     montant, titre, dateTxt);
+        shareCount->ajouterUneDepense(dep);
+        miseAJourDepenses();
     }
 }
 
@@ -149,6 +137,7 @@ void PageGestionDeBudget::on_ajouterParticipantButton_clicked() {
     }
 
     if (ajouter) {
+
         shareCount->ajouterParticipantAuGroupe(user, ui->label->text());
         QAbstractItemModel *model = new QStringListModel(shareCount->initialiserParticipants(ui->label->text()));
         ui->participantsLisetView->setModel(model);
@@ -158,4 +147,9 @@ void PageGestionDeBudget::on_ajouterParticipantButton_clicked() {
 void PageGestionDeBudget::miseAJourParticipant() {
     QAbstractItemModel *model = new QStringListModel(shareCount->initialiserParticipants(ui->label->text()));
     ui->participantsLisetView->setModel(model);
+}
+
+void PageGestionDeBudget::miseAJourDepenses() {
+    QAbstractItemModel *model = new QStringListModel(shareCount->getGroupeActif().depensesToString());
+    ui->depenseListView->setModel(model);
 }

@@ -16,7 +16,7 @@ void Utilisateur::setMail(const QString& m) {
     mail = m;
 }
 
-QString Utilisateur::getIdentifiant() const {
+QString Utilisateur::getIdentifiant() const{
     return identifiant;
 }
 

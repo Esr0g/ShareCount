@@ -10,7 +10,7 @@ void GestionnaireGroupes::ajouterGroupe(Groupe& groupe){
     groupes.push_back(groupe);
 }
 
-Groupe GestionnaireGroupes::getGroupe(const int& i) const{
+Groupe& GestionnaireGroupes::getGroupe(const int& i) {
     return groupes[i];
 }
 

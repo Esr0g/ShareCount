@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "model/depense/Depense.h"
+class Depense;
 
 /**
  * @brief The GestionnaireDepenses class permet de gérer une collection de dépenses:
@@ -48,6 +49,8 @@ public:
      * @return
      */
     std::vector<Depense>::iterator end();
+
+    void clearDepenses();
 
 private:
     std::vector<Depense> depenses;

@@ -4,6 +4,8 @@
 
 #include "model/utilisateur/Utilisateur.h"
 
+class Utilisateur;
+
 /**
  * @brief The Depense class définie une dépense, qui sera la fonction princiaple
  * des GroupesGestionsBudget
@@ -25,7 +27,7 @@ public:
      * @param valRem valeur remboursée (au début 0)
      * @param estRem donne le statut de la dépense
      */
-    explicit Depense(const int& num, Utilisateur& user, int& valB, int valRem = 0, bool estRem = false);
+    explicit Depense(const int& num, QString& user, double& valB, QString& nomDep, QString& dateDep, double valRem = 0, bool estRem = false);
 
     /**
      * @brief getNumDepense retourne le numéro de dépense
@@ -37,19 +39,19 @@ public:
      * @brief getCreateur retourne le créateur de la dépense
      * @return
      */
-    Utilisateur getCreateur() const;
+    QString getCreateur() const;
 
     /**
      * @brief getVealeurBase retourne la valeur initiale
      * @return
      */
-    int getVealeurBase() const;
+    double getVealeurBase() const;
 
     /**
      * @brief getValeurRemboursee retourne la somme déjà remboursée
      * @return
      */
-    int getValeurRemboursee() const;
+    double getValeurRemboursee() const;
 
     /**
      * @brief estRemboursee retourne vrai si la dépense est complétement remboursée,
@@ -70,10 +72,24 @@ public:
      */
     void setEstRemboursee(const bool& b);
 
+    /**
+     * @brief getNom retourne le nom de la dépense
+     * @return
+     */
+    QString getNom() const;
+
+    /**
+     * @brief getdate retourne la date de la dépense
+     * @return
+     */
+    QString getdate() const;
+
 
 private:
     int numDepense;
-    Utilisateur createur;
+    QString nom;
+    QString date;
+    QString createur;
     int valeurBase;
     int valeurRemboursee;
     bool estRembourseeB;

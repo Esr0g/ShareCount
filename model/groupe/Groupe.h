@@ -5,9 +5,13 @@
 #include <QString>
 
 #include "model/gestionnaireutilisateurs/Gestionnaireutilisateur.h"
+#include "model/depense/Depense.h"
+#include "model/gestionnairedepenses/GestionnaireDepenses.h"
 
 class GestionnaireUtilisateur;
 class Utilisateur;
+class Depense;
+class GestionnaireDepenses;
 
 /**
  * @brief classe abstraite de base pour GestionDeBudget et Cagnotte
@@ -52,21 +56,42 @@ public:
     QString getDateCreation() const;
 
     /**
-     * @brief estUnGroupeGestionDeBuget retourne vrai si this est de type GroupeGestionBudget
-     * faux sinon
-     * @return
-     */
-    bool estUnGroupeGestionDeBuget() const;
-
-    /**
      * @brief ajouterUnpParticipant ajouter un participant au groupe
      * @param user
      */
     void ajouterUnpParticipant(Utilisateur& user);
 
+    /**
+     * @brief getParticipants retourne les participants
+     * @return
+     */
     GestionnaireUtilisateur getParticipants() const;
 
+    /**
+     * @brief setDate permet de fixer la date de création groupe
+     * @param date
+     */
     void setDate(const QString& date);
+
+    /**
+     * @brief ajouterUneDepense permet d'ajouter une dépense
+     * @param dep
+     */
+    void ajouterUneDepense(Depense& dep);
+
+    /**
+     * @brief nbDepenses retourne le nombre de dépense;
+     * @return
+     */
+     int nbDepenses() const;
+
+     /**
+      * @brief depensesToString retourne la liste des dépenses en string
+      * @return
+      */
+     QStringList depensesToString();
+
+     void clearDepenses();
 
     ~Groupe();
 
@@ -75,6 +100,7 @@ private:
     QString dateCreation;
     QString description;
     GestionnaireUtilisateur* participants;
+    GestionnaireDepenses* depenses;
 };
 
 #endif // GROUPE_H

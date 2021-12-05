@@ -24,3 +24,7 @@ std::vector<Depense>::iterator GestionnaireDepenses::begin() {
 std::vector<Depense>::iterator GestionnaireDepenses::end() {
     return depenses.end();
 }
+
+void GestionnaireDepenses::clearDepenses() {
+    depenses.clear();
+}

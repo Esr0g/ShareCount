@@ -1,6 +1,5 @@
 #include "PageCreationGroupe.h"
 #include "ui_PageCreationGroupe.h"
-#include "model/groupe/GroupeGestionBuget.h"
 #include <QDockWidget>
 #include <iostream>
 #include <QMessageBox>
@@ -38,7 +37,7 @@ void PageCreationGroupe::on_CreerGroupe_clicked()
         QMessageBox::critical(this, "Erreur création groupe", "Deux groupes ne peuvent pas avoir le même nom !");
     } else {
         Utilisateur u = shareCount->getUtilisateurActif();
-        GroupeGestionBuget ggb(ui->lineEdit->text());
+        Groupe ggb(ui->lineEdit->text());
         u.ajouterAMesGroupes(ggb);
         shareCount->inserGroupe(ggb, u);
     }

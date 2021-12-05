@@ -1,6 +1,5 @@
 #include "BDDManager.h"
 #include <iostream>
-#include "model/groupe/GroupeGestionBuget.h"
 
 BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
@@ -66,9 +65,10 @@ void BDDManager::createDataBase() {
         query.prepare("CREATE TABLE Depenses(idUser TEXT,"
                       "idGroupe TEXT,"
                       "noDep INTEGER,"
-                      "valeurBase INTEGER NOT NULL,"
+                      "valeurBase REAL NOT NULL,"
+                      "nomDep TEXT NOT NULL,"
                       "BoolDepRembourse INTEGER DEFAULT 0," // Ceci représente un booléen
-                      "valeurRembourse INTEGER DEFAULT 0,"
+                      "valeurRembourse REAL DEFAULT 0,"
                       "dateDep TEXT NOT NULL,"
                       "PRIMARY KEY (idUser, idGroupe, noDep),"
                       "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser), "
@@ -81,9 +81,9 @@ void BDDManager::createDataBase() {
 
         query.prepare("CREATE TABLE Dettes(idUser TEXT,"
                       "noDep INTEGER,"
-                      "valeurBase INTEGER NOT NULL,"
+                      "valeurBase REAL NOT NULL,"
                       "BoolDetteRembourse INTEGER DEFAULT 0," // Ceci représente un booléen
-                      "valeurRembourse INTEGER DEFAULT 0,"
+                      "valeurRembourse REAL DEFAULT 0,"
                       "dateDette TEXT NOT NULL,"
                       "PRIMARY KEY (idUser, noDep),"
                       "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser), "
@@ -181,7 +181,7 @@ void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QS
         QString idUser = query.value("idUser").toString();
         QString description = query.value("description").toString();
         QString date = query.value("dateCreationGrp").toString();
-        GroupeGestionBuget ggb(idGroupe, description);
+        Groupe ggb(idGroupe, description);
         ggb.setDate(date);
         grp.ajouterGroupe(ggb);
     }
@@ -249,3 +249,54 @@ QStringList BDDManager::initialiserParticipants(const QString& grp) {
 
     return listeUser;
 }
+
+void BDDManager::insererUneDepense(const Depense& dep, const Groupe& grp) {
+    QSqlQuery query;
+
+    query.prepare("INSERT INTO Depenses(idUser, idGroupe, noDep, valeurBase, nomDep, dateDep)"
+                  "VALUES (:idUser, :idGroupe, :noDep, :valeurBase, :nomDep, :dateDep);");
+    query.bindValue(":idUser", QVariant(dep.getCreateur()));
+    query.bindValue(":idGroupe", QVariant(grp.getIdentifiant()));
+    query.bindValue(":noDep", QVariant(dep.getNumDepense()));
+    query.bindValue(":valeurBase", QVariant(dep.getVealeurBase()));
+    query.bindValue(":nomDep", QVariant(dep.getNom()));
+    query.bindValue(":dateDep", QVariant(dep.getdate()));
+
+    if (query.exec()) {
+        qDebug() << "Requête inserUneDepense réussie";
+    } else {
+        qDebug() << "Requête insererUneDepense échouée" << query.lastError().text();
+    }
+}
+
+void BDDManager::initialiserDepensesGroupe(Groupe& grp) {
+    QSqlQuery query;
+
+    query.prepare("SELECT * FROM Depenses "
+                  "WHERE idGroupe = ? ;");
+    query.addBindValue(QVariant(grp.getIdentifiant()));
+
+    if (query.exec()) {
+        qDebug() << "Selection pour les dépenses du groupe réussie";
+    } else {
+        qDebug() << "Selection pour les dépenses du groupe échouée " << query.lastError().text();
+    }
+
+    grp.clearDepenses();
+
+    while (query.next()) {
+        QString idUser = query.value("idUser").toString();
+        int noDep = query.value("noDep").toInt();
+        double valeurBase = query.value("valeurBase").toDouble();
+        bool boolDepRembourse = query.value("boolDepRembourse").toBool();
+        double valeurRembourse = query.value("valeurRembourse").toDouble();
+        QString dateDep = query.value("dateDep").toString();
+        QString nomDep = query.value("nomDep").toString();
+
+        //std::cout << std::to_string(valeurBase) << std::endl;
+        Depense dep(noDep, idUser, valeurBase, nomDep, dateDep, valeurRembourse, boolDepRembourse);
+        grp.ajouterUneDepense(dep);
+    }
+}
+
+//Depense(const int& num, Utilisateur& user, double& valB, QString& nomDep, QString& dateDep, double valRem = 0, bool estRem = false);

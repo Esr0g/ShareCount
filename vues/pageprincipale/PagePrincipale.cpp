@@ -38,6 +38,8 @@ void PagePrincipale::afficherGroupe(){
     pgdb->getLabelNomGroupe()->setText(vlg->getListView()->currentIndex().data().toString());
     setCentralWidget(pgdb);
     pgdb->miseAJourParticipant();
+    shareCount->setGroupeActif(shareCount->getUtilisateurActif().getGroupe(vlg->getListView()->currentIndex().data().toString()));
+    pgdb->miseAJourDepenses();
 }
 
 PagePrincipale::~PagePrincipale()

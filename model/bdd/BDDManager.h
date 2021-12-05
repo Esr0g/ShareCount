@@ -87,6 +87,20 @@ public:
      */
     QStringList initialiserParticipants(const QString& grp);
 
+    /**
+     * @brief insererUneDepense permet d'insérer une dépense pour le groupe "grp"
+     * dans la table Depenses
+     * @param dep
+     * @param grp
+     */
+    void insererUneDepense(const Depense& dep, const Groupe& grp);
+
+    /**
+     * @brief initialiserDepensesGroupe permet d'initialiser toutes les dépenses du groupe
+     * @param grp
+     */
+    void initialiserDepensesGroupe(Groupe& grp);
+
 
 private:
     QSqlDatabase sharCountBase;

@@ -20,7 +20,6 @@ SOURCES += \
     model/gestionnaireutilisateurs/Gestionnaireutilisateur.cpp \
     model/groupe/Groupe.cpp \
     model/bdd/BDDManager.cpp \
-    model/groupe/GroupeGestionBuget.cpp \
     model/sharecount/ShareCount.cpp \
     model/depense/Depense.cpp \
     model/gestionnairedepenses/GestionnaireDepenses.cpp \
@@ -39,7 +38,6 @@ HEADERS += \
     model/gestionnaireutilisateurs/Gestionnaireutilisateur.h \
     model/groupe/Groupe.h \
     model/bdd/BDDManager.h \
-    model/groupe/GroupeGestionBuget.h \
     model/sharecount/ShareCount.h \
     model/depense/Depense.h \
     model/gestionnairedepenses/GestionnaireDepenses.h \
