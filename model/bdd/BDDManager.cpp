@@ -167,7 +167,7 @@ void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QS
 
     query.prepare("SELECT DISTINCT GGB.idGroupe, GGB.idUser, GGB.description, GGB.dateCreationGrp "
                   "FROM GroupesGestionBudget GGB, UtilisateursParGroupesGDB UPG "
-                  "WHERE UPG.idUser = :id AND UPG.idUser = GGB.idUser;");
+                  "WHERE UPG.idUser = :id AND UPG.idGroupe = GGB.idGroupe;");
     query.bindValue(":id", QVariant(idUser));
 
     if (query.exec()) {
@@ -241,21 +241,11 @@ QStringList BDDManager::initialiserParticipants(const QString& grp) {
 
     QStringList listeUser;
 
-    std::cout << grp.toStdString() << std::endl;
 
     while (query.next()) {
         QString idUser = query.value("idUser").toString();
         listeUser << idUser;
-        std::cout << "ok" << std::endl;
-
     }
-
-    //std::cout << listeUser.size() << std::endl;
-
-    for (QString str: listeUser.toStdList()) {
-        std::cout << str.toStdString() << std::endl;
-    }
-
 
     return listeUser;
 }

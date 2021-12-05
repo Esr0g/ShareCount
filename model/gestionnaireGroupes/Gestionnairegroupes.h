@@ -45,6 +45,13 @@ public:
      */
     bool findGroupe(const QString& grp) const;
 
+    /**
+     * @brief getGroupe retourne un groupe
+     * @param idGroupe
+     * @return
+     */
+    Groupe& getGroupe(const QString& idGroupe);
+
 private:
     std::vector<Groupe> groupes;
 };

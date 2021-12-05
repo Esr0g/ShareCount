@@ -29,3 +29,11 @@ bool GestionnaireGroupes::findGroupe(const QString& grp) const {
 
     return trouve;
 }
+
+Groupe& GestionnaireGroupes::getGroupe(const QString& idGroupe) {
+    for (int i = 0; i < size(); i++) {
+        if (groupes[i].getIdentifiant() == idGroupe) {
+            return groupes[i];
+        }
+    }
+}

@@ -51,6 +51,10 @@ bool Utilisateur::findGroupe(const QString& grp) const {
     return mesGroupes->findGroupe(grp);
 }
 
+Groupe& Utilisateur::getGroupe(const QString& idGroupe) {
+    return mesGroupes->getGroupe(idGroupe);
+}
+
 Utilisateur::~Utilisateur() {
     //delete mesGroupes;
 }

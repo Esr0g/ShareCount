@@ -4,6 +4,8 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <QDoubleSpinBox>
+#include <QDateEdit>
 
 PageGestionDeBudget::PageGestionDeBudget(QWidget *parent) :
     QWidget(parent),
@@ -36,7 +38,7 @@ void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
     //QDialog *dialog = new QDialog(parent, 0);
     //QString text = QInputDialog::getText(0, "Nouvelle dépense", "Montant", QLineEdit::Normal,"", &ok);
 
-    double valeurDep = QInputDialog::getDouble(this, "Ajouter Une Dépense", "Nouvelle Dépense : ", 0, 0, 10000, 2);
+    /*double valeurDep = QInputDialog::getDouble(this, "Ajouter Une Dépense", "Nouvelle Dépense : ", 0, 0, 10000, 2);
 
     if (valeurDep != 0) {
         std::ostringstream streamObj;
@@ -45,13 +47,20 @@ void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
         streamObj << valeurDep;
         QString valeurTxt = QString::fromStdString(streamObj.str());
         depenses << valeurTxt + " € par " +shareCount->getUtilisateurActif().getIdentifiant();;
-    }
+    }*/
+
+    QString idGroupe = ui->label->text();
 
     QDialog * d = new QDialog();
     QVBoxLayout * vbox = new QVBoxLayout();
     QLineEdit * lineEditA = new QLineEdit();
-    QLineEdit * lineEditB = new QLineEdit();
-    QLineEdit * lineEditC = new QLineEdit();
+    QDoubleSpinBox * doubleSpinBoxA = new QDoubleSpinBox();
+    doubleSpinBoxA->setMinimum(0);
+    doubleSpinBoxA->setMaximum(10000);
+    doubleSpinBoxA->setSingleStep(0.01);
+    doubleSpinBoxA->setValue(0);
+    doubleSpinBoxA->setDecimals(2);
+    QDateEdit * dateEditA = new QDateEdit();
     QLabel * labelA = new QLabel();
     QLabel * labelB = new QLabel();
     QLabel * labelC = new QLabel();
@@ -68,22 +77,55 @@ void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
     vbox->addWidget(labelA);
     vbox->addWidget(lineEditA);
     vbox->addWidget(labelB);
-    vbox->addWidget(lineEditB);
+    vbox->addWidget(doubleSpinBoxA);
     vbox->addWidget(labelC);
-    vbox->addWidget(lineEditC);
+    vbox->addWidget(dateEditA);
     vbox->addWidget(buttonBox);
 
     d->setAttribute(Qt::WA_QuitOnClose, false); //Empêche la fermeture de la main window
     d->setLayout(vbox);
     d->exec();
 
-    //QString text = QInputDialog::getText(this, "Nouvelle dépense ", "Montant : ");
+    /* On récupère les informations des éditeurs et on les vérifie */
+    bool ajouterDepense = false;
+    QString titre = lineEditA->text();
+    double montant = doubleSpinBoxA->value();
+    QString montantTxt;
+    QDate date = dateEditA->date();
+    QString dateTxt;
 
-    depenses << lineEditA->text();
+    if (montant != 0) {
+        ajouterDepense = true;
 
-    QAbstractItemModel *model = new QStringListModel(depenses);
-    ui->depenseListView->setModel(model);
+        std::ostringstream streamObj;
+        streamObj<< std::fixed;
+        streamObj << std::setprecision(2);
+        streamObj << montant;
+        montantTxt = QString::fromStdString(streamObj.str());
 
+        if (titre.isEmpty()) {
+            titre = "Depense " + shareCount->getUtilisateurActif().getMesGroupes().size() + 1;
+        }
+
+        if (!date.isValid()) {
+            ajouterDepense = false;
+            QMessageBox::critical(this, "Erreur Ajout Dépense", "Date invalide");
+        } else {
+            dateTxt = date.toString("dd/MM/yyyy");
+        }
+
+
+    } else {
+        ajouterDepense = false;
+        QMessageBox::critical(this, "Erreur Ajout Dépense", "Montant invalide");
+    }
+
+    if (ajouterDepense) {
+        depenses << lineEditA->text() + " : " + montantTxt + " € avancé par " +
+                    shareCount->getUtilisateurActif().getIdentifiant() + " le "+ dateTxt;
+        QAbstractItemModel *model = new QStringListModel(depenses);
+        ui->depenseListView->setModel(model);
+    }
 }
 
 void PageGestionDeBudget::on_ajouterParticipantButton_clicked() {
