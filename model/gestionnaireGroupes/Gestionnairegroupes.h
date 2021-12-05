@@ -8,16 +8,42 @@
 
 class Groupe;
 
+/**
+ * @brief The GestionnaireGroupes class qui gère une collection de groupes
+ */
 class GestionnaireGroupes
 {
 public:
+    /**
+     * @brief GestionnaireGroupes constructeur
+     */
     explicit GestionnaireGroupes();
 
+    /**
+     * @brief ajouterGroupe permet d'ajouter un groupe a la collection
+     * @param groupe
+     */
     void ajouterGroupe(Groupe& groupe);
 
+    /**
+     * @brief getGroupe permet de retourner un groupe à la position i
+     * @param i
+     * @return
+     */
     Groupe getGroupe(const int& i) const;
 
-    int size();
+    /**
+     * @brief size retourne la taille de la collection
+     * @return
+     */
+    int size() const;
+
+    /**
+     * @brief findGroupe renvoie vrai si grp est présent dans la collection, faux sinon
+     * @param grp
+     * @return
+     */
+    bool findGroupe(const QString& grp) const;
 
 private:
     std::vector<Groupe> groupes;

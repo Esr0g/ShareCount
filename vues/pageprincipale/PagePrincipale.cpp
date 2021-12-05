@@ -27,6 +27,8 @@ PagePrincipale::PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCoun
     addDockWidget(Qt::LeftDockWidgetArea, vueGroupes);
     vlg = vueGroupes;
     setConnect(vlg);
+    setWindowTitle("ShareCount - " + shareCount->getUtilisateurActif().getIdentifiant());
+    //afficherGroupe();
 }
 
 void PagePrincipale::afficherGroupe(){
@@ -35,6 +37,7 @@ void PagePrincipale::afficherGroupe(){
     //qDebug() << vlg->getListView()->currentIndex().data().toString();
     pgdb->getLabelNomGroupe()->setText(vlg->getListView()->currentIndex().data().toString());
     setCentralWidget(pgdb);
+    pgdb->miseAJourParticipant();
 }
 
 PagePrincipale::~PagePrincipale()
@@ -47,16 +50,10 @@ void PagePrincipale::ajouterGroupe()
     PageCreationGroupe *pcg = new PageCreationGroupe(pwindow, pwindow, shareCount);
     setCentralWidget(pcg);
     vlg->setPageCreationGroupe(pcg);
-    setConnect1();
 }
 
 void PagePrincipale::setConnect(VueListeGroupe *vlg){
     QObject::connect(vlg->getCreerGroupeButton(), &QPushButton::clicked, this, &PagePrincipale::ajouterGroupe); //lors d'un clique sur le bouton "Créer un groupe" de la vueListeGroupe on affiche la pageCréation groupe
-}
-
-void PagePrincipale::setConnect1(){
-    //QModelIndex index = vlg->getListView()->currentIndex();
-
     QObject::connect(vlg->getListView(), SIGNAL(clicked(const QModelIndex)),this,SLOT(afficherGroupe()));
 }
 

@@ -44,7 +44,7 @@ void BDDManager::createDataBase() {
                       "idUser TEXT,"
                       "PRIMARY KEY(idGroupe, idUser),"
                       "FOREIGN KEY (idUser) REFERENCES Utilisateurs(idUser),"
-                      "FOREIGN KEY (idGroupe) REFERENCES Utilisateurs(idGroupe));");
+                      "FOREIGN KEY (idGroupe) REFERENCES GroupesGestionBudget(idGroupe));");
         if (query.exec()) {
             qDebug() << "Création de la table UtilisateursParGroupesGDB réussie.";
         } else {
@@ -56,7 +56,7 @@ void BDDManager::createDataBase() {
                       "contenu TEXT NOT NULL,"
                       "dateHisto TEXT NOT NULL,"
                       "PRIMARY KEY(noHist, idGroupe),"
-                      "FOREIGN KEY (idGroupe) REFERENCES Utilisateurs(idGroupe));");
+                      "FOREIGN KEY (idGroupe) REFERENCES GroupesGestionBudget(idGroupe));");
         if (query.exec()) {
             qDebug() << "Création de la table Historique réussie.";
         } else {
@@ -143,25 +143,37 @@ void BDDManager::insererunGroupe(const Groupe& grp, const Utilisateur& user) {
     query.bindValue(":description", QVariant(grp.getDescription()));
     query.bindValue(":dateCreationGrp", QVariant(grp.getDateCreation()));
 
-    std::cout << grp.getIdentifiant().toStdString() << std::endl;
-
     if (query.exec()) {
         qDebug() << "Le groupe a bien était ajouté a la table groupe";
     } else {
         qDebug() << "Echec de l'ajout du groupe";
+    }
+
+    query.clear();
+    query.prepare("INSERT INTO UtilisateursParGroupesGDB(idGroupe, idUser)"
+                  "VALUES(:idGroupe, :idUser);");
+    query.bindValue(":idGroupe", QVariant(grp.getIdentifiant()));
+    query.bindValue(":idUser", QVariant(user.getIdentifiant()));
+
+    if (query.exec()) {
+        qDebug() << "UtilisateursParGroupesGDB mise a jour";
+    } else {
+        qDebug() << "UtilisateursParGroupesGDB echèc mise à jour";
     }
 }
 
 void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QString& idUser) {
     QSqlQuery query;
 
-    query.prepare("SELECT * FROM GroupesGestionBudget WHERE idUser = :id;");
+    query.prepare("SELECT DISTINCT GGB.idGroupe, GGB.idUser, GGB.description, GGB.dateCreationGrp "
+                  "FROM GroupesGestionBudget GGB, UtilisateursParGroupesGDB UPG "
+                  "WHERE UPG.idUser = :id AND UPG.idUser = GGB.idUser;");
     query.bindValue(":id", QVariant(idUser));
 
     if (query.exec()) {
         qDebug() << "Selection du groupe réussie";
     } else {
-        qDebug() << "Selection du groupe échouée";
+        qDebug() << "Selection du groupe échoué";
     }
 
     while (query.next()) {
@@ -173,4 +185,77 @@ void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QS
         ggb.setDate(date);
         grp.ajouterGroupe(ggb);
     }
+}
+
+bool BDDManager::appartientAuGroupe(const QString& user, const QString& grp) {
+    bool trouve = false;
+
+    QSqlQuery query;
+
+    query.prepare("SELECT DISTINCT idGroupe FROM UtilisateursParGroupesGDB "
+                  "WHERE idUser = :idUser;");
+    query.bindValue(":idUser", QVariant(user));
+
+    if (query.exec()) {
+        qDebug() << "Requête appartientAuGroupe réussie";
+    } else {
+        qDebug() << "Requête appartientAuGroupe échouée " << sharCountBase.lastError().text();
+    }
+
+    while (query.next() && !trouve) {
+        QString idGroupe = query.value("idGroupe").toString();
+        if (idGroupe == grp) {
+            trouve = true;
+        }
+    }
+
+    return trouve;
+}
+
+void BDDManager::ajouterParticipantAuGroupe(const QString& user, const QString& grp) {
+    QSqlQuery query;
+    query.prepare("INSERT INTO UtilisateursParGroupesGDB(idGroupe, idUser)"
+                  "VALUES(:idGroupe, :idUser);");
+    query.bindValue(":idGroupe", QVariant(grp));
+    query.bindValue(":idUser", QVariant(user));
+
+    if (query.exec()) {
+        qDebug() << "UtilisateursParGroupesGDB mise a jour";
+    } else {
+        qDebug() << "UtilisateursParGroupesGDB échec mise à jour";
+    }
+}
+
+QStringList BDDManager::initialiserParticipants(const QString& grp) {
+    QSqlQuery query;
+
+    query.prepare("SELECT DISTINCT idUser FROM UtilisateursParGroupesGDB "
+                  "WHERE idGroupe = :idGroupe;");
+    query.bindValue(":idGroupe", QVariant(grp));
+
+    if (query.exec()) {
+        qDebug() << "Requête initaliserParticipants réussie";
+    } else {
+        qDebug() << "Requête initaliserParticipants échouée";
+    }
+
+    QStringList listeUser;
+
+    std::cout << grp.toStdString() << std::endl;
+
+    while (query.next()) {
+        QString idUser = query.value("idUser").toString();
+        listeUser << idUser;
+        std::cout << "ok" << std::endl;
+
+    }
+
+    //std::cout << listeUser.size() << std::endl;
+
+    for (QString str: listeUser.toStdList()) {
+        std::cout << str.toStdString() << std::endl;
+    }
+
+
+    return listeUser;
 }

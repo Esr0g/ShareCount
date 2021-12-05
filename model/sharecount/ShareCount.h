@@ -60,9 +60,47 @@ public:
      */
     void creerUtilisateur(Utilisateur& user);
 
-    Utilisateur getUtilisateurActif();
+    /**
+     * @brief getUtilisateurActif retourne la référence de l'utiisateur actif
+     * @return
+     */
+    Utilisateur& getUtilisateurActif();
 
+    /**
+     * @brief inserGroupe permet d'inserer un groupe dans la base de donnée
+     * @param grp
+     * @param user
+     */
     void inserGroupe(const Groupe& grp, const Utilisateur& user);
+
+    /**
+     * @brief findGroupe retourne vrai si grp fait partie des groupes d'utilisateurActif
+     * @param grp
+     * @return
+     */
+    bool findGroupe(const QString& grp) const;
+
+    /**
+     * @brief appartientAuGroupe retourne vrai si user appartient à grp
+     * @param user
+     * @param grp
+     * @return
+     */
+    bool appartientAuGroupe(const QString& user, const QString& grp);
+
+    /**
+     * @brief ajouterParticipantAuGroupe ajoute le participant "user" au groupe "grp";
+     * @param user
+     * @param grp
+     */
+    void ajouterParticipantAuGroupe(const QString& user, const QString& grp);
+
+    /**
+     * @brief initialiserParticipants permet d'initialiser les participants au groupe grp
+     * pour l'afficher
+     * @param grp
+     */
+    QStringList initialiserParticipants(const QString& grp);
 
     ~ShareCount();
 

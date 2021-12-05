@@ -1,4 +1,5 @@
 #include "Gestionnairegroupes.h"
+#include <algorithm>
 
 GestionnaireGroupes::GestionnaireGroupes()
 {
@@ -13,6 +14,18 @@ Groupe GestionnaireGroupes::getGroupe(const int& i) const{
     return groupes[i];
 }
 
-int GestionnaireGroupes::size() {
+int GestionnaireGroupes::size() const {
     return groupes.size();
+}
+
+bool GestionnaireGroupes::findGroupe(const QString& grp) const {
+    bool trouve = false;
+
+    for (int i = 0; i < size() && !trouve; i++) {
+        if (groupes[i].getIdentifiant() == grp) {
+            trouve = true;
+        }
+    }
+
+    return trouve;
 }

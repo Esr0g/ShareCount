@@ -15,7 +15,6 @@ bool ShareCount::identifierUtilisateur(const QString &identifiant, const QString
 void ShareCount::setUtilisateurActif(Utilisateur& user) {
     utilisateurActif = user;
     shareCountBDD.initialiserGroupeUtilisateur(user.getMesGroupes(), user.getIdentifiant());
-    std::cout << user.getMesGroupes().size() << std::endl;
 }
 
 Utilisateur ShareCount::getUtilisateur(const QString& id) const {
@@ -31,12 +30,28 @@ void ShareCount::creerUtilisateur(Utilisateur& user) {
     utilisateurs.ajouterUtilisateur(user);
 }
 
-Utilisateur ShareCount::getUtilisateurActif()  {
+Utilisateur& ShareCount::getUtilisateurActif()  {
     return utilisateurActif;
 }
 
 void ShareCount::inserGroupe(const Groupe& grp, const Utilisateur& user) {
     shareCountBDD.insererunGroupe(grp, user);
+}
+
+bool ShareCount::findGroupe(const QString& grp) const {
+    return utilisateurActif.findGroupe(grp);
+}
+
+bool ShareCount::appartientAuGroupe(const QString& user, const QString& grp) {
+    return shareCountBDD.appartientAuGroupe(user, grp);
+}
+
+void ShareCount::ajouterParticipantAuGroupe(const QString& user, const QString& grp) {
+    shareCountBDD.ajouterParticipantAuGroupe(user, grp);
+}
+
+QStringList ShareCount::initialiserParticipants(const QString& grp) {
+    return shareCountBDD.initialiserParticipants(grp);
 }
 
 ShareCount::~ShareCount() {

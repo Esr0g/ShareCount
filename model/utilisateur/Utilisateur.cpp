@@ -47,6 +47,10 @@ GestionnaireGroupes& Utilisateur::getMesGroupes() const {
     return *mesGroupes;
 }
 
+bool Utilisateur::findGroupe(const QString& grp) const {
+    return mesGroupes->findGroupe(grp);
+}
+
 Utilisateur::~Utilisateur() {
     //delete mesGroupes;
 }

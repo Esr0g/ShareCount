@@ -21,10 +21,12 @@ public:
     explicit PageGestionDeBudget(QWidget *parent = nullptr);
     explicit PageGestionDeBudget(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
     QLabel *getLabelNomGroupe();
+    void miseAJourParticipant();
     ~PageGestionDeBudget();
 
 private slots:
     void on_ajouterDepenseButton_clicked();
+    void on_ajouterParticipantButton_clicked();
 
 private:
     Ui::PageGestionDeBudget *ui;

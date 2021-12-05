@@ -50,9 +50,42 @@ public:
      */
     void initialiserListeUtilisateur(GestionnaireUtilisateur& users);
 
+    /**
+     * @brief insererunGroupe permet d'inserer un groupe dans la table GroupesGestionBudget
+     * et de mettre à jour la table UtilisateursParGroupesGDB
+     * @param grp
+     * @param user
+     */
     void insererunGroupe(const Groupe& grp, const Utilisateur& user);
 
+    /**
+     * @brief initialiserGroupeUtilisateur permet d'initialiser les groupes de l'utilisateur
+     * @param grp
+     * @param idUser
+     */
     void initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QString& idUser);
+
+    /**
+     * @brief appartientAuGroupe retourne vrai si user appartient a un groupe grp
+     * @param user
+     * @param grp
+     * @return
+     */
+    bool appartientAuGroupe(const QString& user, const QString& grp);
+
+    /**
+     * @brief ajouterParticipantAuGroupe ajoute le participant "user" au groupe "grp";
+     * @param user
+     * @param grp
+     */
+    void ajouterParticipantAuGroupe(const QString& user, const QString& grp);
+
+    /**
+     * @brief initialiserParticipants permet d'initialiser les participants au groupe grp
+     * pour l'afficher
+     * @param grp
+     */
+    QStringList initialiserParticipants(const QString& grp);
 
 
 private:

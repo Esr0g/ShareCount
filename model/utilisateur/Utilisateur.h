@@ -61,9 +61,25 @@ public:
      */
     void ajouterAMesGroupes(Groupe& grp);
 
+    /**
+     * @brief getMesGroupesToString retourne la liste des groupe sous la
+     * forme d'une liste de QString
+     * @return
+     */
     QStringList getMesGroupesToString() const;
 
+    /**
+     * @brief getMesGroupes retourne une référence sur mesGroupes
+     * @return
+     */
     GestionnaireGroupes& getMesGroupes() const;
+
+    /**
+     * @brief findGroupe retourne vrai si grp fait partie des groupes
+     * @param grp
+     * @return
+     */
+    bool findGroupe(const QString& grp) const;
 
     ~Utilisateur();
 

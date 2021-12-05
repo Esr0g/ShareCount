@@ -22,7 +22,7 @@ public:
     ~PagePrincipale();
 private:
     void setConnect(VueListeGroupe *vlg);
-    void setConnect1();
+
 private slots:
     void ajouterGroupe();
     void afficherGroupe();  //Affichage des données du groupe dans le central widget
