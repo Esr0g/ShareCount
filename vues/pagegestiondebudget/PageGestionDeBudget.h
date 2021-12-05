@@ -8,6 +8,7 @@
 #include "model/depense/Depense.h"
 #include <QInputDialog>
 #include <QStringListModel>
+#include <QDialogButtonBox>
 
 namespace Ui {
 class PageGestionDeBudget;
