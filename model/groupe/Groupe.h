@@ -66,6 +66,8 @@ public:
 
     GestionnaireUtilisateur getParticipants() const;
 
+    void setDate(const QString& date);
+
     ~Groupe();
 
 private:

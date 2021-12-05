@@ -36,6 +36,7 @@ void PageCreationGroupe::on_CreerGroupe_clicked()
     Utilisateur u = shareCount->getUtilisateurActif();
     GroupeGestionBuget ggb(ui->lineEdit->text());
     u.ajouterAMesGroupes(ggb);
+    shareCount->inserGroupe(ggb, u);
 }
 
 PageCreationGroupe::~PageCreationGroupe()

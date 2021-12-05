@@ -34,6 +34,8 @@ void PageAccueil::setConnect() {
 
 void PageAccueil::connexion() {
     if (shareCount->identifierUtilisateur(ui->lineEdit->text(), ui->lineEdit_2->text())) {
+        Utilisateur u = shareCount->getUtilisateur(ui->lineEdit->text());
+        shareCount->setUtilisateurActif(u);
         pwindow->setPageActive(new PagePrincipale(pwindow, pwindow, shareCount));
         pwindow->hide();
     } else {

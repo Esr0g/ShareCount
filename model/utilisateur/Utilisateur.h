@@ -61,7 +61,9 @@ public:
      */
     void ajouterAMesGroupes(Groupe& grp);
 
-    QStringList getMesGroupes() const;
+    QStringList getMesGroupesToString() const;
+
+    GestionnaireGroupes& getMesGroupes() const;
 
     ~Utilisateur();
 

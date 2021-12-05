@@ -38,7 +38,7 @@ public:
      * @brief setUtilisateurActif Permet d'affecter au système l'utilisateur actif
      * @param user
      */
-    void setUtilisateurActif(Utilisateur &user);
+    void setUtilisateurActif(Utilisateur& user);
 
     /**
      * @brief getUtilisateur retourne un utilisateur avec l'id spécifique
@@ -60,7 +60,9 @@ public:
      */
     void creerUtilisateur(Utilisateur& user);
 
-    Utilisateur getUtilisateurActif() const;
+    Utilisateur getUtilisateurActif();
+
+    void inserGroupe(const Groupe& grp, const Utilisateur& user);
 
     ~ShareCount();
 

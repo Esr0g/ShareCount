@@ -41,6 +41,9 @@ GestionnaireUtilisateur Groupe::getParticipants() const {
     return *participants;
 }
 
+void Groupe::setDate(const QString& date) {
+    dateCreation = date;}
+
 Groupe::~Groupe() {
     //delete participants;
 }
