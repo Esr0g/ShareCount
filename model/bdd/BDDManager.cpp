@@ -1,5 +1,6 @@
 #include "BDDManager.h"
 #include <iostream>
+#include <QDateTime>
 
 BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
@@ -145,6 +146,10 @@ void BDDManager::insererunGroupe(const Groupe& grp, const Utilisateur& user) {
 
     if (query.exec()) {
         qDebug() << "Le groupe a bien était ajouté a la table groupe";
+        QString action;
+        action.append(user.getIdentifiant());
+        action.append(" a crée le groupe.");
+        updateHistorique(grp.getIdentifiant(), action );
     } else {
         qDebug() << "Echec de l'ajout du groupe";
     }
@@ -221,6 +226,10 @@ void BDDManager::ajouterParticipantAuGroupe(const QString& user, const QString& 
 
     if (query.exec()) {
         qDebug() << "UtilisateursParGroupesGDB mise a jour";
+        QString action;
+        action.append(user);
+        action.append(" ajouté au groupe.");
+        updateHistorique(grp, action );
     } else {
         qDebug() << "UtilisateursParGroupesGDB échec mise à jour";
     }
@@ -264,6 +273,10 @@ void BDDManager::insererUneDepense(const Depense& dep, const Groupe& grp) {
 
     if (query.exec()) {
         qDebug() << "Requête inserUneDepense réussie";
+        QString action;
+        action.append(dep.getCreateur());
+        action.append(" a crée un dépense.");
+        updateHistorique(grp.getIdentifiant(), action );
     } else {
         qDebug() << "Requête insererUneDepense échouée" << query.lastError().text();
     }
@@ -299,4 +312,19 @@ void BDDManager::initialiserDepensesGroupe(Groupe& grp) {
     }
 }
 
-//Depense(const int& num, Utilisateur& user, double& valB, QString& nomDep, QString& dateDep, double valRem = 0, bool estRem = false);
+void BDDManager::updateHistorique(const QString& grp, const QString& action) {
+    QSqlQuery query;
+    QDateTime date;
+
+    query.prepare("INSERT INTO Historique(idGroupe, contenu, dateHisto) "
+                  "VALUES(:idGroupe, :contenu, :dateHisto);");
+    query.bindValue(":idGroupe", QVariant(grp));
+    query.bindValue(":contenu", QVariant(action));
+    query.bindValue(":dateHisto", QVariant(date.currentDateTime().toString("dd/MM/yyyy hh:mm:ss")));
+
+    if (query.exec()) {
+        qDebug() << "Historique mise à jour";
+    } else {
+        qDebug() << "Echec de la mise à jour de l'historique" << query.lastError().text();
+    }
+}
