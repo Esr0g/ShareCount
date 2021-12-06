@@ -61,3 +61,6 @@ void PagePrincipale::setConnect(VueListeGroupe *vlg){
     QObject::connect(ui->actionDeconnexion, SIGNAL(triggered(bool)), this->parent(), SLOT(deconnexion()));
 }
 
+ShareCount* PagePrincipale::getShareCount() {
+    return shareCount;
+}

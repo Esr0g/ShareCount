@@ -13,7 +13,6 @@ void ShareCount::initialiserListeUtilisateur() {
 }
 
 bool ShareCount::identifierUtilisateur(const QString &identifiant, const QString &motDePasse) const {
-    std::cout << utilisateurs.getNombreUtilisateur() << std::endl;
     return utilisateurs.identifierUtilisateur(identifiant, motDePasse);
 }
 

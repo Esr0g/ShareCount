@@ -37,3 +37,7 @@ Groupe& GestionnaireGroupes::getGroupe(const QString& idGroupe) {
         }
     }
 }
+
+void GestionnaireGroupes::clear() {
+    groupes.clear();
+}
