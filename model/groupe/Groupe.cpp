@@ -72,7 +72,7 @@ void Groupe::clearDepenses() {
     depenses->clearDepenses();
 }
 
-std::map<QString, int> Groupe::getDettes(){
+std::map<QString, double> Groupe::getDettes(){
     return dettes;
 }
 /*On calcule les dettes de tous les participants du groupe, en fonction de leur dépense*/

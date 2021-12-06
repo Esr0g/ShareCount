@@ -97,7 +97,7 @@ public:
 
      void setDettes();
 
-     std::map<QString, int> getDettes();
+     std::map<QString, double> getDettes();
 
     ~Groupe();
 
@@ -107,7 +107,7 @@ private:
     QString description;
     GestionnaireUtilisateur* participants;
     GestionnaireDepenses* depenses;
-    std::map<QString, int> dettes; //Chaque utilisateur est associé à une dette (positive ou négative) pour le groupe concerné
+    std::map<QString, double> dettes; //Chaque utilisateur est associé à une dette (positive ou négative) pour le groupe concerné
 };
 
 #endif // GROUPE_H
