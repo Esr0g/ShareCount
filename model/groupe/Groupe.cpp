@@ -35,7 +35,7 @@ QString Groupe::getDateCreation() const {
     return dateCreation;
 }
 
-void Groupe::ajouterUnpParticipant(Utilisateur& user) {
+void Groupe::ajouterUnpParticipant(Utilisateur user) {
     participants->ajouterUtilisateur(user);
 }
 
@@ -70,6 +70,27 @@ QStringList Groupe::depensesToString() {
 
 void Groupe::clearDepenses() {
     depenses->clearDepenses();
+}
+
+std::map<QString, int> Groupe::getDettes(){
+    return dettes;
+}
+/*On calcule les dettes de tous les participants du groupe, en fonction de leur dépense*/
+void Groupe::setDettes(){
+    for(std::map<QString, Utilisateur>::iterator it = participants->begin(); it != participants->end(); ++it){ //on initialise toutes les dettes à 0 €
+        dettes[it->second.getIdentifiant()] = 0;
+    }
+    for(int i = 0; i<nbDepenses(); i++){ //Pour chaque dépense on vérifie qui l'a créé pour ajuster les calculs (répartir les dépenses sur l'ensemble des membres du groupes)
+        for(std::map<QString, Utilisateur>::iterator it = participants->begin(); it != participants->end(); ++it){
+            qDebug() << it->second.getIdentifiant();
+            if(depenses->getDepense(i).getCreateur() == it->first){
+                qDebug() << it->first;
+                dettes[it->second.getIdentifiant()] += depenses->getDepense(i).getVealeurBase()-depenses->getDepense(i).getVealeurBase()/participants->getNombreUtilisateur();
+            }else{
+                dettes[it->second.getIdentifiant()] -= (depenses->getDepense(i).getVealeurBase()/participants->getNombreUtilisateur());
+            }
+        }
+    }
 }
 
 Groupe::~Groupe() {

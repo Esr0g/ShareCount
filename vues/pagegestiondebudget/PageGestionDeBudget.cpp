@@ -116,6 +116,7 @@ void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
         shareCount->ajouterUneDepense(dep);
         miseAJourDepenses();
     }
+    setEquilibre();
 }
 
 void PageGestionDeBudget::on_ajouterParticipantButton_clicked() {
@@ -144,6 +145,51 @@ void PageGestionDeBudget::on_ajouterParticipantButton_clicked() {
         QAbstractItemModel *model = new QStringListModel(shareCount->initialiserParticipants(ui->label->text()));
         ui->participantsLisetView->setModel(model);
     }
+}
+/* affichage des dettes dans une listView, sur l'ensemble des dépenses (qui a avancé plus d'argent que les autres/ qui doit de l'argent) */
+void PageGestionDeBudget::setEquilibre(){
+    QString participant;
+    QStringList list = shareCount->initialiserParticipants(ui->label->text());
+    qDebug() << QString::number(list.size());
+    for(int i=0; i<list.size();i++){
+        participant = list.at(i);
+        shareCount->getGroupeActif().ajouterUnpParticipant(shareCount->getUtilisateur(participant)); //ajout des participants dans le groupe actif
+    }
+    shareCount->getGroupeActif().setDettes(); //initialisation des dettes (calcul des dettes)
+    std::map<QString, int> dettes = shareCount->getGroupeActif().getDettes();
+    QStringList equilibreDette;
+    QString nom;
+    QString val;
+    for(std::map<QString, int>::iterator it = dettes.begin(); it != dettes.end(); ++it){
+        val = QString::number(it->second);
+        nom = it->first;
+        equilibreDette << nom + " : "+val+" €";
+    }
+
+    QStandardItemModel *model = new QStandardItemModel();
+    QList<QStandardItem *> list1;
+    ui->listView_3->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->listView_3->setViewMode(QListView::ListMode);
+
+    QRegExp rx(".+-{1}.+"); //Cherche un '-', pour trouver un nombre négatif
+    for(int i=0;i<equilibreDette.size();i++){
+        list1 << new QStandardItem(equilibreDette.at(i));
+    }
+    model->appendColumn(list1);
+
+    for(int i=0;i<equilibreDette.size();i++){
+
+        QModelIndex vIndex = model->index(i, 0);
+        QMap<int, QVariant> vMap = model->itemData(vIndex);
+        if(rx.exactMatch(equilibreDette.at(i))){
+            vMap.insert(Qt::BackgroundRole, QVariant(QBrush(Qt::red))); // Si l'utilisateur doit de l'argent au groupe
+        }else{
+            vMap.insert(Qt::BackgroundRole, QVariant(QBrush(Qt::green))); // Si l'utilisateur a avancé plus d'argent que les autres
+        }
+        model->setItemData(vIndex, vMap);
+
+    }
+    ui->listView_3->setModel(model);
 }
 
 void PageGestionDeBudget::miseAJourParticipant() {

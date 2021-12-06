@@ -7,6 +7,8 @@
 #include "model/gestionnaireutilisateurs/Gestionnaireutilisateur.h"
 #include "model/depense/Depense.h"
 #include "model/gestionnairedepenses/GestionnaireDepenses.h"
+#include <QDebug>
+#include <QStandardItemModel>
 
 class GestionnaireUtilisateur;
 class Utilisateur;
@@ -59,7 +61,7 @@ public:
      * @brief ajouterUnpParticipant ajouter un participant au groupe
      * @param user
      */
-    void ajouterUnpParticipant(Utilisateur& user);
+    void ajouterUnpParticipant(Utilisateur user);
 
     /**
      * @brief getParticipants retourne les participants
@@ -93,6 +95,10 @@ public:
 
      void clearDepenses();
 
+     void setDettes();
+
+     std::map<QString, int> getDettes();
+
     ~Groupe();
 
 private:
@@ -101,6 +107,7 @@ private:
     QString description;
     GestionnaireUtilisateur* participants;
     GestionnaireDepenses* depenses;
+    std::map<QString, int> dettes; //Chaque utilisateur est associé à une dette (positive ou négative) pour le groupe concerné
 };
 
 #endif // GROUPE_H

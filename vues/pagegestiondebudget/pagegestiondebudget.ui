@@ -17,13 +17,6 @@
    <item row="3" column="2">
     <widget class="QListView" name="listView_3"/>
    </item>
-   <item row="1" column="2">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Historique des dépenses</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
@@ -55,6 +48,13 @@
     <widget class="QPushButton" name="ajouterParticipantButton">
      <property name="text">
       <string>Ajouter un participant</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Equilibre</string>
      </property>
     </widget>
    </item>
