@@ -2,7 +2,7 @@
 #include <iostream>
 #include <QDateTime>
 
-BDDManager::BDDManager(const QString& path) : creerDataBase(false)
+BDDManager::BDDManager(const QString& path) : creerDataBase(true)
 {
     sharCountBase = QSqlDatabase::addDatabase("QSQLITE");
     sharCountBase.setDatabaseName(path);
