@@ -21,6 +21,8 @@ PageGestionDeBudget::PageGestionDeBudget(QWidget *parent, FenetrePrincipale *fp,
     shareCount(sc)
 {
     ui->setupUi(this);
+    ui->depenseListView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->participantsLisetView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 QLabel *PageGestionDeBudget::getLabelNomGroupe(){

@@ -101,6 +101,21 @@ public:
      */
     void initialiserDepensesGroupe(Groupe& grp);
 
+    /**
+     * @brief updateHistorique a chaque fois qu'une action est fête celle-ci
+     * est enregistré dans la table historique.
+     * @param grp
+     * @param action
+     */
+    void updateHistorique(const QString& grp, const QString& action);
+
+    /**
+     * @brief initialiserHistorique permet d'initialiser l'historique en fonction du groupe
+     * @param grp
+     * @return
+     */
+    QStringList initialiserHistorique(const QString& grp);
+
 
 private:
     QSqlDatabase sharCountBase;
