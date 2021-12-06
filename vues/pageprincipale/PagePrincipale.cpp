@@ -40,6 +40,7 @@ void PagePrincipale::afficherGroupe(){
     pgdb->miseAJourParticipant();
     shareCount->setGroupeActif(shareCount->getUtilisateurActif().getGroupe(vlg->getListView()->currentIndex().data().toString()));
     pgdb->miseAJourDepenses();
+    pgdb->setEquilibre();
 }
 
 PagePrincipale::~PagePrincipale()

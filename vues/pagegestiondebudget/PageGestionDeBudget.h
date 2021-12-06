@@ -9,6 +9,8 @@
 #include <QInputDialog>
 #include <QStringListModel>
 #include <QDialogButtonBox>
+#include <QDebug>
+#include <QRegExp>
 
 namespace Ui {
 class PageGestionDeBudget;
@@ -24,6 +26,7 @@ public:
     QLabel *getLabelNomGroupe();
     void miseAJourParticipant();
     void miseAJourDepenses();
+    void setEquilibre();
     ~PageGestionDeBudget();
 
 private slots:

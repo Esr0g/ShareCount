@@ -32,7 +32,7 @@ void ShareCount::creerUtilisateur(Utilisateur& user) {
     utilisateurs.ajouterUtilisateur(user);
 }
 
-Utilisateur& ShareCount::getUtilisateurActif()  {
+Utilisateur& ShareCount::getUtilisateurActif() {
     return utilisateurActif;
 }
 
