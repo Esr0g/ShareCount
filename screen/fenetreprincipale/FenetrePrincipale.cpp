@@ -1,9 +1,11 @@
 #include "FenetrePrincipale.h"
 #include "ui_FenetrePrincipale.h"
+#include "vues/pageaccueil/PageAccueil.h"
 
 FenetrePrincipale::FenetrePrincipale(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::FenetrePrincipale)
+    ui(new Ui::FenetrePrincipale),
+    pageEnAttenteBool(false)
 {
     ui->setupUi(this);
     pageActive = nullptr;
@@ -13,7 +15,8 @@ FenetrePrincipale::FenetrePrincipale(QWidget *parent) :
 FenetrePrincipale::FenetrePrincipale(QWidget *parent, ShareCount* sc):
      QWidget(parent),
      ui(new Ui::FenetrePrincipale),
-     shareCount(sc)
+     shareCount(sc),
+     pageEnAttenteBool(false)
  {
      ui->setupUi(this);
      pageActive = nullptr;
@@ -41,6 +44,29 @@ void FenetrePrincipale::resizeEvent(QResizeEvent *event){
         pageActive->resize(width(), height());
     }
 }
+
+void FenetrePrincipale::deconnexion() {
+    this->show();
+    pageActive->hide();
+    pageEnAttente = pageActive;
+    setPageEstEnAttente(true);
+    pageActive = nullptr;
+    std::cout << shareCount->getNombreUtilisateurs() << std::endl;
+    setPageActive(new PageAccueil(this, this, shareCount));
+}
+
+bool FenetrePrincipale::pageEstEnAttente() {
+    return pageEnAttenteBool;
+}
+
+QWidget* FenetrePrincipale::getPageEnattente() {
+    return pageEnAttente;
+}
+
+void FenetrePrincipale::setPageEstEnAttente(bool b) {
+    pageEnAttenteBool = b;
+}
+
 
 
 FenetrePrincipale::~FenetrePrincipale()

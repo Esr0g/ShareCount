@@ -55,3 +55,7 @@ std::map<QString, Utilisateur>::iterator  GestionnaireUtilisateur::begin() {
 std::map<QString, Utilisateur>::iterator  GestionnaireUtilisateur::end() {
     return utilisateurs.end();
 }
+
+void GestionnaireUtilisateur::clear() {
+    utilisateurs.clear();
+}

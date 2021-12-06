@@ -4,13 +4,16 @@
 ShareCount::ShareCount(QObject *parent): QObject(parent){
     shareCountBDD.createDataBase();
 
-    Groupe ggb;
-
     //On va ajouter au GestionnaireUtilisateur, tous les utilisateurs présent dans la base de donnée
     shareCountBDD.initialiserListeUtilisateur(utilisateurs);
 }
 
+void ShareCount::initialiserListeUtilisateur() {
+    shareCountBDD.initialiserListeUtilisateur(utilisateurs);
+}
+
 bool ShareCount::identifierUtilisateur(const QString &identifiant, const QString &motDePasse) const {
+    std::cout << utilisateurs.getNombreUtilisateur() << std::endl;
     return utilisateurs.identifierUtilisateur(identifiant, motDePasse);
 }
 
@@ -68,6 +71,10 @@ Groupe& ShareCount::getGroupeActif() {
 void ShareCount::setGroupeActif(Groupe& grp) {
     groupeActif = grp;
     shareCountBDD.initialiserDepensesGroupe(groupeActif);
+}
+
+int ShareCount::getNombreUtilisateurs() const {
+    return utilisateurs.getNombreUtilisateur();
 }
 
 ShareCount::~ShareCount() {

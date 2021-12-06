@@ -118,6 +118,10 @@ public:
      */
     void setGroupeActif(Groupe& grp);
 
+    void initialiserListeUtilisateur();
+
+    int getNombreUtilisateurs() const;
+
     ~ShareCount();
 
 

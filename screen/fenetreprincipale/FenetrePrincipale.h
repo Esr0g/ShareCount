@@ -41,12 +41,23 @@ public:
      */
     void setPageActive(QWidget *p);
 
+    bool pageEstEnAttente();
+
+    void setPageEstEnAttente(bool b);
+
+    QWidget* getPageEnattente();
+
     ~FenetrePrincipale();
+
+public slots:
+    void deconnexion();
 
 private:
     Ui::FenetrePrincipale *ui;
     QWidget *pageActive;
     ShareCount* shareCount;
+    QWidget *pageEnAttente;
+    bool pageEnAttenteBool;
 };
 
 #endif // FENETREPRINCIPALE_H

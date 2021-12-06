@@ -17,6 +17,33 @@
    <set>QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks|QMainWindow::VerticalTabs</set>
   </property>
   <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCompte">
+    <property name="title">
+     <string>Compte</string>
+    </property>
+    <addaction name="actionDeconnexion"/>
+   </widget>
+   <addaction name="menuCompte"/>
+  </widget>
+  <action name="actionDeconnexion">
+   <property name="text">
+    <string>Deconnexion</string>
+   </property>
+  </action>
+  <action name="actiondd">
+   <property name="text">
+    <string>dd</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

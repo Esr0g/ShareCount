@@ -36,8 +36,14 @@ void PageAccueil::connexion() {
     if (shareCount->identifierUtilisateur(ui->lineEdit->text(), ui->lineEdit_2->text())) {
         Utilisateur u = shareCount->getUtilisateur(ui->lineEdit->text());
         shareCount->setUtilisateurActif(u);
-        pwindow->setPageActive(new PagePrincipale(pwindow, pwindow, shareCount));
-        pwindow->hide();
+        if (pwindow->pageEstEnAttente()) {
+            pwindow->setPageActive(pwindow->getPageEnattente());
+            pwindow->setPageEstEnAttente(false);
+            pwindow->hide();
+        } else {
+            pwindow->setPageActive(new PagePrincipale(pwindow, pwindow, shareCount));
+            pwindow->hide();
+        }
     } else {
         QMessageBox::critical(this, "Erreur connexion", "Identifiant ou mot de passe inconnu, veuillez réessayer");
     }

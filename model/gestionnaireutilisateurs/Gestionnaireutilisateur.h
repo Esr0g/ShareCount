@@ -69,6 +69,8 @@ public:
      */
     std::map<QString, Utilisateur>::iterator end();
 
+    void clear();
+
 private:
     std::map<QString, Utilisateur> utilisateurs;
 };

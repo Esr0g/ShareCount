@@ -57,5 +57,6 @@ void PagePrincipale::ajouterGroupe()
 void PagePrincipale::setConnect(VueListeGroupe *vlg){
     QObject::connect(vlg->getCreerGroupeButton(), &QPushButton::clicked, this, &PagePrincipale::ajouterGroupe); //lors d'un clique sur le bouton "Créer un groupe" de la vueListeGroupe on affiche la pageCréation groupe
     QObject::connect(vlg->getListView(), SIGNAL(clicked(const QModelIndex)),this,SLOT(afficherGroupe()));
+    QObject::connect(ui->actionDeconnexion, SIGNAL(triggered(bool)), this->parent(), SLOT(deconnexion()));
 }
 
