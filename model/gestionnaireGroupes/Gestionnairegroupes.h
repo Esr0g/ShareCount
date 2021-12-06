@@ -52,6 +52,8 @@ public:
      */
     Groupe& getGroupe(const QString& idGroupe);
 
+    void clear();
+
 private:
     std::vector<Groupe> groupes;
 };

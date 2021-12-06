@@ -19,7 +19,9 @@ class PagePrincipale : public QMainWindow
 public:
     explicit PagePrincipale(QWidget *parent = nullptr);
     explicit PagePrincipale(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
+    ShareCount* getShareCount();
     ~PagePrincipale();
+
 private:
     void setConnect(VueListeGroupe *vlg);
 

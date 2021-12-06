@@ -2,7 +2,7 @@
 #include <iostream>
 #include <QDateTime>
 
-BDDManager::BDDManager(const QString& path) : creerDataBase(true)
+BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
     sharCountBase = QSqlDatabase::addDatabase("QSQLITE");
     sharCountBase.setDatabaseName(path);
@@ -169,6 +169,7 @@ void BDDManager::insererunGroupe(const Groupe& grp, const Utilisateur& user) {
 
 void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QString& idUser) {
     QSqlQuery query;
+    grp.clear();
 
     query.prepare("SELECT DISTINCT GGB.idGroupe, GGB.idUser, GGB.description, GGB.dateCreationGrp "
                   "FROM GroupesGestionBudget GGB, UtilisateursParGroupesGDB UPG "
