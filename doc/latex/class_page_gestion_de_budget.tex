@@ -1,0 +1,206 @@
+\hypertarget{class_page_gestion_de_budget}{}\doxysection{Référence de la classe Page\+Gestion\+De\+Budget}
+\label{class_page_gestion_de_budget}\index{PageGestionDeBudget@{PageGestionDeBudget}}
+
+
+{\ttfamily \#include $<$Page\+Gestion\+De\+Budget.\+h$>$}
+
+
+
+Graphe de collaboration de Page\+Gestion\+De\+Budget\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_page_gestion_de_budget_a1ceff48d13ced364ecef74ce058590d2}{Page\+Gestion\+De\+Budget}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_page_gestion_de_budget_a4e3e7b971dfd1a272f99ba3b64515312}{Page\+Gestion\+De\+Budget}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent, \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$fp, \mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$sc)
+\item 
+Q\+Label $\ast$ \mbox{\hyperlink{class_page_gestion_de_budget_a4b50ae1ec16f7ec80a682cf51a9312a6}{get\+Label\+Nom\+Groupe}} ()
+\item 
+void \mbox{\hyperlink{class_page_gestion_de_budget_a4cbac69d1c7b0dad4e611e7da3613e7a}{mise\+A\+Jour\+Participant}} ()
+\item 
+void \mbox{\hyperlink{class_page_gestion_de_budget_a71be607d22c7ef5d0dffdcd4392ecd13}{mise\+A\+Jour\+Depenses}} ()
+\item 
+void \mbox{\hyperlink{class_page_gestion_de_budget_a5c0dc4f9a0847a121c5d1361043ba12c}{set\+Equilibre}} ()
+\item 
+\mbox{\hyperlink{class_page_gestion_de_budget_a0687608e90eedc962a53351634570087}{$\sim$\+Page\+Gestion\+De\+Budget}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Connecteurs privés}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_page_gestion_de_budget_a67a9df137640d72ff2817072435a7c16}{on\+\_\+ajouter\+Depense\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_page_gestion_de_budget_ab94f028d92d84407a6b7d83bb5ab7c3d}{on\+\_\+ajouter\+Participant\+Button\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Page\+Gestion\+De\+Budget $\ast$ \mbox{\hyperlink{class_page_gestion_de_budget_a33d5f4b2f3674021c42d320bcc13506b}{ui}}
+\item 
+\mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$ \mbox{\hyperlink{class_page_gestion_de_budget_af8bc70113365a1036d583589dac51e6f}{pwindow}}
+\item 
+\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$ \mbox{\hyperlink{class_page_gestion_de_budget_a52fd31a9d8e921e37d97ee2466c5ec00}{share\+Count}}
+\item 
+Q\+Label \mbox{\hyperlink{class_page_gestion_de_budget_a0d1d04e5ba68076d8654a6641d41ded6}{nom\+Groupe}}
+\item 
+Q\+String\+List \mbox{\hyperlink{class_page_gestion_de_budget_a6cd5fef84d9319f0a4005969d6a9c48a}{depenses}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_page_gestion_de_budget_a1ceff48d13ced364ecef74ce058590d2}\label{class_page_gestion_de_budget_a1ceff48d13ced364ecef74ce058590d2}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!PageGestionDeBudget@{PageGestionDeBudget}}
+\index{PageGestionDeBudget@{PageGestionDeBudget}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{PageGestionDeBudget()}{PageGestionDeBudget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Page\+Gestion\+De\+Budget\+::\+Page\+Gestion\+De\+Budget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Références ui.
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a4e3e7b971dfd1a272f99ba3b64515312}\label{class_page_gestion_de_budget_a4e3e7b971dfd1a272f99ba3b64515312}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!PageGestionDeBudget@{PageGestionDeBudget}}
+\index{PageGestionDeBudget@{PageGestionDeBudget}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{PageGestionDeBudget()}{PageGestionDeBudget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Page\+Gestion\+De\+Budget\+::\+Page\+Gestion\+De\+Budget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent,  }\item[{\mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$}]{fp,  }\item[{\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$}]{sc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Références ui.
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a0687608e90eedc962a53351634570087}\label{class_page_gestion_de_budget_a0687608e90eedc962a53351634570087}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!````~PageGestionDeBudget@{$\sim$PageGestionDeBudget}}
+\index{````~PageGestionDeBudget@{$\sim$PageGestionDeBudget}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{$\sim$PageGestionDeBudget()}{~PageGestionDeBudget()}}
+{\footnotesize\ttfamily Page\+Gestion\+De\+Budget\+::$\sim$\+Page\+Gestion\+De\+Budget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références ui.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_page_gestion_de_budget_a4b50ae1ec16f7ec80a682cf51a9312a6}\label{class_page_gestion_de_budget_a4b50ae1ec16f7ec80a682cf51a9312a6}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!getLabelNomGroupe@{getLabelNomGroupe}}
+\index{getLabelNomGroupe@{getLabelNomGroupe}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{getLabelNomGroupe()}{getLabelNomGroupe()}}
+{\footnotesize\ttfamily Q\+Label $\ast$ Page\+Gestion\+De\+Budget\+::get\+Label\+Nom\+Groupe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références ui.
+
+
+
+Référencé par Page\+Principale\+::afficher\+Groupe().
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a71be607d22c7ef5d0dffdcd4392ecd13}\label{class_page_gestion_de_budget_a71be607d22c7ef5d0dffdcd4392ecd13}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!miseAJourDepenses@{miseAJourDepenses}}
+\index{miseAJourDepenses@{miseAJourDepenses}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{miseAJourDepenses()}{miseAJourDepenses()}}
+{\footnotesize\ttfamily void Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Depenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références Groupe\+::depenses\+To\+String(), Share\+Count\+::get\+Groupe\+Actif(), share\+Count, et ui.
+
+
+
+Référencé par Page\+Principale\+::afficher\+Groupe(), et on\+\_\+ajouter\+Depense\+Button\+\_\+clicked().
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a4cbac69d1c7b0dad4e611e7da3613e7a}\label{class_page_gestion_de_budget_a4cbac69d1c7b0dad4e611e7da3613e7a}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!miseAJourParticipant@{miseAJourParticipant}}
+\index{miseAJourParticipant@{miseAJourParticipant}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{miseAJourParticipant()}{miseAJourParticipant()}}
+{\footnotesize\ttfamily void Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Participant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références Share\+Count\+::initialiser\+Participants(), share\+Count, et ui.
+
+
+
+Référencé par Page\+Principale\+::afficher\+Groupe().
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a67a9df137640d72ff2817072435a7c16}\label{class_page_gestion_de_budget_a67a9df137640d72ff2817072435a7c16}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!on\_ajouterDepenseButton\_clicked@{on\_ajouterDepenseButton\_clicked}}
+\index{on\_ajouterDepenseButton\_clicked@{on\_ajouterDepenseButton\_clicked}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{on\_ajouterDepenseButton\_clicked}{on\_ajouterDepenseButton\_clicked}}
+{\footnotesize\ttfamily void Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Références Share\+Count\+::ajouter\+Une\+Depense(), Share\+Count\+::get\+Groupe\+Actif(), Utilisateur\+::get\+Identifiant(), Share\+Count\+::get\+Utilisateur\+Actif(), mise\+A\+Jour\+Depenses(), Groupe\+::nb\+Depenses(), set\+Equilibre(), share\+Count, et ui.
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_ab94f028d92d84407a6b7d83bb5ab7c3d}\label{class_page_gestion_de_budget_ab94f028d92d84407a6b7d83bb5ab7c3d}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!on\_ajouterParticipantButton\_clicked@{on\_ajouterParticipantButton\_clicked}}
+\index{on\_ajouterParticipantButton\_clicked@{on\_ajouterParticipantButton\_clicked}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{on\_ajouterParticipantButton\_clicked}{on\_ajouterParticipantButton\_clicked}}
+{\footnotesize\ttfamily void Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Participant\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Références Share\+Count\+::ajouter\+Participant\+Au\+Groupe(), Share\+Count\+::appartient\+Au\+Groupe(), Share\+Count\+::find\+Utilisateur(), Share\+Count\+::initialiser\+Participants(), share\+Count, et ui.
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a5c0dc4f9a0847a121c5d1361043ba12c}\label{class_page_gestion_de_budget_a5c0dc4f9a0847a121c5d1361043ba12c}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!setEquilibre@{setEquilibre}}
+\index{setEquilibre@{setEquilibre}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{setEquilibre()}{setEquilibre()}}
+{\footnotesize\ttfamily void Page\+Gestion\+De\+Budget\+::set\+Equilibre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références Groupe\+::ajouter\+Unp\+Participant(), Groupe\+::get\+Dettes(), Share\+Count\+::get\+Groupe\+Actif(), Share\+Count\+::get\+Utilisateur(), Share\+Count\+::initialiser\+Participants(), Groupe\+::set\+Dettes(), share\+Count, et ui.
+
+
+
+Référencé par Page\+Principale\+::afficher\+Groupe(), et on\+\_\+ajouter\+Depense\+Button\+\_\+clicked().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_page_gestion_de_budget_a6cd5fef84d9319f0a4005969d6a9c48a}\label{class_page_gestion_de_budget_a6cd5fef84d9319f0a4005969d6a9c48a}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!depenses@{depenses}}
+\index{depenses@{depenses}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{depenses}{depenses}}
+{\footnotesize\ttfamily Q\+String\+List Page\+Gestion\+De\+Budget\+::depenses\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a0d1d04e5ba68076d8654a6641d41ded6}\label{class_page_gestion_de_budget_a0d1d04e5ba68076d8654a6641d41ded6}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!nomGroupe@{nomGroupe}}
+\index{nomGroupe@{nomGroupe}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{nomGroupe}{nomGroupe}}
+{\footnotesize\ttfamily Q\+Label Page\+Gestion\+De\+Budget\+::nom\+Groupe\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_af8bc70113365a1036d583589dac51e6f}\label{class_page_gestion_de_budget_af8bc70113365a1036d583589dac51e6f}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!pwindow@{pwindow}}
+\index{pwindow@{pwindow}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{pwindow}{pwindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}}$\ast$ Page\+Gestion\+De\+Budget\+::pwindow\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a52fd31a9d8e921e37d97ee2466c5ec00}\label{class_page_gestion_de_budget_a52fd31a9d8e921e37d97ee2466c5ec00}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!shareCount@{shareCount}}
+\index{shareCount@{shareCount}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{shareCount}{shareCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_share_count}{Share\+Count}}$\ast$ Page\+Gestion\+De\+Budget\+::share\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par mise\+A\+Jour\+Depenses(), mise\+A\+Jour\+Participant(), on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), et set\+Equilibre().
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_a33d5f4b2f3674021c42d320bcc13506b}\label{class_page_gestion_de_budget_a33d5f4b2f3674021c42d320bcc13506b}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!ui@{ui}}
+\index{ui@{ui}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Page\+Gestion\+De\+Budget$\ast$ Page\+Gestion\+De\+Budget\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Label\+Nom\+Groupe(), mise\+A\+Jour\+Depenses(), mise\+A\+Jour\+Participant(), on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), Page\+Gestion\+De\+Budget(), set\+Equilibre(), et $\sim$\+Page\+Gestion\+De\+Budget().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/vues/pagegestiondebudget/\mbox{\hyperlink{_page_gestion_de_budget_8h}{Page\+Gestion\+De\+Budget.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/vues/pagegestiondebudget/\mbox{\hyperlink{_page_gestion_de_budget_8cpp}{Page\+Gestion\+De\+Budget.\+cpp}}\end{DoxyCompactItemize}

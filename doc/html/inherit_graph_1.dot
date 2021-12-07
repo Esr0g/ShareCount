@@ -1,8 +1,8 @@
-digraph "Graphical Class Hierarchy"
+digraph "Graphe hiérarchique des classes"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="gestionnaireUtilisateurs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgestionnaire_utilisateurs.html",tooltip=" "];
+  Node0 [label="GestionnaireDepenses",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gestionnaire_depenses.html",tooltip="The GestionnaireDepenses class permet de gérer une collection de dépenses: Un groupe peut avoir plusi..."];
 }

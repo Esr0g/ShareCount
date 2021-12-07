@@ -1,0 +1,312 @@
+\hypertarget{class_depense}{}\doxysection{Référence de la classe Depense}
+\label{class_depense}\index{Depense@{Depense}}
+
+
+The \mbox{\hyperlink{class_depense}{Depense}} class définie une dépense, qui sera la fonction princiaple des Groupes\+Gestions\+Budget.  
+
+
+
+
+{\ttfamily \#include $<$Depense.\+h$>$}
+
+
+
+Graphe de collaboration de Depense\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_depense_a8e490d0930a44d723736876f3f688517}{Depense}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_depense}{Depense}} constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_depense_a5198c915e3841d15ad2bf6eddea4d958}{Depense}} (const int \&num, Q\+String \&user, double \&valB, Q\+String \&nom\+Dep, Q\+String \&date\+Dep, double val\+Rem=0, bool est\+Rem=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_depense}{Depense}} constructeur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_depense_ab210f525cfa6fa0c72aa65f766e89e07}{get\+Num\+Depense}} () const
+\begin{DoxyCompactList}\small\item\em get\+Num\+Depense retourne le numéro de dépense \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_depense_ae333d5599ab77931c28c15897183891c}{get\+Createur}} () const
+\begin{DoxyCompactList}\small\item\em get\+Createur retourne le créateur de la dépense \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_depense_a7c5dcd10b28f6beae9fe49fd317adbcf}{get\+Vealeur\+Base}} () const
+\begin{DoxyCompactList}\small\item\em get\+Vealeur\+Base retourne la valeur initiale \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_depense_a019de7106c8444b235828e9ae7db1b3f}{get\+Valeur\+Remboursee}} () const
+\begin{DoxyCompactList}\small\item\em get\+Valeur\+Remboursee retourne la somme déjà remboursée \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_depense_a0d012f96ef791910b8751786afaf2a61}{is\+Remboursee}} () const
+\begin{DoxyCompactList}\small\item\em est\+Remboursee retourne vrai si la dépense est complétement remboursée, faux sinon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_depense_ace3f889d651b408d5e0b37794a0f37b2}{add\+Valeur\+Remboursee}} (const int \&val)
+\begin{DoxyCompactList}\small\item\em add\+Valeur\+Remboursee permet de rembourser une partie de la dépense \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_depense_adfd380c9eac4e850d2ad763f5c6a2728}{set\+Est\+Remboursee}} (const bool \&b)
+\begin{DoxyCompactList}\small\item\em set\+Est\+Remboursee positionne le boolean est\+Remboursee sur b \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_depense_ab99a9d1e31e4d032fc952862ccb18db4}{get\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em get\+Nom retourne le nom de la dépense \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_depense_ab2771264d5aa5739a4cf8343f73e0015}{getdate}} () const
+\begin{DoxyCompactList}\small\item\em getdate retourne la date de la dépense \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_depense_a6f637b200de69336b48ad5d82e7b31d1}{num\+Depense}}
+\item 
+Q\+String \mbox{\hyperlink{class_depense_a9c266eeb5286eeb7d00686f64bd45131}{nom}}
+\item 
+Q\+String \mbox{\hyperlink{class_depense_ab371398c3d6905b3aa4e2a5e566bbe7f}{date}}
+\item 
+Q\+String \mbox{\hyperlink{class_depense_a52292ca043931ac4e86416388be6f28a}{createur}}
+\item 
+int \mbox{\hyperlink{class_depense_a86592998292858e9b7aad52f4932548a}{valeur\+Base}}
+\item 
+int \mbox{\hyperlink{class_depense_ac93046664d7f6fd53a23195bf54113d0}{valeur\+Remboursee}}
+\item 
+bool \mbox{\hyperlink{class_depense_af703c672f63ba8470baa76b325d149df}{est\+RembourseeB}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_depense_a8e490d0930a44d723736876f3f688517}\label{class_depense_a8e490d0930a44d723736876f3f688517}} 
+\index{Depense@{Depense}!Depense@{Depense}}
+\index{Depense@{Depense}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{Depense()}{Depense()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Depense\+::\+Depense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_depense_a5198c915e3841d15ad2bf6eddea4d958}\label{class_depense_a5198c915e3841d15ad2bf6eddea4d958}} 
+\index{Depense@{Depense}!Depense@{Depense}}
+\index{Depense@{Depense}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{Depense()}{Depense()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Depense\+::\+Depense (\begin{DoxyParamCaption}\item[{const int \&}]{num,  }\item[{Q\+String \&}]{user,  }\item[{double \&}]{valB,  }\item[{Q\+String \&}]{nom\+Dep,  }\item[{Q\+String \&}]{date\+Dep,  }\item[{double}]{val\+Rem = {\ttfamily 0},  }\item[{bool}]{est\+Rem = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em num} & numéro de la dépense dans un groupe \\
+\hline
+{\em user} & utilisateur qui a crée lé dépense \\
+\hline
+{\em valB} & valeur initiale de la dépense \\
+\hline
+{\em val\+Rem} & valeur remboursée (au début 0) \\
+\hline
+{\em est\+Rem} & donne le statut de la dépense \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_depense_ace3f889d651b408d5e0b37794a0f37b2}\label{class_depense_ace3f889d651b408d5e0b37794a0f37b2}} 
+\index{Depense@{Depense}!addValeurRemboursee@{addValeurRemboursee}}
+\index{addValeurRemboursee@{addValeurRemboursee}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{addValeurRemboursee()}{addValeurRemboursee()}}
+{\footnotesize\ttfamily void Depense\+::add\+Valeur\+Remboursee (\begin{DoxyParamCaption}\item[{const int \&}]{val }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em val} & \\
+\hline
+\end{DoxyParams}
+
+
+Références valeur\+Remboursee.
+
+\mbox{\Hypertarget{class_depense_ae333d5599ab77931c28c15897183891c}\label{class_depense_ae333d5599ab77931c28c15897183891c}} 
+\index{Depense@{Depense}!getCreateur@{getCreateur}}
+\index{getCreateur@{getCreateur}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{getCreateur()}{getCreateur()}}
+{\footnotesize\ttfamily Q\+String Depense\+::get\+Createur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références createur.
+
+
+
+Référencé par Groupe\+::depenses\+To\+String(), B\+D\+D\+Manager\+::inserer\+Une\+Depense(), et Groupe\+::set\+Dettes().
+
+\mbox{\Hypertarget{class_depense_ab2771264d5aa5739a4cf8343f73e0015}\label{class_depense_ab2771264d5aa5739a4cf8343f73e0015}} 
+\index{Depense@{Depense}!getdate@{getdate}}
+\index{getdate@{getdate}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{getdate()}{getdate()}}
+{\footnotesize\ttfamily Q\+String Depense\+::getdate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références date.
+
+
+
+Référencé par Groupe\+::depenses\+To\+String(), et B\+D\+D\+Manager\+::inserer\+Une\+Depense().
+
+\mbox{\Hypertarget{class_depense_ab99a9d1e31e4d032fc952862ccb18db4}\label{class_depense_ab99a9d1e31e4d032fc952862ccb18db4}} 
+\index{Depense@{Depense}!getNom@{getNom}}
+\index{getNom@{getNom}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily Q\+String Depense\+::get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références nom.
+
+
+
+Référencé par Groupe\+::depenses\+To\+String(), et B\+D\+D\+Manager\+::inserer\+Une\+Depense().
+
+\mbox{\Hypertarget{class_depense_ab210f525cfa6fa0c72aa65f766e89e07}\label{class_depense_ab210f525cfa6fa0c72aa65f766e89e07}} 
+\index{Depense@{Depense}!getNumDepense@{getNumDepense}}
+\index{getNumDepense@{getNumDepense}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{getNumDepense()}{getNumDepense()}}
+{\footnotesize\ttfamily int Depense\+::get\+Num\+Depense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références num\+Depense.
+
+
+
+Référencé par B\+D\+D\+Manager\+::inserer\+Une\+Depense().
+
+\mbox{\Hypertarget{class_depense_a019de7106c8444b235828e9ae7db1b3f}\label{class_depense_a019de7106c8444b235828e9ae7db1b3f}} 
+\index{Depense@{Depense}!getValeurRemboursee@{getValeurRemboursee}}
+\index{getValeurRemboursee@{getValeurRemboursee}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{getValeurRemboursee()}{getValeurRemboursee()}}
+{\footnotesize\ttfamily double Depense\+::get\+Valeur\+Remboursee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références valeur\+Remboursee.
+
+
+
+Référencé par Groupe\+::depenses\+To\+String().
+
+\mbox{\Hypertarget{class_depense_a7c5dcd10b28f6beae9fe49fd317adbcf}\label{class_depense_a7c5dcd10b28f6beae9fe49fd317adbcf}} 
+\index{Depense@{Depense}!getVealeurBase@{getVealeurBase}}
+\index{getVealeurBase@{getVealeurBase}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{getVealeurBase()}{getVealeurBase()}}
+{\footnotesize\ttfamily double Depense\+::get\+Vealeur\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références valeur\+Base.
+
+
+
+Référencé par Groupe\+::depenses\+To\+String(), B\+D\+D\+Manager\+::inserer\+Une\+Depense(), et Groupe\+::set\+Dettes().
+
+\mbox{\Hypertarget{class_depense_a0d012f96ef791910b8751786afaf2a61}\label{class_depense_a0d012f96ef791910b8751786afaf2a61}} 
+\index{Depense@{Depense}!isRemboursee@{isRemboursee}}
+\index{isRemboursee@{isRemboursee}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{isRemboursee()}{isRemboursee()}}
+{\footnotesize\ttfamily bool Depense\+::is\+Remboursee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références est\+RembourseeB.
+
+\mbox{\Hypertarget{class_depense_adfd380c9eac4e850d2ad763f5c6a2728}\label{class_depense_adfd380c9eac4e850d2ad763f5c6a2728}} 
+\index{Depense@{Depense}!setEstRemboursee@{setEstRemboursee}}
+\index{setEstRemboursee@{setEstRemboursee}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{setEstRemboursee()}{setEstRemboursee()}}
+{\footnotesize\ttfamily void Depense\+::set\+Est\+Remboursee (\begin{DoxyParamCaption}\item[{const bool \&}]{b }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+
+
+Références est\+RembourseeB.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_depense_a52292ca043931ac4e86416388be6f28a}\label{class_depense_a52292ca043931ac4e86416388be6f28a}} 
+\index{Depense@{Depense}!createur@{createur}}
+\index{createur@{createur}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{createur}{createur}}
+{\footnotesize\ttfamily Q\+String Depense\+::createur\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Createur().
+
+\mbox{\Hypertarget{class_depense_ab371398c3d6905b3aa4e2a5e566bbe7f}\label{class_depense_ab371398c3d6905b3aa4e2a5e566bbe7f}} 
+\index{Depense@{Depense}!date@{date}}
+\index{date@{date}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{date}{date}}
+{\footnotesize\ttfamily Q\+String Depense\+::date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par getdate().
+
+\mbox{\Hypertarget{class_depense_af703c672f63ba8470baa76b325d149df}\label{class_depense_af703c672f63ba8470baa76b325d149df}} 
+\index{Depense@{Depense}!estRembourseeB@{estRembourseeB}}
+\index{estRembourseeB@{estRembourseeB}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{estRembourseeB}{estRembourseeB}}
+{\footnotesize\ttfamily bool Depense\+::est\+RembourseeB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par is\+Remboursee(), et set\+Est\+Remboursee().
+
+\mbox{\Hypertarget{class_depense_a9c266eeb5286eeb7d00686f64bd45131}\label{class_depense_a9c266eeb5286eeb7d00686f64bd45131}} 
+\index{Depense@{Depense}!nom@{nom}}
+\index{nom@{nom}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{nom}{nom}}
+{\footnotesize\ttfamily Q\+String Depense\+::nom\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Nom().
+
+\mbox{\Hypertarget{class_depense_a6f637b200de69336b48ad5d82e7b31d1}\label{class_depense_a6f637b200de69336b48ad5d82e7b31d1}} 
+\index{Depense@{Depense}!numDepense@{numDepense}}
+\index{numDepense@{numDepense}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{numDepense}{numDepense}}
+{\footnotesize\ttfamily int Depense\+::num\+Depense\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Num\+Depense().
+
+\mbox{\Hypertarget{class_depense_a86592998292858e9b7aad52f4932548a}\label{class_depense_a86592998292858e9b7aad52f4932548a}} 
+\index{Depense@{Depense}!valeurBase@{valeurBase}}
+\index{valeurBase@{valeurBase}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{valeurBase}{valeurBase}}
+{\footnotesize\ttfamily int Depense\+::valeur\+Base\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Vealeur\+Base().
+
+\mbox{\Hypertarget{class_depense_ac93046664d7f6fd53a23195bf54113d0}\label{class_depense_ac93046664d7f6fd53a23195bf54113d0}} 
+\index{Depense@{Depense}!valeurRemboursee@{valeurRemboursee}}
+\index{valeurRemboursee@{valeurRemboursee}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{valeurRemboursee}{valeurRemboursee}}
+{\footnotesize\ttfamily int Depense\+::valeur\+Remboursee\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par add\+Valeur\+Remboursee(), et get\+Valeur\+Remboursee().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/depense/\mbox{\hyperlink{_depense_8h}{Depense.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/depense/\mbox{\hyperlink{_depense_8cpp}{Depense.\+cpp}}\end{DoxyCompactItemize}

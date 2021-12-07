@@ -1,0 +1,11 @@
+digraph "/home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/model/gestionnaireGroupes" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3f14f6767c31cb4a1d22c13c18cc6fc3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="model" fontname="Helvetica", fontsize="10", URL="dir_3f14f6767c31cb4a1d22c13c18cc6fc3.html"]
+  dir_5d127840cb7f16c45060f373cb4bca37 [shape=box, label="gestionnaireGroupes", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5d127840cb7f16c45060f373cb4bca37.html"];
+  }
+  dir_be53b3a474f3a7a074cbe09cc367e36a [shape=box label="groupe" URL="dir_be53b3a474f3a7a074cbe09cc367e36a.html"];
+  dir_5d127840cb7f16c45060f373cb4bca37->dir_be53b3a474f3a7a074cbe09cc367e36a [headlabel="1", labeldistance=1.5 headhref="dir_000004_000006.html"];
+}

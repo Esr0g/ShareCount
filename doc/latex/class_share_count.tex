@@ -1,0 +1,454 @@
+\hypertarget{class_share_count}{}\doxysection{Référence de la classe Share\+Count}
+\label{class_share_count}\index{ShareCount@{ShareCount}}
+
+
+The \mbox{\hyperlink{class_share_count}{Share\+Count}} class Classe principale du model qui est aussi un Q\+Objet pour pouvoir utiliser les sigaux et les slots.  
+
+
+
+
+{\ttfamily \#include $<$Share\+Count.\+h$>$}
+
+
+
+Graphe de collaboration de Share\+Count\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_share_count_a2fb80959c8eb0af9dca90a308efb529a}{Share\+Count}} (\mbox{\hyperlink{class_q_object}{Q\+Object}} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_share_count}{Share\+Count}} constructeur par défaut. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_share_count_a4460787ef2d2f0624d2c1e00e89f6026}{identifier\+Utilisateur}} (const Q\+String \&identifiant, const Q\+String \&mot\+De\+Passe) const
+\begin{DoxyCompactList}\small\item\em identifier\+Utilisateur retourne vrai si l\textquotesingle{}utilisateur existe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_share_count_a595dbfccc1ec2ec70acf4c424634bca4}{set\+Utilisateur\+Actif}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user)
+\begin{DoxyCompactList}\small\item\em set\+Utilisateur\+Actif Permet d\textquotesingle{}affecter au système l\textquotesingle{}utilisateur actif \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \mbox{\hyperlink{class_share_count_aaf8f0db0cca91e77d96e5e7509ad218b}{get\+Utilisateur}} (const Q\+String \&id) const
+\begin{DoxyCompactList}\small\item\em get\+Utilisateur retourne un utilisateur avec l\textquotesingle{}id spécifique \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_share_count_a87cfe057ff1d4a2541d8bd1def4c923c}{find\+Utilisateur}} (const Q\+String \&id) const
+\begin{DoxyCompactList}\small\item\em find\+Utilisateur retourne vrai si l\textquotesingle{}utilisateur existe faux sinon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_share_count_a391039e11770ecdce33713a461f21d5e}{creer\+Utilisateur}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user)
+\begin{DoxyCompactList}\small\item\em creer\+Utilisateur permet d\textquotesingle{}ajouter un utilisateur à la base de donnée \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \& \mbox{\hyperlink{class_share_count_a37a2f1f3a1cef420ad2cba760b693378}{get\+Utilisateur\+Actif}} ()
+\begin{DoxyCompactList}\small\item\em get\+Utilisateur\+Actif retourne la référence de l\textquotesingle{}utiisateur actif \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_share_count_a5fb6b920af7abe26c0314e82e4a21590}{inser\+Groupe}} (const \mbox{\hyperlink{class_groupe}{Groupe}} \&grp, const \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user)
+\begin{DoxyCompactList}\small\item\em inser\+Groupe permet d\textquotesingle{}inserer un groupe dans la base de donnée \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_share_count_ae99158f74557d2033bc5976bd1218099}{find\+Groupe}} (const Q\+String \&grp) const
+\begin{DoxyCompactList}\small\item\em find\+Groupe retourne vrai si grp fait partie des groupes d\textquotesingle{}utilisateur\+Actif \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_share_count_a1f260ef5e8c31d7314e6cebf8e1437f2}{appartient\+Au\+Groupe}} (const Q\+String \&user, const Q\+String \&grp)
+\begin{DoxyCompactList}\small\item\em appartient\+Au\+Groupe retourne vrai si user appartient à grp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_share_count_a77ac03d5fc52b031dc3375e4b93c9c85}{ajouter\+Participant\+Au\+Groupe}} (const Q\+String \&user, const Q\+String \&grp)
+\begin{DoxyCompactList}\small\item\em ajouter\+Participant\+Au\+Groupe ajoute le participant \char`\"{}user\char`\"{} au groupe \char`\"{}grp\char`\"{}; \end{DoxyCompactList}\item 
+Q\+String\+List \mbox{\hyperlink{class_share_count_ab2e8810f3302b41b3ed5ed7436c8732e}{initialiser\+Participants}} (const Q\+String \&grp)
+\begin{DoxyCompactList}\small\item\em initialiser\+Participants permet d\textquotesingle{}initialiser les participants au groupe grp pour l\textquotesingle{}afficher \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_share_count_ab85ba0622564fccb166d9880b2e4587f}{ajouter\+Une\+Depense}} (\mbox{\hyperlink{class_depense}{Depense}} \&dep)
+\begin{DoxyCompactList}\small\item\em ajouter\+Une\+Depense permet d\textquotesingle{}ajouter une dépense au groupe actif \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe}{Groupe}} \& \mbox{\hyperlink{class_share_count_af00ecd5ca528be42c209e1e34871134d}{get\+Groupe\+Actif}} ()
+\begin{DoxyCompactList}\small\item\em get\+Groupe\+Actif retourne le groupe actif \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_share_count_afb1878d4dd772e6b52bf39c6430703e3}{set\+Groupe\+Actif}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&grp)
+\begin{DoxyCompactList}\small\item\em set\+Groupe\+Actif positionne le groupe actif \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_share_count_a2155b64ed453857585e61f26bae3769c}{initialiser\+Liste\+Utilisateur}} ()
+\item 
+int \mbox{\hyperlink{class_share_count_af3fed63ab658bfcedbec1914f2242350}{get\+Nombre\+Utilisateurs}} () const
+\item 
+\mbox{\hyperlink{class_share_count_a0ba453b0570674fa045ceb5117676f8e}{$\sim$\+Share\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} \mbox{\hyperlink{class_share_count_a4741338e4369f241d85cf149f05ed14d}{utilisateurs}}
+\item 
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \mbox{\hyperlink{class_share_count_a40cf7ba2aaaba85b71d5f0abcf4b46b3}{utilisateur\+Actif}}
+\item 
+\mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} \mbox{\hyperlink{class_share_count_ae317d95dc6a0d036d400c67308400819}{groupes}}
+\item 
+\mbox{\hyperlink{class_b_d_d_manager}{B\+D\+D\+Manager}} \mbox{\hyperlink{class_share_count_a57a6f709fd434d0ce2818885fc161f99}{share\+Count\+B\+DD}}
+\item 
+\mbox{\hyperlink{class_groupe}{Groupe}} \mbox{\hyperlink{class_share_count_a1acdc8e42b4c424533142b4845868411}{groupe\+Actif}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_share_count_a2fb80959c8eb0af9dca90a308efb529a}\label{class_share_count_a2fb80959c8eb0af9dca90a308efb529a}} 
+\index{ShareCount@{ShareCount}!ShareCount@{ShareCount}}
+\index{ShareCount@{ShareCount}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{ShareCount()}{ShareCount()}}
+{\footnotesize\ttfamily Share\+Count\+::\+Share\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_object}{Q\+Object}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Références B\+D\+D\+Manager\+::create\+Data\+Base(), B\+D\+D\+Manager\+::initialiser\+Liste\+Utilisateur(), share\+Count\+B\+DD, et utilisateurs.
+
+\mbox{\Hypertarget{class_share_count_a0ba453b0570674fa045ceb5117676f8e}\label{class_share_count_a0ba453b0570674fa045ceb5117676f8e}} 
+\index{ShareCount@{ShareCount}!````~ShareCount@{$\sim$ShareCount}}
+\index{````~ShareCount@{$\sim$ShareCount}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShareCount()}{~ShareCount()}}
+{\footnotesize\ttfamily Share\+Count\+::$\sim$\+Share\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_share_count_a77ac03d5fc52b031dc3375e4b93c9c85}\label{class_share_count_a77ac03d5fc52b031dc3375e4b93c9c85}} 
+\index{ShareCount@{ShareCount}!ajouterParticipantAuGroupe@{ajouterParticipantAuGroupe}}
+\index{ajouterParticipantAuGroupe@{ajouterParticipantAuGroupe}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{ajouterParticipantAuGroupe()}{ajouterParticipantAuGroupe()}}
+{\footnotesize\ttfamily void Share\+Count\+::ajouter\+Participant\+Au\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{user,  }\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références B\+D\+D\+Manager\+::ajouter\+Participant\+Au\+Groupe(), et share\+Count\+B\+DD.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Participant\+Button\+\_\+clicked().
+
+\mbox{\Hypertarget{class_share_count_ab85ba0622564fccb166d9880b2e4587f}\label{class_share_count_ab85ba0622564fccb166d9880b2e4587f}} 
+\index{ShareCount@{ShareCount}!ajouterUneDepense@{ajouterUneDepense}}
+\index{ajouterUneDepense@{ajouterUneDepense}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{ajouterUneDepense()}{ajouterUneDepense()}}
+{\footnotesize\ttfamily void Share\+Count\+::ajouter\+Une\+Depense (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_depense}{Depense}} \&}]{dep }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dep} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Groupe\+::ajouter\+Une\+Depense(), groupe\+Actif, B\+D\+D\+Manager\+::inserer\+Une\+Depense(), et share\+Count\+B\+DD.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked().
+
+\mbox{\Hypertarget{class_share_count_a1f260ef5e8c31d7314e6cebf8e1437f2}\label{class_share_count_a1f260ef5e8c31d7314e6cebf8e1437f2}} 
+\index{ShareCount@{ShareCount}!appartientAuGroupe@{appartientAuGroupe}}
+\index{appartientAuGroupe@{appartientAuGroupe}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{appartientAuGroupe()}{appartientAuGroupe()}}
+{\footnotesize\ttfamily bool Share\+Count\+::appartient\+Au\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{user,  }\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références B\+D\+D\+Manager\+::appartient\+Au\+Groupe(), et share\+Count\+B\+DD.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Participant\+Button\+\_\+clicked().
+
+\mbox{\Hypertarget{class_share_count_a391039e11770ecdce33713a461f21d5e}\label{class_share_count_a391039e11770ecdce33713a461f21d5e}} 
+\index{ShareCount@{ShareCount}!creerUtilisateur@{creerUtilisateur}}
+\index{creerUtilisateur@{creerUtilisateur}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{creerUtilisateur()}{creerUtilisateur()}}
+{\footnotesize\ttfamily void Share\+Count\+::creer\+Utilisateur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Gestionnaire\+Utilisateur\+::ajouter\+Utilisateur(), B\+D\+D\+Manager\+::inserer\+Utilisateur(), share\+Count\+B\+DD, et utilisateurs.
+
+
+
+Référencé par Page\+Creation\+Compte\+::on\+Push\+Button\+Creer\+Compte().
+
+\mbox{\Hypertarget{class_share_count_ae99158f74557d2033bc5976bd1218099}\label{class_share_count_ae99158f74557d2033bc5976bd1218099}} 
+\index{ShareCount@{ShareCount}!findGroupe@{findGroupe}}
+\index{findGroupe@{findGroupe}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{findGroupe()}{findGroupe()}}
+{\footnotesize\ttfamily bool Share\+Count\+::find\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références Utilisateur\+::find\+Groupe(), et utilisateur\+Actif.
+
+
+
+Référencé par Page\+Creation\+Groupe\+::on\+\_\+\+Creer\+Groupe\+\_\+clicked().
+
+\mbox{\Hypertarget{class_share_count_a87cfe057ff1d4a2541d8bd1def4c923c}\label{class_share_count_a87cfe057ff1d4a2541d8bd1def4c923c}} 
+\index{ShareCount@{ShareCount}!findUtilisateur@{findUtilisateur}}
+\index{findUtilisateur@{findUtilisateur}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{findUtilisateur()}{findUtilisateur()}}
+{\footnotesize\ttfamily bool Share\+Count\+::find\+Utilisateur (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références Gestionnaire\+Utilisateur\+::find\+Utilisateur(), et utilisateurs.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), et Page\+Creation\+Compte\+::on\+Push\+Button\+Creer\+Compte().
+
+\mbox{\Hypertarget{class_share_count_af00ecd5ca528be42c209e1e34871134d}\label{class_share_count_af00ecd5ca528be42c209e1e34871134d}} 
+\index{ShareCount@{ShareCount}!getGroupeActif@{getGroupeActif}}
+\index{getGroupeActif@{getGroupeActif}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{getGroupeActif()}{getGroupeActif()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_groupe}{Groupe}} \& Share\+Count\+::get\+Groupe\+Actif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références groupe\+Actif.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Depenses(), Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), et Page\+Gestion\+De\+Budget\+::set\+Equilibre().
+
+\mbox{\Hypertarget{class_share_count_af3fed63ab658bfcedbec1914f2242350}\label{class_share_count_af3fed63ab658bfcedbec1914f2242350}} 
+\index{ShareCount@{ShareCount}!getNombreUtilisateurs@{getNombreUtilisateurs}}
+\index{getNombreUtilisateurs@{getNombreUtilisateurs}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{getNombreUtilisateurs()}{getNombreUtilisateurs()}}
+{\footnotesize\ttfamily int Share\+Count\+::get\+Nombre\+Utilisateurs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Références Gestionnaire\+Utilisateur\+::get\+Nombre\+Utilisateur(), et utilisateurs.
+
+\mbox{\Hypertarget{class_share_count_aaf8f0db0cca91e77d96e5e7509ad218b}\label{class_share_count_aaf8f0db0cca91e77d96e5e7509ad218b}} 
+\index{ShareCount@{ShareCount}!getUtilisateur@{getUtilisateur}}
+\index{getUtilisateur@{getUtilisateur}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{getUtilisateur()}{getUtilisateur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_utilisateur}{Utilisateur}} Share\+Count\+::get\+Utilisateur (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références Gestionnaire\+Utilisateur\+::get\+Utilisateur(), et utilisateurs.
+
+
+
+Référencé par Page\+Accueil\+::connexion(), et Page\+Gestion\+De\+Budget\+::set\+Equilibre().
+
+\mbox{\Hypertarget{class_share_count_a37a2f1f3a1cef420ad2cba760b693378}\label{class_share_count_a37a2f1f3a1cef420ad2cba760b693378}} 
+\index{ShareCount@{ShareCount}!getUtilisateurActif@{getUtilisateurActif}}
+\index{getUtilisateurActif@{getUtilisateurActif}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{getUtilisateurActif()}{getUtilisateurActif()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \& Share\+Count\+::get\+Utilisateur\+Actif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références utilisateur\+Actif.
+
+
+
+Référencé par Page\+Principale\+::afficher\+Groupe(), Vue\+Liste\+Groupe\+::ajouter\+Groupe(), Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), Page\+Creation\+Groupe\+::on\+\_\+\+Creer\+Groupe\+\_\+clicked(), Page\+Principale\+::\+Page\+Principale(), et Vue\+Liste\+Groupe\+::\+Vue\+Liste\+Groupe().
+
+\mbox{\Hypertarget{class_share_count_a4460787ef2d2f0624d2c1e00e89f6026}\label{class_share_count_a4460787ef2d2f0624d2c1e00e89f6026}} 
+\index{ShareCount@{ShareCount}!identifierUtilisateur@{identifierUtilisateur}}
+\index{identifierUtilisateur@{identifierUtilisateur}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{identifierUtilisateur()}{identifierUtilisateur()}}
+{\footnotesize\ttfamily bool Share\+Count\+::identifier\+Utilisateur (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{identifiant,  }\item[{const Q\+String \&}]{mot\+De\+Passe }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em identifiant} & \\
+\hline
+{\em mot\+De\+Passe} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références Gestionnaire\+Utilisateur\+::identifier\+Utilisateur(), et utilisateurs.
+
+
+
+Référencé par Page\+Accueil\+::connexion().
+
+\mbox{\Hypertarget{class_share_count_a2155b64ed453857585e61f26bae3769c}\label{class_share_count_a2155b64ed453857585e61f26bae3769c}} 
+\index{ShareCount@{ShareCount}!initialiserListeUtilisateur@{initialiserListeUtilisateur}}
+\index{initialiserListeUtilisateur@{initialiserListeUtilisateur}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{initialiserListeUtilisateur()}{initialiserListeUtilisateur()}}
+{\footnotesize\ttfamily void Share\+Count\+::initialiser\+Liste\+Utilisateur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références B\+D\+D\+Manager\+::initialiser\+Liste\+Utilisateur(), share\+Count\+B\+DD, et utilisateurs.
+
+\mbox{\Hypertarget{class_share_count_ab2e8810f3302b41b3ed5ed7436c8732e}\label{class_share_count_ab2e8810f3302b41b3ed5ed7436c8732e}} 
+\index{ShareCount@{ShareCount}!initialiserParticipants@{initialiserParticipants}}
+\index{initialiserParticipants@{initialiserParticipants}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{initialiserParticipants()}{initialiserParticipants()}}
+{\footnotesize\ttfamily Q\+String\+List Share\+Count\+::initialiser\+Participants (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références B\+D\+D\+Manager\+::initialiser\+Participants(), et share\+Count\+B\+DD.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Participant(), Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), et Page\+Gestion\+De\+Budget\+::set\+Equilibre().
+
+\mbox{\Hypertarget{class_share_count_a5fb6b920af7abe26c0314e82e4a21590}\label{class_share_count_a5fb6b920af7abe26c0314e82e4a21590}} 
+\index{ShareCount@{ShareCount}!inserGroupe@{inserGroupe}}
+\index{inserGroupe@{inserGroupe}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{inserGroupe()}{inserGroupe()}}
+{\footnotesize\ttfamily void Share\+Count\+::inser\+Groupe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{grp,  }\item[{const \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Références B\+D\+D\+Manager\+::insererun\+Groupe(), et share\+Count\+B\+DD.
+
+
+
+Référencé par Page\+Creation\+Groupe\+::on\+\_\+\+Creer\+Groupe\+\_\+clicked().
+
+\mbox{\Hypertarget{class_share_count_afb1878d4dd772e6b52bf39c6430703e3}\label{class_share_count_afb1878d4dd772e6b52bf39c6430703e3}} 
+\index{ShareCount@{ShareCount}!setGroupeActif@{setGroupeActif}}
+\index{setGroupeActif@{setGroupeActif}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{setGroupeActif()}{setGroupeActif()}}
+{\footnotesize\ttfamily void Share\+Count\+::set\+Groupe\+Actif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_groupe}{Groupe}} \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références groupe\+Actif, B\+D\+D\+Manager\+::initialiser\+Depenses\+Groupe(), et share\+Count\+B\+DD.
+
+
+
+Référencé par Page\+Principale\+::afficher\+Groupe().
+
+\mbox{\Hypertarget{class_share_count_a595dbfccc1ec2ec70acf4c424634bca4}\label{class_share_count_a595dbfccc1ec2ec70acf4c424634bca4}} 
+\index{ShareCount@{ShareCount}!setUtilisateurActif@{setUtilisateurActif}}
+\index{setUtilisateurActif@{setUtilisateurActif}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{setUtilisateurActif()}{setUtilisateurActif()}}
+{\footnotesize\ttfamily void Share\+Count\+::set\+Utilisateur\+Actif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Utilisateur\+::get\+Identifiant(), Utilisateur\+::get\+Mes\+Groupes(), B\+D\+D\+Manager\+::initialiser\+Groupe\+Utilisateur(), share\+Count\+B\+DD, et utilisateur\+Actif.
+
+
+
+Référencé par Page\+Accueil\+::connexion().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_share_count_a1acdc8e42b4c424533142b4845868411}\label{class_share_count_a1acdc8e42b4c424533142b4845868411}} 
+\index{ShareCount@{ShareCount}!groupeActif@{groupeActif}}
+\index{groupeActif@{groupeActif}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{groupeActif}{groupeActif}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_groupe}{Groupe}} Share\+Count\+::groupe\+Actif\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+Une\+Depense(), get\+Groupe\+Actif(), et set\+Groupe\+Actif().
+
+\mbox{\Hypertarget{class_share_count_ae317d95dc6a0d036d400c67308400819}\label{class_share_count_ae317d95dc6a0d036d400c67308400819}} 
+\index{ShareCount@{ShareCount}!groupes@{groupes}}
+\index{groupes@{groupes}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{groupes}{groupes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} Share\+Count\+::groupes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_share_count_a57a6f709fd434d0ce2818885fc161f99}\label{class_share_count_a57a6f709fd434d0ce2818885fc161f99}} 
+\index{ShareCount@{ShareCount}!shareCountBDD@{shareCountBDD}}
+\index{shareCountBDD@{shareCountBDD}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{shareCountBDD}{shareCountBDD}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_d_d_manager}{B\+D\+D\+Manager}} Share\+Count\+::share\+Count\+B\+DD\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+Participant\+Au\+Groupe(), ajouter\+Une\+Depense(), appartient\+Au\+Groupe(), creer\+Utilisateur(), initialiser\+Liste\+Utilisateur(), initialiser\+Participants(), inser\+Groupe(), set\+Groupe\+Actif(), set\+Utilisateur\+Actif(), et Share\+Count().
+
+\mbox{\Hypertarget{class_share_count_a40cf7ba2aaaba85b71d5f0abcf4b46b3}\label{class_share_count_a40cf7ba2aaaba85b71d5f0abcf4b46b3}} 
+\index{ShareCount@{ShareCount}!utilisateurActif@{utilisateurActif}}
+\index{utilisateurActif@{utilisateurActif}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{utilisateurActif}{utilisateurActif}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_utilisateur}{Utilisateur}} Share\+Count\+::utilisateur\+Actif\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par find\+Groupe(), get\+Utilisateur\+Actif(), et set\+Utilisateur\+Actif().
+
+\mbox{\Hypertarget{class_share_count_a4741338e4369f241d85cf149f05ed14d}\label{class_share_count_a4741338e4369f241d85cf149f05ed14d}} 
+\index{ShareCount@{ShareCount}!utilisateurs@{utilisateurs}}
+\index{utilisateurs@{utilisateurs}!ShareCount@{ShareCount}}
+\doxysubsubsection{\texorpdfstring{utilisateurs}{utilisateurs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} Share\+Count\+::utilisateurs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par creer\+Utilisateur(), find\+Utilisateur(), get\+Nombre\+Utilisateurs(), get\+Utilisateur(), identifier\+Utilisateur(), initialiser\+Liste\+Utilisateur(), et Share\+Count().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/sharecount/\mbox{\hyperlink{_share_count_8h}{Share\+Count.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/sharecount/\mbox{\hyperlink{_share_count_8cpp}{Share\+Count.\+cpp}}\end{DoxyCompactItemize}

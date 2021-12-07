@@ -1,0 +1,28 @@
+digraph "FenetrePrincipale"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{FenetrePrincipale\n|- ui\l- pageActive\l|+ FenetrePrincipale()\l+ FenetrePrincipale()\l+ getThis()\l+ resizeEvent()\l+ setPageActive()\l+ ~FenetrePrincipale()\l+ deconnexion()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The FenetrePrincipale class, cette classe va permettre de contenir toutes les pages de l'application."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{QWidget\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_widget.html",tooltip=" "];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -shareCount" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{ShareCount\n||+ ShareCount()\l+ identifierUtilisateur()\l+ setUtilisateurActif()\l+ getUtilisateur()\l+ findUtilisateur()\l+ creerUtilisateur()\l+ getUtilisateurActif()\l+ inserGroupe()\l+ findGroupe()\l+ appartientAuGroupe()\let 8 de plus...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_share_count.html",tooltip="The ShareCount class Classe principale du model qui est aussi un QObjet pour pouvoir utiliser les sig..."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{QObject\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_object.html",tooltip=" "];
+  Node5 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -groupeActif" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{Groupe\n|- identifiant\l- dateCreation\l- description\l- dettes\l|+ Groupe()\l+ Groupe()\l+ setIdentifiant()\l+ getIdentifiant()\l+ getDescription()\l+ setDescription()\l+ getDateCreation()\l+ ajouterUnpParticipant()\l+ getParticipants()\l+ setDate()\let 7 de plus...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_groupe.html",tooltip="classe abstraite de base pour GestionDeBudget et Cagnotte"];
+  Node6 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -participants" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{GestionnaireUtilisateur\n|- utilisateurs\l|+ GestionnaireUtilisateur()\l+ ajouterUtilisateur()\l+ identifierUtilisateur()\l+ getUtilisateur()\l+ findUtilisateur()\l+ getNombreUtilisateur()\l+ begin()\l+ end()\l+ clear()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gestionnaire_utilisateur.html",tooltip="The GestionnaireUtilisateur class C'est un classe qui permet de gérer la collection d'utilisateur."];
+  Node7 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -depenses" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{GestionnaireDepenses\n|- depenses\l|+ GestionnaireDepenses()\l+ ajouterUneDepense()\l+ getDepense()\l+ nbDepense()\l+ begin()\l+ end()\l+ clearDepenses()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gestionnaire_depenses.html",tooltip="The GestionnaireDepenses class permet de gérer une collection de dépenses: Un groupe peut avoir plusi..."];
+  Node6 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -utilisateurs" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -utilisateurActif" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 [label="{Utilisateur\n|- identifiant\l- motDePasse\l- mail\l|+ Utilisateur()\l+ getIdentifiant()\l+ getMotDePasse()\l+ getMail()\l+ setIdentifiant()\l+ setMotDePasse()\l+ setMail()\l+ ajouterAMesGroupes()\l+ getMesGroupesToString()\l+ getMesGroupes()\l+ findGroupe()\l+ getGroupe()\l+ ~Utilisateur()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_utilisateur.html",tooltip="The Utilisateur class est une classe qui représente un utilisateur ou un compte. défini par un identi..."];
+  Node9 -> Node8 [color="grey25",fontsize="10",style="solid",label=" -mesGroupes" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 [label="{GestionnaireGroupes\n|- groupes\l|+ GestionnaireGroupes()\l+ ajouterGroupe()\l+ getGroupe()\l+ size()\l+ findGroupe()\l+ getGroupe()\l+ clear()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gestionnaire_groupes.html",tooltip="The GestionnaireGroupes class qui gère une collection de groupes."];
+  Node10 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -shareCountBDD" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node10 [label="{BDDManager\n|- sharCountBase\l- creerDataBase\l|+ BDDManager()\l+ createDataBase()\l+ insererUtilisateur()\l+ initialiserListeUtilisateur()\l+ insererunGroupe()\l+ initialiserGroupeUtilisateur()\l+ appartientAuGroupe()\l+ ajouterParticipantAuGroupe()\l+ initialiserParticipants()\l+ insererUneDepense()\l+ initialiserDepensesGroupe()\l+ updateHistorique()\l+ initialiserHistorique()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_b_d_d_manager.html",tooltip="The DbManager class qui permet de gérer les entrées et les sorties avec la base de donnée."];
+  Node4 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node9 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -groupes" ,arrowhead="odiamond",fontname="Helvetica"];
+}

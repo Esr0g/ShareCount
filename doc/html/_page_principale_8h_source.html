@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShareCount:  Fichier source de /home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/vues/pageprincipale/PagePrincipale.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ShareCount
+   &#160;<span id="projectnumber">12</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_page_principale_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PagePrincipale.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_page_principale_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PAGEPRINCIPALE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PAGEPRINCIPALE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_fenetre_principale_8h.html">screen/fenetreprincipale/FenetrePrincipale.h</a>&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vue_liste_groupe_8h.html">vues/vuelistegroupe/VueListeGroupe.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_page_gestion_de_budget_8h.html">vues/pagegestiondebudget/PageGestionDeBudget.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QListView&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="class_page_principale.html">PagePrincipale</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_page_principale.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_page_principale.html">PagePrincipale</a> : <span class="keyword">public</span> <a class="code" href="class_q_main_window.html">QMainWindow</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_page_principale.html#a6cc8f104861798f4a3440a1851f7c7ee">PagePrincipale</a>(<a class="code" href="class_q_widget.html">QWidget</a> *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_page_principale.html#a6cc8f104861798f4a3440a1851f7c7ee">PagePrincipale</a>(<a class="code" href="class_q_widget.html">QWidget</a> *parent, <a class="code" href="class_fenetre_principale.html">FenetrePrincipale</a> *fp, <a class="code" href="class_share_count.html">ShareCount</a>* sc);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_share_count.html">ShareCount</a>* <a class="code" href="class_page_principale.html#a2dd2ea1741ff59c44aa9170b2e5108ee">getShareCount</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_page_principale.html#ad3ca0a401af08e868c1e5f725bf1d7a5">~PagePrincipale</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_principale.html#a12e3ff41cf4054dfdb6644144d53523d">setConnect</a>(<a class="code" href="class_vue_liste_groupe.html">VueListeGroupe</a> *<a class="code" href="class_page_principale.html#a6ae47f26eefaf999a797b48fc81995e6">vlg</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_principale.html#ac1e7c9d12b4fbcee8ecb7178eb905da9">ajouterGroupe</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_principale.html#a27049d12449ded2948e9d7e441d57fcb">afficherGroupe</a>();  <span class="comment">//Affichage des données du groupe dans le central widget</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_page_principale.html#a7ca272b6ac99cee9251aad3f5ed9fb2b">   33</a></span>&#160;    Ui::PagePrincipale *<a class="code" href="class_page_principale.html#a7ca272b6ac99cee9251aad3f5ed9fb2b">ui</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_page_principale.html#a884a2a05ffa68a3cb7b8a83a93f37d66">   34</a></span>&#160;    <a class="code" href="class_fenetre_principale.html">FenetrePrincipale</a>* <a class="code" href="class_page_principale.html#a884a2a05ffa68a3cb7b8a83a93f37d66">pwindow</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_page_principale.html#ad0f9676caf152f15d6c90660585b933f">   35</a></span>&#160;    <a class="code" href="class_share_count.html">ShareCount</a>* <a class="code" href="class_page_principale.html#ad0f9676caf152f15d6c90660585b933f">shareCount</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_page_principale.html#a6ae47f26eefaf999a797b48fc81995e6">   36</a></span>&#160;    <a class="code" href="class_vue_liste_groupe.html">VueListeGroupe</a>* <a class="code" href="class_page_principale.html#a6ae47f26eefaf999a797b48fc81995e6">vlg</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif // PAGEPRINCIPALE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_vue_liste_groupe_html_a24d95353d796a8116b8525296de64498"><div class="ttname"><a href="class_vue_liste_groupe.html#a24d95353d796a8116b8525296de64498">VueListeGroupe::setPageCreationGroupe</a></div><div class="ttdeci">void setPageCreationGroupe(PageCreationGroupe *pcg)</div><div class="ttdef"><b>Definition:</b> VueListeGroupe.cpp:37</div></div>
+<div class="ttc" id="aclass_fenetre_principale_html"><div class="ttname"><a href="class_fenetre_principale.html">FenetrePrincipale</a></div><div class="ttdoc">The FenetrePrincipale class, cette classe va permettre de contenir toutes les pages de l'application.</div><div class="ttdef"><b>Definition:</b> FenetrePrincipale.h:16</div></div>
+<div class="ttc" id="aclass_q_widget_html"><div class="ttname"><a href="class_q_widget.html">QWidget</a></div></div>
+<div class="ttc" id="a_page_gestion_de_budget_8h_html"><div class="ttname"><a href="_page_gestion_de_budget_8h.html">PageGestionDeBudget.h</a></div></div>
+<div class="ttc" id="aclass_share_count_html_a37a2f1f3a1cef420ad2cba760b693378"><div class="ttname"><a href="class_share_count.html#a37a2f1f3a1cef420ad2cba760b693378">ShareCount::getUtilisateurActif</a></div><div class="ttdeci">Utilisateur &amp; getUtilisateurActif()</div><div class="ttdoc">getUtilisateurActif retourne la référence de l'utiisateur actif</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:37</div></div>
+<div class="ttc" id="a_page_principale_8h_html"><div class="ttname"><a href="_page_principale_8h.html">PagePrincipale.h</a></div></div>
+<div class="ttc" id="aclass_q_main_window_html"><div class="ttname"><a href="class_q_main_window.html">QMainWindow</a></div></div>
+<div class="ttc" id="a_page_creation_groupe_8h_html"><div class="ttname"><a href="_page_creation_groupe_8h.html">PageCreationGroupe.h</a></div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a5c0dc4f9a0847a121c5d1361043ba12c"><div class="ttname"><a href="class_page_gestion_de_budget.html#a5c0dc4f9a0847a121c5d1361043ba12c">PageGestionDeBudget::setEquilibre</a></div><div class="ttdeci">void setEquilibre()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:150</div></div>
+<div class="ttc" id="aclass_page_creation_groupe_html"><div class="ttname"><a href="class_page_creation_groupe.html">PageCreationGroupe</a></div><div class="ttdef"><b>Definition:</b> PageCreationGroupe.h:15</div></div>
+<div class="ttc" id="aclass_vue_liste_groupe_html"><div class="ttname"><a href="class_vue_liste_groupe.html">VueListeGroupe</a></div><div class="ttdef"><b>Definition:</b> VueListeGroupe.h:18</div></div>
+<div class="ttc" id="aclass_utilisateur_html_ae43bec9b1cb36ed9ed61320c8a772e21"><div class="ttname"><a href="class_utilisateur.html#ae43bec9b1cb36ed9ed61320c8a772e21">Utilisateur::getGroupe</a></div><div class="ttdeci">Groupe &amp; getGroupe(const QString &amp;idGroupe)</div><div class="ttdoc">getGroupe retourne un groupe</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:54</div></div>
+<div class="ttc" id="aclass_page_principale_html_a12e3ff41cf4054dfdb6644144d53523d"><div class="ttname"><a href="class_page_principale.html#a12e3ff41cf4054dfdb6644144d53523d">PagePrincipale::setConnect</a></div><div class="ttdeci">void setConnect(VueListeGroupe *vlg)</div><div class="ttdef"><b>Definition:</b> PagePrincipale.cpp:58</div></div>
+<div class="ttc" id="aclass_page_principale_html_a7ca272b6ac99cee9251aad3f5ed9fb2b"><div class="ttname"><a href="class_page_principale.html#a7ca272b6ac99cee9251aad3f5ed9fb2b">PagePrincipale::ui</a></div><div class="ttdeci">Ui::PagePrincipale * ui</div><div class="ttdef"><b>Definition:</b> PagePrincipale.h:33</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a4b50ae1ec16f7ec80a682cf51a9312a6"><div class="ttname"><a href="class_page_gestion_de_budget.html#a4b50ae1ec16f7ec80a682cf51a9312a6">PageGestionDeBudget::getLabelNomGroupe</a></div><div class="ttdeci">QLabel * getLabelNomGroupe()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:28</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a52d76cf858b62cacca941d36382b08fe"><div class="ttname"><a href="class_utilisateur.html#a52d76cf858b62cacca941d36382b08fe">Utilisateur::getIdentifiant</a></div><div class="ttdeci">QString getIdentifiant() const</div><div class="ttdoc">getIdentifiant</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:19</div></div>
+<div class="ttc" id="aclass_page_principale_html_ac1e7c9d12b4fbcee8ecb7178eb905da9"><div class="ttname"><a href="class_page_principale.html#ac1e7c9d12b4fbcee8ecb7178eb905da9">PagePrincipale::ajouterGroupe</a></div><div class="ttdeci">void ajouterGroupe()</div><div class="ttdef"><b>Definition:</b> PagePrincipale.cpp:51</div></div>
+<div class="ttc" id="aclass_page_principale_html_a2dd2ea1741ff59c44aa9170b2e5108ee"><div class="ttname"><a href="class_page_principale.html#a2dd2ea1741ff59c44aa9170b2e5108ee">PagePrincipale::getShareCount</a></div><div class="ttdeci">ShareCount * getShareCount()</div><div class="ttdef"><b>Definition:</b> PagePrincipale.cpp:64</div></div>
+<div class="ttc" id="aclass_page_principale_html_a6cc8f104861798f4a3440a1851f7c7ee"><div class="ttname"><a href="class_page_principale.html#a6cc8f104861798f4a3440a1851f7c7ee">PagePrincipale::PagePrincipale</a></div><div class="ttdeci">PagePrincipale(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> PagePrincipale.cpp:11</div></div>
+<div class="ttc" id="aclass_vue_liste_groupe_html_a6fa846c63cf0a1e1172a37925b41f11b"><div class="ttname"><a href="class_vue_liste_groupe.html#a6fa846c63cf0a1e1172a37925b41f11b">VueListeGroupe::getListView</a></div><div class="ttdeci">QListView * getListView()</div><div class="ttdef"><b>Definition:</b> VueListeGroupe.cpp:50</div></div>
+<div class="ttc" id="aclass_page_principale_html_a27049d12449ded2948e9d7e441d57fcb"><div class="ttname"><a href="class_page_principale.html#a27049d12449ded2948e9d7e441d57fcb">PagePrincipale::afficherGroupe</a></div><div class="ttdeci">void afficherGroupe()</div><div class="ttdef"><b>Definition:</b> PagePrincipale.cpp:34</div></div>
+<div class="ttc" id="aclass_share_count_html"><div class="ttname"><a href="class_share_count.html">ShareCount</a></div><div class="ttdoc">The ShareCount class Classe principale du model qui est aussi un QObjet pour pouvoir utiliser les sig...</div><div class="ttdef"><b>Definition:</b> ShareCount.h:15</div></div>
+<div class="ttc" id="aclass_page_principale_html"><div class="ttname"><a href="class_page_principale.html">PagePrincipale</a></div><div class="ttdef"><b>Definition:</b> PagePrincipale.h:15</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> PageAccueil.h:8</div></div>
+<div class="ttc" id="a_b_d_d_manager_8h_html"><div class="ttname"><a href="_b_d_d_manager_8h.html">BDDManager.h</a></div></div>
+<div class="ttc" id="aclass_page_principale_html_a6ae47f26eefaf999a797b48fc81995e6"><div class="ttname"><a href="class_page_principale.html#a6ae47f26eefaf999a797b48fc81995e6">PagePrincipale::vlg</a></div><div class="ttdeci">VueListeGroupe * vlg</div><div class="ttdef"><b>Definition:</b> PagePrincipale.h:36</div></div>
+<div class="ttc" id="aclass_share_count_html_afb1878d4dd772e6b52bf39c6430703e3"><div class="ttname"><a href="class_share_count.html#afb1878d4dd772e6b52bf39c6430703e3">ShareCount::setGroupeActif</a></div><div class="ttdeci">void setGroupeActif(Groupe &amp;grp)</div><div class="ttdoc">setGroupeActif positionne le groupe actif</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:70</div></div>
+<div class="ttc" id="aclass_page_principale_html_ad0f9676caf152f15d6c90660585b933f"><div class="ttname"><a href="class_page_principale.html#ad0f9676caf152f15d6c90660585b933f">PagePrincipale::shareCount</a></div><div class="ttdeci">ShareCount * shareCount</div><div class="ttdef"><b>Definition:</b> PagePrincipale.h:35</div></div>
+<div class="ttc" id="a_vue_liste_groupe_8h_html"><div class="ttname"><a href="_vue_liste_groupe_8h.html">VueListeGroupe.h</a></div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a4cbac69d1c7b0dad4e611e7da3613e7a"><div class="ttname"><a href="class_page_gestion_de_budget.html#a4cbac69d1c7b0dad4e611e7da3613e7a">PageGestionDeBudget::miseAJourParticipant</a></div><div class="ttdeci">void miseAJourParticipant()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:195</div></div>
+<div class="ttc" id="aclass_page_principale_html_a884a2a05ffa68a3cb7b8a83a93f37d66"><div class="ttname"><a href="class_page_principale.html#a884a2a05ffa68a3cb7b8a83a93f37d66">PagePrincipale::pwindow</a></div><div class="ttdeci">FenetrePrincipale * pwindow</div><div class="ttdef"><b>Definition:</b> PagePrincipale.h:34</div></div>
+<div class="ttc" id="aclass_page_principale_html_ad3ca0a401af08e868c1e5f725bf1d7a5"><div class="ttname"><a href="class_page_principale.html#ad3ca0a401af08e868c1e5f725bf1d7a5">PagePrincipale::~PagePrincipale</a></div><div class="ttdeci">~PagePrincipale()</div><div class="ttdef"><b>Definition:</b> PagePrincipale.cpp:46</div></div>
+<div class="ttc" id="aclass_vue_liste_groupe_html_a2a029d45f2cec2cc2d4c40bc1df16e73"><div class="ttname"><a href="class_vue_liste_groupe.html#a2a029d45f2cec2cc2d4c40bc1df16e73">VueListeGroupe::getCreerGroupeButton</a></div><div class="ttdeci">QPushButton * getCreerGroupeButton()</div><div class="ttdef"><b>Definition:</b> VueListeGroupe.cpp:46</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a71be607d22c7ef5d0dffdcd4392ecd13"><div class="ttname"><a href="class_page_gestion_de_budget.html#a71be607d22c7ef5d0dffdcd4392ecd13">PageGestionDeBudget::miseAJourDepenses</a></div><div class="ttdeci">void miseAJourDepenses()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:200</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html"><div class="ttname"><a href="class_page_gestion_de_budget.html">PageGestionDeBudget</a></div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.h:19</div></div>
+<div class="ttc" id="a_fenetre_principale_8h_html"><div class="ttname"><a href="_fenetre_principale_8h.html">FenetrePrincipale.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_595c3ed372cc279b2f91c4681d5b0e80.html">vues</a></li><li class="navelem"><a class="el" href="dir_a088b96b7d458b1044bc92aa65be5d04.html">pageprincipale</a></li><li class="navelem"><a class="el" href="_page_principale_8h.html">PagePrincipale.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,8 +1,8 @@
-digraph "Graphical Class Hierarchy"
+digraph "Graphe hiérarchique des classes"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="ShareCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_share_count.html",tooltip=" "];
+  Node0 [label="GestionnaireGroupes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gestionnaire_groupes.html",tooltip="The GestionnaireGroupes class qui gère une collection de groupes."];
 }

@@ -1,0 +1,395 @@
+\hypertarget{class_groupe}{}\doxysection{Référence de la classe Groupe}
+\label{class_groupe}\index{Groupe@{Groupe}}
+
+
+classe abstraite de base pour Gestion\+De\+Budget et Cagnotte  
+
+
+
+
+{\ttfamily \#include $<$Groupe.\+h$>$}
+
+
+
+Graphe de collaboration de Groupe\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_groupe_a413ae785f3c78828334b2f3140d2dd7a}{Groupe}} ()
+\item 
+\mbox{\hyperlink{class_groupe_aeb1ed3946d359b32d15b026226b8fead}{Groupe}} (const Q\+String \&id, const Q\+String \&descr=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_groupe}{Groupe}} constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a52508ba979d0a4229d1dbf174d5e641f}{set\+Identifiant}} (const Q\+String \&id)
+\item 
+Q\+String \mbox{\hyperlink{class_groupe_aca8ed1d8038e8bba032d01d492301a00}{get\+Identifiant}} () const
+\begin{DoxyCompactList}\small\item\em get\+Identifiant retourne l\textquotesingle{}identifiant / nom du groupe \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_groupe_aab274df80679c62c4b94de8e3394192e}{get\+Description}} () const
+\begin{DoxyCompactList}\small\item\em get\+Description retourne la descrption du groupe, qui peut etre ajouté ou pas par le créateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_acebc75610f3dcb4940154d89a4484fd8}{set\+Description}} (const Q\+String \&descr)
+\begin{DoxyCompactList}\small\item\em set\+Description permet de donné une déscription pour le groupe \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_groupe_a3e0fc6063e1a3ef73d7d4db0309ed032}{get\+Date\+Creation}} () const
+\begin{DoxyCompactList}\small\item\em get\+Date\+Creation retourne la date de création du groupe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a10446174f44bbae222e6b75267dd541c}{ajouter\+Unp\+Participant}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} user)
+\begin{DoxyCompactList}\small\item\em ajouter\+Unp\+Participant ajouter un participant au groupe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} \mbox{\hyperlink{class_groupe_a80e55eb56fdeef9326d3df80d79eb305}{get\+Participants}} () const
+\begin{DoxyCompactList}\small\item\em get\+Participants retourne les participants \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_ae7860ce0681793ec719d8062fea017a7}{set\+Date}} (const Q\+String \&date)
+\begin{DoxyCompactList}\small\item\em set\+Date permet de fixer la date de création groupe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a073917b2f10926740c1631224b9ead7b}{ajouter\+Une\+Depense}} (\mbox{\hyperlink{class_depense}{Depense}} \&dep)
+\begin{DoxyCompactList}\small\item\em ajouter\+Une\+Depense permet d\textquotesingle{}ajouter une dépense \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_groupe_a8c130d8ce7035c269d998d858a6d62a9}{nb\+Depenses}} () const
+\begin{DoxyCompactList}\small\item\em nb\+Depenses retourne le nombre de dépense; \end{DoxyCompactList}\item 
+Q\+String\+List \mbox{\hyperlink{class_groupe_aa5609e3271dd65a8c0ebf24697ac171d}{depenses\+To\+String}} ()
+\begin{DoxyCompactList}\small\item\em depenses\+To\+String retourne la liste des dépenses en string \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a4f8bdb1618bf7aef87caa49ea58b8aaa}{clear\+Depenses}} ()
+\item 
+void \mbox{\hyperlink{class_groupe_a2ddd793a859cc86c9ff2b8d30338c5e7}{set\+Dettes}} ()
+\item 
+std\+::map$<$ Q\+String, int $>$ \mbox{\hyperlink{class_groupe_a7090147049f9c50223dcd05935beeb98}{get\+Dettes}} ()
+\item 
+\mbox{\hyperlink{class_groupe_a99dd414922635dcc0585aabb2a330f63}{$\sim$\+Groupe}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_groupe_ad89d1e8d054fb0198cbc422f81d174d2}{identifiant}}
+\item 
+Q\+String \mbox{\hyperlink{class_groupe_a4de5c114907d95660dca56ef6526a162}{date\+Creation}}
+\item 
+Q\+String \mbox{\hyperlink{class_groupe_aaf85aa1e92fb7a5374cca85ecacb615f}{description}}
+\item 
+\mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} $\ast$ \mbox{\hyperlink{class_groupe_a7e725e15cb132004cbe325933e87d516}{participants}}
+\item 
+\mbox{\hyperlink{class_gestionnaire_depenses}{Gestionnaire\+Depenses}} $\ast$ \mbox{\hyperlink{class_groupe_a43ef3afb4c32c55d317a25e6331c8d14}{depenses}}
+\item 
+std\+::map$<$ Q\+String, int $>$ \mbox{\hyperlink{class_groupe_ab1419286101232c68099eef66fc8ec9c}{dettes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_groupe_a413ae785f3c78828334b2f3140d2dd7a}\label{class_groupe_a413ae785f3c78828334b2f3140d2dd7a}} 
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{Groupe()}{Groupe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Groupe\+::\+Groupe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_groupe_aeb1ed3946d359b32d15b026226b8fead}\label{class_groupe_aeb1ed3946d359b32d15b026226b8fead}} 
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{Groupe()}{Groupe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Groupe\+::\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id,  }\item[{const Q\+String \&}]{descr = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & nom / identifiant du groupe \\
+\hline
+{\em date} & date de création du group \\
+\hline
+{\em descr} & petite déscription du groupe \\
+\hline
+\end{DoxyParams}
+
+
+Références date\+Creation.
+
+\mbox{\Hypertarget{class_groupe_a99dd414922635dcc0585aabb2a330f63}\label{class_groupe_a99dd414922635dcc0585aabb2a330f63}} 
+\index{Groupe@{Groupe}!````~Groupe@{$\sim$Groupe}}
+\index{````~Groupe@{$\sim$Groupe}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{$\sim$Groupe()}{~Groupe()}}
+{\footnotesize\ttfamily Groupe\+::$\sim$\+Groupe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_groupe_a073917b2f10926740c1631224b9ead7b}\label{class_groupe_a073917b2f10926740c1631224b9ead7b}} 
+\index{Groupe@{Groupe}!ajouterUneDepense@{ajouterUneDepense}}
+\index{ajouterUneDepense@{ajouterUneDepense}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{ajouterUneDepense()}{ajouterUneDepense()}}
+{\footnotesize\ttfamily void Groupe\+::ajouter\+Une\+Depense (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_depense}{Depense}} \&}]{dep }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dep} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Gestionnaire\+Depenses\+::ajouter\+Une\+Depense(), et depenses.
+
+
+
+Référencé par Share\+Count\+::ajouter\+Une\+Depense(), et B\+D\+D\+Manager\+::initialiser\+Depenses\+Groupe().
+
+\mbox{\Hypertarget{class_groupe_a10446174f44bbae222e6b75267dd541c}\label{class_groupe_a10446174f44bbae222e6b75267dd541c}} 
+\index{Groupe@{Groupe}!ajouterUnpParticipant@{ajouterUnpParticipant}}
+\index{ajouterUnpParticipant@{ajouterUnpParticipant}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{ajouterUnpParticipant()}{ajouterUnpParticipant()}}
+{\footnotesize\ttfamily void Groupe\+::ajouter\+Unp\+Participant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Gestionnaire\+Utilisateur\+::ajouter\+Utilisateur(), et participants.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::set\+Equilibre().
+
+\mbox{\Hypertarget{class_groupe_a4f8bdb1618bf7aef87caa49ea58b8aaa}\label{class_groupe_a4f8bdb1618bf7aef87caa49ea58b8aaa}} 
+\index{Groupe@{Groupe}!clearDepenses@{clearDepenses}}
+\index{clearDepenses@{clearDepenses}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{clearDepenses()}{clearDepenses()}}
+{\footnotesize\ttfamily void Groupe\+::clear\+Depenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références Gestionnaire\+Depenses\+::clear\+Depenses(), et depenses.
+
+
+
+Référencé par B\+D\+D\+Manager\+::initialiser\+Depenses\+Groupe().
+
+\mbox{\Hypertarget{class_groupe_aa5609e3271dd65a8c0ebf24697ac171d}\label{class_groupe_aa5609e3271dd65a8c0ebf24697ac171d}} 
+\index{Groupe@{Groupe}!depensesToString@{depensesToString}}
+\index{depensesToString@{depensesToString}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{depensesToString()}{depensesToString()}}
+{\footnotesize\ttfamily Q\+String\+List Groupe\+::depenses\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses, Depense\+::get\+Createur(), Depense\+::getdate(), Gestionnaire\+Depenses\+::get\+Depense(), Depense\+::get\+Nom(), Depense\+::get\+Valeur\+Remboursee(), Depense\+::get\+Vealeur\+Base(), et nb\+Depenses().
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Depenses().
+
+\mbox{\Hypertarget{class_groupe_a3e0fc6063e1a3ef73d7d4db0309ed032}\label{class_groupe_a3e0fc6063e1a3ef73d7d4db0309ed032}} 
+\index{Groupe@{Groupe}!getDateCreation@{getDateCreation}}
+\index{getDateCreation@{getDateCreation}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getDateCreation()}{getDateCreation()}}
+{\footnotesize\ttfamily Q\+String Groupe\+::get\+Date\+Creation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références date\+Creation.
+
+
+
+Référencé par B\+D\+D\+Manager\+::insererun\+Groupe().
+
+\mbox{\Hypertarget{class_groupe_aab274df80679c62c4b94de8e3394192e}\label{class_groupe_aab274df80679c62c4b94de8e3394192e}} 
+\index{Groupe@{Groupe}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily Q\+String Groupe\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références description.
+
+
+
+Référencé par B\+D\+D\+Manager\+::insererun\+Groupe().
+
+\mbox{\Hypertarget{class_groupe_a7090147049f9c50223dcd05935beeb98}\label{class_groupe_a7090147049f9c50223dcd05935beeb98}} 
+\index{Groupe@{Groupe}!getDettes@{getDettes}}
+\index{getDettes@{getDettes}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getDettes()}{getDettes()}}
+{\footnotesize\ttfamily std\+::map$<$ Q\+String, int $>$ Groupe\+::get\+Dettes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références dettes.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::set\+Equilibre().
+
+\mbox{\Hypertarget{class_groupe_aca8ed1d8038e8bba032d01d492301a00}\label{class_groupe_aca8ed1d8038e8bba032d01d492301a00}} 
+\index{Groupe@{Groupe}!getIdentifiant@{getIdentifiant}}
+\index{getIdentifiant@{getIdentifiant}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getIdentifiant()}{getIdentifiant()}}
+{\footnotesize\ttfamily Q\+String Groupe\+::get\+Identifiant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références identifiant.
+
+
+
+Référencé par Utilisateur\+::get\+Mes\+Groupes\+To\+String(), B\+D\+D\+Manager\+::initialiser\+Depenses\+Groupe(), B\+D\+D\+Manager\+::inserer\+Une\+Depense(), et B\+D\+D\+Manager\+::insererun\+Groupe().
+
+\mbox{\Hypertarget{class_groupe_a80e55eb56fdeef9326d3df80d79eb305}\label{class_groupe_a80e55eb56fdeef9326d3df80d79eb305}} 
+\index{Groupe@{Groupe}!getParticipants@{getParticipants}}
+\index{getParticipants@{getParticipants}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getParticipants()}{getParticipants()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} Groupe\+::get\+Participants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références participants.
+
+\mbox{\Hypertarget{class_groupe_a8c130d8ce7035c269d998d858a6d62a9}\label{class_groupe_a8c130d8ce7035c269d998d858a6d62a9}} 
+\index{Groupe@{Groupe}!nbDepenses@{nbDepenses}}
+\index{nbDepenses@{nbDepenses}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{nbDepenses()}{nbDepenses()}}
+{\footnotesize\ttfamily int Groupe\+::nb\+Depenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses, et Gestionnaire\+Depenses\+::nb\+Depense().
+
+
+
+Référencé par depenses\+To\+String(), Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), et set\+Dettes().
+
+\mbox{\Hypertarget{class_groupe_ae7860ce0681793ec719d8062fea017a7}\label{class_groupe_ae7860ce0681793ec719d8062fea017a7}} 
+\index{Groupe@{Groupe}!setDate@{setDate}}
+\index{setDate@{setDate}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Groupe\+::set\+Date (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{date }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em date} & \\
+\hline
+\end{DoxyParams}
+
+
+Références date\+Creation.
+
+
+
+Référencé par B\+D\+D\+Manager\+::initialiser\+Groupe\+Utilisateur().
+
+\mbox{\Hypertarget{class_groupe_acebc75610f3dcb4940154d89a4484fd8}\label{class_groupe_acebc75610f3dcb4940154d89a4484fd8}} 
+\index{Groupe@{Groupe}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily void Groupe\+::set\+Description (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{descr }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em descr} & \\
+\hline
+\end{DoxyParams}
+
+
+Références description.
+
+\mbox{\Hypertarget{class_groupe_a2ddd793a859cc86c9ff2b8d30338c5e7}\label{class_groupe_a2ddd793a859cc86c9ff2b8d30338c5e7}} 
+\index{Groupe@{Groupe}!setDettes@{setDettes}}
+\index{setDettes@{setDettes}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{setDettes()}{setDettes()}}
+{\footnotesize\ttfamily void Groupe\+::set\+Dettes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références Gestionnaire\+Utilisateur\+::begin(), depenses, dettes, Gestionnaire\+Utilisateur\+::end(), Depense\+::get\+Createur(), Gestionnaire\+Depenses\+::get\+Depense(), Gestionnaire\+Utilisateur\+::get\+Nombre\+Utilisateur(), Depense\+::get\+Vealeur\+Base(), nb\+Depenses(), et participants.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::set\+Equilibre().
+
+\mbox{\Hypertarget{class_groupe_a52508ba979d0a4229d1dbf174d5e641f}\label{class_groupe_a52508ba979d0a4229d1dbf174d5e641f}} 
+\index{Groupe@{Groupe}!setIdentifiant@{setIdentifiant}}
+\index{setIdentifiant@{setIdentifiant}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{setIdentifiant()}{setIdentifiant()}}
+{\footnotesize\ttfamily void Groupe\+::set\+Identifiant (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Références identifiant.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_groupe_a4de5c114907d95660dca56ef6526a162}\label{class_groupe_a4de5c114907d95660dca56ef6526a162}} 
+\index{Groupe@{Groupe}!dateCreation@{dateCreation}}
+\index{dateCreation@{dateCreation}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{dateCreation}{dateCreation}}
+{\footnotesize\ttfamily Q\+String Groupe\+::date\+Creation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Date\+Creation(), Groupe(), et set\+Date().
+
+\mbox{\Hypertarget{class_groupe_a43ef3afb4c32c55d317a25e6331c8d14}\label{class_groupe_a43ef3afb4c32c55d317a25e6331c8d14}} 
+\index{Groupe@{Groupe}!depenses@{depenses}}
+\index{depenses@{depenses}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{depenses}{depenses}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_depenses}{Gestionnaire\+Depenses}}$\ast$ Groupe\+::depenses\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+Une\+Depense(), clear\+Depenses(), depenses\+To\+String(), nb\+Depenses(), et set\+Dettes().
+
+\mbox{\Hypertarget{class_groupe_aaf85aa1e92fb7a5374cca85ecacb615f}\label{class_groupe_aaf85aa1e92fb7a5374cca85ecacb615f}} 
+\index{Groupe@{Groupe}!description@{description}}
+\index{description@{description}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily Q\+String Groupe\+::description\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Description(), et set\+Description().
+
+\mbox{\Hypertarget{class_groupe_ab1419286101232c68099eef66fc8ec9c}\label{class_groupe_ab1419286101232c68099eef66fc8ec9c}} 
+\index{Groupe@{Groupe}!dettes@{dettes}}
+\index{dettes@{dettes}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{dettes}{dettes}}
+{\footnotesize\ttfamily std\+::map$<$Q\+String, int$>$ Groupe\+::dettes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Dettes(), et set\+Dettes().
+
+\mbox{\Hypertarget{class_groupe_ad89d1e8d054fb0198cbc422f81d174d2}\label{class_groupe_ad89d1e8d054fb0198cbc422f81d174d2}} 
+\index{Groupe@{Groupe}!identifiant@{identifiant}}
+\index{identifiant@{identifiant}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{identifiant}{identifiant}}
+{\footnotesize\ttfamily Q\+String Groupe\+::identifiant\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Identifiant(), et set\+Identifiant().
+
+\mbox{\Hypertarget{class_groupe_a7e725e15cb132004cbe325933e87d516}\label{class_groupe_a7e725e15cb132004cbe325933e87d516}} 
+\index{Groupe@{Groupe}!participants@{participants}}
+\index{participants@{participants}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{participants}{participants}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}}$\ast$ Groupe\+::participants\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+Unp\+Participant(), get\+Participants(), et set\+Dettes().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/groupe/\mbox{\hyperlink{_groupe_8h}{Groupe.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/groupe/\mbox{\hyperlink{_groupe_8cpp}{Groupe.\+cpp}}\end{DoxyCompactItemize}

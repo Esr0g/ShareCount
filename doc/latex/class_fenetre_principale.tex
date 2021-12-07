@@ -1,0 +1,176 @@
+\hypertarget{class_fenetre_principale}{}\doxysection{Référence de la classe Fenetre\+Principale}
+\label{class_fenetre_principale}\index{FenetrePrincipale@{FenetrePrincipale}}
+
+
+The \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} class, cette classe va permettre de contenir toutes les pages de l\textquotesingle{}application.  
+
+
+
+
+{\ttfamily \#include $<$Fenetre\+Principale.\+h$>$}
+
+
+
+Graphe de collaboration de Fenetre\+Principale\+:
+% FIG 0
+\doxysubsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fenetre_principale_ab7e11794e728402e54451cdf30ce5266}{deconnexion}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fenetre_principale_aa7946cb7167a6a9db6c280ab89cbd568}{Fenetre\+Principale}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_fenetre_principale_a9bfd4fa2877acd66686c4a5280a252fc}{Fenetre\+Principale}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent, \mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$sc)
+\item 
+virtual \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$ \mbox{\hyperlink{class_fenetre_principale_a3cec44d7ecb0e8ae927f54ad74b55cbc}{get\+This}} ()
+\begin{DoxyCompactList}\small\item\em get\+This permet de renvoyer le pointeur de la classe pour pouvoir ajouter des \char`\"{}enfants\char`\"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fenetre_principale_a65a785bdfa69b36ef408de1a8a57225c}{resize\+Event}} (Q\+Resize\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em resize\+Event permet de redimensionner automatiquement la taille de la page lorsque l\textquotesingle{}utilisateur modifie la taille de la fenêtre \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fenetre_principale_a008d1795b615dcf27c1163adfb51d20b}{set\+Page\+Active}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em set\+Page\+Active permet de positionner la page active détruit celle précédente si elle existe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fenetre_principale_afb035ceb7a4f1ddd23ab6213b582efa1}{$\sim$\+Fenetre\+Principale}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Fenetre\+Principale $\ast$ \mbox{\hyperlink{class_fenetre_principale_a91d039c4c64aa17e522791b8dd263914}{ui}}
+\item 
+\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$ \mbox{\hyperlink{class_fenetre_principale_a5e5d389947cc485e5e51c6e1fcbdc1cc}{page\+Active}}
+\item 
+\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$ \mbox{\hyperlink{class_fenetre_principale_abe6b86e7156322e4a4c30642f1f94e51}{share\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_fenetre_principale_aa7946cb7167a6a9db6c280ab89cbd568}\label{class_fenetre_principale_aa7946cb7167a6a9db6c280ab89cbd568}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\index{FenetrePrincipale@{FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{FenetrePrincipale()}{FenetrePrincipale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fenetre\+Principale\+::\+Fenetre\+Principale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Références page\+Active, et ui.
+
+\mbox{\Hypertarget{class_fenetre_principale_a9bfd4fa2877acd66686c4a5280a252fc}\label{class_fenetre_principale_a9bfd4fa2877acd66686c4a5280a252fc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\index{FenetrePrincipale@{FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{FenetrePrincipale()}{FenetrePrincipale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fenetre\+Principale\+::\+Fenetre\+Principale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent,  }\item[{\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$}]{sc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Références page\+Active, et ui.
+
+\mbox{\Hypertarget{class_fenetre_principale_afb035ceb7a4f1ddd23ab6213b582efa1}\label{class_fenetre_principale_afb035ceb7a4f1ddd23ab6213b582efa1}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!````~FenetrePrincipale@{$\sim$FenetrePrincipale}}
+\index{````~FenetrePrincipale@{$\sim$FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{$\sim$FenetrePrincipale()}{~FenetrePrincipale()}}
+{\footnotesize\ttfamily Fenetre\+Principale\+::$\sim$\+Fenetre\+Principale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références page\+Active, et ui.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_fenetre_principale_ab7e11794e728402e54451cdf30ce5266}\label{class_fenetre_principale_ab7e11794e728402e54451cdf30ce5266}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!deconnexion@{deconnexion}}
+\index{deconnexion@{deconnexion}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{deconnexion}{deconnexion}}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::deconnexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Références page\+Active, set\+Page\+Active(), et share\+Count.
+
+\mbox{\Hypertarget{class_fenetre_principale_a3cec44d7ecb0e8ae927f54ad74b55cbc}\label{class_fenetre_principale_a3cec44d7ecb0e8ae927f54ad74b55cbc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!getThis@{getThis}}
+\index{getThis@{getThis}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{getThis()}{getThis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$ Fenetre\+Principale\+::get\+This (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Renvoie}
+this 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fenetre_principale_a65a785bdfa69b36ef408de1a8a57225c}\label{class_fenetre_principale_a65a785bdfa69b36ef408de1a8a57225c}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::resize\+Event (\begin{DoxyParamCaption}\item[{Q\+Resize\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+Références page\+Active.
+
+
+
+Référencé par set\+Page\+Active().
+
+\mbox{\Hypertarget{class_fenetre_principale_a008d1795b615dcf27c1163adfb51d20b}\label{class_fenetre_principale_a008d1795b615dcf27c1163adfb51d20b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!setPageActive@{setPageActive}}
+\index{setPageActive@{setPageActive}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{setPageActive()}{setPageActive()}}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::set\+Page\+Active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & page que l\textquotesingle{}on souhaite afficher \\
+\hline
+\end{DoxyParams}
+
+
+Références page\+Active, et resize\+Event().
+
+
+
+Référencé par Page\+Creation\+Compte\+::annuler(), Page\+Accueil\+::connexion(), Page\+Accueil\+::creer\+Compte(), deconnexion(), et Page\+Creation\+Compte\+::on\+Push\+Button\+Creer\+Compte().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_fenetre_principale_a5e5d389947cc485e5e51c6e1fcbdc1cc}\label{class_fenetre_principale_a5e5d389947cc485e5e51c6e1fcbdc1cc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!pageActive@{pageActive}}
+\index{pageActive@{pageActive}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{pageActive}{pageActive}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_widget}{Q\+Widget}}$\ast$ Fenetre\+Principale\+::page\+Active\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par deconnexion(), Fenetre\+Principale(), resize\+Event(), set\+Page\+Active(), et $\sim$\+Fenetre\+Principale().
+
+\mbox{\Hypertarget{class_fenetre_principale_abe6b86e7156322e4a4c30642f1f94e51}\label{class_fenetre_principale_abe6b86e7156322e4a4c30642f1f94e51}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!shareCount@{shareCount}}
+\index{shareCount@{shareCount}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{shareCount}{shareCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_share_count}{Share\+Count}}$\ast$ Fenetre\+Principale\+::share\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par deconnexion().
+
+\mbox{\Hypertarget{class_fenetre_principale_a91d039c4c64aa17e522791b8dd263914}\label{class_fenetre_principale_a91d039c4c64aa17e522791b8dd263914}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ui@{ui}}
+\index{ui@{ui}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Fenetre\+Principale$\ast$ Fenetre\+Principale\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par Fenetre\+Principale(), et $\sim$\+Fenetre\+Principale().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/screen/fenetreprincipale/\mbox{\hyperlink{_fenetre_principale_8h}{Fenetre\+Principale.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/screen/fenetreprincipale/\mbox{\hyperlink{_fenetre_principale_8cpp}{Fenetre\+Principale.\+cpp}}\end{DoxyCompactItemize}

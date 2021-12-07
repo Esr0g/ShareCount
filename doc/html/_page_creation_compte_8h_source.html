@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShareCount:  Fichier source de /home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/vues/pagecreationcompte/PageCreationCompte.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ShareCount
+   &#160;<span id="projectnumber">12</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_page_creation_compte_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PageCreationCompte.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_page_creation_compte_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PAGECREATIONCOMPTE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PAGECREATIONCOMPTE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_fenetre_principale_8h.html">screen/fenetreprincipale/FenetrePrincipale.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_share_count_8h.html">model/sharecount/ShareCount.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;QKeyEvent&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="class_page_creation_compte.html">PageCreationCompte</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_page_creation_compte.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_page_creation_compte.html">PageCreationCompte</a> : <span class="keyword">public</span> <a class="code" href="class_q_widget.html">QWidget</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_page_creation_compte.html#a8d0f312db1d809dcba5f8d912bac35c9">PageCreationCompte</a>(<a class="code" href="class_q_widget.html">QWidget</a> *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_page_creation_compte.html#a8d0f312db1d809dcba5f8d912bac35c9">PageCreationCompte</a>(<a class="code" href="class_q_widget.html">QWidget</a> *parent, <a class="code" href="class_fenetre_principale.html">FenetrePrincipale</a> *fp, <a class="code" href="class_share_count.html">ShareCount</a>* sc);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_page_creation_compte.html#afbc0ad756765d28424b5c5197128179b">~PageCreationCompte</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_creation_compte.html#afb86d1f2244d01eb5d5b864deac8b74f">setConnexion</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_creation_compte.html#aa67ff622d952f57df21f2b2c3afbd2cb">annuler</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_creation_compte.html#a20e1892dd3f50a1d244e536661c4e730">onPushButtonCreerCompte</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_page_creation_compte.html#a1e589751995c5b3c9317bf9105378b10">   60</a></span>&#160;    Ui::PageCreationCompte *<a class="code" href="class_page_creation_compte.html#a1e589751995c5b3c9317bf9105378b10">ui</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_page_creation_compte.html#a9545255707947d8ae1aca634c22d602d">   61</a></span>&#160;    <a class="code" href="class_fenetre_principale.html">FenetrePrincipale</a> *<a class="code" href="class_page_creation_compte.html#a9545255707947d8ae1aca634c22d602d">pwindow</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_page_creation_compte.html#a681974ebce13b082ac1903304846a9ab">   62</a></span>&#160;    <a class="code" href="class_share_count.html">ShareCount</a>* <a class="code" href="class_page_creation_compte.html#a681974ebce13b082ac1903304846a9ab">shareCount</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif // PAGECREATIONCOMPTE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_fenetre_principale_html"><div class="ttname"><a href="class_fenetre_principale.html">FenetrePrincipale</a></div><div class="ttdoc">The FenetrePrincipale class, cette classe va permettre de contenir toutes les pages de l'application.</div><div class="ttdef"><b>Definition:</b> FenetrePrincipale.h:16</div></div>
+<div class="ttc" id="aclass_fenetre_principale_html_a008d1795b615dcf27c1163adfb51d20b"><div class="ttname"><a href="class_fenetre_principale.html#a008d1795b615dcf27c1163adfb51d20b">FenetrePrincipale::setPageActive</a></div><div class="ttdeci">void setPageActive(QWidget *p)</div><div class="ttdoc">setPageActive permet de positionner la page active détruit celle précédente si elle existe</div><div class="ttdef"><b>Definition:</b> FenetrePrincipale.cpp:29</div></div>
+<div class="ttc" id="aclass_q_widget_html"><div class="ttname"><a href="class_q_widget.html">QWidget</a></div></div>
+<div class="ttc" id="aclass_utilisateur_html_a460366e5185438182eb8c4a1a877c0d1"><div class="ttname"><a href="class_utilisateur.html#a460366e5185438182eb8c4a1a877c0d1">Utilisateur::setMotDePasse</a></div><div class="ttdeci">void setMotDePasse(const QString &amp;mdp)</div><div class="ttdoc">setMotDePasse modifier le mdp</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:11</div></div>
+<div class="ttc" id="aclass_share_count_html_a87cfe057ff1d4a2541d8bd1def4c923c"><div class="ttname"><a href="class_share_count.html#a87cfe057ff1d4a2541d8bd1def4c923c">ShareCount::findUtilisateur</a></div><div class="ttdeci">bool findUtilisateur(const QString &amp;id) const</div><div class="ttdoc">findUtilisateur retourne vrai si l'utilisateur existe faux sinon</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:28</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_a20e1892dd3f50a1d244e536661c4e730"><div class="ttname"><a href="class_page_creation_compte.html#a20e1892dd3f50a1d244e536661c4e730">PageCreationCompte::onPushButtonCreerCompte</a></div><div class="ttdeci">void onPushButtonCreerCompte()</div><div class="ttdoc">onPushButtonCreerCompte Envoie les informations entré par l'utilisateur a ShareCount pour les traiter...</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.cpp:35</div></div>
+<div class="ttc" id="a_share_count_8h_html"><div class="ttname"><a href="_share_count_8h.html">ShareCount.h</a></div></div>
+<div class="ttc" id="aclass_utilisateur_html_a0d229bdf6e5c720b8addf97e3250b51e"><div class="ttname"><a href="class_utilisateur.html#a0d229bdf6e5c720b8addf97e3250b51e">Utilisateur::setIdentifiant</a></div><div class="ttdeci">void setIdentifiant(const QString &amp;id)</div><div class="ttdoc">setIdentifiant modifie l'identifiant</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:7</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a52d76cf858b62cacca941d36382b08fe"><div class="ttname"><a href="class_utilisateur.html#a52d76cf858b62cacca941d36382b08fe">Utilisateur::getIdentifiant</a></div><div class="ttdeci">QString getIdentifiant() const</div><div class="ttdoc">getIdentifiant</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:19</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_aa67ff622d952f57df21f2b2c3afbd2cb"><div class="ttname"><a href="class_page_creation_compte.html#aa67ff622d952f57df21f2b2c3afbd2cb">PageCreationCompte::annuler</a></div><div class="ttdeci">void annuler()</div><div class="ttdoc">annuler Permet d'annuler la création de compte et de retrouner sur la page d'accueil</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.cpp:26</div></div>
+<div class="ttc" id="a_page_accueil_8h_html"><div class="ttname"><a href="_page_accueil_8h.html">PageAccueil.h</a></div></div>
+<div class="ttc" id="aclass_utilisateur_html_aac03746781fc9eb8b5b8ef44b26d152d"><div class="ttname"><a href="class_utilisateur.html#aac03746781fc9eb8b5b8ef44b26d152d">Utilisateur::setMail</a></div><div class="ttdeci">void setMail(const QString &amp;m)</div><div class="ttdoc">setMail modifier le mail</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:15</div></div>
+<div class="ttc" id="aclass_share_count_html_a391039e11770ecdce33713a461f21d5e"><div class="ttname"><a href="class_share_count.html#a391039e11770ecdce33713a461f21d5e">ShareCount::creerUtilisateur</a></div><div class="ttdeci">void creerUtilisateur(Utilisateur &amp;user)</div><div class="ttdoc">creerUtilisateur permet d'ajouter un utilisateur à la base de donnée</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:32</div></div>
+<div class="ttc" id="aclass_utilisateur_html"><div class="ttname"><a href="class_utilisateur.html">Utilisateur</a></div><div class="ttdoc">The Utilisateur class est une classe qui représente un utilisateur ou un compte. défini par un identi...</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:14</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_afb86d1f2244d01eb5d5b864deac8b74f"><div class="ttname"><a href="class_page_creation_compte.html#afb86d1f2244d01eb5d5b864deac8b74f">PageCreationCompte::setConnexion</a></div><div class="ttdeci">void setConnexion()</div><div class="ttdoc">setConnect Permet de connecter les signaux des éléments afficher avec leur slots correspondant</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.cpp:30</div></div>
+<div class="ttc" id="aclass_share_count_html"><div class="ttname"><a href="class_share_count.html">ShareCount</a></div><div class="ttdoc">The ShareCount class Classe principale du model qui est aussi un QObjet pour pouvoir utiliser les sig...</div><div class="ttdef"><b>Definition:</b> ShareCount.h:15</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_a8d0f312db1d809dcba5f8d912bac35c9"><div class="ttname"><a href="class_page_creation_compte.html#a8d0f312db1d809dcba5f8d912bac35c9">PageCreationCompte::PageCreationCompte</a></div><div class="ttdeci">PageCreationCompte(QWidget *parent=nullptr)</div><div class="ttdoc">PageCreationCompte.</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.cpp:7</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> PageAccueil.h:8</div></div>
+<div class="ttc" id="a_page_creation_compte_8h_html"><div class="ttname"><a href="_page_creation_compte_8h.html">PageCreationCompte.h</a></div></div>
+<div class="ttc" id="aclass_page_accueil_html"><div class="ttname"><a href="class_page_accueil.html">PageAccueil</a></div><div class="ttdoc">The PageAccueil class C'est la classe qui permet d'affichier la page ou l'on peut soit se connecter s...</div><div class="ttdef"><b>Definition:</b> PageAccueil.h:17</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_a9545255707947d8ae1aca634c22d602d"><div class="ttname"><a href="class_page_creation_compte.html#a9545255707947d8ae1aca634c22d602d">PageCreationCompte::pwindow</a></div><div class="ttdeci">FenetrePrincipale * pwindow</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.h:61</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html"><div class="ttname"><a href="class_page_creation_compte.html">PageCreationCompte</a></div><div class="ttdoc">The PageCreationCompte class page qui permet de créer son compte.</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.h:17</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_a1e589751995c5b3c9317bf9105378b10"><div class="ttname"><a href="class_page_creation_compte.html#a1e589751995c5b3c9317bf9105378b10">PageCreationCompte::ui</a></div><div class="ttdeci">Ui::PageCreationCompte * ui</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.h:60</div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_afbc0ad756765d28424b5c5197128179b"><div class="ttname"><a href="class_page_creation_compte.html#afbc0ad756765d28424b5c5197128179b">PageCreationCompte::~PageCreationCompte</a></div><div class="ttdeci">~PageCreationCompte()</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.cpp:61</div></div>
+<div class="ttc" id="a_fenetre_principale_8h_html"><div class="ttname"><a href="_fenetre_principale_8h.html">FenetrePrincipale.h</a></div></div>
+<div class="ttc" id="aclass_page_creation_compte_html_a681974ebce13b082ac1903304846a9ab"><div class="ttname"><a href="class_page_creation_compte.html#a681974ebce13b082ac1903304846a9ab">PageCreationCompte::shareCount</a></div><div class="ttdeci">ShareCount * shareCount</div><div class="ttdef"><b>Definition:</b> PageCreationCompte.h:62</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_595c3ed372cc279b2f91c4681d5b0e80.html">vues</a></li><li class="navelem"><a class="el" href="dir_eb1e75a3081d733c1b5c9ee74cbac408.html">pagecreationcompte</a></li><li class="navelem"><a class="el" href="_page_creation_compte_8h.html">PageCreationCompte.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

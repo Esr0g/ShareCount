@@ -1,0 +1,220 @@
+\hypertarget{class_gestionnaire_utilisateur}{}\doxysection{Référence de la classe Gestionnaire\+Utilisateur}
+\label{class_gestionnaire_utilisateur}\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+
+
+The \mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} class C\textquotesingle{}est un classe qui permet de gérer la collection d\textquotesingle{}utilisateur.  
+
+
+
+
+{\ttfamily \#include $<$Gestionnaireutilisateur.\+h$>$}
+
+
+
+Graphe de collaboration de Gestionnaire\+Utilisateur\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestionnaire_utilisateur_a7d44afbfd45772034a6fce47bfcb4bae}{Gestionnaire\+Utilisateur}} ()
+\begin{DoxyCompactList}\small\item\em class \mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} constructeur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestionnaire_utilisateur_a05c123f97d97a06a04626ccfd54a9e26}{ajouter\+Utilisateur}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user)
+\begin{DoxyCompactList}\small\item\em ajouter\+Utilisateur permet d\textquotesingle{}ajouter un utilisateur \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gestionnaire_utilisateur_a36f1d3a68a5790d1f80d731c80185e00}{identifier\+Utilisateur}} (const Q\+String \&id, const Q\+String \&mdp) const
+\begin{DoxyCompactList}\small\item\em identifier\+Utilisateur permet d\textquotesingle{}identifer un utilisateur à l\textquotesingle{}aide de son mot de passe et de sont identifiant \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \mbox{\hyperlink{class_gestionnaire_utilisateur_a61c669a8f91b38cf9372abef6bab0f01}{get\+Utilisateur}} (const Q\+String \&id) const
+\begin{DoxyCompactList}\small\item\em get\+Utilisateur retorune l\textquotesingle{}utilisateur avec l\textquotesingle{}identifiant \char`\"{}id\char`\"{} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gestionnaire_utilisateur_ab74523891b320dd06f5d991101aa3fea}{find\+Utilisateur}} (const Q\+String \&id) const
+\begin{DoxyCompactList}\small\item\em find\+Utilisateur retourne vrai si l\textquotesingle{}utilisateur st trouvé, faux sinon \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestionnaire_utilisateur_ae90e46d418140f93899ca0ca3f6bf9f7}{get\+Nombre\+Utilisateur}} () const
+\begin{DoxyCompactList}\small\item\em get\+Nombre\+Utilisateur retourne le nombre d\textquotesingle{}utilisateur présent dans la map \end{DoxyCompactList}\item 
+std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$\+::iterator \mbox{\hyperlink{class_gestionnaire_utilisateur_a8a09ebd51b900d2e0ac1ecb7169a8331}{begin}} ()
+\begin{DoxyCompactList}\small\item\em begin retourne l\textquotesingle{}itérateur begin de la collection \end{DoxyCompactList}\item 
+std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$\+::iterator \mbox{\hyperlink{class_gestionnaire_utilisateur_aa6d3525d67032e00add9de00e10bcc31}{end}} ()
+\begin{DoxyCompactList}\small\item\em end retourne l\textquotesingle{}itérateur end de la collection \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestionnaire_utilisateur_ac081e8a004388a204942600c2c6d5996}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$ \mbox{\hyperlink{class_gestionnaire_utilisateur_a886918c579b5582767fe9b71320ffd1e}{utilisateurs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_a7d44afbfd45772034a6fce47bfcb4bae}\label{class_gestionnaire_utilisateur_a7d44afbfd45772034a6fce47bfcb4bae}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{GestionnaireUtilisateur()}{GestionnaireUtilisateur()}}
+{\footnotesize\ttfamily Gestionnaire\+Utilisateur\+::\+Gestionnaire\+Utilisateur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_a05c123f97d97a06a04626ccfd54a9e26}\label{class_gestionnaire_utilisateur_a05c123f97d97a06a04626ccfd54a9e26}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!ajouterUtilisateur@{ajouterUtilisateur}}
+\index{ajouterUtilisateur@{ajouterUtilisateur}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{ajouterUtilisateur()}{ajouterUtilisateur()}}
+{\footnotesize\ttfamily void Gestionnaire\+Utilisateur\+::ajouter\+Utilisateur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Utilisateur\+::get\+Identifiant(), et utilisateurs.
+
+
+
+Référencé par Groupe\+::ajouter\+Unp\+Participant(), Share\+Count\+::creer\+Utilisateur(), et B\+D\+D\+Manager\+::initialiser\+Liste\+Utilisateur().
+
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_a8a09ebd51b900d2e0ac1ecb7169a8331}\label{class_gestionnaire_utilisateur_a8a09ebd51b900d2e0ac1ecb7169a8331}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!begin@{begin}}
+\index{begin@{begin}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$\+::iterator Gestionnaire\+Utilisateur\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références utilisateurs.
+
+
+
+Référencé par Groupe\+::set\+Dettes().
+
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_ac081e8a004388a204942600c2c6d5996}\label{class_gestionnaire_utilisateur_ac081e8a004388a204942600c2c6d5996}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!clear@{clear}}
+\index{clear@{clear}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Gestionnaire\+Utilisateur\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références utilisateurs.
+
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_aa6d3525d67032e00add9de00e10bcc31}\label{class_gestionnaire_utilisateur_aa6d3525d67032e00add9de00e10bcc31}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!end@{end}}
+\index{end@{end}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$\+::iterator Gestionnaire\+Utilisateur\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références utilisateurs.
+
+
+
+Référencé par Groupe\+::set\+Dettes().
+
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_ab74523891b320dd06f5d991101aa3fea}\label{class_gestionnaire_utilisateur_ab74523891b320dd06f5d991101aa3fea}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!findUtilisateur@{findUtilisateur}}
+\index{findUtilisateur@{findUtilisateur}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{findUtilisateur()}{findUtilisateur()}}
+{\footnotesize\ttfamily bool Gestionnaire\+Utilisateur\+::find\+Utilisateur (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références utilisateurs.
+
+
+
+Référencé par Share\+Count\+::find\+Utilisateur().
+
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_ae90e46d418140f93899ca0ca3f6bf9f7}\label{class_gestionnaire_utilisateur_ae90e46d418140f93899ca0ca3f6bf9f7}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!getNombreUtilisateur@{getNombreUtilisateur}}
+\index{getNombreUtilisateur@{getNombreUtilisateur}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{getNombreUtilisateur()}{getNombreUtilisateur()}}
+{\footnotesize\ttfamily int Gestionnaire\+Utilisateur\+::get\+Nombre\+Utilisateur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références utilisateurs.
+
+
+
+Référencé par Share\+Count\+::get\+Nombre\+Utilisateurs(), et Groupe\+::set\+Dettes().
+
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_a61c669a8f91b38cf9372abef6bab0f01}\label{class_gestionnaire_utilisateur_a61c669a8f91b38cf9372abef6bab0f01}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!getUtilisateur@{getUtilisateur}}
+\index{getUtilisateur@{getUtilisateur}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{getUtilisateur()}{getUtilisateur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_utilisateur}{Utilisateur}} Gestionnaire\+Utilisateur\+::get\+Utilisateur (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références utilisateurs.
+
+
+
+Référencé par Share\+Count\+::get\+Utilisateur().
+
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_a36f1d3a68a5790d1f80d731c80185e00}\label{class_gestionnaire_utilisateur_a36f1d3a68a5790d1f80d731c80185e00}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!identifierUtilisateur@{identifierUtilisateur}}
+\index{identifierUtilisateur@{identifierUtilisateur}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{identifierUtilisateur()}{identifierUtilisateur()}}
+{\footnotesize\ttfamily bool Gestionnaire\+Utilisateur\+::identifier\+Utilisateur (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id,  }\item[{const Q\+String \&}]{mdp }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em identifiant} & \\
+\hline
+{\em mdp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références utilisateurs.
+
+
+
+Référencé par Share\+Count\+::identifier\+Utilisateur().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_gestionnaire_utilisateur_a886918c579b5582767fe9b71320ffd1e}\label{class_gestionnaire_utilisateur_a886918c579b5582767fe9b71320ffd1e}} 
+\index{GestionnaireUtilisateur@{GestionnaireUtilisateur}!utilisateurs@{utilisateurs}}
+\index{utilisateurs@{utilisateurs}!GestionnaireUtilisateur@{GestionnaireUtilisateur}}
+\doxysubsubsection{\texorpdfstring{utilisateurs}{utilisateurs}}
+{\footnotesize\ttfamily std\+::map$<$Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}}$>$ Gestionnaire\+Utilisateur\+::utilisateurs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+Utilisateur(), begin(), clear(), end(), find\+Utilisateur(), get\+Nombre\+Utilisateur(), get\+Utilisateur(), et identifier\+Utilisateur().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/gestionnaireutilisateurs/\mbox{\hyperlink{_gestionnaireutilisateur_8h}{Gestionnaireutilisateur.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/gestionnaireutilisateurs/\mbox{\hyperlink{_gestionnaireutilisateur_8cpp}{Gestionnaireutilisateur.\+cpp}}\end{DoxyCompactItemize}

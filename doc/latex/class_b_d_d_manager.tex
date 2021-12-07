@@ -1,0 +1,326 @@
+\hypertarget{class_b_d_d_manager}{}\doxysection{Référence de la classe B\+D\+D\+Manager}
+\label{class_b_d_d_manager}\index{BDDManager@{BDDManager}}
+
+
+The Db\+Manager class qui permet de gérer les entrées et les sorties avec la base de donnée.  
+
+
+
+
+{\ttfamily \#include $<$B\+D\+D\+Manager.\+h$>$}
+
+
+
+Graphe de collaboration de B\+D\+D\+Manager\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_d_d_manager_a4ba1a8f6ec4bb70fbaa38e4274d559a5}{B\+D\+D\+Manager}} (const Q\+String \&path=\mbox{\hyperlink{_b_d_d_manager_8h_a0670e0e3546fcd815d007fe1aeff321e}{D\+B\+\_\+\+P\+A\+TH}})
+\begin{DoxyCompactList}\small\item\em Db\+Manager Constrcteur par défaut. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_aa2a0ec86d6918daadfa907d56ac5eb74}{create\+Data\+Base}} ()
+\begin{DoxyCompactList}\small\item\em create\+Data\+Base permet de créer et d\textquotesingle{}initialiser la base de donnée si le fichier Share\+Count\+Data\+Base.\+db n\textquotesingle{}existe pas \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_aaea0b59b4af96bc0bbf2719e43c52f7a}{inserer\+Utilisateur}} (const \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user) const
+\begin{DoxyCompactList}\small\item\em inserer\+Utilisateur permet d\textquotesingle{}ajouter un utilisateur à la base de donnée \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_a59a9d535a6804dbed50cdfe95d5d1322}{initialiser\+Liste\+Utilisateur}} (\mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} \&users)
+\begin{DoxyCompactList}\small\item\em initialiser\+Liste\+Utilisateur permet de récupérer tous les utilisateurs dans la base de donnée au lancement de k\textquotesingle{}application \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_a7a162aa3d1b0efa056cf2d1fb8c86933}{insererun\+Groupe}} (const \mbox{\hyperlink{class_groupe}{Groupe}} \&grp, const \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user)
+\begin{DoxyCompactList}\small\item\em insererun\+Groupe permet d\textquotesingle{}inserer un groupe dans la table Groupes\+Gestion\+Budget et de mettre à jour la table Utilisateurs\+Par\+Groupes\+G\+DB \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_a4637fafc2464ae5f7d3bdafd5ff6a33c}{initialiser\+Groupe\+Utilisateur}} (\mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} \&grp, const Q\+String \&id\+User)
+\begin{DoxyCompactList}\small\item\em initialiser\+Groupe\+Utilisateur permet d\textquotesingle{}initialiser les groupes de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_d_d_manager_a9ca50d943c283252bbebcaa52d5846bc}{appartient\+Au\+Groupe}} (const Q\+String \&user, const Q\+String \&grp)
+\begin{DoxyCompactList}\small\item\em appartient\+Au\+Groupe retourne vrai si user appartient a un groupe grp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_af50f5bad182ecce0c4f42597bff39df3}{ajouter\+Participant\+Au\+Groupe}} (const Q\+String \&user, const Q\+String \&grp)
+\begin{DoxyCompactList}\small\item\em ajouter\+Participant\+Au\+Groupe ajoute le participant \char`\"{}user\char`\"{} au groupe \char`\"{}grp\char`\"{}; \end{DoxyCompactList}\item 
+Q\+String\+List \mbox{\hyperlink{class_b_d_d_manager_a06e10ff9b218bf1877633e51a3d80647}{initialiser\+Participants}} (const Q\+String \&grp)
+\begin{DoxyCompactList}\small\item\em initialiser\+Participants permet d\textquotesingle{}initialiser les participants au groupe grp pour l\textquotesingle{}afficher \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_ac04b73ab46588ff7deaa02e5a2426610}{inserer\+Une\+Depense}} (const \mbox{\hyperlink{class_depense}{Depense}} \&dep, const \mbox{\hyperlink{class_groupe}{Groupe}} \&grp)
+\begin{DoxyCompactList}\small\item\em inserer\+Une\+Depense permet d\textquotesingle{}insérer une dépense pour le groupe \char`\"{}grp\char`\"{} dans la table Depenses \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_a43965e30235dddee0207d88d56df846d}{initialiser\+Depenses\+Groupe}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&grp)
+\begin{DoxyCompactList}\small\item\em initialiser\+Depenses\+Groupe permet d\textquotesingle{}initialiser toutes les dépenses du groupe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_d_d_manager_ae777eda4a45f719de81b81b8b75ca5ad}{update\+Historique}} (const Q\+String \&grp, const Q\+String \&action)
+\begin{DoxyCompactList}\small\item\em update\+Historique a chaque fois qu\textquotesingle{}une action est fête celle-\/ci est enregistré dans la table historique. \end{DoxyCompactList}\item 
+Q\+String\+List \mbox{\hyperlink{class_b_d_d_manager_a8383e33f8658c18617942fc6b47a85a3}{initialiser\+Historique}} (const Q\+String \&grp)
+\begin{DoxyCompactList}\small\item\em initialiser\+Historique permet d\textquotesingle{}initialiser l\textquotesingle{}historique en fonction du groupe \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Sql\+Database \mbox{\hyperlink{class_b_d_d_manager_a2bb03e72350dfb03b7ced1d55bf12b86}{shar\+Count\+Base}}
+\item 
+bool \mbox{\hyperlink{class_b_d_d_manager_a0494a1917c30dde61c964fd6dcffe6e5}{creer\+Data\+Base}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_b_d_d_manager_a4ba1a8f6ec4bb70fbaa38e4274d559a5}\label{class_b_d_d_manager_a4ba1a8f6ec4bb70fbaa38e4274d559a5}} 
+\index{BDDManager@{BDDManager}!BDDManager@{BDDManager}}
+\index{BDDManager@{BDDManager}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{BDDManager()}{BDDManager()}}
+{\footnotesize\ttfamily B\+D\+D\+Manager\+::\+B\+D\+D\+Manager (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path = {\ttfamily \mbox{\hyperlink{_b_d_d_manager_8h_a0670e0e3546fcd815d007fe1aeff321e}{D\+B\+\_\+\+P\+A\+TH}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em path} & de la base de donnée \\
+\hline
+\end{DoxyParams}
+
+
+Références shar\+Count\+Base.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_b_d_d_manager_af50f5bad182ecce0c4f42597bff39df3}\label{class_b_d_d_manager_af50f5bad182ecce0c4f42597bff39df3}} 
+\index{BDDManager@{BDDManager}!ajouterParticipantAuGroupe@{ajouterParticipantAuGroupe}}
+\index{ajouterParticipantAuGroupe@{ajouterParticipantAuGroupe}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{ajouterParticipantAuGroupe()}{ajouterParticipantAuGroupe()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::ajouter\+Participant\+Au\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{user,  }\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références update\+Historique().
+
+
+
+Référencé par Share\+Count\+::ajouter\+Participant\+Au\+Groupe().
+
+\mbox{\Hypertarget{class_b_d_d_manager_a9ca50d943c283252bbebcaa52d5846bc}\label{class_b_d_d_manager_a9ca50d943c283252bbebcaa52d5846bc}} 
+\index{BDDManager@{BDDManager}!appartientAuGroupe@{appartientAuGroupe}}
+\index{appartientAuGroupe@{appartientAuGroupe}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{appartientAuGroupe()}{appartientAuGroupe()}}
+{\footnotesize\ttfamily bool B\+D\+D\+Manager\+::appartient\+Au\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{user,  }\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références shar\+Count\+Base.
+
+
+
+Référencé par Share\+Count\+::appartient\+Au\+Groupe().
+
+\mbox{\Hypertarget{class_b_d_d_manager_aa2a0ec86d6918daadfa907d56ac5eb74}\label{class_b_d_d_manager_aa2a0ec86d6918daadfa907d56ac5eb74}} 
+\index{BDDManager@{BDDManager}!createDataBase@{createDataBase}}
+\index{createDataBase@{createDataBase}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{createDataBase()}{createDataBase()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::create\+Data\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références creer\+Data\+Base.
+
+
+
+Référencé par Share\+Count\+::\+Share\+Count().
+
+\mbox{\Hypertarget{class_b_d_d_manager_a43965e30235dddee0207d88d56df846d}\label{class_b_d_d_manager_a43965e30235dddee0207d88d56df846d}} 
+\index{BDDManager@{BDDManager}!initialiserDepensesGroupe@{initialiserDepensesGroupe}}
+\index{initialiserDepensesGroupe@{initialiserDepensesGroupe}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{initialiserDepensesGroupe()}{initialiserDepensesGroupe()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::initialiser\+Depenses\+Groupe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_groupe}{Groupe}} \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Groupe\+::ajouter\+Une\+Depense(), Groupe\+::clear\+Depenses(), et Groupe\+::get\+Identifiant().
+
+
+
+Référencé par Share\+Count\+::set\+Groupe\+Actif().
+
+\mbox{\Hypertarget{class_b_d_d_manager_a4637fafc2464ae5f7d3bdafd5ff6a33c}\label{class_b_d_d_manager_a4637fafc2464ae5f7d3bdafd5ff6a33c}} 
+\index{BDDManager@{BDDManager}!initialiserGroupeUtilisateur@{initialiserGroupeUtilisateur}}
+\index{initialiserGroupeUtilisateur@{initialiserGroupeUtilisateur}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{initialiserGroupeUtilisateur()}{initialiserGroupeUtilisateur()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::initialiser\+Groupe\+Utilisateur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} \&}]{grp,  }\item[{const Q\+String \&}]{id\+User }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+{\em id\+User} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Gestionnaire\+Groupes\+::ajouter\+Groupe(), Gestionnaire\+Groupes\+::clear(), et Groupe\+::set\+Date().
+
+
+
+Référencé par Share\+Count\+::set\+Utilisateur\+Actif().
+
+\mbox{\Hypertarget{class_b_d_d_manager_a8383e33f8658c18617942fc6b47a85a3}\label{class_b_d_d_manager_a8383e33f8658c18617942fc6b47a85a3}} 
+\index{BDDManager@{BDDManager}!initialiserHistorique@{initialiserHistorique}}
+\index{initialiserHistorique@{initialiserHistorique}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{initialiserHistorique()}{initialiserHistorique()}}
+{\footnotesize\ttfamily Q\+String\+List B\+D\+D\+Manager\+::initialiser\+Historique (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_b_d_d_manager_a59a9d535a6804dbed50cdfe95d5d1322}\label{class_b_d_d_manager_a59a9d535a6804dbed50cdfe95d5d1322}} 
+\index{BDDManager@{BDDManager}!initialiserListeUtilisateur@{initialiserListeUtilisateur}}
+\index{initialiserListeUtilisateur@{initialiserListeUtilisateur}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{initialiserListeUtilisateur()}{initialiserListeUtilisateur()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::initialiser\+Liste\+Utilisateur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} \&}]{users }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sc} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Gestionnaire\+Utilisateur\+::ajouter\+Utilisateur(), Utilisateur\+::set\+Identifiant(), Utilisateur\+::set\+Mail(), et Utilisateur\+::set\+Mot\+De\+Passe().
+
+
+
+Référencé par Share\+Count\+::initialiser\+Liste\+Utilisateur(), et Share\+Count\+::\+Share\+Count().
+
+\mbox{\Hypertarget{class_b_d_d_manager_a06e10ff9b218bf1877633e51a3d80647}\label{class_b_d_d_manager_a06e10ff9b218bf1877633e51a3d80647}} 
+\index{BDDManager@{BDDManager}!initialiserParticipants@{initialiserParticipants}}
+\index{initialiserParticipants@{initialiserParticipants}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{initialiserParticipants()}{initialiserParticipants()}}
+{\footnotesize\ttfamily Q\+String\+List B\+D\+D\+Manager\+::initialiser\+Participants (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Référencé par Share\+Count\+::initialiser\+Participants().
+
+\mbox{\Hypertarget{class_b_d_d_manager_ac04b73ab46588ff7deaa02e5a2426610}\label{class_b_d_d_manager_ac04b73ab46588ff7deaa02e5a2426610}} 
+\index{BDDManager@{BDDManager}!insererUneDepense@{insererUneDepense}}
+\index{insererUneDepense@{insererUneDepense}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{insererUneDepense()}{insererUneDepense()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::inserer\+Une\+Depense (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_depense}{Depense}} \&}]{dep,  }\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dep} & \\
+\hline
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Depense\+::get\+Createur(), Depense\+::getdate(), Groupe\+::get\+Identifiant(), Depense\+::get\+Nom(), Depense\+::get\+Num\+Depense(), Depense\+::get\+Vealeur\+Base(), et update\+Historique().
+
+
+
+Référencé par Share\+Count\+::ajouter\+Une\+Depense().
+
+\mbox{\Hypertarget{class_b_d_d_manager_a7a162aa3d1b0efa056cf2d1fb8c86933}\label{class_b_d_d_manager_a7a162aa3d1b0efa056cf2d1fb8c86933}} 
+\index{BDDManager@{BDDManager}!insererunGroupe@{insererunGroupe}}
+\index{insererunGroupe@{insererunGroupe}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{insererunGroupe()}{insererunGroupe()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::insererun\+Groupe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{grp,  }\item[{const \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&}]{user }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Groupe\+::get\+Date\+Creation(), Groupe\+::get\+Description(), Utilisateur\+::get\+Identifiant(), Groupe\+::get\+Identifiant(), et update\+Historique().
+
+
+
+Référencé par Share\+Count\+::inser\+Groupe().
+
+\mbox{\Hypertarget{class_b_d_d_manager_aaea0b59b4af96bc0bbf2719e43c52f7a}\label{class_b_d_d_manager_aaea0b59b4af96bc0bbf2719e43c52f7a}} 
+\index{BDDManager@{BDDManager}!insererUtilisateur@{insererUtilisateur}}
+\index{insererUtilisateur@{insererUtilisateur}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{insererUtilisateur()}{insererUtilisateur()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::inserer\+Utilisateur (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&}]{user }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Utilisateur\+::get\+Identifiant(), Utilisateur\+::get\+Mail(), et Utilisateur\+::get\+Mot\+De\+Passe().
+
+
+
+Référencé par Share\+Count\+::creer\+Utilisateur().
+
+\mbox{\Hypertarget{class_b_d_d_manager_ae777eda4a45f719de81b81b8b75ca5ad}\label{class_b_d_d_manager_ae777eda4a45f719de81b81b8b75ca5ad}} 
+\index{BDDManager@{BDDManager}!updateHistorique@{updateHistorique}}
+\index{updateHistorique@{updateHistorique}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{updateHistorique()}{updateHistorique()}}
+{\footnotesize\ttfamily void B\+D\+D\+Manager\+::update\+Historique (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp,  }\item[{const Q\+String \&}]{action }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+{\em action} & \\
+\hline
+\end{DoxyParams}
+
+
+Référencé par ajouter\+Participant\+Au\+Groupe(), inserer\+Une\+Depense(), et insererun\+Groupe().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_b_d_d_manager_a0494a1917c30dde61c964fd6dcffe6e5}\label{class_b_d_d_manager_a0494a1917c30dde61c964fd6dcffe6e5}} 
+\index{BDDManager@{BDDManager}!creerDataBase@{creerDataBase}}
+\index{creerDataBase@{creerDataBase}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{creerDataBase}{creerDataBase}}
+{\footnotesize\ttfamily bool B\+D\+D\+Manager\+::creer\+Data\+Base\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par create\+Data\+Base().
+
+\mbox{\Hypertarget{class_b_d_d_manager_a2bb03e72350dfb03b7ced1d55bf12b86}\label{class_b_d_d_manager_a2bb03e72350dfb03b7ced1d55bf12b86}} 
+\index{BDDManager@{BDDManager}!sharCountBase@{sharCountBase}}
+\index{sharCountBase@{sharCountBase}!BDDManager@{BDDManager}}
+\doxysubsubsection{\texorpdfstring{sharCountBase}{sharCountBase}}
+{\footnotesize\ttfamily Q\+Sql\+Database B\+D\+D\+Manager\+::shar\+Count\+Base\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par appartient\+Au\+Groupe(), et B\+D\+D\+Manager().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/bdd/\mbox{\hyperlink{_b_d_d_manager_8h}{B\+D\+D\+Manager.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/bdd/\mbox{\hyperlink{_b_d_d_manager_8cpp}{B\+D\+D\+Manager.\+cpp}}\end{DoxyCompactItemize}
