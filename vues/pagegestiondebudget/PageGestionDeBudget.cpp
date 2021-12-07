@@ -156,11 +156,11 @@ void PageGestionDeBudget::setEquilibre(){
         shareCount->getGroupeActif().ajouterUnpParticipant(shareCount->getUtilisateur(participant)); //ajout des participants dans le groupe actif
     }
     shareCount->getGroupeActif().setDettes(); //initialisation des dettes (calcul des dettes)
-    std::map<QString, int> dettes = shareCount->getGroupeActif().getDettes();
+    std::map<QString, double> dettes = shareCount->getGroupeActif().getDettes();
     QStringList equilibreDette;
     QString nom;
     QString val;
-    for(std::map<QString, int>::iterator it = dettes.begin(); it != dettes.end(); ++it){
+    for(std::map<QString, double>::iterator it = dettes.begin(); it != dettes.end(); ++it){
         val = QString::number(it->second);
         nom = it->first;
         equilibreDette << nom + " : "+val+" €";
