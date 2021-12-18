@@ -14,13 +14,23 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="3" column="2">
-    <widget class="QListView" name="listView_3"/>
+   <item row="3" column="0">
+    <widget class="QListView" name="participantsLisetView"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="QListView" name="depenseListView"/>
    </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Participants : </string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Equilibre</string>
      </property>
     </widget>
    </item>
@@ -31,18 +41,8 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QListView" name="depenseListView"/>
-   </item>
-   <item row="3" column="0">
-    <widget class="QListView" name="participantsLisetView"/>
-   </item>
-   <item row="2" column="1">
-    <widget class="QPushButton" name="ajouterDepenseButton">
-     <property name="text">
-      <string>Ajouter une dépense</string>
-     </property>
-    </widget>
+   <item row="3" column="2">
+    <widget class="QListView" name="listView_3"/>
    </item>
    <item row="2" column="0">
     <widget class="QPushButton" name="ajouterParticipantButton">
@@ -51,10 +51,17 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="2">
-    <widget class="QLabel" name="label_3">
+   <item row="4" column="1">
+    <widget class="QPushButton" name="reglerDepense">
      <property name="text">
-      <string>Equilibre</string>
+      <string>Regler la dépense</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="ajouterDepenseButton">
+     <property name="text">
+      <string>Ajouter une dépense</string>
      </property>
     </widget>
    </item>

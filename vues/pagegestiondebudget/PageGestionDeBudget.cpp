@@ -7,6 +7,10 @@
 #include <QDoubleSpinBox>
 #include <QDateEdit>
 
+/**
+ * @brief PageGestionDeBudget
+ * @param parent
+ */
 PageGestionDeBudget::PageGestionDeBudget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::PageGestionDeBudget)
@@ -14,6 +18,12 @@ PageGestionDeBudget::PageGestionDeBudget(QWidget *parent) :
     ui->setupUi(this);
 }
 
+/**
+ * @brief PageGestionDeBudget
+ * @param fp fenêtre principale de l'application
+ * @param sc sharcount (Sorte de système de l'application)
+ * @param parent
+ */
 PageGestionDeBudget::PageGestionDeBudget(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc):
     QWidget(parent),
     ui(new Ui::PageGestionDeBudget),
@@ -25,6 +35,10 @@ PageGestionDeBudget::PageGestionDeBudget(QWidget *parent, FenetrePrincipale *fp,
     ui->participantsLisetView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
+/**
+ * @brief getLabelNomGroupe retourne le label (qui affiche le nom du groupe)
+ * @return
+ */
 QLabel *PageGestionDeBudget::getLabelNomGroupe(){
     return ui->label;
 }
@@ -35,6 +49,10 @@ PageGestionDeBudget::~PageGestionDeBudget()
     delete ui;
 }
 
+
+/**
+ * @brief on_ajouterDepenseButton_clicked ajoute une dépense
+ */
 void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
 {
     QString idGroupe = ui->label->text();
@@ -119,6 +137,9 @@ void PageGestionDeBudget::on_ajouterDepenseButton_clicked()
     setEquilibre();
 }
 
+/**
+ * @brief on_ajouterParticipantButton_clicked ajoute un participant
+ */
 void PageGestionDeBudget::on_ajouterParticipantButton_clicked() {
     QString user = QInputDialog::getText(this, "Ajouter Un Participant", "Identifiant Utilisateur: ");
 
@@ -146,7 +167,10 @@ void PageGestionDeBudget::on_ajouterParticipantButton_clicked() {
         ui->participantsLisetView->setModel(model);
     }
 }
-/* affichage des dettes dans une listView, sur l'ensemble des dépenses (qui a avancé plus d'argent que les autres/ qui doit de l'argent) */
+
+/**
+ * @brief setEquilibre affichage des dettes dans une listView, sur l'ensemble des dépenses (qui a avancé plus d'argent que les autres/ qui doit de l'argent)
+ */
 void PageGestionDeBudget::setEquilibre(){
     QString participant;
     QStringList list = shareCount->initialiserParticipants(ui->label->text());
@@ -192,12 +216,41 @@ void PageGestionDeBudget::setEquilibre(){
     ui->listView_3->setModel(model);
 }
 
+/**
+ * @brief miseAJourParticipant affiche les participants dans la listView des participants
+ */
 void PageGestionDeBudget::miseAJourParticipant() {
     QAbstractItemModel *model = new QStringListModel(shareCount->initialiserParticipants(ui->label->text()));
     ui->participantsLisetView->setModel(model);
 }
 
+/**
+ * @brief miseAJourDepenses affiche les dépenses dans la listView des dépenses
+ */
 void PageGestionDeBudget::miseAJourDepenses() {
     QAbstractItemModel *model = new QStringListModel(shareCount->getGroupeActif().depensesToString());
     ui->depenseListView->setModel(model);
+}
+
+/**
+ * @brief on_reglerDepense_clicked ajoute une valeur (prix de la dépense/nombre d'utilisateur) à la valeur totale remboursée de la dépense
+ */
+void PageGestionDeBudget::on_reglerDepense_clicked()
+{
+    //ui->depenseListView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    QModelIndex index = ui->depenseListView->currentIndex();
+    QString itemText = index.data(Qt::DisplayRole).toString();
+    std::string s = itemText.toStdString();
+    std::string delimiter = " ";
+    std::string token = s.substr(0, s.find(delimiter));
+    std::cout << token << "\n";
+
+    int nbUsers = shareCount->getNombreUtilisateurs();
+    Depense depense = shareCount->getGroupeActif().getDepenses().getDepense(token);
+
+    depense.addValeurRemboursee(depense.getVealeurBase()/nbUsers);
+
+    miseAJourDepenses();
+
+
 }

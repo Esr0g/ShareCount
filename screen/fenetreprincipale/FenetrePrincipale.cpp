@@ -22,10 +22,19 @@ FenetrePrincipale::FenetrePrincipale(QWidget *parent, ShareCount* sc):
      resize(1280, 720);
  }
 
+/**
+ * @brief getThis permet de renvoyer le pointeur de la classe pour pouvoir ajouter des "enfants"
+ * @return this
+ */
 FenetrePrincipale* FenetrePrincipale::getThis() {
     return this;
 }
 
+/**
+ * @brief setPageActive permet de positionner la page active
+ * détruit celle précédente si elle existe
+ * @param p page que l'on souhaite afficher
+ */
 void FenetrePrincipale::setPageActive(QWidget *p) {
     if (pageActive != nullptr) {
         delete pageActive;
@@ -37,6 +46,11 @@ void FenetrePrincipale::setPageActive(QWidget *p) {
     pageActive->show();
 }
 
+/**
+ * @brief resizeEvent permet de redimensionner automatiquement la taille de la page lorsque
+ * l'utilisateur modifie la taille de la fenêtre
+ * @param event
+ */
 void FenetrePrincipale::resizeEvent(QResizeEvent *event){
     QWidget::resizeEvent(event);
     if (pageActive) {

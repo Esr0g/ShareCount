@@ -19,40 +19,17 @@ class PageCreationCompte : public QWidget
     Q_OBJECT
 
 public:
-    /**
-     * @brief PageCreationCompte
-     * @param parent
-     */
     explicit PageCreationCompte(QWidget *parent = nullptr);
 
-    /**
-     * @brief PageCreationCompte
-     * @param fp fenêtre principale de l'application
-     * @param sc sharcount (Sorte de système de l'application)
-     * @param sc
-     */
     explicit PageCreationCompte(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc);
     ~PageCreationCompte();
 
 private:
-    /**
-     * @brief setConnect
-     * Permet de connecter les signaux des éléments afficher avec
-     * leur slots correspondant
-     */
     void setConnexion();
 
 public slots:
-    /**
-     * @brief annuler Permet d'annuler la création de compte et de retrouner
-     * sur la page d'accueil
-     */
     void annuler();
 
-    /**
-     * @brief onPushButtonCreerCompte Envoie les informations entré par l'utilisateur
-     * a ShareCount pour les traiter.
-     */
     void onPushButtonCreerCompte();
 
 private:

@@ -2,6 +2,15 @@
 #include <iostream>
 #include <QDateTime>
 
+/**
+ * @brief The DbManager class qui permet de gérer les entrées et les sorties
+ * avec la base de donnée
+ */
+
+/**
+ * @brief DbManager Constrcteur par défaut
+ * @param path de la base de donnée
+ */
 BDDManager::BDDManager(const QString& path) : creerDataBase(false)
 {
     sharCountBase = QSqlDatabase::addDatabase("QSQLITE");
@@ -15,6 +24,10 @@ BDDManager::BDDManager(const QString& path) : creerDataBase(false)
     }
 }
 
+/**
+ * @brief createDataBase permet de créer et d'initialiser la base de donnée
+ * si le fichier ShareCountDataBase.db n'existe pas
+ */
 void BDDManager::createDataBase() {
 
     if (creerDataBase) {
@@ -97,6 +110,10 @@ void BDDManager::createDataBase() {
     }
 }
 
+/**
+ * @brief insererUtilisateur permet d'ajouter un utilisateur à la base de donnée
+ * @param user
+ */
 void BDDManager::insererUtilisateur(const Utilisateur& user) const {
     QSqlQuery query;
     query.prepare("INSERT INTO utilisateurs(idUser, mdp, mail)"
@@ -112,6 +129,11 @@ void BDDManager::insererUtilisateur(const Utilisateur& user) const {
     }
 }
 
+/**
+ * @brief initialiserListeUtilisateur permet de récupérer tous les utilisateurs dans la base de donnée
+ * au lancement de k'application
+ * @param sc
+ */
 void BDDManager::initialiserListeUtilisateur(GestionnaireUtilisateur& users) {
     QSqlQuery query;
 
@@ -135,6 +157,12 @@ void BDDManager::initialiserListeUtilisateur(GestionnaireUtilisateur& users) {
     }
 }
 
+/**
+ * @brief insererunGroupe permet d'inserer un groupe dans la table GroupesGestionBudget
+ * et de mettre à jour la table UtilisateursParGroupesGDB
+ * @param grp
+ * @param user
+ */
 void BDDManager::insererunGroupe(const Groupe& grp, const Utilisateur& user) {
     QSqlQuery query;
     query.prepare("INSERT INTO GroupesGestionBudget(idGroupe, idUser, description, dateCreationGrp )"
@@ -167,6 +195,11 @@ void BDDManager::insererunGroupe(const Groupe& grp, const Utilisateur& user) {
     }
 }
 
+/**
+ * @brief initialiserGroupeUtilisateur permet d'initialiser les groupes de l'utilisateur
+ * @param grp
+ * @param idUser
+ */
 void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QString& idUser) {
     QSqlQuery query;
     grp.clear();
@@ -193,6 +226,12 @@ void BDDManager::initialiserGroupeUtilisateur(GestionnaireGroupes& grp, const QS
     }
 }
 
+/**
+ * @brief appartientAuGroupe retourne vrai si user appartient a un groupe grp
+ * @param user
+ * @param grp
+ * @return
+ */
 bool BDDManager::appartientAuGroupe(const QString& user, const QString& grp) {
     bool trouve = false;
 
@@ -218,6 +257,11 @@ bool BDDManager::appartientAuGroupe(const QString& user, const QString& grp) {
     return trouve;
 }
 
+/**
+ * @brief ajouterParticipantAuGroupe ajoute le participant "user" au groupe "grp";
+ * @param user
+ * @param grp
+ */
 void BDDManager::ajouterParticipantAuGroupe(const QString& user, const QString& grp) {
     QSqlQuery query;
     query.prepare("INSERT INTO UtilisateursParGroupesGDB(idGroupe, idUser)"
@@ -236,6 +280,11 @@ void BDDManager::ajouterParticipantAuGroupe(const QString& user, const QString& 
     }
 }
 
+/**
+ * @brief initialiserParticipants permet d'initialiser les participants au groupe grp
+ * pour l'afficher
+ * @param grp
+ */
 QStringList BDDManager::initialiserParticipants(const QString& grp) {
     QSqlQuery query;
 
@@ -260,6 +309,12 @@ QStringList BDDManager::initialiserParticipants(const QString& grp) {
     return listeUser;
 }
 
+/**
+ * @brief insererUneDepense permet d'insérer une dépense pour le groupe "grp"
+ * dans la table Depenses
+ * @param dep
+ * @param grp
+ */
 void BDDManager::insererUneDepense(const Depense& dep, const Groupe& grp) {
     QSqlQuery query;
 
@@ -283,6 +338,10 @@ void BDDManager::insererUneDepense(const Depense& dep, const Groupe& grp) {
     }
 }
 
+/**
+ * @brief initialiserDepensesGroupe permet d'initialiser toutes les dépenses du groupe
+ * @param grp
+ */
 void BDDManager::initialiserDepensesGroupe(Groupe& grp) {
     QSqlQuery query;
 
@@ -313,6 +372,12 @@ void BDDManager::initialiserDepensesGroupe(Groupe& grp) {
     }
 }
 
+/**
+ * @brief updateHistorique a chaque fois qu'une action est fête celle-ci
+ * est enregistré dans la table historique.
+ * @param grp
+ * @param action
+ */
 void BDDManager::updateHistorique(const QString& grp, const QString& action) {
     QSqlQuery query;
     QDateTime date;

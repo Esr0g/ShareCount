@@ -2,6 +2,7 @@
 #define GESTIONNAIREDEPENSES_H
 
 #include <vector>
+#include <string>
 
 #include "model/depense/Depense.h"
 class Depense;
@@ -13,41 +14,18 @@ class Depense;
 class GestionnaireDepenses
 {
 public:
-    /**
-     * @brief GestionnaireDepenses constructeur par défaut
-     * @param parent
-     */
     explicit GestionnaireDepenses();
 
-    /**
-     * @brief ajouterUneDepense permet d'ajouter une dépense
-     * @param dep
-     */
     void ajouterUneDepense(Depense& dep);
 
-    /**
-     * @brief getDepense permet de récupérer une dépense
-     * @param i
-     * @return
-     */
     Depense getDepense(const int& i) const;
 
-    /**
-     * @brief nbDepense retourne le nombre de dépenses
-     * @return
-     */
+    Depense getDepense(const std::string& str);
+
     int nbDepense() const;
 
-    /**
-     * @brief begin retourne l'itérateur begin de la collection
-     * @return
-     */
     std::vector<Depense>::iterator begin();
 
-    /**
-     * @brief end retorune l'itérateur ed de la collection
-     * @return
-     */
     std::vector<Depense>::iterator end();
 
     void clearDepenses();
