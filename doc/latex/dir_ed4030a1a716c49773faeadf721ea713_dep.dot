@@ -1,0 +1,14 @@
+digraph "/home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/vues/pagecreationgroupe" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_595c3ed372cc279b2f91c4681d5b0e80 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vues" fontname="Helvetica", fontsize="10", URL="dir_595c3ed372cc279b2f91c4681d5b0e80.html"]
+  dir_ed4030a1a716c49773faeadf721ea713 [shape=box, label="pagecreationgroupe", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ed4030a1a716c49773faeadf721ea713.html"];
+  }
+  dir_d686753603722e47837e58f0ba777cfb [shape=box label="screen" fillcolor="white" style="filled" color="red" URL="dir_d686753603722e47837e58f0ba777cfb.html"];
+  dir_3f14f6767c31cb4a1d22c13c18cc6fc3 [shape=box label="model" fillcolor="white" style="filled" color="red" URL="dir_3f14f6767c31cb4a1d22c13c18cc6fc3.html"];
+  dir_ed4030a1a716c49773faeadf721ea713->dir_d686753603722e47837e58f0ba777cfb [headlabel="1", labeldistance=1.5 headhref="dir_000014_000009.html"];
+  dir_ed4030a1a716c49773faeadf721ea713->dir_3f14f6767c31cb4a1d22c13c18cc6fc3 [headlabel="1", labeldistance=1.5 headhref="dir_000014_000000.html"];
+  dir_d686753603722e47837e58f0ba777cfb->dir_3f14f6767c31cb4a1d22c13c18cc6fc3 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000000.html"];
+}

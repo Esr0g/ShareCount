@@ -1,0 +1,327 @@
+\hypertarget{class_utilisateur}{}\doxysection{Référence de la classe Utilisateur}
+\label{class_utilisateur}\index{Utilisateur@{Utilisateur}}
+
+
+The \mbox{\hyperlink{class_utilisateur}{Utilisateur}} class est une classe qui représente un utilisateur ou un compte. défini par un identifiant, un mot de passe et une adresse mail.  
+
+
+
+
+{\ttfamily \#include $<$Utilisateur.\+h$>$}
+
+
+
+Graphe de collaboration de Utilisateur\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_utilisateur_ae76433a6d353c5f5ad0c6a6af64022ad}{Utilisateur}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_utilisateur}{Utilisateur}} constructeur. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_utilisateur_a52d76cf858b62cacca941d36382b08fe}{get\+Identifiant}} () const
+\begin{DoxyCompactList}\small\item\em get\+Identifiant \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_utilisateur_ab5daa50e4c94dcc3834d012258456dd9}{get\+Mot\+De\+Passe}} () const
+\begin{DoxyCompactList}\small\item\em get\+Mot\+De\+Passe \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_utilisateur_a0a29886b8ffd97eac7b10d651e12793a}{get\+Mail}} () const
+\begin{DoxyCompactList}\small\item\em get\+Mail \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utilisateur_a0d229bdf6e5c720b8addf97e3250b51e}{set\+Identifiant}} (const Q\+String \&id)
+\begin{DoxyCompactList}\small\item\em set\+Identifiant modifie l\textquotesingle{}identifiant \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utilisateur_a460366e5185438182eb8c4a1a877c0d1}{set\+Mot\+De\+Passe}} (const Q\+String \&mdp)
+\begin{DoxyCompactList}\small\item\em set\+Mot\+De\+Passe modifier le mdp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utilisateur_aac03746781fc9eb8b5b8ef44b26d152d}{set\+Mail}} (const Q\+String \&m)
+\begin{DoxyCompactList}\small\item\em set\+Mail modifier le mail \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utilisateur_a973513b6dd3f243918b2b1f9ecfcfc74}{ajouter\+A\+Mes\+Groupes}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&grp)
+\begin{DoxyCompactList}\small\item\em ajouter\+A\+Mes\+Groupes permet d\textquotesingle{}ajouter un groupe \end{DoxyCompactList}\item 
+Q\+String\+List \mbox{\hyperlink{class_utilisateur_acc78868eb16b01056faeda2f6dc275aa}{get\+Mes\+Groupes\+To\+String}} () const
+\begin{DoxyCompactList}\small\item\em get\+Mes\+Groupes\+To\+String retourne la liste des groupe sous la forme d\textquotesingle{}une liste de Q\+String \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} \& \mbox{\hyperlink{class_utilisateur_ae44462f2990788a6e98bb743ea010c98}{get\+Mes\+Groupes}} () const
+\begin{DoxyCompactList}\small\item\em get\+Mes\+Groupes retourne une référence sur mes\+Groupes \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_utilisateur_a8f3667597707f8b17ae08d6e1806bfe8}{find\+Groupe}} (const Q\+String \&grp) const
+\begin{DoxyCompactList}\small\item\em find\+Groupe retourne vrai si grp fait partie des groupes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe}{Groupe}} \& \mbox{\hyperlink{class_utilisateur_ae43bec9b1cb36ed9ed61320c8a772e21}{get\+Groupe}} (const Q\+String \&id\+Groupe)
+\begin{DoxyCompactList}\small\item\em get\+Groupe retourne un groupe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utilisateur_a6631539ceecd6140fe525eb91485537b}{$\sim$\+Utilisateur}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_utilisateur_a1e79e47202a2c716346f47adbbeb2511}{identifiant}}
+\begin{DoxyCompactList}\small\item\em identifiant de client \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_utilisateur_a4f6a17d0fb5c231bcb414396236a056f}{mot\+De\+Passe}}
+\begin{DoxyCompactList}\small\item\em mot\+De\+Passe de compte \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_utilisateur_a2a4f3c552c52ff36115e398993e1b79c}{mail}}
+\begin{DoxyCompactList}\small\item\em mail de client \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} $\ast$ \mbox{\hyperlink{class_utilisateur_a287ae8ba75269001fff589e0cdadcfc9}{mes\+Groupes}}
+\begin{DoxyCompactList}\small\item\em solde de client \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_utilisateur_ae76433a6d353c5f5ad0c6a6af64022ad}\label{class_utilisateur_ae76433a6d353c5f5ad0c6a6af64022ad}} 
+\index{Utilisateur@{Utilisateur}!Utilisateur@{Utilisateur}}
+\index{Utilisateur@{Utilisateur}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{Utilisateur()}{Utilisateur()}}
+{\footnotesize\ttfamily Utilisateur\+::\+Utilisateur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_utilisateur_a6631539ceecd6140fe525eb91485537b}\label{class_utilisateur_a6631539ceecd6140fe525eb91485537b}} 
+\index{Utilisateur@{Utilisateur}!````~Utilisateur@{$\sim$Utilisateur}}
+\index{````~Utilisateur@{$\sim$Utilisateur}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{$\sim$Utilisateur()}{~Utilisateur()}}
+{\footnotesize\ttfamily Utilisateur\+::$\sim$\+Utilisateur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_utilisateur_a973513b6dd3f243918b2b1f9ecfcfc74}\label{class_utilisateur_a973513b6dd3f243918b2b1f9ecfcfc74}} 
+\index{Utilisateur@{Utilisateur}!ajouterAMesGroupes@{ajouterAMesGroupes}}
+\index{ajouterAMesGroupes@{ajouterAMesGroupes}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{ajouterAMesGroupes()}{ajouterAMesGroupes()}}
+{\footnotesize\ttfamily void Utilisateur\+::ajouter\+A\+Mes\+Groupes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_groupe}{Groupe}} \&}]{grp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références Gestionnaire\+Groupes\+::ajouter\+Groupe(), et mes\+Groupes.
+
+
+
+Référencé par Page\+Creation\+Groupe\+::on\+\_\+\+Creer\+Groupe\+\_\+clicked().
+
+\mbox{\Hypertarget{class_utilisateur_a8f3667597707f8b17ae08d6e1806bfe8}\label{class_utilisateur_a8f3667597707f8b17ae08d6e1806bfe8}} 
+\index{Utilisateur@{Utilisateur}!findGroupe@{findGroupe}}
+\index{findGroupe@{findGroupe}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{findGroupe()}{findGroupe()}}
+{\footnotesize\ttfamily bool Utilisateur\+::find\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références Gestionnaire\+Groupes\+::find\+Groupe(), et mes\+Groupes.
+
+
+
+Référencé par Share\+Count\+::find\+Groupe().
+
+\mbox{\Hypertarget{class_utilisateur_ae43bec9b1cb36ed9ed61320c8a772e21}\label{class_utilisateur_ae43bec9b1cb36ed9ed61320c8a772e21}} 
+\index{Utilisateur@{Utilisateur}!getGroupe@{getGroupe}}
+\index{getGroupe@{getGroupe}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getGroupe()}{getGroupe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_groupe}{Groupe}} \& Utilisateur\+::get\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id\+Groupe }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id\+Groupe} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références Gestionnaire\+Groupes\+::get\+Groupe(), et mes\+Groupes.
+
+
+
+Référencé par Page\+Principale\+::afficher\+Groupe().
+
+\mbox{\Hypertarget{class_utilisateur_a52d76cf858b62cacca941d36382b08fe}\label{class_utilisateur_a52d76cf858b62cacca941d36382b08fe}} 
+\index{Utilisateur@{Utilisateur}!getIdentifiant@{getIdentifiant}}
+\index{getIdentifiant@{getIdentifiant}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getIdentifiant()}{getIdentifiant()}}
+{\footnotesize\ttfamily Q\+String Utilisateur\+::get\+Identifiant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}identifiant de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+
+
+Références identifiant.
+
+
+
+Référencé par Gestionnaire\+Utilisateur\+::ajouter\+Utilisateur(), B\+D\+D\+Manager\+::insererun\+Groupe(), B\+D\+D\+Manager\+::inserer\+Utilisateur(), Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), Page\+Creation\+Compte\+::on\+Push\+Button\+Creer\+Compte(), Page\+Principale\+::\+Page\+Principale(), et Share\+Count\+::set\+Utilisateur\+Actif().
+
+\mbox{\Hypertarget{class_utilisateur_a0a29886b8ffd97eac7b10d651e12793a}\label{class_utilisateur_a0a29886b8ffd97eac7b10d651e12793a}} 
+\index{Utilisateur@{Utilisateur}!getMail@{getMail}}
+\index{getMail@{getMail}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getMail()}{getMail()}}
+{\footnotesize\ttfamily Q\+String Utilisateur\+::get\+Mail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+le mail de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+
+
+Références mail.
+
+
+
+Référencé par B\+D\+D\+Manager\+::inserer\+Utilisateur().
+
+\mbox{\Hypertarget{class_utilisateur_ae44462f2990788a6e98bb743ea010c98}\label{class_utilisateur_ae44462f2990788a6e98bb743ea010c98}} 
+\index{Utilisateur@{Utilisateur}!getMesGroupes@{getMesGroupes}}
+\index{getMesGroupes@{getMesGroupes}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getMesGroupes()}{getMesGroupes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} \& Utilisateur\+::get\+Mes\+Groupes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références mes\+Groupes.
+
+
+
+Référencé par Share\+Count\+::set\+Utilisateur\+Actif().
+
+\mbox{\Hypertarget{class_utilisateur_acc78868eb16b01056faeda2f6dc275aa}\label{class_utilisateur_acc78868eb16b01056faeda2f6dc275aa}} 
+\index{Utilisateur@{Utilisateur}!getMesGroupesToString@{getMesGroupesToString}}
+\index{getMesGroupesToString@{getMesGroupesToString}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getMesGroupesToString()}{getMesGroupesToString()}}
+{\footnotesize\ttfamily Q\+String\+List Utilisateur\+::get\+Mes\+Groupes\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références Gestionnaire\+Groupes\+::get\+Groupe(), Groupe\+::get\+Identifiant(), mes\+Groupes, et Gestionnaire\+Groupes\+::size().
+
+
+
+Référencé par Vue\+Liste\+Groupe\+::ajouter\+Groupe(), et Vue\+Liste\+Groupe\+::\+Vue\+Liste\+Groupe().
+
+\mbox{\Hypertarget{class_utilisateur_ab5daa50e4c94dcc3834d012258456dd9}\label{class_utilisateur_ab5daa50e4c94dcc3834d012258456dd9}} 
+\index{Utilisateur@{Utilisateur}!getMotDePasse@{getMotDePasse}}
+\index{getMotDePasse@{getMotDePasse}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getMotDePasse()}{getMotDePasse()}}
+{\footnotesize\ttfamily Q\+String Utilisateur\+::get\+Mot\+De\+Passe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+le mot de passe de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+
+
+Références mot\+De\+Passe.
+
+
+
+Référencé par B\+D\+D\+Manager\+::inserer\+Utilisateur().
+
+\mbox{\Hypertarget{class_utilisateur_a0d229bdf6e5c720b8addf97e3250b51e}\label{class_utilisateur_a0d229bdf6e5c720b8addf97e3250b51e}} 
+\index{Utilisateur@{Utilisateur}!setIdentifiant@{setIdentifiant}}
+\index{setIdentifiant@{setIdentifiant}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setIdentifiant()}{setIdentifiant()}}
+{\footnotesize\ttfamily void Utilisateur\+::set\+Identifiant (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+
+
+Références identifiant.
+
+
+
+Référencé par B\+D\+D\+Manager\+::initialiser\+Liste\+Utilisateur(), et Page\+Creation\+Compte\+::on\+Push\+Button\+Creer\+Compte().
+
+\mbox{\Hypertarget{class_utilisateur_aac03746781fc9eb8b5b8ef44b26d152d}\label{class_utilisateur_aac03746781fc9eb8b5b8ef44b26d152d}} 
+\index{Utilisateur@{Utilisateur}!setMail@{setMail}}
+\index{setMail@{setMail}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setMail()}{setMail()}}
+{\footnotesize\ttfamily void Utilisateur\+::set\+Mail (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{m }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
+Références mail.
+
+
+
+Référencé par B\+D\+D\+Manager\+::initialiser\+Liste\+Utilisateur(), et Page\+Creation\+Compte\+::on\+Push\+Button\+Creer\+Compte().
+
+\mbox{\Hypertarget{class_utilisateur_a460366e5185438182eb8c4a1a877c0d1}\label{class_utilisateur_a460366e5185438182eb8c4a1a877c0d1}} 
+\index{Utilisateur@{Utilisateur}!setMotDePasse@{setMotDePasse}}
+\index{setMotDePasse@{setMotDePasse}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setMotDePasse()}{setMotDePasse()}}
+{\footnotesize\ttfamily void Utilisateur\+::set\+Mot\+De\+Passe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{mdp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mdp} & \\
+\hline
+\end{DoxyParams}
+
+
+Références mot\+De\+Passe.
+
+
+
+Référencé par B\+D\+D\+Manager\+::initialiser\+Liste\+Utilisateur(), et Page\+Creation\+Compte\+::on\+Push\+Button\+Creer\+Compte().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_utilisateur_a1e79e47202a2c716346f47adbbeb2511}\label{class_utilisateur_a1e79e47202a2c716346f47adbbeb2511}} 
+\index{Utilisateur@{Utilisateur}!identifiant@{identifiant}}
+\index{identifiant@{identifiant}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{identifiant}{identifiant}}
+{\footnotesize\ttfamily Q\+String Utilisateur\+::identifiant\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Identifiant(), et set\+Identifiant().
+
+\mbox{\Hypertarget{class_utilisateur_a2a4f3c552c52ff36115e398993e1b79c}\label{class_utilisateur_a2a4f3c552c52ff36115e398993e1b79c}} 
+\index{Utilisateur@{Utilisateur}!mail@{mail}}
+\index{mail@{mail}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{mail}{mail}}
+{\footnotesize\ttfamily Q\+String Utilisateur\+::mail\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Mail(), et set\+Mail().
+
+\mbox{\Hypertarget{class_utilisateur_a287ae8ba75269001fff589e0cdadcfc9}\label{class_utilisateur_a287ae8ba75269001fff589e0cdadcfc9}} 
+\index{Utilisateur@{Utilisateur}!mesGroupes@{mesGroupes}}
+\index{mesGroupes@{mesGroupes}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{mesGroupes}{mesGroupes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}}$\ast$ Utilisateur\+::mes\+Groupes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+A\+Mes\+Groupes(), find\+Groupe(), get\+Groupe(), get\+Mes\+Groupes(), et get\+Mes\+Groupes\+To\+String().
+
+\mbox{\Hypertarget{class_utilisateur_a4f6a17d0fb5c231bcb414396236a056f}\label{class_utilisateur_a4f6a17d0fb5c231bcb414396236a056f}} 
+\index{Utilisateur@{Utilisateur}!motDePasse@{motDePasse}}
+\index{motDePasse@{motDePasse}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{motDePasse}{motDePasse}}
+{\footnotesize\ttfamily Q\+String Utilisateur\+::mot\+De\+Passe\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par get\+Mot\+De\+Passe(), et set\+Mot\+De\+Passe().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/utilisateur/\mbox{\hyperlink{_utilisateur_8h}{Utilisateur.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/utilisateur/\mbox{\hyperlink{_utilisateur_8cpp}{Utilisateur.\+cpp}}\end{DoxyCompactItemize}

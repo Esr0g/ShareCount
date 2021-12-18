@@ -1,24 +1,33 @@
 var indexSectionsWithContent =
 {
-  0: "cgmsu",
-  1: "cgmsu",
-  2: "cgmsu",
-  3: "s"
+  0: "abcdefgimnopqrsuv~",
+  1: "bdfgpqsuv",
+  2: "u",
+  3: "bdfgpsuv",
+  4: "abcdefgimnoprsuv~",
+  5: "cdegimnpsuv",
+  6: "d"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions",
-  3: "pages"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "defines"
 };
 
 var indexSectionLabels =
 {
-  0: "All",
+  0: "Tout",
   1: "Classes",
-  2: "Functions",
-  3: "Pages"
+  2: "Espaces de nommage",
+  3: "Fichiers",
+  4: "Fonctions",
+  5: "Variables",
+  6: "Macros"
 };
 

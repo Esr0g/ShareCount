@@ -1,0 +1,176 @@
+\hypertarget{class_page_accueil}{}\doxysection{Référence de la classe Page\+Accueil}
+\label{class_page_accueil}\index{PageAccueil@{PageAccueil}}
+
+
+The \mbox{\hyperlink{class_page_accueil}{Page\+Accueil}} class C\textquotesingle{}est la classe qui permet d\textquotesingle{}affichier la page ou l\textquotesingle{}on peut soit se connecter soit choisir de créer un compte.  
+
+
+
+
+{\ttfamily \#include $<$Page\+Accueil.\+h$>$}
+
+
+
+Graphe de collaboration de Page\+Accueil\+:
+% FIG 0
+\doxysubsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_page_accueil_a5fcaa613695f7b0805649d1748c20708}{creer\+Compte}} ()
+\begin{DoxyCompactList}\small\item\em creer\+Compte lorsque l\textquotesingle{}utilisateur appuie sur le bouton créer un compte celui-\/ci créer une nouvelle \mbox{\hyperlink{class_page_creation_compte}{Page\+Creation\+Compte}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_page_accueil_a89478cfb840e20372327fd9f6ba5a6d0}{connexion}} ()
+\begin{DoxyCompactList}\small\item\em connexion envoie les informations de connexion a \mbox{\hyperlink{class_share_count}{Share\+Count}} et accepte la connexion ou pas en fonction de la réponse de \mbox{\hyperlink{class_share_count}{Share\+Count}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_page_accueil_aa9e789dd2641e519e6ad9a3593d8730d}{Page\+Accueil}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_page_accueil}{Page\+Accueil}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_page_accueil_ab8ee3c8da0c40aacd2478714333d7cb2}{Page\+Accueil}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent, \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$fp, \mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$sc)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_page_accueil}{Page\+Accueil}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_page_accueil_a812b9711d3c04faa010f1642d27f7cc5}{$\sim$\+Page\+Accueil}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_page_accueil_a1421eec7231cb5cfb6e69bc600494c52}{set\+Connect}} ()
+\begin{DoxyCompactList}\small\item\em set\+Connect Permet de connecter les signaux des éléments afficher avec leur slots correspondant \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Page\+Accueil $\ast$ \mbox{\hyperlink{class_page_accueil_aa0a3bcd4d89916db2f767a4a3383a0b4}{ui}}
+\item 
+\mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$ \mbox{\hyperlink{class_page_accueil_a5e25b3356f99248208396ffa8f6eed05}{pwindow}}
+\item 
+\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$ \mbox{\hyperlink{class_page_accueil_a8fae43ee73edccc2fa8eb1bd4de4db47}{share\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_page_accueil_aa9e789dd2641e519e6ad9a3593d8730d}\label{class_page_accueil_aa9e789dd2641e519e6ad9a3593d8730d}} 
+\index{PageAccueil@{PageAccueil}!PageAccueil@{PageAccueil}}
+\index{PageAccueil@{PageAccueil}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{PageAccueil()}{PageAccueil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Page\+Accueil\+::\+Page\+Accueil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Références set\+Connect(), et ui.
+
+\mbox{\Hypertarget{class_page_accueil_ab8ee3c8da0c40aacd2478714333d7cb2}\label{class_page_accueil_ab8ee3c8da0c40aacd2478714333d7cb2}} 
+\index{PageAccueil@{PageAccueil}!PageAccueil@{PageAccueil}}
+\index{PageAccueil@{PageAccueil}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{PageAccueil()}{PageAccueil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Page\+Accueil\+::\+Page\+Accueil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent,  }\item[{\mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$}]{fp,  }\item[{\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$}]{sc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+{\em fp} & fenêtre principale de l\textquotesingle{}application \\
+\hline
+{\em sc} & sharcount (Sorte de système de l\textquotesingle{}application) \\
+\hline
+\end{DoxyParams}
+
+
+Références set\+Connect(), et ui.
+
+\mbox{\Hypertarget{class_page_accueil_a812b9711d3c04faa010f1642d27f7cc5}\label{class_page_accueil_a812b9711d3c04faa010f1642d27f7cc5}} 
+\index{PageAccueil@{PageAccueil}!````~PageAccueil@{$\sim$PageAccueil}}
+\index{````~PageAccueil@{$\sim$PageAccueil}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{$\sim$PageAccueil()}{~PageAccueil()}}
+{\footnotesize\ttfamily Page\+Accueil\+::$\sim$\+Page\+Accueil (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références ui.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_page_accueil_a89478cfb840e20372327fd9f6ba5a6d0}\label{class_page_accueil_a89478cfb840e20372327fd9f6ba5a6d0}} 
+\index{PageAccueil@{PageAccueil}!connexion@{connexion}}
+\index{connexion@{connexion}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{connexion}{connexion}}
+{\footnotesize\ttfamily void Page\+Accueil\+::connexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Références Share\+Count\+::get\+Utilisateur(), Share\+Count\+::identifier\+Utilisateur(), pwindow, Fenetre\+Principale\+::set\+Page\+Active(), Share\+Count\+::set\+Utilisateur\+Actif(), share\+Count, et ui.
+
+
+
+Référencé par set\+Connect().
+
+\mbox{\Hypertarget{class_page_accueil_a5fcaa613695f7b0805649d1748c20708}\label{class_page_accueil_a5fcaa613695f7b0805649d1748c20708}} 
+\index{PageAccueil@{PageAccueil}!creerCompte@{creerCompte}}
+\index{creerCompte@{creerCompte}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{creerCompte}{creerCompte}}
+{\footnotesize\ttfamily void Page\+Accueil\+::creer\+Compte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Références pwindow, Fenetre\+Principale\+::set\+Page\+Active(), et share\+Count.
+
+
+
+Référencé par set\+Connect().
+
+\mbox{\Hypertarget{class_page_accueil_a1421eec7231cb5cfb6e69bc600494c52}\label{class_page_accueil_a1421eec7231cb5cfb6e69bc600494c52}} 
+\index{PageAccueil@{PageAccueil}!setConnect@{setConnect}}
+\index{setConnect@{setConnect}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{setConnect()}{setConnect()}}
+{\footnotesize\ttfamily void Page\+Accueil\+::set\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Références connexion(), creer\+Compte(), et ui.
+
+
+
+Référencé par Page\+Accueil().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_page_accueil_a5e25b3356f99248208396ffa8f6eed05}\label{class_page_accueil_a5e25b3356f99248208396ffa8f6eed05}} 
+\index{PageAccueil@{PageAccueil}!pwindow@{pwindow}}
+\index{pwindow@{pwindow}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{pwindow}{pwindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}}$\ast$ Page\+Accueil\+::pwindow\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par connexion(), et creer\+Compte().
+
+\mbox{\Hypertarget{class_page_accueil_a8fae43ee73edccc2fa8eb1bd4de4db47}\label{class_page_accueil_a8fae43ee73edccc2fa8eb1bd4de4db47}} 
+\index{PageAccueil@{PageAccueil}!shareCount@{shareCount}}
+\index{shareCount@{shareCount}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{shareCount}{shareCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_share_count}{Share\+Count}}$\ast$ Page\+Accueil\+::share\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par connexion(), et creer\+Compte().
+
+\mbox{\Hypertarget{class_page_accueil_aa0a3bcd4d89916db2f767a4a3383a0b4}\label{class_page_accueil_aa0a3bcd4d89916db2f767a4a3383a0b4}} 
+\index{PageAccueil@{PageAccueil}!ui@{ui}}
+\index{ui@{ui}!PageAccueil@{PageAccueil}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Page\+Accueil$\ast$ Page\+Accueil\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par connexion(), Page\+Accueil(), set\+Connect(), et $\sim$\+Page\+Accueil().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/vues/pageaccueil/\mbox{\hyperlink{_page_accueil_8h}{Page\+Accueil.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/vues/pageaccueil/\mbox{\hyperlink{_page_accueil_8cpp}{Page\+Accueil.\+cpp}}\end{DoxyCompactItemize}

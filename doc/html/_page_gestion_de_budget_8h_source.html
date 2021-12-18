@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShareCount:  Fichier source de /home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/vues/pagegestiondebudget/PageGestionDeBudget.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ShareCount
+   &#160;<span id="projectnumber">12</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_page_gestion_de_budget_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PageGestionDeBudget.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_page_gestion_de_budget_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PAGEGESTIONDEBUDGET_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PAGEGESTIONDEBUDGET_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_fenetre_principale_8h.html">screen/fenetreprincipale/FenetrePrincipale.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_share_count_8h.html">model/sharecount/ShareCount.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QLabel&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_depense_8h.html">model/depense/Depense.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QInputDialog&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QStringListModel&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QDialogButtonBox&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QRegExp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_page_gestion_de_budget.html">PageGestionDeBudget</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_page_gestion_de_budget.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_page_gestion_de_budget.html">PageGestionDeBudget</a> : <span class="keyword">public</span> <a class="code" href="class_q_widget.html">QWidget</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_page_gestion_de_budget.html#a1ceff48d13ced364ecef74ce058590d2">PageGestionDeBudget</a>(<a class="code" href="class_q_widget.html">QWidget</a> *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_page_gestion_de_budget.html#a1ceff48d13ced364ecef74ce058590d2">PageGestionDeBudget</a>(<a class="code" href="class_q_widget.html">QWidget</a> *parent, <a class="code" href="class_fenetre_principale.html">FenetrePrincipale</a> *fp, <a class="code" href="class_share_count.html">ShareCount</a>* sc);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    QLabel *<a class="code" href="class_page_gestion_de_budget.html#a4b50ae1ec16f7ec80a682cf51a9312a6">getLabelNomGroupe</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_gestion_de_budget.html#a4cbac69d1c7b0dad4e611e7da3613e7a">miseAJourParticipant</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_gestion_de_budget.html#a71be607d22c7ef5d0dffdcd4392ecd13">miseAJourDepenses</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_gestion_de_budget.html#a5c0dc4f9a0847a121c5d1361043ba12c">setEquilibre</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_page_gestion_de_budget.html#a0687608e90eedc962a53351634570087">~PageGestionDeBudget</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_gestion_de_budget.html#a67a9df137640d72ff2817072435a7c16">on_ajouterDepenseButton_clicked</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_page_gestion_de_budget.html#ab94f028d92d84407a6b7d83bb5ab7c3d">on_ajouterParticipantButton_clicked</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_page_gestion_de_budget.html#a33d5f4b2f3674021c42d320bcc13506b">   37</a></span>&#160;    Ui::PageGestionDeBudget *<a class="code" href="class_page_gestion_de_budget.html#a33d5f4b2f3674021c42d320bcc13506b">ui</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_page_gestion_de_budget.html#af8bc70113365a1036d583589dac51e6f">   38</a></span>&#160;    <a class="code" href="class_fenetre_principale.html">FenetrePrincipale</a>* <a class="code" href="class_page_gestion_de_budget.html#af8bc70113365a1036d583589dac51e6f">pwindow</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_page_gestion_de_budget.html#a52fd31a9d8e921e37d97ee2466c5ec00">   39</a></span>&#160;    <a class="code" href="class_share_count.html">ShareCount</a>* <a class="code" href="class_page_gestion_de_budget.html#a52fd31a9d8e921e37d97ee2466c5ec00">shareCount</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_page_gestion_de_budget.html#a0d1d04e5ba68076d8654a6641d41ded6">   40</a></span>&#160;    QLabel <a class="code" href="class_page_gestion_de_budget.html#a0d1d04e5ba68076d8654a6641d41ded6">nomGroupe</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_page_gestion_de_budget.html#a6cd5fef84d9319f0a4005969d6a9c48a">   41</a></span>&#160;    QStringList <a class="code" href="class_page_gestion_de_budget.html#a6cd5fef84d9319f0a4005969d6a9c48a">depenses</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif // PAGEGESTIONDEBUDGET_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a52fd31a9d8e921e37d97ee2466c5ec00"><div class="ttname"><a href="class_page_gestion_de_budget.html#a52fd31a9d8e921e37d97ee2466c5ec00">PageGestionDeBudget::shareCount</a></div><div class="ttdeci">ShareCount * shareCount</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.h:39</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_ab94f028d92d84407a6b7d83bb5ab7c3d"><div class="ttname"><a href="class_page_gestion_de_budget.html#ab94f028d92d84407a6b7d83bb5ab7c3d">PageGestionDeBudget::on_ajouterParticipantButton_clicked</a></div><div class="ttdeci">void on_ajouterParticipantButton_clicked()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:122</div></div>
+<div class="ttc" id="aclass_fenetre_principale_html"><div class="ttname"><a href="class_fenetre_principale.html">FenetrePrincipale</a></div><div class="ttdoc">The FenetrePrincipale class, cette classe va permettre de contenir toutes les pages de l'application.</div><div class="ttdef"><b>Definition:</b> FenetrePrincipale.h:16</div></div>
+<div class="ttc" id="aclass_q_widget_html"><div class="ttname"><a href="class_q_widget.html">QWidget</a></div></div>
+<div class="ttc" id="a_page_gestion_de_budget_8h_html"><div class="ttname"><a href="_page_gestion_de_budget_8h.html">PageGestionDeBudget.h</a></div></div>
+<div class="ttc" id="aclass_share_count_html_a37a2f1f3a1cef420ad2cba760b693378"><div class="ttname"><a href="class_share_count.html#a37a2f1f3a1cef420ad2cba760b693378">ShareCount::getUtilisateurActif</a></div><div class="ttdeci">Utilisateur &amp; getUtilisateurActif()</div><div class="ttdoc">getUtilisateurActif retourne la référence de l'utiisateur actif</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:37</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a0687608e90eedc962a53351634570087"><div class="ttname"><a href="class_page_gestion_de_budget.html#a0687608e90eedc962a53351634570087">PageGestionDeBudget::~PageGestionDeBudget</a></div><div class="ttdeci">~PageGestionDeBudget()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:33</div></div>
+<div class="ttc" id="aclass_share_count_html_a87cfe057ff1d4a2541d8bd1def4c923c"><div class="ttname"><a href="class_share_count.html#a87cfe057ff1d4a2541d8bd1def4c923c">ShareCount::findUtilisateur</a></div><div class="ttdeci">bool findUtilisateur(const QString &amp;id) const</div><div class="ttdoc">findUtilisateur retourne vrai si l'utilisateur existe faux sinon</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:28</div></div>
+<div class="ttc" id="aclass_share_count_html_ab2e8810f3302b41b3ed5ed7436c8732e"><div class="ttname"><a href="class_share_count.html#ab2e8810f3302b41b3ed5ed7436c8732e">ShareCount::initialiserParticipants</a></div><div class="ttdeci">QStringList initialiserParticipants(const QString &amp;grp)</div><div class="ttdoc">initialiserParticipants permet d'initialiser les participants au groupe grp pour l'afficher</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:57</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a1ceff48d13ced364ecef74ce058590d2"><div class="ttname"><a href="class_page_gestion_de_budget.html#a1ceff48d13ced364ecef74ce058590d2">PageGestionDeBudget::PageGestionDeBudget</a></div><div class="ttdeci">PageGestionDeBudget(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:10</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a0d1d04e5ba68076d8654a6641d41ded6"><div class="ttname"><a href="class_page_gestion_de_budget.html#a0d1d04e5ba68076d8654a6641d41ded6">PageGestionDeBudget::nomGroupe</a></div><div class="ttdeci">QLabel nomGroupe</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.h:40</div></div>
+<div class="ttc" id="a_share_count_8h_html"><div class="ttname"><a href="_share_count_8h.html">ShareCount.h</a></div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_af8bc70113365a1036d583589dac51e6f"><div class="ttname"><a href="class_page_gestion_de_budget.html#af8bc70113365a1036d583589dac51e6f">PageGestionDeBudget::pwindow</a></div><div class="ttdeci">FenetrePrincipale * pwindow</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.h:38</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a6cd5fef84d9319f0a4005969d6a9c48a"><div class="ttname"><a href="class_page_gestion_de_budget.html#a6cd5fef84d9319f0a4005969d6a9c48a">PageGestionDeBudget::depenses</a></div><div class="ttdeci">QStringList depenses</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.h:41</div></div>
+<div class="ttc" id="aclass_share_count_html_af00ecd5ca528be42c209e1e34871134d"><div class="ttname"><a href="class_share_count.html#af00ecd5ca528be42c209e1e34871134d">ShareCount::getGroupeActif</a></div><div class="ttdeci">Groupe &amp; getGroupeActif()</div><div class="ttdoc">getGroupeActif retourne le groupe actif</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:66</div></div>
+<div class="ttc" id="aclass_groupe_html_aa5609e3271dd65a8c0ebf24697ac171d"><div class="ttname"><a href="class_groupe.html#aa5609e3271dd65a8c0ebf24697ac171d">Groupe::depensesToString</a></div><div class="ttdeci">QStringList depensesToString()</div><div class="ttdoc">depensesToString retourne la liste des dépenses en string</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:58</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a5c0dc4f9a0847a121c5d1361043ba12c"><div class="ttname"><a href="class_page_gestion_de_budget.html#a5c0dc4f9a0847a121c5d1361043ba12c">PageGestionDeBudget::setEquilibre</a></div><div class="ttdeci">void setEquilibre()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:150</div></div>
+<div class="ttc" id="aclass_depense_html"><div class="ttname"><a href="class_depense.html">Depense</a></div><div class="ttdoc">The Depense class définie une dépense, qui sera la fonction princiaple des GroupesGestionsBudget.</div><div class="ttdef"><b>Definition:</b> Depense.h:13</div></div>
+<div class="ttc" id="aclass_share_count_html_aaf8f0db0cca91e77d96e5e7509ad218b"><div class="ttname"><a href="class_share_count.html#aaf8f0db0cca91e77d96e5e7509ad218b">ShareCount::getUtilisateur</a></div><div class="ttdeci">Utilisateur getUtilisateur(const QString &amp;id) const</div><div class="ttdoc">getUtilisateur retourne un utilisateur avec l'id spécifique</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:24</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a4b50ae1ec16f7ec80a682cf51a9312a6"><div class="ttname"><a href="class_page_gestion_de_budget.html#a4b50ae1ec16f7ec80a682cf51a9312a6">PageGestionDeBudget::getLabelNomGroupe</a></div><div class="ttdeci">QLabel * getLabelNomGroupe()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:28</div></div>
+<div class="ttc" id="aclass_utilisateur_html_a52d76cf858b62cacca941d36382b08fe"><div class="ttname"><a href="class_utilisateur.html#a52d76cf858b62cacca941d36382b08fe">Utilisateur::getIdentifiant</a></div><div class="ttdeci">QString getIdentifiant() const</div><div class="ttdoc">getIdentifiant</div><div class="ttdef"><b>Definition:</b> Utilisateur.cpp:19</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a33d5f4b2f3674021c42d320bcc13506b"><div class="ttname"><a href="class_page_gestion_de_budget.html#a33d5f4b2f3674021c42d320bcc13506b">PageGestionDeBudget::ui</a></div><div class="ttdeci">Ui::PageGestionDeBudget * ui</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.h:37</div></div>
+<div class="ttc" id="aclass_groupe_html_a7090147049f9c50223dcd05935beeb98"><div class="ttname"><a href="class_groupe.html#a7090147049f9c50223dcd05935beeb98">Groupe::getDettes</a></div><div class="ttdeci">std::map&lt; QString, int &gt; getDettes()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:75</div></div>
+<div class="ttc" id="aclass_share_count_html"><div class="ttname"><a href="class_share_count.html">ShareCount</a></div><div class="ttdoc">The ShareCount class Classe principale du model qui est aussi un QObjet pour pouvoir utiliser les sig...</div><div class="ttdef"><b>Definition:</b> ShareCount.h:15</div></div>
+<div class="ttc" id="aclass_share_count_html_a1f260ef5e8c31d7314e6cebf8e1437f2"><div class="ttname"><a href="class_share_count.html#a1f260ef5e8c31d7314e6cebf8e1437f2">ShareCount::appartientAuGroupe</a></div><div class="ttdeci">bool appartientAuGroupe(const QString &amp;user, const QString &amp;grp)</div><div class="ttdoc">appartientAuGroupe retourne vrai si user appartient à grp</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:49</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> PageAccueil.h:8</div></div>
+<div class="ttc" id="aclass_share_count_html_a77ac03d5fc52b031dc3375e4b93c9c85"><div class="ttname"><a href="class_share_count.html#a77ac03d5fc52b031dc3375e4b93c9c85">ShareCount::ajouterParticipantAuGroupe</a></div><div class="ttdeci">void ajouterParticipantAuGroupe(const QString &amp;user, const QString &amp;grp)</div><div class="ttdoc">ajouterParticipantAuGroupe ajoute le participant &quot;user&quot; au groupe &quot;grp&quot;;</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:53</div></div>
+<div class="ttc" id="aclass_groupe_html_a8c130d8ce7035c269d998d858a6d62a9"><div class="ttname"><a href="class_groupe.html#a8c130d8ce7035c269d998d858a6d62a9">Groupe::nbDepenses</a></div><div class="ttdeci">int nbDepenses() const</div><div class="ttdoc">nbDepenses retourne le nombre de dépense;</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:54</div></div>
+<div class="ttc" id="aclass_groupe_html_a2ddd793a859cc86c9ff2b8d30338c5e7"><div class="ttname"><a href="class_groupe.html#a2ddd793a859cc86c9ff2b8d30338c5e7">Groupe::setDettes</a></div><div class="ttdeci">void setDettes()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:79</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a4cbac69d1c7b0dad4e611e7da3613e7a"><div class="ttname"><a href="class_page_gestion_de_budget.html#a4cbac69d1c7b0dad4e611e7da3613e7a">PageGestionDeBudget::miseAJourParticipant</a></div><div class="ttdeci">void miseAJourParticipant()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:195</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a67a9df137640d72ff2817072435a7c16"><div class="ttname"><a href="class_page_gestion_de_budget.html#a67a9df137640d72ff2817072435a7c16">PageGestionDeBudget::on_ajouterDepenseButton_clicked</a></div><div class="ttdeci">void on_ajouterDepenseButton_clicked()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:38</div></div>
+<div class="ttc" id="aclass_share_count_html_ab85ba0622564fccb166d9880b2e4587f"><div class="ttname"><a href="class_share_count.html#ab85ba0622564fccb166d9880b2e4587f">ShareCount::ajouterUneDepense</a></div><div class="ttdeci">void ajouterUneDepense(Depense &amp;dep)</div><div class="ttdoc">ajouterUneDepense permet d'ajouter une dépense au groupe actif</div><div class="ttdef"><b>Definition:</b> ShareCount.cpp:61</div></div>
+<div class="ttc" id="a_depense_8h_html"><div class="ttname"><a href="_depense_8h.html">Depense.h</a></div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html_a71be607d22c7ef5d0dffdcd4392ecd13"><div class="ttname"><a href="class_page_gestion_de_budget.html#a71be607d22c7ef5d0dffdcd4392ecd13">PageGestionDeBudget::miseAJourDepenses</a></div><div class="ttdeci">void miseAJourDepenses()</div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.cpp:200</div></div>
+<div class="ttc" id="aclass_page_gestion_de_budget_html"><div class="ttname"><a href="class_page_gestion_de_budget.html">PageGestionDeBudget</a></div><div class="ttdef"><b>Definition:</b> PageGestionDeBudget.h:19</div></div>
+<div class="ttc" id="aclass_groupe_html_a10446174f44bbae222e6b75267dd541c"><div class="ttname"><a href="class_groupe.html#a10446174f44bbae222e6b75267dd541c">Groupe::ajouterUnpParticipant</a></div><div class="ttdeci">void ajouterUnpParticipant(Utilisateur user)</div><div class="ttdoc">ajouterUnpParticipant ajouter un participant au groupe</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:38</div></div>
+<div class="ttc" id="a_fenetre_principale_8h_html"><div class="ttname"><a href="_fenetre_principale_8h.html">FenetrePrincipale.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_595c3ed372cc279b2f91c4681d5b0e80.html">vues</a></li><li class="navelem"><a class="el" href="dir_a4d31b60efad253569ab4eee0ea031c6.html">pagegestiondebudget</a></li><li class="navelem"><a class="el" href="_page_gestion_de_budget_8h.html">PageGestionDeBudget.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

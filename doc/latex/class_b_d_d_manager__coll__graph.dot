@@ -1,0 +1,9 @@
+digraph "BDDManager"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{BDDManager\n|- sharCountBase\l- creerDataBase\l|+ BDDManager()\l+ createDataBase()\l+ insererUtilisateur()\l+ initialiserListeUtilisateur()\l+ insererunGroupe()\l+ initialiserGroupeUtilisateur()\l+ appartientAuGroupe()\l+ ajouterParticipantAuGroupe()\l+ initialiserParticipants()\l+ insererUneDepense()\l+ initialiserDepensesGroupe()\l+ updateHistorique()\l+ initialiserHistorique()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The DbManager class qui permet de gérer les entrées et les sorties avec la base de donnée."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{QObject\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_object.html",tooltip=" "];
+}

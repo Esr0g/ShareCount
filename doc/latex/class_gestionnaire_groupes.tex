@@ -1,0 +1,180 @@
+\hypertarget{class_gestionnaire_groupes}{}\doxysection{Référence de la classe Gestionnaire\+Groupes}
+\label{class_gestionnaire_groupes}\index{GestionnaireGroupes@{GestionnaireGroupes}}
+
+
+The \mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} class qui gère une collection de groupes.  
+
+
+
+
+{\ttfamily \#include $<$Gestionnairegroupes.\+h$>$}
+
+
+
+Graphe de collaboration de Gestionnaire\+Groupes\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestionnaire_groupes_a62b6dc228599ab3a979d57f511c64d49}{Gestionnaire\+Groupes}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_gestionnaire_groupes}{Gestionnaire\+Groupes}} constructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestionnaire_groupes_aae6c3d79ffcf855144347c25a5e508de}{ajouter\+Groupe}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&groupe)
+\begin{DoxyCompactList}\small\item\em ajouter\+Groupe permet d\textquotesingle{}ajouter un groupe a la collection \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe}{Groupe}} \& \mbox{\hyperlink{class_gestionnaire_groupes_a8cb6b255cd86632d8e643295dcc7e5bd}{get\+Groupe}} (const int \&i)
+\begin{DoxyCompactList}\small\item\em get\+Groupe permet de retourner un groupe à la position i \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestionnaire_groupes_a7732cd91b71d5864677ac12c80009fbd}{size}} () const
+\begin{DoxyCompactList}\small\item\em size retourne la taille de la collection \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gestionnaire_groupes_aaec051eb28429edc81f1f06922d982c1}{find\+Groupe}} (const Q\+String \&grp) const
+\begin{DoxyCompactList}\small\item\em find\+Groupe renvoie vrai si grp est présent dans la collection, faux sinon \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe}{Groupe}} \& \mbox{\hyperlink{class_gestionnaire_groupes_aef6a44afd1dc98ac799f4a316bc761ba}{get\+Groupe}} (const Q\+String \&id\+Groupe)
+\begin{DoxyCompactList}\small\item\em get\+Groupe retourne un groupe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestionnaire_groupes_aa832bb9ac769394a6bfdc1b4261522b4}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_groupe}{Groupe}} $>$ \mbox{\hyperlink{class_gestionnaire_groupes_a5c1eb883bfcf6b3d8da8503ca2fdfce0}{groupes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_gestionnaire_groupes_a62b6dc228599ab3a979d57f511c64d49}\label{class_gestionnaire_groupes_a62b6dc228599ab3a979d57f511c64d49}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!GestionnaireGroupes@{GestionnaireGroupes}}
+\index{GestionnaireGroupes@{GestionnaireGroupes}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{GestionnaireGroupes()}{GestionnaireGroupes()}}
+{\footnotesize\ttfamily Gestionnaire\+Groupes\+::\+Gestionnaire\+Groupes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_gestionnaire_groupes_aae6c3d79ffcf855144347c25a5e508de}\label{class_gestionnaire_groupes_aae6c3d79ffcf855144347c25a5e508de}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!ajouterGroupe@{ajouterGroupe}}
+\index{ajouterGroupe@{ajouterGroupe}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{ajouterGroupe()}{ajouterGroupe()}}
+{\footnotesize\ttfamily void Gestionnaire\+Groupes\+::ajouter\+Groupe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_groupe}{Groupe}} \&}]{groupe }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em groupe} & \\
+\hline
+\end{DoxyParams}
+
+
+Références groupes.
+
+
+
+Référencé par Utilisateur\+::ajouter\+A\+Mes\+Groupes(), et B\+D\+D\+Manager\+::initialiser\+Groupe\+Utilisateur().
+
+\mbox{\Hypertarget{class_gestionnaire_groupes_aa832bb9ac769394a6bfdc1b4261522b4}\label{class_gestionnaire_groupes_aa832bb9ac769394a6bfdc1b4261522b4}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!clear@{clear}}
+\index{clear@{clear}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Gestionnaire\+Groupes\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références groupes.
+
+
+
+Référencé par B\+D\+D\+Manager\+::initialiser\+Groupe\+Utilisateur().
+
+\mbox{\Hypertarget{class_gestionnaire_groupes_aaec051eb28429edc81f1f06922d982c1}\label{class_gestionnaire_groupes_aaec051eb28429edc81f1f06922d982c1}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!findGroupe@{findGroupe}}
+\index{findGroupe@{findGroupe}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{findGroupe()}{findGroupe()}}
+{\footnotesize\ttfamily bool Gestionnaire\+Groupes\+::find\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références groupes, et size().
+
+
+
+Référencé par Utilisateur\+::find\+Groupe().
+
+\mbox{\Hypertarget{class_gestionnaire_groupes_a8cb6b255cd86632d8e643295dcc7e5bd}\label{class_gestionnaire_groupes_a8cb6b255cd86632d8e643295dcc7e5bd}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!getGroupe@{getGroupe}}
+\index{getGroupe@{getGroupe}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{getGroupe()}{getGroupe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_groupe}{Groupe}} \& Gestionnaire\+Groupes\+::get\+Groupe (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références groupes.
+
+
+
+Référencé par Utilisateur\+::get\+Groupe(), et Utilisateur\+::get\+Mes\+Groupes\+To\+String().
+
+\mbox{\Hypertarget{class_gestionnaire_groupes_aef6a44afd1dc98ac799f4a316bc761ba}\label{class_gestionnaire_groupes_aef6a44afd1dc98ac799f4a316bc761ba}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!getGroupe@{getGroupe}}
+\index{getGroupe@{getGroupe}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{getGroupe()}{getGroupe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_groupe}{Groupe}} \& Gestionnaire\+Groupes\+::get\+Groupe (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{id\+Groupe }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id\+Groupe} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références groupes, et size().
+
+\mbox{\Hypertarget{class_gestionnaire_groupes_a7732cd91b71d5864677ac12c80009fbd}\label{class_gestionnaire_groupes_a7732cd91b71d5864677ac12c80009fbd}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!size@{size}}
+\index{size@{size}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Gestionnaire\+Groupes\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références groupes.
+
+
+
+Référencé par find\+Groupe(), get\+Groupe(), et Utilisateur\+::get\+Mes\+Groupes\+To\+String().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_gestionnaire_groupes_a5c1eb883bfcf6b3d8da8503ca2fdfce0}\label{class_gestionnaire_groupes_a5c1eb883bfcf6b3d8da8503ca2fdfce0}} 
+\index{GestionnaireGroupes@{GestionnaireGroupes}!groupes@{groupes}}
+\index{groupes@{groupes}!GestionnaireGroupes@{GestionnaireGroupes}}
+\doxysubsubsection{\texorpdfstring{groupes}{groupes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_groupe}{Groupe}}$>$ Gestionnaire\+Groupes\+::groupes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+Groupe(), clear(), find\+Groupe(), get\+Groupe(), et size().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/gestionnaire\+Groupes/\mbox{\hyperlink{_gestionnairegroupes_8h}{Gestionnairegroupes.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/gestionnaire\+Groupes/\mbox{\hyperlink{_gestionnairegroupes_8cpp}{Gestionnairegroupes.\+cpp}}\end{DoxyCompactItemize}

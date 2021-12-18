@@ -1,0 +1,7 @@
+digraph "GestionnaireUtilisateur"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{GestionnaireUtilisateur\n|- utilisateurs\l|+ GestionnaireUtilisateur()\l+ ajouterUtilisateur()\l+ identifierUtilisateur()\l+ getUtilisateur()\l+ findUtilisateur()\l+ getNombreUtilisateur()\l+ begin()\l+ end()\l+ clear()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The GestionnaireUtilisateur class C'est un classe qui permet de gérer la collection d'utilisateur."];
+}

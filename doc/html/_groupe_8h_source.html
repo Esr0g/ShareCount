@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShareCount:  Fichier source de /home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/model/groupe/Groupe.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ShareCount
+   &#160;<span id="projectnumber">12</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_groupe_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Groupe.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_groupe_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GROUPE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GROUPE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QDateTime&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_gestionnaireutilisateur_8h.html">model/gestionnaireutilisateurs/Gestionnaireutilisateur.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_depense_8h.html">model/depense/Depense.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_gestionnaire_depenses_8h.html">model/gestionnairedepenses/GestionnaireDepenses.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QStandardItemModel&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="class_gestionnaire_utilisateur.html">GestionnaireUtilisateur</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="class_utilisateur.html">Utilisateur</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="class_depense.html">Depense</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_gestionnaire_depenses.html">GestionnaireDepenses</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_groupe.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_groupe.html">Groupe</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_groupe.html#a413ae785f3c78828334b2f3140d2dd7a">Groupe</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_groupe.html#a413ae785f3c78828334b2f3140d2dd7a">Groupe</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; descr = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_groupe.html#a52508ba979d0a4229d1dbf174d5e641f">setIdentifiant</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QString <a class="code" href="class_groupe.html#aca8ed1d8038e8bba032d01d492301a00">getIdentifiant</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QString <a class="code" href="class_groupe.html#aab274df80679c62c4b94de8e3394192e">getDescription</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_groupe.html#acebc75610f3dcb4940154d89a4484fd8">setDescription</a>(<span class="keyword">const</span> QString &amp;descr);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    QString <a class="code" href="class_groupe.html#a3e0fc6063e1a3ef73d7d4db0309ed032">getDateCreation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_groupe.html#a10446174f44bbae222e6b75267dd541c">ajouterUnpParticipant</a>(<a class="code" href="class_utilisateur.html">Utilisateur</a> user);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_gestionnaire_utilisateur.html">GestionnaireUtilisateur</a> <a class="code" href="class_groupe.html#a80e55eb56fdeef9326d3df80d79eb305">getParticipants</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_groupe.html#ae7860ce0681793ec719d8062fea017a7">setDate</a>(<span class="keyword">const</span> QString&amp; date);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_groupe.html#a073917b2f10926740c1631224b9ead7b">ajouterUneDepense</a>(<a class="code" href="class_depense.html">Depense</a>&amp; dep);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;     <span class="keywordtype">int</span> <a class="code" href="class_groupe.html#a8c130d8ce7035c269d998d858a6d62a9">nbDepenses</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;     QStringList <a class="code" href="class_groupe.html#aa5609e3271dd65a8c0ebf24697ac171d">depensesToString</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="class_groupe.html#a4f8bdb1618bf7aef87caa49ea58b8aaa">clearDepenses</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="class_groupe.html#a2ddd793a859cc86c9ff2b8d30338c5e7">setDettes</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;     std::map&lt;QString, int&gt; <a class="code" href="class_groupe.html#a7090147049f9c50223dcd05935beeb98">getDettes</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="class_groupe.html#a99dd414922635dcc0585aabb2a330f63">~Groupe</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_groupe.html#ad89d1e8d054fb0198cbc422f81d174d2">  105</a></span>&#160;    QString <a class="code" href="class_groupe.html#ad89d1e8d054fb0198cbc422f81d174d2">identifiant</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_groupe.html#a4de5c114907d95660dca56ef6526a162">  106</a></span>&#160;    QString <a class="code" href="class_groupe.html#a4de5c114907d95660dca56ef6526a162">dateCreation</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_groupe.html#aaf85aa1e92fb7a5374cca85ecacb615f">  107</a></span>&#160;    QString <a class="code" href="class_groupe.html#aaf85aa1e92fb7a5374cca85ecacb615f">description</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_groupe.html#a7e725e15cb132004cbe325933e87d516">  108</a></span>&#160;    <a class="code" href="class_gestionnaire_utilisateur.html">GestionnaireUtilisateur</a>* <a class="code" href="class_groupe.html#a7e725e15cb132004cbe325933e87d516">participants</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_groupe.html#a43ef3afb4c32c55d317a25e6331c8d14">  109</a></span>&#160;    <a class="code" href="class_gestionnaire_depenses.html">GestionnaireDepenses</a>* <a class="code" href="class_groupe.html#a43ef3afb4c32c55d317a25e6331c8d14">depenses</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_groupe.html#ab1419286101232c68099eef66fc8ec9c">  110</a></span>&#160;    std::map&lt;QString, int&gt; <a class="code" href="class_groupe.html#ab1419286101232c68099eef66fc8ec9c">dettes</a>; <span class="comment">//Chaque utilisateur est associé à une dette (positive ou négative) pour le groupe concerné</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif // GROUPE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_gestionnaireutilisateur_8h_html"><div class="ttname"><a href="_gestionnaireutilisateur_8h.html">Gestionnaireutilisateur.h</a></div></div>
+<div class="ttc" id="aclass_groupe_html_a073917b2f10926740c1631224b9ead7b"><div class="ttname"><a href="class_groupe.html#a073917b2f10926740c1631224b9ead7b">Groupe::ajouterUneDepense</a></div><div class="ttdeci">void ajouterUneDepense(Depense &amp;dep)</div><div class="ttdoc">ajouterUneDepense permet d'ajouter une dépense</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:50</div></div>
+<div class="ttc" id="aclass_groupe_html_a3e0fc6063e1a3ef73d7d4db0309ed032"><div class="ttname"><a href="class_groupe.html#a3e0fc6063e1a3ef73d7d4db0309ed032">Groupe::getDateCreation</a></div><div class="ttdeci">QString getDateCreation() const</div><div class="ttdoc">getDateCreation retourne la date de création du groupe</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:34</div></div>
+<div class="ttc" id="aclass_groupe_html_aaf85aa1e92fb7a5374cca85ecacb615f"><div class="ttname"><a href="class_groupe.html#aaf85aa1e92fb7a5374cca85ecacb615f">Groupe::description</a></div><div class="ttdeci">QString description</div><div class="ttdef"><b>Definition:</b> Groupe.h:107</div></div>
+<div class="ttc" id="a_groupe_8h_html"><div class="ttname"><a href="_groupe_8h.html">Groupe.h</a></div></div>
+<div class="ttc" id="aclass_gestionnaire_depenses_html_a7c22139dcc50f6d0b5dabde56fcbe49e"><div class="ttname"><a href="class_gestionnaire_depenses.html#a7c22139dcc50f6d0b5dabde56fcbe49e">GestionnaireDepenses::nbDepense</a></div><div class="ttdeci">int nbDepense() const</div><div class="ttdoc">nbDepense retourne le nombre de dépenses</div><div class="ttdef"><b>Definition:</b> GestionnaireDepenses.cpp:16</div></div>
+<div class="ttc" id="aclass_gestionnaire_utilisateur_html_ae90e46d418140f93899ca0ca3f6bf9f7"><div class="ttname"><a href="class_gestionnaire_utilisateur.html#ae90e46d418140f93899ca0ca3f6bf9f7">GestionnaireUtilisateur::getNombreUtilisateur</a></div><div class="ttdeci">int getNombreUtilisateur() const</div><div class="ttdoc">getNombreUtilisateur retourne le nombre d'utilisateur présent dans la map</div><div class="ttdef"><b>Definition:</b> Gestionnaireutilisateur.cpp:47</div></div>
+<div class="ttc" id="aclass_groupe_html_a99dd414922635dcc0585aabb2a330f63"><div class="ttname"><a href="class_groupe.html#a99dd414922635dcc0585aabb2a330f63">Groupe::~Groupe</a></div><div class="ttdeci">~Groupe()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:96</div></div>
+<div class="ttc" id="aclass_depense_html_ab2771264d5aa5739a4cf8343f73e0015"><div class="ttname"><a href="class_depense.html#ab2771264d5aa5739a4cf8343f73e0015">Depense::getdate</a></div><div class="ttdeci">QString getdate() const</div><div class="ttdoc">getdate retourne la date de la dépense</div><div class="ttdef"><b>Definition:</b> Depense.cpp:47</div></div>
+<div class="ttc" id="aclass_groupe_html_aab274df80679c62c4b94de8e3394192e"><div class="ttname"><a href="class_groupe.html#aab274df80679c62c4b94de8e3394192e">Groupe::getDescription</a></div><div class="ttdeci">QString getDescription() const</div><div class="ttdoc">getDescription retourne la descrption du groupe, qui peut etre ajouté ou pas par le créateur</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:26</div></div>
+<div class="ttc" id="aclass_groupe_html_aa5609e3271dd65a8c0ebf24697ac171d"><div class="ttname"><a href="class_groupe.html#aa5609e3271dd65a8c0ebf24697ac171d">Groupe::depensesToString</a></div><div class="ttdeci">QStringList depensesToString()</div><div class="ttdoc">depensesToString retourne la liste des dépenses en string</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:58</div></div>
+<div class="ttc" id="aclass_gestionnaire_utilisateur_html_a8a09ebd51b900d2e0ac1ecb7169a8331"><div class="ttname"><a href="class_gestionnaire_utilisateur.html#a8a09ebd51b900d2e0ac1ecb7169a8331">GestionnaireUtilisateur::begin</a></div><div class="ttdeci">std::map&lt; QString, Utilisateur &gt;::iterator begin()</div><div class="ttdoc">begin retourne l'itérateur begin de la collection</div><div class="ttdef"><b>Definition:</b> Gestionnaireutilisateur.cpp:51</div></div>
+<div class="ttc" id="aclass_groupe_html_ab1419286101232c68099eef66fc8ec9c"><div class="ttname"><a href="class_groupe.html#ab1419286101232c68099eef66fc8ec9c">Groupe::dettes</a></div><div class="ttdeci">std::map&lt; QString, int &gt; dettes</div><div class="ttdef"><b>Definition:</b> Groupe.h:110</div></div>
+<div class="ttc" id="aclass_groupe_html_a52508ba979d0a4229d1dbf174d5e641f"><div class="ttname"><a href="class_groupe.html#a52508ba979d0a4229d1dbf174d5e641f">Groupe::setIdentifiant</a></div><div class="ttdeci">void setIdentifiant(const QString &amp;id)</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:22</div></div>
+<div class="ttc" id="aclass_groupe_html"><div class="ttname"><a href="class_groupe.html">Groupe</a></div><div class="ttdoc">classe abstraite de base pour GestionDeBudget et Cagnotte</div><div class="ttdef"><b>Definition:</b> Groupe.h:21</div></div>
+<div class="ttc" id="aclass_depense_html_ab99a9d1e31e4d032fc952862ccb18db4"><div class="ttname"><a href="class_depense.html#ab99a9d1e31e4d032fc952862ccb18db4">Depense::getNom</a></div><div class="ttdeci">QString getNom() const</div><div class="ttdoc">getNom retourne le nom de la dépense</div><div class="ttdef"><b>Definition:</b> Depense.cpp:43</div></div>
+<div class="ttc" id="aclass_depense_html"><div class="ttname"><a href="class_depense.html">Depense</a></div><div class="ttdoc">The Depense class définie une dépense, qui sera la fonction princiaple des GroupesGestionsBudget.</div><div class="ttdef"><b>Definition:</b> Depense.h:13</div></div>
+<div class="ttc" id="aclass_groupe_html_a7e725e15cb132004cbe325933e87d516"><div class="ttname"><a href="class_groupe.html#a7e725e15cb132004cbe325933e87d516">Groupe::participants</a></div><div class="ttdeci">GestionnaireUtilisateur * participants</div><div class="ttdef"><b>Definition:</b> Groupe.h:108</div></div>
+<div class="ttc" id="aclass_groupe_html_a4f8bdb1618bf7aef87caa49ea58b8aaa"><div class="ttname"><a href="class_groupe.html#a4f8bdb1618bf7aef87caa49ea58b8aaa">Groupe::clearDepenses</a></div><div class="ttdeci">void clearDepenses()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:71</div></div>
+<div class="ttc" id="aclass_gestionnaire_depenses_html_a340d9af3fa239b9a9f85781228ff1115"><div class="ttname"><a href="class_gestionnaire_depenses.html#a340d9af3fa239b9a9f85781228ff1115">GestionnaireDepenses::ajouterUneDepense</a></div><div class="ttdeci">void ajouterUneDepense(Depense &amp;dep)</div><div class="ttdoc">ajouterUneDepense permet d'ajouter une dépense</div><div class="ttdef"><b>Definition:</b> GestionnaireDepenses.cpp:8</div></div>
+<div class="ttc" id="aclass_gestionnaire_utilisateur_html"><div class="ttname"><a href="class_gestionnaire_utilisateur.html">GestionnaireUtilisateur</a></div><div class="ttdoc">The GestionnaireUtilisateur class C'est un classe qui permet de gérer la collection d'utilisateur.</div><div class="ttdef"><b>Definition:</b> Gestionnaireutilisateur.h:16</div></div>
+<div class="ttc" id="aclass_gestionnaire_depenses_html_a0e617f5c3c8204e1feb944625c874d41"><div class="ttname"><a href="class_gestionnaire_depenses.html#a0e617f5c3c8204e1feb944625c874d41">GestionnaireDepenses::getDepense</a></div><div class="ttdeci">Depense getDepense(const int &amp;i) const</div><div class="ttdoc">getDepense permet de récupérer une dépense</div><div class="ttdef"><b>Definition:</b> GestionnaireDepenses.cpp:12</div></div>
+<div class="ttc" id="aclass_groupe_html_a43ef3afb4c32c55d317a25e6331c8d14"><div class="ttname"><a href="class_groupe.html#a43ef3afb4c32c55d317a25e6331c8d14">Groupe::depenses</a></div><div class="ttdeci">GestionnaireDepenses * depenses</div><div class="ttdef"><b>Definition:</b> Groupe.h:109</div></div>
+<div class="ttc" id="aclass_groupe_html_a4de5c114907d95660dca56ef6526a162"><div class="ttname"><a href="class_groupe.html#a4de5c114907d95660dca56ef6526a162">Groupe::dateCreation</a></div><div class="ttdeci">QString dateCreation</div><div class="ttdef"><b>Definition:</b> Groupe.h:106</div></div>
+<div class="ttc" id="aclass_gestionnaire_utilisateur_html_aa6d3525d67032e00add9de00e10bcc31"><div class="ttname"><a href="class_gestionnaire_utilisateur.html#aa6d3525d67032e00add9de00e10bcc31">GestionnaireUtilisateur::end</a></div><div class="ttdeci">std::map&lt; QString, Utilisateur &gt;::iterator end()</div><div class="ttdoc">end retourne l'itérateur end de la collection</div><div class="ttdef"><b>Definition:</b> Gestionnaireutilisateur.cpp:55</div></div>
+<div class="ttc" id="aclass_depense_html_a019de7106c8444b235828e9ae7db1b3f"><div class="ttname"><a href="class_depense.html#a019de7106c8444b235828e9ae7db1b3f">Depense::getValeurRemboursee</a></div><div class="ttdeci">double getValeurRemboursee() const</div><div class="ttdoc">getValeurRemboursee retourne la somme déjà remboursée</div><div class="ttdef"><b>Definition:</b> Depense.cpp:27</div></div>
+<div class="ttc" id="aclass_utilisateur_html"><div class="ttname"><a href="class_utilisateur.html">Utilisateur</a></div><div class="ttdoc">The Utilisateur class est une classe qui représente un utilisateur ou un compte. défini par un identi...</div><div class="ttdef"><b>Definition:</b> Utilisateur.h:14</div></div>
+<div class="ttc" id="aclass_groupe_html_ad89d1e8d054fb0198cbc422f81d174d2"><div class="ttname"><a href="class_groupe.html#ad89d1e8d054fb0198cbc422f81d174d2">Groupe::identifiant</a></div><div class="ttdeci">QString identifiant</div><div class="ttdef"><b>Definition:</b> Groupe.h:105</div></div>
+<div class="ttc" id="aclass_groupe_html_a7090147049f9c50223dcd05935beeb98"><div class="ttname"><a href="class_groupe.html#a7090147049f9c50223dcd05935beeb98">Groupe::getDettes</a></div><div class="ttdeci">std::map&lt; QString, int &gt; getDettes()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:75</div></div>
+<div class="ttc" id="aclass_gestionnaire_depenses_html_aea8f6c79495521a5366f28c5a962f364"><div class="ttname"><a href="class_gestionnaire_depenses.html#aea8f6c79495521a5366f28c5a962f364">GestionnaireDepenses::clearDepenses</a></div><div class="ttdeci">void clearDepenses()</div><div class="ttdef"><b>Definition:</b> GestionnaireDepenses.cpp:28</div></div>
+<div class="ttc" id="aclass_groupe_html_acebc75610f3dcb4940154d89a4484fd8"><div class="ttname"><a href="class_groupe.html#acebc75610f3dcb4940154d89a4484fd8">Groupe::setDescription</a></div><div class="ttdeci">void setDescription(const QString &amp;descr)</div><div class="ttdoc">setDescription permet de donné une déscription pour le groupe</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:30</div></div>
+<div class="ttc" id="aclass_groupe_html_aca8ed1d8038e8bba032d01d492301a00"><div class="ttname"><a href="class_groupe.html#aca8ed1d8038e8bba032d01d492301a00">Groupe::getIdentifiant</a></div><div class="ttdeci">QString getIdentifiant() const</div><div class="ttdoc">getIdentifiant retourne l'identifiant / nom du groupe</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:18</div></div>
+<div class="ttc" id="aclass_groupe_html_a8c130d8ce7035c269d998d858a6d62a9"><div class="ttname"><a href="class_groupe.html#a8c130d8ce7035c269d998d858a6d62a9">Groupe::nbDepenses</a></div><div class="ttdeci">int nbDepenses() const</div><div class="ttdoc">nbDepenses retourne le nombre de dépense;</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:54</div></div>
+<div class="ttc" id="aclass_gestionnaire_utilisateur_html_a05c123f97d97a06a04626ccfd54a9e26"><div class="ttname"><a href="class_gestionnaire_utilisateur.html#a05c123f97d97a06a04626ccfd54a9e26">GestionnaireUtilisateur::ajouterUtilisateur</a></div><div class="ttdeci">void ajouterUtilisateur(Utilisateur &amp;user)</div><div class="ttdoc">ajouterUtilisateur permet d'ajouter un utilisateur</div><div class="ttdef"><b>Definition:</b> Gestionnaireutilisateur.cpp:27</div></div>
+<div class="ttc" id="a_gestionnaire_depenses_8h_html"><div class="ttname"><a href="_gestionnaire_depenses_8h.html">GestionnaireDepenses.h</a></div></div>
+<div class="ttc" id="aclass_groupe_html_a80e55eb56fdeef9326d3df80d79eb305"><div class="ttname"><a href="class_groupe.html#a80e55eb56fdeef9326d3df80d79eb305">Groupe::getParticipants</a></div><div class="ttdeci">GestionnaireUtilisateur getParticipants() const</div><div class="ttdoc">getParticipants retourne les participants</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:42</div></div>
+<div class="ttc" id="aclass_gestionnaire_depenses_html"><div class="ttname"><a href="class_gestionnaire_depenses.html">GestionnaireDepenses</a></div><div class="ttdoc">The GestionnaireDepenses class permet de gérer une collection de dépenses: Un groupe peut avoir plusi...</div><div class="ttdef"><b>Definition:</b> GestionnaireDepenses.h:13</div></div>
+<div class="ttc" id="aclass_groupe_html_a2ddd793a859cc86c9ff2b8d30338c5e7"><div class="ttname"><a href="class_groupe.html#a2ddd793a859cc86c9ff2b8d30338c5e7">Groupe::setDettes</a></div><div class="ttdeci">void setDettes()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:79</div></div>
+<div class="ttc" id="aclass_groupe_html_ae7860ce0681793ec719d8062fea017a7"><div class="ttname"><a href="class_groupe.html#ae7860ce0681793ec719d8062fea017a7">Groupe::setDate</a></div><div class="ttdeci">void setDate(const QString &amp;date)</div><div class="ttdoc">setDate permet de fixer la date de création groupe</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:46</div></div>
+<div class="ttc" id="a_depense_8h_html"><div class="ttname"><a href="_depense_8h.html">Depense.h</a></div></div>
+<div class="ttc" id="aclass_groupe_html_a413ae785f3c78828334b2f3140d2dd7a"><div class="ttname"><a href="class_groupe.html#a413ae785f3c78828334b2f3140d2dd7a">Groupe::Groupe</a></div><div class="ttdeci">Groupe()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:14</div></div>
+<div class="ttc" id="aclass_depense_html_ae333d5599ab77931c28c15897183891c"><div class="ttname"><a href="class_depense.html#ae333d5599ab77931c28c15897183891c">Depense::getCreateur</a></div><div class="ttdeci">QString getCreateur() const</div><div class="ttdoc">getCreateur retourne le créateur de la dépense</div><div class="ttdef"><b>Definition:</b> Depense.cpp:19</div></div>
+<div class="ttc" id="aclass_groupe_html_a10446174f44bbae222e6b75267dd541c"><div class="ttname"><a href="class_groupe.html#a10446174f44bbae222e6b75267dd541c">Groupe::ajouterUnpParticipant</a></div><div class="ttdeci">void ajouterUnpParticipant(Utilisateur user)</div><div class="ttdoc">ajouterUnpParticipant ajouter un participant au groupe</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:38</div></div>
+<div class="ttc" id="aclass_depense_html_a7c5dcd10b28f6beae9fe49fd317adbcf"><div class="ttname"><a href="class_depense.html#a7c5dcd10b28f6beae9fe49fd317adbcf">Depense::getVealeurBase</a></div><div class="ttdeci">double getVealeurBase() const</div><div class="ttdoc">getVealeurBase retourne la valeur initiale</div><div class="ttdef"><b>Definition:</b> Depense.cpp:23</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3f14f6767c31cb4a1d22c13c18cc6fc3.html">model</a></li><li class="navelem"><a class="el" href="dir_be53b3a474f3a7a074cbe09cc367e36a.html">groupe</a></li><li class="navelem"><a class="el" href="_groupe_8h.html">Groupe.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

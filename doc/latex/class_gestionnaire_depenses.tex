@@ -1,0 +1,171 @@
+\hypertarget{class_gestionnaire_depenses}{}\doxysection{Référence de la classe Gestionnaire\+Depenses}
+\label{class_gestionnaire_depenses}\index{GestionnaireDepenses@{GestionnaireDepenses}}
+
+
+The \mbox{\hyperlink{class_gestionnaire_depenses}{Gestionnaire\+Depenses}} class permet de gérer une collection de dépenses\+: Un groupe peut avoir plusieurs dépenses associées de même pour les utilisateurs.  
+
+
+
+
+{\ttfamily \#include $<$Gestionnaire\+Depenses.\+h$>$}
+
+
+
+Graphe de collaboration de Gestionnaire\+Depenses\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestionnaire_depenses_a06cbb57c5a19b971920c56535c33d63b}{Gestionnaire\+Depenses}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_gestionnaire_depenses}{Gestionnaire\+Depenses}} constructeur par défaut. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestionnaire_depenses_a340d9af3fa239b9a9f85781228ff1115}{ajouter\+Une\+Depense}} (\mbox{\hyperlink{class_depense}{Depense}} \&dep)
+\begin{DoxyCompactList}\small\item\em ajouter\+Une\+Depense permet d\textquotesingle{}ajouter une dépense \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_depense}{Depense}} \mbox{\hyperlink{class_gestionnaire_depenses_a0e617f5c3c8204e1feb944625c874d41}{get\+Depense}} (const int \&i) const
+\begin{DoxyCompactList}\small\item\em get\+Depense permet de récupérer une dépense \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestionnaire_depenses_a7c22139dcc50f6d0b5dabde56fcbe49e}{nb\+Depense}} () const
+\begin{DoxyCompactList}\small\item\em nb\+Depense retourne le nombre de dépenses \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_depense}{Depense}} $>$\+::iterator \mbox{\hyperlink{class_gestionnaire_depenses_a07d2165884369542c057f7fd46bad0e5}{begin}} ()
+\begin{DoxyCompactList}\small\item\em begin retourne l\textquotesingle{}itérateur begin de la collection \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_depense}{Depense}} $>$\+::iterator \mbox{\hyperlink{class_gestionnaire_depenses_a02485be631a89974b64b0edd2b0e5aad}{end}} ()
+\begin{DoxyCompactList}\small\item\em end retorune l\textquotesingle{}itérateur ed de la collection \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestionnaire_depenses_aea8f6c79495521a5366f28c5a962f364}{clear\+Depenses}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_depense}{Depense}} $>$ \mbox{\hyperlink{class_gestionnaire_depenses_a12898eda71b2c357dc33e48542fbd4a2}{depenses}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_gestionnaire_depenses_a06cbb57c5a19b971920c56535c33d63b}\label{class_gestionnaire_depenses_a06cbb57c5a19b971920c56535c33d63b}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!GestionnaireDepenses@{GestionnaireDepenses}}
+\index{GestionnaireDepenses@{GestionnaireDepenses}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{GestionnaireDepenses()}{GestionnaireDepenses()}}
+{\footnotesize\ttfamily Gestionnaire\+Depenses\+::\+Gestionnaire\+Depenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_gestionnaire_depenses_a340d9af3fa239b9a9f85781228ff1115}\label{class_gestionnaire_depenses_a340d9af3fa239b9a9f85781228ff1115}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!ajouterUneDepense@{ajouterUneDepense}}
+\index{ajouterUneDepense@{ajouterUneDepense}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{ajouterUneDepense()}{ajouterUneDepense()}}
+{\footnotesize\ttfamily void Gestionnaire\+Depenses\+::ajouter\+Une\+Depense (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_depense}{Depense}} \&}]{dep }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dep} & \\
+\hline
+\end{DoxyParams}
+
+
+Références depenses.
+
+
+
+Référencé par Groupe\+::ajouter\+Une\+Depense().
+
+\mbox{\Hypertarget{class_gestionnaire_depenses_a07d2165884369542c057f7fd46bad0e5}\label{class_gestionnaire_depenses_a07d2165884369542c057f7fd46bad0e5}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!begin@{begin}}
+\index{begin@{begin}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_depense}{Depense}} $>$\+::iterator Gestionnaire\+Depenses\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses.
+
+\mbox{\Hypertarget{class_gestionnaire_depenses_aea8f6c79495521a5366f28c5a962f364}\label{class_gestionnaire_depenses_aea8f6c79495521a5366f28c5a962f364}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!clearDepenses@{clearDepenses}}
+\index{clearDepenses@{clearDepenses}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{clearDepenses()}{clearDepenses()}}
+{\footnotesize\ttfamily void Gestionnaire\+Depenses\+::clear\+Depenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Références depenses.
+
+
+
+Référencé par Groupe\+::clear\+Depenses().
+
+\mbox{\Hypertarget{class_gestionnaire_depenses_a02485be631a89974b64b0edd2b0e5aad}\label{class_gestionnaire_depenses_a02485be631a89974b64b0edd2b0e5aad}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!end@{end}}
+\index{end@{end}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_depense}{Depense}} $>$\+::iterator Gestionnaire\+Depenses\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses.
+
+\mbox{\Hypertarget{class_gestionnaire_depenses_a0e617f5c3c8204e1feb944625c874d41}\label{class_gestionnaire_depenses_a0e617f5c3c8204e1feb944625c874d41}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!getDepense@{getDepense}}
+\index{getDepense@{getDepense}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{getDepense()}{getDepense()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_depense}{Depense}} Gestionnaire\+Depenses\+::get\+Depense (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses.
+
+
+
+Référencé par Groupe\+::depenses\+To\+String(), et Groupe\+::set\+Dettes().
+
+\mbox{\Hypertarget{class_gestionnaire_depenses_a7c22139dcc50f6d0b5dabde56fcbe49e}\label{class_gestionnaire_depenses_a7c22139dcc50f6d0b5dabde56fcbe49e}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!nbDepense@{nbDepense}}
+\index{nbDepense@{nbDepense}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{nbDepense()}{nbDepense()}}
+{\footnotesize\ttfamily int Gestionnaire\+Depenses\+::nb\+Depense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses.
+
+
+
+Référencé par Groupe\+::nb\+Depenses().
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_gestionnaire_depenses_a12898eda71b2c357dc33e48542fbd4a2}\label{class_gestionnaire_depenses_a12898eda71b2c357dc33e48542fbd4a2}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!depenses@{depenses}}
+\index{depenses@{depenses}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{depenses}{depenses}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_depense}{Depense}}$>$ Gestionnaire\+Depenses\+::depenses\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Référencé par ajouter\+Une\+Depense(), begin(), clear\+Depenses(), end(), get\+Depense(), et nb\+Depense().
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/gestionnairedepenses/\mbox{\hyperlink{_gestionnaire_depenses_8h}{Gestionnaire\+Depenses.\+h}}\item 
+/home/sacha/\+Documents/\+Fac/\+L3\+\_\+\+S5/\+C\+P\+O\+A/\+Projet/\+Dev/\+Share\+Count/model/gestionnairedepenses/\mbox{\hyperlink{_gestionnaire_depenses_8cpp}{Gestionnaire\+Depenses.\+cpp}}\end{DoxyCompactItemize}
