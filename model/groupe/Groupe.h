@@ -54,7 +54,7 @@ public:
 
     std::map<QString, double> getDettes();
 
-    GestionnaireDepenses getDepenses() const;
+    GestionnaireDepenses& getDepenses();
 
     ~Groupe();
 

@@ -62,6 +62,7 @@ Groupe& GestionnaireGroupes::getGroupe(const QString& idGroupe) {
             return groupes[i];
         }
     }
+    //return std::nullptr_t;
 }
 
 /**

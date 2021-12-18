@@ -53,6 +53,9 @@
    </item>
    <item row="4" column="1">
     <widget class="QPushButton" name="reglerDepense">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="text">
       <string>Regler la dépense</string>
      </property>

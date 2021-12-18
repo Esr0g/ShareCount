@@ -246,9 +246,9 @@ void PageGestionDeBudget::on_reglerDepense_clicked()
     std::cout << token << std::endl;
 
     int nbUsers = shareCount->getNombreUtilisateurs();
-    Depense depense = shareCount->getGroupeActif().getDepenses().getDepense(token);
 
-    depense.addValeurRemboursee(depense.getVealeurBase()/nbUsers);
+    double v = shareCount->getGroupeActif().getDepenses().getDepense(token).getVealeurBase();
+    shareCount->getGroupeActif().getDepenses().getDepense(token).addValeurRemboursee(v/(double)nbUsers);
 
     miseAJourDepenses();
 }

@@ -78,7 +78,7 @@ GestionnaireUtilisateur Groupe::getParticipants() const {
  * @brief getDepenses retourne le gestionnaire de dépense
  * @return
  */
-GestionnaireDepenses Groupe::getDepenses() const{
+GestionnaireDepenses& Groupe::getDepenses(){
     return *depenses;
 }
 

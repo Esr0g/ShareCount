@@ -70,8 +70,6 @@ void PageCreationCompte::onPushButtonCreerCompte() {
         QMessageBox::critical(this, "Erreur mot de passe", "Les mots de passe ne correspondent pas.");
     } else if (ui->lineEdit_5->text() != ui->lineEdit_6->text()) {
         QMessageBox::critical(this, "Erreur mail", "Les mails ne correspondent pas.");
-    } else if (ui->lineEdit_6->text().size() > 0){
-        //QRegex
     } else {
         u.setMotDePasse(ui->lineEdit_4->text());
         u.setMail(ui->lineEdit_6->text());
