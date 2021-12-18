@@ -11,7 +11,7 @@
  * @brief DbManager Constrcteur par défaut
  * @param path de la base de donnée
  */
-BDDManager::BDDManager(const QString& path) : creerDataBase(false)
+BDDManager::BDDManager(const QString& path) : creerDataBase(true)
 {
     sharCountBase = QSqlDatabase::addDatabase("QSQLITE");
     sharCountBase.setDatabaseName(path);

@@ -20,7 +20,7 @@ public:
 
     Depense getDepense(const int& i) const;
 
-    Depense getDepense(const std::string& str);
+    Depense& getDepense(const std::string& str);
 
     int nbDepense() const;
 

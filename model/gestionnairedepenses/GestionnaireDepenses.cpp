@@ -30,7 +30,7 @@ Depense GestionnaireDepenses::getDepense(const int& i) const {
  * @brief nbDepense retourne le nombre de dépenses
  * @return
  */
-Depense GestionnaireDepenses::getDepense(const std::string& str) {
+Depense& GestionnaireDepenses::getDepense(const std::string& str) {
     for(Depense depense : depenses){
         if(depense.getNom().toStdString() == str){
             return depense;

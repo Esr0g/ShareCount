@@ -241,9 +241,9 @@ void PageGestionDeBudget::on_reglerDepense_clicked()
     QModelIndex index = ui->depenseListView->currentIndex();
     QString itemText = index.data(Qt::DisplayRole).toString();
     std::string s = itemText.toStdString();
-    std::string delimiter = " ";
+    std::string delimiter = " :";
     std::string token = s.substr(0, s.find(delimiter));
-    std::cout << token << "\n";
+    std::cout << token << std::endl;
 
     int nbUsers = shareCount->getNombreUtilisateurs();
     Depense depense = shareCount->getGroupeActif().getDepenses().getDepense(token);
@@ -251,6 +251,4 @@ void PageGestionDeBudget::on_reglerDepense_clicked()
     depense.addValeurRemboursee(depense.getVealeurBase()/nbUsers);
 
     miseAJourDepenses();
-
-
 }
