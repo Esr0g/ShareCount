@@ -4,6 +4,10 @@
 #include "QMessageBox"
 #include <iostream>
 
+/**
+ * @brief PageCreationCompte
+ * @param parent
+ */
 PageCreationCompte::PageCreationCompte(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::PageCreationCompte)
@@ -12,6 +16,12 @@ PageCreationCompte::PageCreationCompte(QWidget *parent) :
     setConnexion();
 }
 
+/**
+ * @brief PageCreationCompte
+ * @param fp fenêtre principale de l'application
+ * @param sc sharcount (Sorte de système de l'application)
+ * @param parent
+ */
 PageCreationCompte::PageCreationCompte(QWidget *parent, FenetrePrincipale *fp, ShareCount* sc) :
     QWidget(parent),
     ui(new Ui::PageCreationCompte),
@@ -23,15 +33,28 @@ PageCreationCompte::PageCreationCompte(QWidget *parent, FenetrePrincipale *fp, S
 
 }
 
+/**
+ * @brief annuler Permet d'annuler la création de compte et de retrouner
+ * sur la page d'accueil
+ */
 void PageCreationCompte::annuler() {
     pwindow->setPageActive(new PageAccueil(pwindow, pwindow, shareCount));
 }
 
+/**
+ * @brief setConnect
+ * Permet de connecter les signaux des éléments afficher avec
+ * leur slots correspondant
+ */
 void PageCreationCompte::setConnexion() {
     connect(ui->pushButton_2, SIGNAL(released()), this, SLOT(annuler()));
     connect(ui->pushButton, SIGNAL(pressed()), this, SLOT(onPushButtonCreerCompte()));
 }
 
+/**
+ * @brief onPushButtonCreerCompte Envoie les informations entré par l'utilisateur
+ * a ShareCount pour les traiter.
+ */
 void PageCreationCompte::onPushButtonCreerCompte() {
     Utilisateur u;
 
