@@ -11,6 +11,7 @@
 #include <QDialogButtonBox>
 #include <QDebug>
 #include <QRegExp>
+#include <string>
 
 namespace Ui {
 class PageGestionDeBudget;
@@ -32,6 +33,8 @@ public:
 private slots:
     void on_ajouterDepenseButton_clicked();
     void on_ajouterParticipantButton_clicked();
+
+    void on_reglerDepense_clicked();
 
 private:
     Ui::PageGestionDeBudget *ui;

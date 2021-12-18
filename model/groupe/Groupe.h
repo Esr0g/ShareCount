@@ -99,6 +99,8 @@ public:
 
      std::map<QString, double> getDettes();
 
+     GestionnaireDepenses getDepenses() const;
+
     ~Groupe();
 
 private:

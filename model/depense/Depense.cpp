@@ -32,7 +32,7 @@ bool Depense::isRemboursee() const {
     return estRembourseeB;
 }
 
-void Depense::addValeurRemboursee(const int& val) {
+void Depense::addValeurRemboursee(const double& val) {
     valeurRemboursee += val;
 }
 

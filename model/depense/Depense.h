@@ -64,7 +64,7 @@ public:
      * @brief addValeurRemboursee permet de rembourser une partie de la dépense
      * @param val
      */
-    void addValeurRemboursee(const int& val);
+    void addValeurRemboursee(const double& val);
 
     /**
      * @brief setEstRemboursee positionne le boolean estRemboursee sur b
@@ -91,7 +91,7 @@ private:
     QString date;
     QString createur;
     int valeurBase;
-    int valeurRemboursee;
+    double valeurRemboursee;
     bool estRembourseeB;
 
 

@@ -2,6 +2,7 @@
 #define GESTIONNAIREDEPENSES_H
 
 #include <vector>
+#include <string>
 
 #include "model/depense/Depense.h"
 class Depense;
@@ -31,6 +32,8 @@ public:
      * @return
      */
     Depense getDepense(const int& i) const;
+
+    Depense getDepense(const std::string& str);
 
     /**
      * @brief nbDepense retourne le nombre de dépenses

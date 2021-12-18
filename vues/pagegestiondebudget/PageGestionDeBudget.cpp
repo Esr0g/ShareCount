@@ -201,3 +201,24 @@ void PageGestionDeBudget::miseAJourDepenses() {
     QAbstractItemModel *model = new QStringListModel(shareCount->getGroupeActif().depensesToString());
     ui->depenseListView->setModel(model);
 }
+
+
+void PageGestionDeBudget::on_reglerDepense_clicked()
+{
+    //ui->depenseListView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    QModelIndex index = ui->depenseListView->currentIndex();
+    QString itemText = index.data(Qt::DisplayRole).toString();
+    std::string s = itemText.toStdString();
+    std::string delimiter = " ";
+    std::string token = s.substr(0, s.find(delimiter));
+    std::cout << token << "\n";
+
+    int nbUsers = shareCount->getNombreUtilisateurs();
+    Depense depense = shareCount->getGroupeActif().getDepenses().getDepense(token);
+
+    depense.addValeurRemboursee(depense.getVealeurBase()/nbUsers);
+
+    miseAJourDepenses();
+
+
+}

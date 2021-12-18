@@ -43,6 +43,10 @@ GestionnaireUtilisateur Groupe::getParticipants() const {
     return *participants;
 }
 
+GestionnaireDepenses Groupe::getDepenses() const{
+    return *depenses;
+}
+
 void Groupe::setDate(const QString& date) {
     dateCreation = date;
 }
