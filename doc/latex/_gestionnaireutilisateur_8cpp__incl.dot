@@ -36,6 +36,7 @@ digraph "/home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/model/gestio
   Node11 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
   Node14 [label="model/gestionnairedepenses\l/GestionnaireDepenses.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gestionnaire_depenses_8h.html",tooltip=" "];
   Node14 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
   Node14 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
   Node11 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
   Node15 [label="QDebug",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];

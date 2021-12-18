@@ -19,9 +19,9 @@ Graphe de collaboration de Gestionnaire\+Utilisateur\+:
 \mbox{\hyperlink{class_gestionnaire_utilisateur_a7d44afbfd45772034a6fce47bfcb4bae}{Gestionnaire\+Utilisateur}} ()
 \begin{DoxyCompactList}\small\item\em class \mbox{\hyperlink{class_gestionnaire_utilisateur}{Gestionnaire\+Utilisateur}} constructeur \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_gestionnaire_utilisateur_a05c123f97d97a06a04626ccfd54a9e26}{ajouter\+Utilisateur}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user)
-\begin{DoxyCompactList}\small\item\em ajouter\+Utilisateur permet d\textquotesingle{}ajouter un utilisateur \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_gestionnaire_utilisateur_a36f1d3a68a5790d1f80d731c80185e00}{identifier\+Utilisateur}} (const Q\+String \&id, const Q\+String \&mdp) const
 \begin{DoxyCompactList}\small\item\em identifier\+Utilisateur permet d\textquotesingle{}identifer un utilisateur à l\textquotesingle{}aide de son mot de passe et de sont identifiant \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gestionnaire_utilisateur_a36f1d3a68a5790d1f80d731c80185e00}{identifier\+Utilisateur}} (const Q\+String \&id, const Q\+String \&mdp) const
+\begin{DoxyCompactList}\small\item\em ajouter\+Utilisateur permet d\textquotesingle{}ajouter un utilisateur \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \mbox{\hyperlink{class_gestionnaire_utilisateur_a61c669a8f91b38cf9372abef6bab0f01}{get\+Utilisateur}} (const Q\+String \&id) const
 \begin{DoxyCompactList}\small\item\em get\+Utilisateur retorune l\textquotesingle{}utilisateur avec l\textquotesingle{}identifiant \char`\"{}id\char`\"{} \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_gestionnaire_utilisateur_ab74523891b320dd06f5d991101aa3fea}{find\+Utilisateur}} (const Q\+String \&id) const
@@ -33,7 +33,7 @@ std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$\+
 std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$\+::iterator \mbox{\hyperlink{class_gestionnaire_utilisateur_aa6d3525d67032e00add9de00e10bcc31}{end}} ()
 \begin{DoxyCompactList}\small\item\em end retourne l\textquotesingle{}itérateur end de la collection \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_gestionnaire_utilisateur_ac081e8a004388a204942600c2c6d5996}{clear}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em clear supprime tous les utilisateurs de la collection \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,9 +59,14 @@ std\+::map$<$ Q\+String, \mbox{\hyperlink{class_utilisateur}{Utilisateur}} $>$ \
 
 
 \begin{DoxyParams}{Paramètres}
-{\em user} & \\
+{\em identifiant} & \\
+\hline
+{\em mdp} & \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 
 
 Références Utilisateur\+::get\+Identifiant(), et utilisateurs.
@@ -183,14 +188,9 @@ Référencé par Share\+Count\+::get\+Utilisateur().
 
 
 \begin{DoxyParams}{Paramètres}
-{\em identifiant} & \\
-\hline
-{\em mdp} & \\
+{\em user} & \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-
-\end{DoxyReturn}
 
 
 Références utilisateurs.

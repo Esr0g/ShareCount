@@ -6,7 +6,7 @@ digraph "Graphe hiérarchique des classes"
   rankdir="LR";
   Node0 [label="QObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_object.html",tooltip=" "];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="BDDManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_b_d_d_manager.html",tooltip="The DbManager class qui permet de gérer les entrées et les sorties avec la base de donnée."];
+  Node1 [label="BDDManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_b_d_d_manager.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="ShareCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_share_count.html",tooltip="The ShareCount class Classe principale du model qui est aussi un QObjet pour pouvoir utiliser les sig..."];
 }

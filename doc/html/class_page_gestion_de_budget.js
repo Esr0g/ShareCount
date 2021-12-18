@@ -8,6 +8,7 @@ var class_page_gestion_de_budget =
     [ "miseAJourParticipant", "class_page_gestion_de_budget.html#a4cbac69d1c7b0dad4e611e7da3613e7a", null ],
     [ "on_ajouterDepenseButton_clicked", "class_page_gestion_de_budget.html#a67a9df137640d72ff2817072435a7c16", null ],
     [ "on_ajouterParticipantButton_clicked", "class_page_gestion_de_budget.html#ab94f028d92d84407a6b7d83bb5ab7c3d", null ],
+    [ "on_reglerDepense_clicked", "class_page_gestion_de_budget.html#aa0a0c0deee762e10919449ac1b517a81", null ],
     [ "setEquilibre", "class_page_gestion_de_budget.html#a5c0dc4f9a0847a121c5d1361043ba12c", null ],
     [ "depenses", "class_page_gestion_de_budget.html#a6cd5fef84d9319f0a4005969d6a9c48a", null ],
     [ "nomGroupe", "class_page_gestion_de_budget.html#a0d1d04e5ba68076d8654a6641d41ded6", null ],

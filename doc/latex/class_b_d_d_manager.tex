@@ -2,11 +2,6 @@
 \label{class_b_d_d_manager}\index{BDDManager@{BDDManager}}
 
 
-The Db\+Manager class qui permet de gérer les entrées et les sorties avec la base de donnée.  
-
-
-
-
 {\ttfamily \#include $<$B\+D\+D\+Manager.\+h$>$}
 
 
@@ -17,7 +12,7 @@ Graphe de collaboration de B\+D\+D\+Manager\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_b_d_d_manager_a4ba1a8f6ec4bb70fbaa38e4274d559a5}{B\+D\+D\+Manager}} (const Q\+String \&path=\mbox{\hyperlink{_b_d_d_manager_8h_a0670e0e3546fcd815d007fe1aeff321e}{D\+B\+\_\+\+P\+A\+TH}})
-\begin{DoxyCompactList}\small\item\em Db\+Manager Constrcteur par défaut. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The Db\+Manager class qui permet de gérer les entrées et les sorties avec la base de donnée. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_d_d_manager_aa2a0ec86d6918daadfa907d56ac5eb74}{create\+Data\+Base}} ()
 \begin{DoxyCompactList}\small\item\em create\+Data\+Base permet de créer et d\textquotesingle{}initialiser la base de donnée si le fichier Share\+Count\+Data\+Base.\+db n\textquotesingle{}existe pas \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_d_d_manager_aaea0b59b4af96bc0bbf2719e43c52f7a}{inserer\+Utilisateur}} (const \mbox{\hyperlink{class_utilisateur}{Utilisateur}} \&user) const
@@ -39,9 +34,7 @@ void \mbox{\hyperlink{class_b_d_d_manager_ac04b73ab46588ff7deaa02e5a2426610}{ins
 void \mbox{\hyperlink{class_b_d_d_manager_a43965e30235dddee0207d88d56df846d}{initialiser\+Depenses\+Groupe}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&grp)
 \begin{DoxyCompactList}\small\item\em initialiser\+Depenses\+Groupe permet d\textquotesingle{}initialiser toutes les dépenses du groupe \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_b_d_d_manager_ae777eda4a45f719de81b81b8b75ca5ad}{update\+Historique}} (const Q\+String \&grp, const Q\+String \&action)
-\begin{DoxyCompactList}\small\item\em update\+Historique a chaque fois qu\textquotesingle{}une action est fête celle-\/ci est enregistré dans la table historique. \end{DoxyCompactList}\item 
-Q\+String\+List \mbox{\hyperlink{class_b_d_d_manager_a8383e33f8658c18617942fc6b47a85a3}{initialiser\+Historique}} (const Q\+String \&grp)
-\begin{DoxyCompactList}\small\item\em initialiser\+Historique permet d\textquotesingle{}initialiser l\textquotesingle{}historique en fonction du groupe \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em update\+Historique a chaque fois qu\textquotesingle{}une action est fête celle-\/ci est enregistré dans la table historique. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,7 +51,7 @@ bool \mbox{\hyperlink{class_b_d_d_manager_a0494a1917c30dde61c964fd6dcffe6e5}{cre
 \doxysubsubsection{\texorpdfstring{BDDManager()}{BDDManager()}}
 {\footnotesize\ttfamily B\+D\+D\+Manager\+::\+B\+D\+D\+Manager (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path = {\ttfamily \mbox{\hyperlink{_b_d_d_manager_8h_a0670e0e3546fcd815d007fe1aeff321e}{D\+B\+\_\+\+P\+A\+TH}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
-
+Db\+Manager Constrcteur par défaut 
 \begin{DoxyParams}{Paramètres}
 {\em path} & de la base de donnée \\
 \hline
@@ -169,20 +162,6 @@ Références Gestionnaire\+Groupes\+::ajouter\+Groupe(), Gestionnaire\+Groupes\+
 
 Référencé par Share\+Count\+::set\+Utilisateur\+Actif().
 
-\mbox{\Hypertarget{class_b_d_d_manager_a8383e33f8658c18617942fc6b47a85a3}\label{class_b_d_d_manager_a8383e33f8658c18617942fc6b47a85a3}} 
-\index{BDDManager@{BDDManager}!initialiserHistorique@{initialiserHistorique}}
-\index{initialiserHistorique@{initialiserHistorique}!BDDManager@{BDDManager}}
-\doxysubsubsection{\texorpdfstring{initialiserHistorique()}{initialiserHistorique()}}
-{\footnotesize\ttfamily Q\+String\+List B\+D\+D\+Manager\+::initialiser\+Historique (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{grp }\end{DoxyParamCaption})}
-
-
-\begin{DoxyParams}{Paramètres}
-{\em grp} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_b_d_d_manager_a59a9d535a6804dbed50cdfe95d5d1322}\label{class_b_d_d_manager_a59a9d535a6804dbed50cdfe95d5d1322}} 
 \index{BDDManager@{BDDManager}!initialiserListeUtilisateur@{initialiserListeUtilisateur}}
 \index{initialiserListeUtilisateur@{initialiserListeUtilisateur}!BDDManager@{BDDManager}}

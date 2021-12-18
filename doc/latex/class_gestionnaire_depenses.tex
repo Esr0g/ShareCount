@@ -22,14 +22,16 @@ void \mbox{\hyperlink{class_gestionnaire_depenses_a340d9af3fa239b9a9f85781228ff1
 \begin{DoxyCompactList}\small\item\em ajouter\+Une\+Depense permet d\textquotesingle{}ajouter une dépense \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_depense}{Depense}} \mbox{\hyperlink{class_gestionnaire_depenses_a0e617f5c3c8204e1feb944625c874d41}{get\+Depense}} (const int \&i) const
 \begin{DoxyCompactList}\small\item\em get\+Depense permet de récupérer une dépense \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_gestionnaire_depenses_a7c22139dcc50f6d0b5dabde56fcbe49e}{nb\+Depense}} () const
+\mbox{\hyperlink{class_depense}{Depense}} \& \mbox{\hyperlink{class_gestionnaire_depenses_a5b8dad5ff492e027ccec05a36a4aa91e}{get\+Depense}} (const std\+::string \&str)
 \begin{DoxyCompactList}\small\item\em nb\+Depense retourne le nombre de dépenses \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestionnaire_depenses_a7c22139dcc50f6d0b5dabde56fcbe49e}{nb\+Depense}} () const
+\begin{DoxyCompactList}\small\item\em begin retourne l\textquotesingle{}itérateur begin de la collection \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{class_depense}{Depense}} $>$\+::iterator \mbox{\hyperlink{class_gestionnaire_depenses_a07d2165884369542c057f7fd46bad0e5}{begin}} ()
 \begin{DoxyCompactList}\small\item\em begin retourne l\textquotesingle{}itérateur begin de la collection \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{class_depense}{Depense}} $>$\+::iterator \mbox{\hyperlink{class_gestionnaire_depenses_a02485be631a89974b64b0edd2b0e5aad}{end}} ()
-\begin{DoxyCompactList}\small\item\em end retorune l\textquotesingle{}itérateur ed de la collection \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em end retorune l\textquotesingle{}itérateur end de la collection \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_gestionnaire_depenses_aea8f6c79495521a5366f28c5a962f364}{clear\+Depenses}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em clear\+Depenses supprimme toutes les dépenses de la collection \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
@@ -114,7 +116,7 @@ Références depenses.
 \mbox{\Hypertarget{class_gestionnaire_depenses_a0e617f5c3c8204e1feb944625c874d41}\label{class_gestionnaire_depenses_a0e617f5c3c8204e1feb944625c874d41}} 
 \index{GestionnaireDepenses@{GestionnaireDepenses}!getDepense@{getDepense}}
 \index{getDepense@{getDepense}!GestionnaireDepenses@{GestionnaireDepenses}}
-\doxysubsubsection{\texorpdfstring{getDepense()}{getDepense()}}
+\doxysubsubsection{\texorpdfstring{getDepense()}{getDepense()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_depense}{Depense}} Gestionnaire\+Depenses\+::get\+Depense (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption}) const}
 
 
@@ -131,7 +133,20 @@ Références depenses.
 
 
 
-Référencé par Groupe\+::depenses\+To\+String(), et Groupe\+::set\+Dettes().
+Référencé par Groupe\+::depenses\+To\+String(), Page\+Gestion\+De\+Budget\+::on\+\_\+regler\+Depense\+\_\+clicked(), et Groupe\+::set\+Dettes().
+
+\mbox{\Hypertarget{class_gestionnaire_depenses_a5b8dad5ff492e027ccec05a36a4aa91e}\label{class_gestionnaire_depenses_a5b8dad5ff492e027ccec05a36a4aa91e}} 
+\index{GestionnaireDepenses@{GestionnaireDepenses}!getDepense@{getDepense}}
+\index{getDepense@{getDepense}!GestionnaireDepenses@{GestionnaireDepenses}}
+\doxysubsubsection{\texorpdfstring{getDepense()}{getDepense()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_depense}{Depense}} \& Gestionnaire\+Depenses\+::get\+Depense (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses.
 
 \mbox{\Hypertarget{class_gestionnaire_depenses_a7c22139dcc50f6d0b5dabde56fcbe49e}\label{class_gestionnaire_depenses_a7c22139dcc50f6d0b5dabde56fcbe49e}} 
 \index{GestionnaireDepenses@{GestionnaireDepenses}!nbDepense@{nbDepense}}

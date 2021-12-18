@@ -108,10 +108,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:a7d44afbfd45772034a6fce47bfcb4bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">class <a class="el" href="class_gestionnaire_utilisateur.html" title="The GestionnaireUtilisateur class C&#39;est un classe qui permet de gérer la collection d&#39;utilisateur.">GestionnaireUtilisateur</a> constructeur  <a href="class_gestionnaire_utilisateur.html#a7d44afbfd45772034a6fce47bfcb4bae">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7d44afbfd45772034a6fce47bfcb4bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05c123f97d97a06a04626ccfd54a9e26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestionnaire_utilisateur.html#a05c123f97d97a06a04626ccfd54a9e26">ajouterUtilisateur</a> (<a class="el" href="class_utilisateur.html">Utilisateur</a> &amp;user)</td></tr>
-<tr class="memdesc:a05c123f97d97a06a04626ccfd54a9e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">ajouterUtilisateur permet d'ajouter un utilisateur  <a href="class_gestionnaire_utilisateur.html#a05c123f97d97a06a04626ccfd54a9e26">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a05c123f97d97a06a04626ccfd54a9e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">identifierUtilisateur permet d'identifer un utilisateur à l'aide de son mot de passe et de sont identifiant  <a href="class_gestionnaire_utilisateur.html#a05c123f97d97a06a04626ccfd54a9e26">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a05c123f97d97a06a04626ccfd54a9e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36f1d3a68a5790d1f80d731c80185e00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestionnaire_utilisateur.html#a36f1d3a68a5790d1f80d731c80185e00">identifierUtilisateur</a> (const QString &amp;id, const QString &amp;mdp) const</td></tr>
-<tr class="memdesc:a36f1d3a68a5790d1f80d731c80185e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">identifierUtilisateur permet d'identifer un utilisateur à l'aide de son mot de passe et de sont identifiant  <a href="class_gestionnaire_utilisateur.html#a36f1d3a68a5790d1f80d731c80185e00">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a36f1d3a68a5790d1f80d731c80185e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">ajouterUtilisateur permet d'ajouter un utilisateur  <a href="class_gestionnaire_utilisateur.html#a36f1d3a68a5790d1f80d731c80185e00">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a36f1d3a68a5790d1f80d731c80185e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61c669a8f91b38cf9372abef6bab0f01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_utilisateur.html">Utilisateur</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestionnaire_utilisateur.html#a61c669a8f91b38cf9372abef6bab0f01">getUtilisateur</a> (const QString &amp;id) const</td></tr>
 <tr class="memdesc:a61c669a8f91b38cf9372abef6bab0f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">getUtilisateur retorune l'utilisateur avec l'identifiant "id"  <a href="class_gestionnaire_utilisateur.html#a61c669a8f91b38cf9372abef6bab0f01">Plus de détails...</a><br /></td></tr>
@@ -129,6 +129,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:aa6d3525d67032e00add9de00e10bcc31"><td class="mdescLeft">&#160;</td><td class="mdescRight">end retourne l'itérateur end de la collection  <a href="class_gestionnaire_utilisateur.html#aa6d3525d67032e00add9de00e10bcc31">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa6d3525d67032e00add9de00e10bcc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac081e8a004388a204942600c2c6d5996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestionnaire_utilisateur.html#ac081e8a004388a204942600c2c6d5996">clear</a> ()</td></tr>
+<tr class="memdesc:ac081e8a004388a204942600c2c6d5996"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear supprime tous les utilisateurs de la collection  <a href="class_gestionnaire_utilisateur.html#ac081e8a004388a204942600c2c6d5996">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac081e8a004388a204942600c2c6d5996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -180,10 +181,12 @@ Attributs privés</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">identifiant</td><td></td></tr>
+    <tr><td class="paramname">mdp</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Renvoie</dt><dd></dd></dl>
 
 <p class="reference">Références <a class="el" href="class_utilisateur.html#a52d76cf858b62cacca941d36382b08fe">Utilisateur::getIdentifiant()</a>, et <a class="el" href="class_gestionnaire_utilisateur.html#a886918c579b5582767fe9b71320ffd1e">utilisateurs</a>.</p>
 
@@ -361,12 +364,10 @@ Attributs privés</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identifiant</td><td></td></tr>
-    <tr><td class="paramname">mdp</td><td></td></tr>
+    <tr><td class="paramname">user</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd></dd></dl>
 
 <p class="reference">Références <a class="el" href="class_gestionnaire_utilisateur.html#a886918c579b5582767fe9b71320ffd1e">utilisateurs</a>.</p>
 

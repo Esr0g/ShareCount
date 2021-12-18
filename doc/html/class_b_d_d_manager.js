@@ -6,7 +6,6 @@ var class_b_d_d_manager =
     [ "createDataBase", "class_b_d_d_manager.html#aa2a0ec86d6918daadfa907d56ac5eb74", null ],
     [ "initialiserDepensesGroupe", "class_b_d_d_manager.html#a43965e30235dddee0207d88d56df846d", null ],
     [ "initialiserGroupeUtilisateur", "class_b_d_d_manager.html#a4637fafc2464ae5f7d3bdafd5ff6a33c", null ],
-    [ "initialiserHistorique", "class_b_d_d_manager.html#a8383e33f8658c18617942fc6b47a85a3", null ],
     [ "initialiserListeUtilisateur", "class_b_d_d_manager.html#a59a9d535a6804dbed50cdfe95d5d1322", null ],
     [ "initialiserParticipants", "class_b_d_d_manager.html#a06e10ff9b218bf1877633e51a3d80647", null ],
     [ "insererUneDepense", "class_b_d_d_manager.html#ac04b73ab46588ff7deaa02e5a2426610", null ],

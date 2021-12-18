@@ -66,6 +66,7 @@ digraph "/home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/vues/vuelist
   Node20 -> Node27 [color="midnightblue",fontsize="10",style="solid"];
   Node27 [label="model/gestionnairedepenses\l/GestionnaireDepenses.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gestionnaire_depenses_8h.html",tooltip=" "];
   Node27 -> Node19 [color="midnightblue",fontsize="10",style="solid"];
+  Node27 -> Node25 [color="midnightblue",fontsize="10",style="solid"];
   Node27 -> Node26 [color="midnightblue",fontsize="10",style="solid"];
   Node20 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
   Node20 -> Node28 [color="midnightblue",fontsize="10",style="solid"];

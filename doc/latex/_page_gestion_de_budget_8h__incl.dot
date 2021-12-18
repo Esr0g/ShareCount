@@ -62,6 +62,7 @@ digraph "/home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/vues/pageges
   Node18 -> Node25 [color="midnightblue",fontsize="10",style="solid"];
   Node25 [label="model/gestionnairedepenses\l/GestionnaireDepenses.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gestionnaire_depenses_8h.html",tooltip=" "];
   Node25 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node25 -> Node23 [color="midnightblue",fontsize="10",style="solid"];
   Node25 -> Node24 [color="midnightblue",fontsize="10",style="solid"];
   Node18 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
   Node18 -> Node26 [color="midnightblue",fontsize="10",style="solid"];
@@ -83,4 +84,5 @@ digraph "/home/sacha/Documents/Fac/L3_S5/CPOA/Projet/Dev/ShareCount/vues/pageges
   Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
   Node1 -> Node31 [color="midnightblue",fontsize="10",style="solid"];
   Node31 [label="QRegExp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node23 [color="midnightblue",fontsize="10",style="solid"];
 }

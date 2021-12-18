@@ -43,13 +43,15 @@ int \mbox{\hyperlink{class_groupe_a8c130d8ce7035c269d998d858a6d62a9}{nb\+Depense
 Q\+String\+List \mbox{\hyperlink{class_groupe_aa5609e3271dd65a8c0ebf24697ac171d}{depenses\+To\+String}} ()
 \begin{DoxyCompactList}\small\item\em depenses\+To\+String retourne la liste des dépenses en string \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_groupe_a4f8bdb1618bf7aef87caa49ea58b8aaa}{clear\+Depenses}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em clear\+Depenses supprime toutes les dépenses de la collection \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_groupe_a2ddd793a859cc86c9ff2b8d30338c5e7}{set\+Dettes}} ()
-\item 
-std\+::map$<$ Q\+String, int $>$ \mbox{\hyperlink{class_groupe_a7090147049f9c50223dcd05935beeb98}{get\+Dettes}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em set\+Dettes On calcule les dettes de tous les participants du groupe, en fonction de leur dépense \end{DoxyCompactList}\item 
+std\+::map$<$ Q\+String, double $>$ \mbox{\hyperlink{class_groupe_afa64e3943143122fc4de31c546c57697}{get\+Dettes}} ()
+\begin{DoxyCompactList}\small\item\em get\+Dettes retourne les dettes de chaque utilisateur du groupe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gestionnaire_depenses}{Gestionnaire\+Depenses}} \mbox{\hyperlink{class_groupe_afe527a62df60038cee31aa9fd6735d1a}{get\+Depenses}} () const
+\begin{DoxyCompactList}\small\item\em get\+Depenses retourne le gestionnaire de dépense \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_groupe_a99dd414922635dcc0585aabb2a330f63}{$\sim$\+Groupe}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,7 +65,7 @@ Q\+String \mbox{\hyperlink{class_groupe_aaf85aa1e92fb7a5374cca85ecacb615f}{descr
 \item 
 \mbox{\hyperlink{class_gestionnaire_depenses}{Gestionnaire\+Depenses}} $\ast$ \mbox{\hyperlink{class_groupe_a43ef3afb4c32c55d317a25e6331c8d14}{depenses}}
 \item 
-std\+::map$<$ Q\+String, int $>$ \mbox{\hyperlink{class_groupe_ab1419286101232c68099eef66fc8ec9c}{dettes}}
+std\+::map$<$ Q\+String, double $>$ \mbox{\hyperlink{class_groupe_a102b0daba6bbbf95cbda40a3410c1ba8}{dettes}}
 \end{DoxyCompactItemize}
 
 
@@ -188,6 +190,23 @@ Références date\+Creation.
 
 Référencé par B\+D\+D\+Manager\+::insererun\+Groupe().
 
+\mbox{\Hypertarget{class_groupe_afe527a62df60038cee31aa9fd6735d1a}\label{class_groupe_afe527a62df60038cee31aa9fd6735d1a}} 
+\index{Groupe@{Groupe}!getDepenses@{getDepenses}}
+\index{getDepenses@{getDepenses}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getDepenses()}{getDepenses()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestionnaire_depenses}{Gestionnaire\+Depenses}} Groupe\+::get\+Depenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+
+
+Références depenses.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::on\+\_\+regler\+Depense\+\_\+clicked().
+
 \mbox{\Hypertarget{class_groupe_aab274df80679c62c4b94de8e3394192e}\label{class_groupe_aab274df80679c62c4b94de8e3394192e}} 
 \index{Groupe@{Groupe}!getDescription@{getDescription}}
 \index{getDescription@{getDescription}!Groupe@{Groupe}}
@@ -205,12 +224,15 @@ Références description.
 
 Référencé par B\+D\+D\+Manager\+::insererun\+Groupe().
 
-\mbox{\Hypertarget{class_groupe_a7090147049f9c50223dcd05935beeb98}\label{class_groupe_a7090147049f9c50223dcd05935beeb98}} 
+\mbox{\Hypertarget{class_groupe_afa64e3943143122fc4de31c546c57697}\label{class_groupe_afa64e3943143122fc4de31c546c57697}} 
 \index{Groupe@{Groupe}!getDettes@{getDettes}}
 \index{getDettes@{getDettes}!Groupe@{Groupe}}
 \doxysubsubsection{\texorpdfstring{getDettes()}{getDettes()}}
-{\footnotesize\ttfamily std\+::map$<$ Q\+String, int $>$ Groupe\+::get\+Dettes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::map$<$ Q\+String, double $>$ Groupe\+::get\+Dettes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 
 
 Références dettes.
@@ -345,7 +367,7 @@ Référencé par get\+Date\+Creation(), Groupe(), et set\+Date().
 
 
 
-Référencé par ajouter\+Une\+Depense(), clear\+Depenses(), depenses\+To\+String(), nb\+Depenses(), et set\+Dettes().
+Référencé par ajouter\+Une\+Depense(), clear\+Depenses(), depenses\+To\+String(), get\+Depenses(), nb\+Depenses(), et set\+Dettes().
 
 \mbox{\Hypertarget{class_groupe_aaf85aa1e92fb7a5374cca85ecacb615f}\label{class_groupe_aaf85aa1e92fb7a5374cca85ecacb615f}} 
 \index{Groupe@{Groupe}!description@{description}}
@@ -357,11 +379,11 @@ Référencé par ajouter\+Une\+Depense(), clear\+Depenses(), depenses\+To\+Strin
 
 Référencé par get\+Description(), et set\+Description().
 
-\mbox{\Hypertarget{class_groupe_ab1419286101232c68099eef66fc8ec9c}\label{class_groupe_ab1419286101232c68099eef66fc8ec9c}} 
+\mbox{\Hypertarget{class_groupe_a102b0daba6bbbf95cbda40a3410c1ba8}\label{class_groupe_a102b0daba6bbbf95cbda40a3410c1ba8}} 
 \index{Groupe@{Groupe}!dettes@{dettes}}
 \index{dettes@{dettes}!Groupe@{Groupe}}
 \doxysubsubsection{\texorpdfstring{dettes}{dettes}}
-{\footnotesize\ttfamily std\+::map$<$Q\+String, int$>$ Groupe\+::dettes\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::map$<$Q\+String, double$>$ Groupe\+::dettes\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

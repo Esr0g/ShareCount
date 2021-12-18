@@ -8,8 +8,9 @@ var class_groupe =
     [ "clearDepenses", "class_groupe.html#a4f8bdb1618bf7aef87caa49ea58b8aaa", null ],
     [ "depensesToString", "class_groupe.html#aa5609e3271dd65a8c0ebf24697ac171d", null ],
     [ "getDateCreation", "class_groupe.html#a3e0fc6063e1a3ef73d7d4db0309ed032", null ],
+    [ "getDepenses", "class_groupe.html#afe527a62df60038cee31aa9fd6735d1a", null ],
     [ "getDescription", "class_groupe.html#aab274df80679c62c4b94de8e3394192e", null ],
-    [ "getDettes", "class_groupe.html#a7090147049f9c50223dcd05935beeb98", null ],
+    [ "getDettes", "class_groupe.html#afa64e3943143122fc4de31c546c57697", null ],
     [ "getIdentifiant", "class_groupe.html#aca8ed1d8038e8bba032d01d492301a00", null ],
     [ "getParticipants", "class_groupe.html#a80e55eb56fdeef9326d3df80d79eb305", null ],
     [ "nbDepenses", "class_groupe.html#a8c130d8ce7035c269d998d858a6d62a9", null ],
@@ -20,7 +21,7 @@ var class_groupe =
     [ "dateCreation", "class_groupe.html#a4de5c114907d95660dca56ef6526a162", null ],
     [ "depenses", "class_groupe.html#a43ef3afb4c32c55d317a25e6331c8d14", null ],
     [ "description", "class_groupe.html#aaf85aa1e92fb7a5374cca85ecacb615f", null ],
-    [ "dettes", "class_groupe.html#ab1419286101232c68099eef66fc8ec9c", null ],
+    [ "dettes", "class_groupe.html#a102b0daba6bbbf95cbda40a3410c1ba8", null ],
     [ "identifiant", "class_groupe.html#ad89d1e8d054fb0198cbc422f81d174d2", null ],
     [ "participants", "class_groupe.html#a7e725e15cb132004cbe325933e87d516", null ]
 ];

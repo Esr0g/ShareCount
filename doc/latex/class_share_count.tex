@@ -47,9 +47,9 @@ void \mbox{\hyperlink{class_share_count_ab85ba0622564fccb166d9880b2e4587f}{ajout
 void \mbox{\hyperlink{class_share_count_afb1878d4dd772e6b52bf39c6430703e3}{set\+Groupe\+Actif}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&grp)
 \begin{DoxyCompactList}\small\item\em set\+Groupe\+Actif positionne le groupe actif \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_share_count_a2155b64ed453857585e61f26bae3769c}{initialiser\+Liste\+Utilisateur}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em initialiser\+Liste\+Utilisateur permet d\textquotesingle{}initialiser les utilisateurs \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_share_count_af3fed63ab658bfcedbec1914f2242350}{get\+Nombre\+Utilisateurs}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em get\+Nombre\+Utilisateurs retourne le nombre d\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_share_count_a0ba453b0570674fa045ceb5117676f8e}{$\sim$\+Share\+Count}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
@@ -234,7 +234,7 @@ Références groupe\+Actif.
 
 
 
-Référencé par Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Depenses(), Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), et Page\+Gestion\+De\+Budget\+::set\+Equilibre().
+Référencé par Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Depenses(), Page\+Gestion\+De\+Budget\+::on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), Page\+Gestion\+De\+Budget\+::on\+\_\+regler\+Depense\+\_\+clicked(), et Page\+Gestion\+De\+Budget\+::set\+Equilibre().
 
 \mbox{\Hypertarget{class_share_count_af3fed63ab658bfcedbec1914f2242350}\label{class_share_count_af3fed63ab658bfcedbec1914f2242350}} 
 \index{ShareCount@{ShareCount}!getNombreUtilisateurs@{getNombreUtilisateurs}}
@@ -242,9 +242,16 @@ Référencé par Page\+Gestion\+De\+Budget\+::mise\+A\+Jour\+Depenses(), Page\+G
 \doxysubsubsection{\texorpdfstring{getNombreUtilisateurs()}{getNombreUtilisateurs()}}
 {\footnotesize\ttfamily int Share\+Count\+::get\+Nombre\+Utilisateurs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 
 
 Références Gestionnaire\+Utilisateur\+::get\+Nombre\+Utilisateur(), et utilisateurs.
+
+
+
+Référencé par Page\+Gestion\+De\+Budget\+::on\+\_\+regler\+Depense\+\_\+clicked().
 
 \mbox{\Hypertarget{class_share_count_aaf8f0db0cca91e77d96e5e7509ad218b}\label{class_share_count_aaf8f0db0cca91e77d96e5e7509ad218b}} 
 \index{ShareCount@{ShareCount}!getUtilisateur@{getUtilisateur}}

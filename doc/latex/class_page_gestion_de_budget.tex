@@ -12,26 +12,28 @@ Graphe de collaboration de Page\+Gestion\+De\+Budget\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_page_gestion_de_budget_a1ceff48d13ced364ecef74ce058590d2}{Page\+Gestion\+De\+Budget}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent=nullptr)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_page_gestion_de_budget}{Page\+Gestion\+De\+Budget}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_page_gestion_de_budget_a4e3e7b971dfd1a272f99ba3b64515312}{Page\+Gestion\+De\+Budget}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent, \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$fp, \mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$sc)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_page_gestion_de_budget}{Page\+Gestion\+De\+Budget}}. \end{DoxyCompactList}\item 
 Q\+Label $\ast$ \mbox{\hyperlink{class_page_gestion_de_budget_a4b50ae1ec16f7ec80a682cf51a9312a6}{get\+Label\+Nom\+Groupe}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em get\+Label\+Nom\+Groupe retourne le label (qui affiche le nom du groupe) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_page_gestion_de_budget_a4cbac69d1c7b0dad4e611e7da3613e7a}{mise\+A\+Jour\+Participant}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em mise\+A\+Jour\+Participant affiche les participants dans la list\+View des participants \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_page_gestion_de_budget_a71be607d22c7ef5d0dffdcd4392ecd13}{mise\+A\+Jour\+Depenses}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em mise\+A\+Jour\+Depenses affiche les dépenses dans la list\+View des dépenses \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_page_gestion_de_budget_a5c0dc4f9a0847a121c5d1361043ba12c}{set\+Equilibre}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em set\+Equilibre affichage des dettes dans une list\+View, sur l\textquotesingle{}ensemble des dépenses (qui a avancé plus d\textquotesingle{}argent que les autres/ qui doit de l\textquotesingle{}argent) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_page_gestion_de_budget_a0687608e90eedc962a53351634570087}{$\sim$\+Page\+Gestion\+De\+Budget}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Connecteurs privés}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_page_gestion_de_budget_a67a9df137640d72ff2817072435a7c16}{on\+\_\+ajouter\+Depense\+Button\+\_\+clicked}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em on\+\_\+ajouter\+Depense\+Button\+\_\+clicked ajoute une dépense \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_page_gestion_de_budget_ab94f028d92d84407a6b7d83bb5ab7c3d}{on\+\_\+ajouter\+Participant\+Button\+\_\+clicked}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em on\+\_\+ajouter\+Participant\+Button\+\_\+clicked ajoute un participant \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_page_gestion_de_budget_aa0a0c0deee762e10919449ac1b517a81}{on\+\_\+regler\+Depense\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+regler\+Depense\+\_\+clicked ajoute une valeur (prix de la dépense/nombre d\textquotesingle{}utilisateur) à la valeur totale remboursée de la dépense \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
@@ -55,6 +57,11 @@ Q\+String\+List \mbox{\hyperlink{class_page_gestion_de_budget_a6cd5fef84d9319f0a
 {\footnotesize\ttfamily Page\+Gestion\+De\+Budget\+::\+Page\+Gestion\+De\+Budget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
 
 Références ui.
 
@@ -64,6 +71,15 @@ Références ui.
 \doxysubsubsection{\texorpdfstring{PageGestionDeBudget()}{PageGestionDeBudget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Page\+Gestion\+De\+Budget\+::\+Page\+Gestion\+De\+Budget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent,  }\item[{\mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$}]{fp,  }\item[{\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$}]{sc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+\begin{DoxyParams}{Paramètres}
+{\em fp} & fenêtre principale de l\textquotesingle{}application \\
+\hline
+{\em sc} & sharcount (Sorte de système de l\textquotesingle{}application) \\
+\hline
+{\em parent} & \\
+\hline
+\end{DoxyParams}
 
 
 Références ui.
@@ -87,6 +103,9 @@ Références ui.
 \doxysubsubsection{\texorpdfstring{getLabelNomGroupe()}{getLabelNomGroupe()}}
 {\footnotesize\ttfamily Q\+Label $\ast$ Page\+Gestion\+De\+Budget\+::get\+Label\+Nom\+Groupe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 
 
 Références ui.
@@ -107,7 +126,7 @@ Références Groupe\+::depenses\+To\+String(), Share\+Count\+::get\+Groupe\+Acti
 
 
 
-Référencé par Page\+Principale\+::afficher\+Groupe(), et on\+\_\+ajouter\+Depense\+Button\+\_\+clicked().
+Référencé par Page\+Principale\+::afficher\+Groupe(), on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), et on\+\_\+regler\+Depense\+\_\+clicked().
 
 \mbox{\Hypertarget{class_page_gestion_de_budget_a4cbac69d1c7b0dad4e611e7da3613e7a}\label{class_page_gestion_de_budget_a4cbac69d1c7b0dad4e611e7da3613e7a}} 
 \index{PageGestionDeBudget@{PageGestionDeBudget}!miseAJourParticipant@{miseAJourParticipant}}
@@ -142,6 +161,16 @@ Références Share\+Count\+::ajouter\+Une\+Depense(), Share\+Count\+::get\+Group
 
 
 Références Share\+Count\+::ajouter\+Participant\+Au\+Groupe(), Share\+Count\+::appartient\+Au\+Groupe(), Share\+Count\+::find\+Utilisateur(), Share\+Count\+::initialiser\+Participants(), share\+Count, et ui.
+
+\mbox{\Hypertarget{class_page_gestion_de_budget_aa0a0c0deee762e10919449ac1b517a81}\label{class_page_gestion_de_budget_aa0a0c0deee762e10919449ac1b517a81}} 
+\index{PageGestionDeBudget@{PageGestionDeBudget}!on\_reglerDepense\_clicked@{on\_reglerDepense\_clicked}}
+\index{on\_reglerDepense\_clicked@{on\_reglerDepense\_clicked}!PageGestionDeBudget@{PageGestionDeBudget}}
+\doxysubsubsection{\texorpdfstring{on\_reglerDepense\_clicked}{on\_reglerDepense\_clicked}}
+{\footnotesize\ttfamily void Page\+Gestion\+De\+Budget\+::on\+\_\+regler\+Depense\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Références Depense\+::add\+Valeur\+Remboursee(), Gestionnaire\+Depenses\+::get\+Depense(), Groupe\+::get\+Depenses(), Share\+Count\+::get\+Groupe\+Actif(), Share\+Count\+::get\+Nombre\+Utilisateurs(), Depense\+::get\+Vealeur\+Base(), mise\+A\+Jour\+Depenses(), share\+Count, et ui.
 
 \mbox{\Hypertarget{class_page_gestion_de_budget_a5c0dc4f9a0847a121c5d1361043ba12c}\label{class_page_gestion_de_budget_a5c0dc4f9a0847a121c5d1361043ba12c}} 
 \index{PageGestionDeBudget@{PageGestionDeBudget}!setEquilibre@{setEquilibre}}
@@ -186,7 +215,7 @@ Référencé par Page\+Principale\+::afficher\+Groupe(), et on\+\_\+ajouter\+Dep
 
 
 
-Référencé par mise\+A\+Jour\+Depenses(), mise\+A\+Jour\+Participant(), on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), et set\+Equilibre().
+Référencé par mise\+A\+Jour\+Depenses(), mise\+A\+Jour\+Participant(), on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), on\+\_\+regler\+Depense\+\_\+clicked(), et set\+Equilibre().
 
 \mbox{\Hypertarget{class_page_gestion_de_budget_a33d5f4b2f3674021c42d320bcc13506b}\label{class_page_gestion_de_budget_a33d5f4b2f3674021c42d320bcc13506b}} 
 \index{PageGestionDeBudget@{PageGestionDeBudget}!ui@{ui}}
@@ -196,7 +225,7 @@ Référencé par mise\+A\+Jour\+Depenses(), mise\+A\+Jour\+Participant(), on\+\_
 
 
 
-Référencé par get\+Label\+Nom\+Groupe(), mise\+A\+Jour\+Depenses(), mise\+A\+Jour\+Participant(), on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), Page\+Gestion\+De\+Budget(), set\+Equilibre(), et $\sim$\+Page\+Gestion\+De\+Budget().
+Référencé par get\+Label\+Nom\+Groupe(), mise\+A\+Jour\+Depenses(), mise\+A\+Jour\+Participant(), on\+\_\+ajouter\+Depense\+Button\+\_\+clicked(), on\+\_\+ajouter\+Participant\+Button\+\_\+clicked(), on\+\_\+regler\+Depense\+\_\+clicked(), Page\+Gestion\+De\+Budget(), set\+Equilibre(), et $\sim$\+Page\+Gestion\+De\+Budget().
 
 
 

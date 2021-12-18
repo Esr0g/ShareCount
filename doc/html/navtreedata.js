@@ -49,7 +49,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_b_d_d_manager_8cpp.html",
-"class_vue_liste_groupe.html"
+"class_utilisateur.html#ae44462f2990788a6e98bb743ea010c98"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

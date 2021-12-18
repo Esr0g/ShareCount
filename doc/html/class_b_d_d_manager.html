@@ -91,9 +91,6 @@ $(document).ready(function(){initNavTree('class_b_d_d_manager.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p>The DbManager class qui permet de gérer les entrées et les sorties avec la base de donnée.  
-</p>
-
 <p><code>#include &lt;<a class="el" href="_b_d_d_manager_8h_source.html">BDDManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe de collaboration de BDDManager:</div>
@@ -105,7 +102,7 @@ Graphe de collaboration de BDDManager:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a4ba1a8f6ec4bb70fbaa38e4274d559a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_d_d_manager.html#a4ba1a8f6ec4bb70fbaa38e4274d559a5">BDDManager</a> (const QString &amp;path=<a class="el" href="_b_d_d_manager_8h.html#a0670e0e3546fcd815d007fe1aeff321e">DB_PATH</a>)</td></tr>
-<tr class="memdesc:a4ba1a8f6ec4bb70fbaa38e4274d559a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DbManager Constrcteur par défaut.  <a href="class_b_d_d_manager.html#a4ba1a8f6ec4bb70fbaa38e4274d559a5">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a4ba1a8f6ec4bb70fbaa38e4274d559a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The DbManager class qui permet de gérer les entrées et les sorties avec la base de donnée.  <a href="class_b_d_d_manager.html#a4ba1a8f6ec4bb70fbaa38e4274d559a5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4ba1a8f6ec4bb70fbaa38e4274d559a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2a0ec86d6918daadfa907d56ac5eb74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_d_d_manager.html#aa2a0ec86d6918daadfa907d56ac5eb74">createDataBase</a> ()</td></tr>
 <tr class="memdesc:aa2a0ec86d6918daadfa907d56ac5eb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">createDataBase permet de créer et d'initialiser la base de donnée si le fichier ShareCountDataBase.db n'existe pas  <a href="class_b_d_d_manager.html#aa2a0ec86d6918daadfa907d56ac5eb74">Plus de détails...</a><br /></td></tr>
@@ -140,9 +137,6 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ae777eda4a45f719de81b81b8b75ca5ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_d_d_manager.html#ae777eda4a45f719de81b81b8b75ca5ad">updateHistorique</a> (const QString &amp;grp, const QString &amp;action)</td></tr>
 <tr class="memdesc:ae777eda4a45f719de81b81b8b75ca5ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">updateHistorique a chaque fois qu'une action est fête celle-ci est enregistré dans la table historique.  <a href="class_b_d_d_manager.html#ae777eda4a45f719de81b81b8b75ca5ad">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae777eda4a45f719de81b81b8b75ca5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8383e33f8658c18617942fc6b47a85a3"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_d_d_manager.html#a8383e33f8658c18617942fc6b47a85a3">initialiserHistorique</a> (const QString &amp;grp)</td></tr>
-<tr class="memdesc:a8383e33f8658c18617942fc6b47a85a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialiserHistorique permet d'initialiser l'historique en fonction du groupe  <a href="class_b_d_d_manager.html#a8383e33f8658c18617942fc6b47a85a3">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8383e33f8658c18617942fc6b47a85a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -175,7 +169,7 @@ Attributs privés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Paramètres</dt><dd>
+<p>DbManager Constrcteur par défaut </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>de la base de donnée </td></tr>
   </table>
@@ -351,31 +345,6 @@ Attributs privés</h2></td></tr>
 <p class="reference">Références <a class="el" href="class_gestionnaire_groupes.html#aae6c3d79ffcf855144347c25a5e508de">GestionnaireGroupes::ajouterGroupe()</a>, <a class="el" href="class_gestionnaire_groupes.html#aa832bb9ac769394a6bfdc1b4261522b4">GestionnaireGroupes::clear()</a>, et <a class="el" href="class_groupe.html#ae7860ce0681793ec719d8062fea017a7">Groupe::setDate()</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="class_share_count.html#a595dbfccc1ec2ec70acf4c424634bca4">ShareCount::setUtilisateurActif()</a>.</p>
-
-</div>
-</div>
-<a id="a8383e33f8658c18617942fc6b47a85a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8383e33f8658c18617942fc6b47a85a3">&#9670;&nbsp;</a></span>initialiserHistorique()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QStringList BDDManager::initialiserHistorique </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>grp</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grp</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd></dd></dl>
 
 </div>
 </div>

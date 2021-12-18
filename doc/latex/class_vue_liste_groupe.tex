@@ -12,35 +12,35 @@ Graphe de collaboration de Vue\+Liste\+Groupe\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_vue_liste_groupe_a2e6b4de3568539028706967494965335}{Vue\+Liste\+Groupe}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent=nullptr)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_vue_liste_groupe}{Vue\+Liste\+Groupe}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vue_liste_groupe_a850843c3d8a1db4f136c5075c0d5f295}{Vue\+Liste\+Groupe}} (\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$parent, \mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$fp, \mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$sc)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_vue_liste_groupe}{Vue\+Liste\+Groupe}}. \end{DoxyCompactList}\item 
 Q\+Push\+Button $\ast$ \mbox{\hyperlink{class_vue_liste_groupe_a2a029d45f2cec2cc2d4c40bc1df16e73}{get\+Creer\+Groupe\+Button}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em get\+Creer\+Groupe\+Button retourne le bouton creer\+Groupe \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vue_liste_groupe_a24d95353d796a8116b8525296de64498}{set\+Page\+Creation\+Groupe}} (\mbox{\hyperlink{class_page_creation_groupe}{Page\+Creation\+Groupe}} $\ast$pcg)
-\item 
+\begin{DoxyCompactList}\small\item\em set\+Page\+Creation\+Groupe met en place la page de création de groupe \end{DoxyCompactList}\item 
 Q\+List\+View $\ast$ \mbox{\hyperlink{class_vue_liste_groupe_a6fa846c63cf0a1e1172a37925b41f11b}{get\+List\+View}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em get\+List\+View retourne la list\+View (qui affiche tous les groupes) \end{DoxyCompactList}\item 
 Q\+Model\+Index \mbox{\hyperlink{class_vue_liste_groupe_a74e117faae67ef26845508c16e9ed5e3}{get\+Index\+List}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em get\+Index\+List retourne la liste d\textquotesingle{}index de la list\+View \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vue_liste_groupe_a2511ea69ff255f67372acc964ef09f8f}{$\sim$\+Vue\+Liste\+Groupe}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Connecteurs privés}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_vue_liste_groupe_a6a71d1230d12cfa7d8fc19b2dd40e4d4}{creer\+Groupe\+Button\+Clicked}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em creer\+Groupe\+Button\+Clicked active un signal, qui sera capté par le slot qui affichera la page de création de groupe \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vue_liste_groupe_a69d46f0926bdbb50e4f0c2d3b5f79322}{ajouter\+Groupe}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em ajouter\+Groupe ajoute dans la list\+View le nom du groupe créé \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vue_liste_groupe_adc6b1fda217005f1f09c2852e3de9deb}{item\+Clicked}} (Q\+Model\+Index index)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em item\+Clicked affiche le rang de l\textquotesingle{}item de la list\+View qui a été cliqué \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Fonctions membres privées}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_vue_liste_groupe_aded58b75ac91507f4480a11ece75ca31}{set\+Connect}} (\mbox{\hyperlink{class_page_creation_groupe}{Page\+Creation\+Groupe}} $\ast$pcg)
-\item 
+\begin{DoxyCompactList}\small\item\em set\+Connect connecte les signaux et slots \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_vue_liste_groupe_ac86b8b75d70922b62474e5b679cfa04b}{set\+Connect1}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em set\+Connect1 connecte les signaux et slots \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,6 +66,11 @@ Q\+Model\+Index \mbox{\hyperlink{class_vue_liste_groupe_a2ece773f3913d56dd622fcb
 {\footnotesize\ttfamily Vue\+Liste\+Groupe\+::\+Vue\+Liste\+Groupe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
 
 Références Utilisateur\+::get\+Mes\+Groupes\+To\+String(), Share\+Count\+::get\+Utilisateur\+Actif(), groupes, share\+Count, et ui.
 
@@ -75,6 +80,15 @@ Références Utilisateur\+::get\+Mes\+Groupes\+To\+String(), Share\+Count\+::get
 \doxysubsubsection{\texorpdfstring{VueListeGroupe()}{VueListeGroupe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Vue\+Liste\+Groupe\+::\+Vue\+Liste\+Groupe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_widget}{Q\+Widget}} $\ast$}]{parent,  }\item[{\mbox{\hyperlink{class_fenetre_principale}{Fenetre\+Principale}} $\ast$}]{fp,  }\item[{\mbox{\hyperlink{class_share_count}{Share\+Count}} $\ast$}]{sc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+\begin{DoxyParams}{Paramètres}
+{\em fp} & fenêtre principale de l\textquotesingle{}application \\
+\hline
+{\em sc} & sharcount (Sorte de système de l\textquotesingle{}application) \\
+\hline
+{\em parent} & \\
+\hline
+\end{DoxyParams}
 
 
 Références Utilisateur\+::get\+Mes\+Groupes\+To\+String(), Share\+Count\+::get\+Utilisateur\+Actif(), groupes, set\+Connect1(), share\+Count, et ui.
@@ -118,6 +132,9 @@ Référencé par set\+Connect().
 \doxysubsubsection{\texorpdfstring{getCreerGroupeButton()}{getCreerGroupeButton()}}
 {\footnotesize\ttfamily Q\+Push\+Button $\ast$ Vue\+Liste\+Groupe\+::get\+Creer\+Groupe\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 
 
 Références ui.
@@ -132,6 +149,9 @@ Référencé par Page\+Principale\+::set\+Connect().
 \doxysubsubsection{\texorpdfstring{getIndexList()}{getIndexList()}}
 {\footnotesize\ttfamily Q\+Model\+Index Vue\+Liste\+Groupe\+::get\+Index\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 
 
 Références index\+List.
@@ -142,6 +162,9 @@ Références index\+List.
 \doxysubsubsection{\texorpdfstring{getListView()}{getListView()}}
 {\footnotesize\ttfamily Q\+List\+View $\ast$ Vue\+Liste\+Groupe\+::get\+List\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 
 
 Références ui.
